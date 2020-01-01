@@ -8,10 +8,10 @@
 }
 
 html {
-    background-color: #1a1a1a;
+    background-color: #2C2C2C;
     color: #fff;
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
 }
@@ -23,7 +23,7 @@ html {
 .row {
     max-width: 95vw;
     margin: 0 auto;
-    
+
 }
 
 section { padding: 80px 0; }
@@ -32,11 +32,21 @@ section { padding: 80px 0; }
 /* -------------------------------------------------- */
 h1 {
     font-size: 400%;
+    font-weight: 100;
 }
 
 /* -------------------------------------------------- */
 /* CENTERPIECE */
 /* -------------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7)), url(CoverPhoto2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
 .main-pic {
     height: 350px;
     width: auto;
@@ -59,13 +69,14 @@ h1 {
 
 
 
+
 /* -------------------------------------------------- */
 /* HEADER NAVIGATION */
 /* -------------------------------------------------- */
 
 nav {
     padding-top: 20px;
-    
+
 }
 
 .header-name {
@@ -84,11 +95,26 @@ nav {
     float: right;
 }
 
-.header-nav li a {
-    text-decoration: none;
-    margin-left: 10px;
-    color: #fff;
+.header-nav li a:before {
+    margin-left: 0;
+    font-size: 40px;
 }
+
+.header-nav li a:link,
+.header-nav li a:visited {
+    text-decoration: none;
+    margin-left: 50px;
+    color: #fff;
+    width: 150px;
+    transition: color 0.2s;
+}
+
+.header-nav li a:hover,
+.header-nav li a:active { 
+    color: #cb2828;
+}
+
+
 
 
 /* -------------------------------------------------- */
@@ -96,15 +122,29 @@ nav {
 /* -------------------------------------------------- */
 /* The sidebar menu */
 .sidebar {
-   /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 25%; /* Stay at the top */
-  left: 0;
-  background-color: #fff; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+    height: ; /* Full-height: remove this if you want "auto" height calc(100vh - 150px)*/
+    width: 180px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 21%; /* Stay at the top */
+    left: 0;
+    background-image: linear-gradient(#FF3636, rgb(208, 40, 40));
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+.sidebar li {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+
 }
 
 
