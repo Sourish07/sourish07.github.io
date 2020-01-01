@@ -1,0 +1,124 @@
+/* -------------------------------------------------- */
+/* GENERAL SETUP */
+/* -------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
+}
+
+/* -------------------------------------------------- */
+/* REUSEABLE COMPONENTS */
+/* -------------------------------------------------- */
+
+.row {
+    max-width: 95vw;
+    margin: 0 auto;
+    
+}
+
+section { padding: 80px 0; }
+/* -------------------------------------------------- */
+/* HEADERS */
+/* -------------------------------------------------- */
+h1 {
+    font-size: 400%;
+}
+
+/* -------------------------------------------------- */
+/* CENTERPIECE */
+/* -------------------------------------------------- */
+.main-pic {
+    height: 350px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.centerpiece {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerpiece p {
+    font-size: 200%;
+    display: 
+}
+
+
+
+/* -------------------------------------------------- */
+/* HEADER NAVIGATION */
+/* -------------------------------------------------- */
+
+nav {
+    padding-top: 20px;
+    
+}
+
+.header-name {
+    display: inline-block;
+    float: left;
+    font-size: 178%;
+}
+
+.header-nav {
+    display: inline-block;
+    float: right;
+    padding: 10px 10px;
+    list-style: none;
+}
+.header-nav li {
+    float: right;
+}
+
+.header-nav li a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #fff;
+}
+
+
+/* -------------------------------------------------- */
+/* SIDEBAR NAVIGATION */
+/* -------------------------------------------------- */
+/* The sidebar menu */
+.sidebar {
+   /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 25%; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
