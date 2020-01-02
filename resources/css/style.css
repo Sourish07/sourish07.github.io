@@ -1,5 +1,5 @@
 /* -------------------------------------------------- */
-/* GENERAL SETUP */
+/* GENERAL SETUP (Official color: #FF3636) */ 
 /* -------------------------------------------------- */
 * {
     margin: 0;
@@ -10,7 +10,7 @@
 html {
     background-color: #2C2C2C;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
@@ -21,7 +21,7 @@ html {
 /* -------------------------------------------------- */
 
 .row {
-    max-width: 95vw;
+    max-width: 90vw;
     margin: 0 auto;
 
 }
@@ -34,6 +34,21 @@ h1 {
     font-size: 400%;
     font-weight: 100;
 }
+
+h2 {
+    font-size: 300%;
+    font-weight: 300;
+    position: relative;
+}
+
+
+
+h2 span {    
+    border-bottom: 1.5px solid #FF3636; 
+    display: inline-block;
+    line-height: 0.95;
+}
+
 
 /* -------------------------------------------------- */
 /* CENTERPIECE */
@@ -64,7 +79,8 @@ header {
 
 .centerpiece p {
     font-size: 200%;
-    display: 
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 
 
@@ -83,6 +99,7 @@ nav {
     display: inline-block;
     float: left;
     font-size: 178%;
+    font-weight: 100;
 }
 
 .header-nav {
@@ -122,17 +139,18 @@ nav {
 /* -------------------------------------------------- */
 /* The sidebar menu */
 .sidebar {
-    height: ; /* Full-height: remove this if you want "auto" height calc(100vh - 150px)*/
+    margin-top: 150px;
+    /* Full-height: remove this if you want "auto" height calc(100vh - 150px)*/
     width: 180px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 21%; /* Stay at the top */
+    top: 300px; /* Stay at the top */
     left: 0;
     background-image: linear-gradient(#FF3636, rgb(208, 40, 40));
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    /*overflow-x: hidden; /* Disable horizontal scroll */
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    padding: 40px 0 50px 0;
 
 }
 
@@ -147,10 +165,20 @@ nav {
 
 }
 
+.sidebar li:last-child {
+    margin-bottom: 0;
+
+}
 
 
 
 
+.about-me-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
 
 
 
