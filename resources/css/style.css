@@ -138,34 +138,36 @@ nav {
 /* SIDEBAR NAVIGATION */
 /* -------------------------------------------------- */
 /* The sidebar menu */
-.sidebar {
-    margin-top: 150px;
+.sidebar-nav {
     /* Full-height: remove this if you want "auto" height calc(100vh - 150px)*/
     width: 180px; /* Set the width of the sidebar */
     /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 300px; /* Stay at the top */
+     /* Stay at the top  top: 300px; vertical-align: middle;*/
     left: 0;
     background-image: linear-gradient(#FF3636, rgb(208, 40, 40));
     /*overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 40px 0 50px 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 40px 0 50px 0;
+    transform: translate(0, 25%);
+    
+    
 
 }
 
-.sidebar li {
+.sidebar-nav li {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.sidebar li a {
+.sidebar-nav li a {
     color: #fff;
     text-decoration: none;
 
 }
 
-.sidebar li:last-child {
+.sidebar-nav li:last-child {
     margin-bottom: 0;
 
 }
