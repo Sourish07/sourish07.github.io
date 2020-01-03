@@ -180,31 +180,29 @@ nav {
 .about-me-section {
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-me-section .col {
-    position: relative;
-    width: 50%;
-    height: 100vh;
-    float: left;
+.about-me__content {
+    display: flex;
+    flex-direction: row;
+    max-height: 80vh;
 }
 
-.about-me-section img {
+.about-me__img {
+    flex: 1 0 50%;
+    display: flex;
+}
+
+.about-me__img img {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    align-self: center;
+    height: 70%;
     transform: rotate(90deg);
+    
 }
-
-.about.me-section p {
-    vertical-align: center;
-}
-
-
-
 
 
 
