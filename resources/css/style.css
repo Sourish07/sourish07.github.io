@@ -26,7 +26,7 @@ html {
 
 }
 
-section { padding: 80px 0; } /**/
+section { margin: 80px 0; } /**/
 /* -------------------------------------------------- */
 /* HEADERS */
 /* -------------------------------------------------- */
@@ -39,6 +39,7 @@ h2 {
     font-size: 300%;
     font-weight: 300;
     position: relative;
+    text-align: center;
 }
 
 h2 span {    
@@ -94,7 +95,7 @@ nav {
 .header-name {
     display: inline-block;
     float: left;
-    font-size: 178%;
+    font-size: 150%;
     font-weight: 100;
 }
 
@@ -197,13 +198,12 @@ nav {
 .about-me-section {
     background-size: cover;
     background-position: center;
-    
 }
 
 .about-me__content {
     display: flex;
     max-height: 80vh;
-    padding: 100px;
+    padding: 50px;
     align-content: center;
 }
 
@@ -213,17 +213,20 @@ nav {
 
 .about-me__img img {
     display: block;
-    height: 100%;
+    width: 80%;
     transform: rotate(90deg);
 }
 
 /* -------------------------------------------------- */
 /* PORTFOLIO SECTION */ 
 /* -------------------------------------------------- */
+.portfolio__header p {
+    text-align: center;
+    font-size: 150%;
+}
 .portfolio__projects {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .portfolio__project {
