@@ -103,17 +103,16 @@ nav {
     padding: 10px 10px;
     display: flex;
     flex-direction: row-reverse;
-    width: 500px;
+    width: 395px;
 }
 
 .header-nav li {
     list-style: none;
     text-align: center;
-    width: 100px;
+    width: 75px;
     align-items:center;
     display: flex;
     flex-direction: column;
-    
 }
 
 .header-nav li caption {
