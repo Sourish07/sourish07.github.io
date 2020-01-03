@@ -108,14 +108,16 @@ nav {
 }
 
 .header-nav li {
-    width: 100px;
-    display: flex;
+    list-style: none;
+    text-align: center;
+    width: 75px;
     flex-direction: column;
     align-items:center;
     
 }
 
 .header-nav li caption {
+    display: inline-block;
     text-align: center;
 }
 
@@ -148,17 +150,17 @@ nav {
 /* For the words under the icons */
 
 .header-nav li caption {
-    
-}
-
-
-.header-nav li a:link ~ caption,
-.header-nav li a:visited ~ caption {
     color: rgba(255, 255, 255, 0);
     transition: color 0.2s;
 }
 
-.header-nav li a:hover ~ .header-nav li caption,
+
+.header-nav li a:link ~ .header-nav .caption,
+.header-nav li a:visited ~ caption {
+    
+}
+
+.header-nav li a:hover ~ caption,
 .header-nav li a:active ~ .header-nav li caption { 
     color: rgb(255, 255, 255);
 }
