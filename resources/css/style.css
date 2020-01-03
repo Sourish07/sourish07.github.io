@@ -150,9 +150,7 @@ nav {
 .header-nav li a:active:before */
 .header-nav li a:link span,
 .header-nav li a:visited span {
-   
     color: rgba(255, 255, 255, 0);
-    
     transition: color 0.2s;
 }
 
