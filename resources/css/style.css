@@ -41,8 +41,6 @@ h2 {
     position: relative;
 }
 
-
-
 h2 span {    
     border-bottom: 1.5px solid #FF3636; 
     display: inline-block;
@@ -92,7 +90,6 @@ header {
 
 nav {
     padding-top: 20px;
-
 }
 
 .header-name {
@@ -103,13 +100,23 @@ nav {
 }
 
 .header-nav {
-    display: inline-block;
     float: right;
     padding: 10px 10px;
-    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 500px;
 }
+
 .header-nav li {
-    float: right;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+
+.header-nav li caption {
+    text-align: center;
 }
 
 .header-nav li a:before {
@@ -117,10 +124,17 @@ nav {
     font-size: 40px;
 }
 
+.header-nav li a:hover:before,
+.header-nav li a:active:before { 
+    font-size: 60px;
+    color: #cb2828;
+    transition: font-size 0.2s;
+}
+
 .header-nav li a:link,
 .header-nav li a:visited {
     text-decoration: none;
-    margin-left: 50px;
+    padding-left: 0px;
     color: #fff;
     width: 150px;
     transition: color 0.2s;
@@ -131,29 +145,36 @@ nav {
     color: #cb2828;
 }
 
+/* For the words under the icons */
+
+.header-nav li caption {
+    
+}
 
 
+.header-nav li a:link ~ caption,
+.header-nav li a:visited ~ caption {
+    color: rgba(255, 255, 255, 0);
+    transition: color 0.2s;
+}
+
+.header-nav li a:hover ~ .header-nav li caption,
+.header-nav li a:active ~ .header-nav li caption { 
+    color: rgb(255, 255, 255);
+}
 
 /* -------------------------------------------------- */
 /* SIDEBAR NAVIGATION */
 /* -------------------------------------------------- */
-/* The sidebar menu */
-.sidebar-nav {
-    /* Full-height: remove this if you want "auto" height calc(100vh - 150px)*/
+.sidebar-nav {    
     width: 180px; /* Set the width of the sidebar */
-    /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-     /* Stay at the top  top: 300px; vertical-align: middle;*/
     left: 0;
     background-image: linear-gradient(#FF3636, rgb(208, 40, 40));
-    /*overflow-x: hidden; /* Disable horizontal scroll */
     padding: 40px 0 50px 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    transform: translate(0, 25%);
-    
-    
-
+    transform: translate(0, 25%);  
 }
 
 .sidebar-nav li {
@@ -181,20 +202,12 @@ nav {
     background-position: center;
     
 }
-.about-me__header {
-    
-}
 
 .about-me__content {
     display: flex;
-    flex-direction: row;
     max-height: 80vh;
     padding: 100px;
     align-content: center;
-}
-
-.about-me__content div {
-    
 }
 
 .about-me__img {
@@ -205,10 +218,11 @@ nav {
     display: block;
     height: 100%;
     transform: rotate(90deg);
-    
 }
 
-
+/* -------------------------------------------------- */
+/* PORTFOLIO SECTION */ 
+/* -------------------------------------------------- */
 
 
 
