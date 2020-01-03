@@ -191,15 +191,19 @@ nav {
 }
 
 .about-me__img {
-    flex: 1 0 50%;
+    flex: 0 0 50%;
     display: flex;
+    padding: 100px;
+    
+    
 }
 
 .about-me__img img {
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+    
     align-self: center;
-    height: 70%;
+    height: 100%;
     transform: rotate(90deg);
     
 }
