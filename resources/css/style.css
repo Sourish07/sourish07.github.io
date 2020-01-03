@@ -173,36 +173,36 @@ nav {
 }
 
 /* -------------------------------------------------- */
-/* ABOUT ME SECTION */ max-height: 100%;
-    height: 450px;
+/* ABOUT ME SECTION */ 
 /* -------------------------------------------------- */
 
 .about-me-section {
     background-size: cover;
     background-position: center;
-    display: flex;
-    flex-direction: column;
+    
+}
+.about-me__header {
+    
 }
 
 .about-me__content {
     display: flex;
     flex-direction: row;
     max-height: 80vh;
+    padding: 100px;
+    align-content: center;
+}
+
+.about-me__content div {
+    
 }
 
 .about-me__img {
     flex: 0 0 50%;
-    display: flex;
-    padding: 100px;
-    
-    
 }
 
 .about-me__img img {
     display: block;
-    object-fit: contain;
-    
-    align-self: center;
     height: 100%;
     transform: rotate(90deg);
     
