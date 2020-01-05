@@ -1,0 +1,46 @@
+
+/* Big tablet to 1200px: from 768px to 1023px (Widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+
+/* Small tablets to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    .header {
+        margin-top: 0;
+        height: 100vh;
+    }
+    
+    nav {padding-top: 0;}
+    
+    .sidebar-nav { display: none; }
+    .centerpiece {
+        width: 100%;
+    }
+    .centerpiece img { 
+        width: 50%;
+        height: auto;
+    }
+    
+    h1 { font-size: 350% }
+    .centerpiece p { font-size: 100%; }
+    
+    header {
+        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7)), url(NewCoverPhoto2.png);
+        background-position: 100% 50%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+    
+    }
+}
+
+/* Small phones to snall tablets: from 480px to 767px */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+}

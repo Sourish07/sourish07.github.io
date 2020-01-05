@@ -228,6 +228,8 @@ nav {
     max-height: 80vh;
     padding: 50px;
     align-content: center;
+    
+
 }
 
 .about-me__img {
@@ -238,6 +240,10 @@ nav {
     display: block;
     width: 80%;
     transform: rotate(90deg);
+}
+
+.about-me__text {
+    flex-basis: 1 0 50%;
 }
 
 /* -------------------------------------------------- */
