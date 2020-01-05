@@ -27,12 +27,27 @@
     .centerpiece p { font-size: 100%; }
     
     header {
-        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7)), url(NewCoverPhoto2.png);
-        background-position: 100% 50%;
-        background-size: 50%;
+        /*background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7));*/
+        background-position: 60% 50%;
+        /*background-size: 100%;*/
         background-repeat: no-repeat;
-    
     }
+    
+    /* TRASH CODE
+    .backgrdound-small-screen {
+        display: inline;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        float: right;
+    }
+    
+    .background-small-screen img {
+        opacity: 60%;
+        transform: translate(100%, 10%);
+    }*/
 }
 
 /* Small phones to snall tablets: from 480px to 767px */
