@@ -235,25 +235,26 @@ nav {
     display: flex;
     height: 500px;
     /*padding: 50px;*/
-    align-content: center;
+    
     width: 100vw;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-me__img {
     flex: 0 0 50%;
-    
 }
 
-.about-me__img img {
-    display: block;
+.about-me__content img {
     height: 75%;
     width: auto;
     transform: rotate(90deg);
-    margin: auto;
+    
+    
 }
 
 .about-me__text {
-    flex-basis: 1 0 50%;
+    flex: 0 0 50%;
 }
 
 /* -------------------------------------------------- */
