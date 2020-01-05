@@ -233,21 +233,23 @@ nav {
 
 .about-me__content {
     display: flex;
-    max-height: 80vh;
-    padding: 50px;
+    height: 500px;
+    /*padding: 50px;*/
     align-content: center;
-    
-
+    width: 100vw;
 }
 
 .about-me__img {
     flex: 0 0 50%;
+    
 }
 
 .about-me__img img {
     display: block;
-    width: 80%;
+    height: 75%;
+    width: auto;
     transform: rotate(90deg);
+    margin: auto;
 }
 
 .about-me__text {
