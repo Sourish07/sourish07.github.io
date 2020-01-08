@@ -54,11 +54,12 @@ html {
 
 section:first-of-type { margin: 0; }
 
-section { margin: 80px 0 150px 0; } /**/
+section { margin: 80px 0 100px 0; } /**/
 
 p {
     padding: 20px;
     font-size: 80%;
+    align-self: center;
 }
 /* -------------------------------------------------- */
 /* HEADERS */
@@ -73,6 +74,7 @@ h2 {
     font-weight: 300;
     position: relative;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 h2 span {    
@@ -293,10 +295,55 @@ nav {
 }
 
 /* -------------------------------------------------- */
-/* PORTFOLIO SECTION */ 
+/* EXPERIENCES SECTION */ 
 /* -------------------------------------------------- */
 
-.portfolio__header p {
+.experiences {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.experience {
+    display: flex;
+    height: auto;
+    /*margin-top: 20px;*/
+}
+
+.experience-image-container {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    overflow: hidden;
+}
+
+.experience-image-container img {
+    display: block;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#leidos {
+    transform: rotate(90deg)scale(0.7);
+    
+}
+
+.experience p {
+    align-self: center;
+}
+
+/* -------------------------------------------------- */
+/* PORTFOLIO SECTION */ 
+/* -------------------------------------------------- */
+.portfolio__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__header caption {
     text-align: center;
     font-size: 150%;
 }
@@ -324,6 +371,7 @@ nav {
 .portfolio-project-image-container img {
     display: block;
     width: 100%;
+    max-height: 400px;
     transform: scale(1);
     transition: transform 0.5s, opacity 0.5s;
 }
