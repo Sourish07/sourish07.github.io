@@ -49,7 +49,21 @@
         transform: translate(100%, 10%);
     }*/
     
+    .about-me__content {
+        flex-direction: column;
+    }
     
+    .experience {
+        flex-direction: column;
+    }
+    
+    .portfolio-project {
+        flex-direction: column;
+    }
+    
+    #shotplotter {
+        flex-direction: column-reverse;
+    }
 }
 
 /* Small phones to snall tablets: from 480px to 767px */
