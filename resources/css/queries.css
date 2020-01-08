@@ -68,7 +68,16 @@
 
 /* Small phones to snall tablets: from 480px to 767px */
 @media only screen and (max-width: 767px) {
-
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row {
+        width: 95vw;
+    }
+    
+    section { margin: 0px 0 25px 0; }
 }
 
 /* Small phones: from 0 to 480px */

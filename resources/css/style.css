@@ -176,10 +176,6 @@ input[type=submit]:active {
 /* HEADER NAVIGATION */
 /* -------------------------------------------------- */
 
-nav {
-    padding-top: 20px;
-}
-
 .header-name {
     display: inline-block;
     float: left;
