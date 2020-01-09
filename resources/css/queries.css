@@ -1,18 +1,48 @@
-
-/* Big tablet to 1200px: from 768px to 1023px (Widths smaller than the 1140px row) */
-@media only screen and (max-width: 1200px) {
-
-}
-
-
-/* Small tablets to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1023px) {
+/* -------------------------------------------------- */
+/* Big tablet to 1400px: from 1024px to 1400px (Widths smaller than the 1400px row) */ 
+/* -------------------------------------------------- */
+@media only screen and (max-width: 1400px) {
+    /*
     .header {
         margin-top: 0;
         height: 100vh;
     }
 
-    nav {padding-top: 0;}
+    .sidebar-nav { display: none; }
+    
+    .centerpiece {
+        width: 100%;
+    }
+    
+    .centerpiece img { 
+        width: 50%;
+        height: auto;
+    }
+
+    h1 { font-size: 350% }
+
+    p {
+        padding: 15px;
+    }
+
+    header {
+        
+        background-position: 60% 50%;
+        
+        background-repeat: no-repeat;
+    }
+    */
+}
+
+/* -------------------------------------------------- */
+/* Small tablets to big tablet: from 768px to 1023px */ 
+/* -------------------------------------------------- */
+
+@media only screen and (max-width: 1023px) {
+    .header {
+        margin-top: 0;
+        height: 100vh;
+    }
 
     .sidebar-nav { display: none; }
     .centerpiece {
@@ -36,23 +66,7 @@
         background-repeat: no-repeat;
     }
 
-    /* TRASH CODE
-    .backgrdound-small-screen {
-    display: inline;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-    float: right;
-}
-
-    .background-small-screen img {
-    opacity: 60%;
-    transform: translate(100%, 10%);
-}*/
-
-    .about-me__content {
+    .about-me-content {
         flex-direction: column;
     }
 
@@ -69,7 +83,9 @@
     }
 }
 
-/* Small phones to snall tablets: from 480px to 767px */
+/* -------------------------------------------------- */
+/* Small phones to snall tablets: from 480px to 767px */ 
+/* -------------------------------------------------- */
 @media only screen and (max-width: 767px) {
     .header {
         display: flex;
@@ -87,7 +103,9 @@
     section { margin: 0px 0 25px 0; }
 }
 
-/* Small phones: from 0 to 480px */
+/* -------------------------------------------------- */
+/* Small phones: from 0 to 480px */ 
+/* -------------------------------------------------- */
 @media only screen and (max-width: 480px) {
     html {
         font-size: 14px;
@@ -103,7 +121,9 @@
 
 }
 
-/* Phones in landscape mode: (height) from 0px to 750px */
+/* -------------------------------------------------- */
+/* Phones in landscape mode: (height) from 0px to 750px */ 
+/* -------------------------------------------------- */
 @media (max-height: 750px) {
     .centerpiece {
         height: 70%;
@@ -116,17 +136,17 @@
         border-radius: 50%;
         margin-right: 10px;
     }
-    
+
     h1 {
         font-size: 10vh;
     }
-    
+
     .centerpiece {
         width: 100%;
         flex-direction: row;
         justify-content: center;
     }
-    
+
     .centerpiece .subheader {
         font-size: 4vh;
         word-spacing: 1px;
