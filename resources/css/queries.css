@@ -136,6 +136,8 @@
         border-radius: 50%;
         margin-right: 10px;
     }
+    
+    section { margin: 0px 0 25px 0; }
 
     h1 {
         font-size: 10vh;
