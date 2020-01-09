@@ -1,7 +1,7 @@
 
 /* Big tablet to 1200px: from 768px to 1023px (Widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) {
-    
+
 }
 
 
@@ -11,9 +11,9 @@
         margin-top: 0;
         height: 100vh;
     }
-    
+
     nav {padding-top: 0;}
-    
+
     .sidebar-nav { display: none; }
     .centerpiece {
         width: 100%;
@@ -22,48 +22,48 @@
         width: 50%;
         height: auto;
     }
-    
+
     h1 { font-size: 350% }
-    
+
     p {
         padding: 15px;
     }
-    
+
     header {
         /*background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7));*/
         background-position: 60% 50%;
         /*background-size: 100%;*/
         background-repeat: no-repeat;
     }
-    
+
     /* TRASH CODE
     .backgrdound-small-screen {
-        display: inline;
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        z-index: -1;
-        float: right;
-    }
-    
+    display: inline;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    float: right;
+}
+
     .background-small-screen img {
-        opacity: 60%;
-        transform: translate(100%, 10%);
-    }*/
-    
+    opacity: 60%;
+    transform: translate(100%, 10%);
+}*/
+
     .about-me__content {
         flex-direction: column;
     }
-    
+
     .experience {
         flex-direction: column;
     }
-    
+
     .portfolio-project {
         flex-direction: column;
     }
-    
+
     #shotplotter {
         flex-direction: column-reverse;
     }
@@ -79,11 +79,11 @@
     .row {
         width: 95vw;
     }
-    
+
     p {
-     padding: 0;       
+        padding: 0;       
     }
-    
+
     section { margin: 0px 0 25px 0; }
 }
 
@@ -92,13 +92,36 @@
     html {
         font-size: 14px;
     }
-    
+
     .header-nav {
         width: 100vw;
     }
-    
+
     .centerpiece {
         padding-top: 25px;
     }
+
+}
+
+/* Phones in landscape mode: (height) from 0px to 700px */
+@media (max-height: 700px) {
+    .centerpiece {
+        height: 70%;
+        width: auto;
+    }
+
+    .centerpiece img {
+        height: 70%;
+        width: auto;
+        border-radius: 50%;
+    }
     
+    h1 {
+        font-size: 10vh;
+    }
+    
+    .centerpiece .subheader {
+        font-size: 4vh;
+        word-spacing: 1px;
+    }
 }

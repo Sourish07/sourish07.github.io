@@ -119,7 +119,7 @@ header {
     border-radius: 50%;
 }
 
-.centerpiece caption {
+.centerpiece .subheader {
     font-size: 130%;
     word-spacing: 3px;
 }
@@ -339,7 +339,7 @@ input[type=submit]:active {
     flex-direction: column;
 }
 
-.portfolio__header caption {
+.portfolio__header .subheader {
     text-align: center;
     font-size: 150%;
 }
