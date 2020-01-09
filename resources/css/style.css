@@ -119,6 +119,11 @@ header {
     border-radius: 50%;
 }
 
+.centerpiece-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .centerpiece .subheader {
     font-size: 130%;
     word-spacing: 3px;
