@@ -167,6 +167,10 @@
         width: 40%;
     }
     
+    .about-me-text {
+        margin-bottom: 10px;
+    }
+    
     .my-experiences span {
         justify-content: center;
     }

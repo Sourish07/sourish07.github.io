@@ -321,7 +321,7 @@ input[type=submit]:active {
     display: block;
     width: 100%;
     transform: scale(1);
-    transition: transform 0.5s, opacity 0.5s;
+    
 }
 
 #leidos {
