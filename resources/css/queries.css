@@ -4,33 +4,33 @@
 @media only screen and (max-width: 1400px) {
     /*
     .header {
-        margin-top: 0;
-        height: 100vh;
-    }
+    margin-top: 0;
+    height: 100vh;
+}
 
     .sidebar-nav { display: none; }
-    
+
     .centerpiece {
-        width: 100%;
-    }
-    
+    width: 100%;
+}
+
     .centerpiece img { 
-        width: 50%;
-        height: auto;
-    }
+    width: 50%;
+    height: auto;
+}
 
     h1 { font-size: 350% }
 
     p {
-        padding: 15px;
-    }
+    padding: 15px;
+}
 
     header {
-        
-        background-position: 60% 50%;
-        
-        background-repeat: no-repeat;
-    }
+
+    background-position: 60% 50%;
+
+    background-repeat: no-repeat;
+}
     */
 }
 
@@ -118,7 +118,14 @@
     .centerpiece {
         padding-top: 25px;
     }
-
+    
+    .about-me-text {
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 15vw;
+    }
 }
 
 /* -------------------------------------------------- */
@@ -136,13 +143,14 @@
         border-radius: 50%;
         margin-right: 10px;
     }
-    
+
     section { margin: 0px 0 25px 0; }
 
     h1 {
         font-size: 10vh;
     }
-
+    
+    
     .centerpiece {
         width: 100%;
         flex-direction: row;
@@ -152,5 +160,32 @@
     .centerpiece .subheader {
         font-size: 4vh;
         word-spacing: 1px;
+    }
+    
+    .about-me-img-container img {
+        width: 40%;
+    }
+    
+    .my-experiences span {
+        justify-content: center;
+    }
+    
+    .my-experiences img {
+        width: 50%;
+    }
+    
+    .experience-image-container {
+        justify-content: center;
+    }
+}
+
+/* -------------------------------------------------- */
+/* Firefox unique scroll bar */ 
+/* -------------------------------------------------- */
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #FF2400 rgba(255, 255, 255, 0);
     }
 }
