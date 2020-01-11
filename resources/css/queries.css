@@ -162,7 +162,8 @@
         word-spacing: 1px;
     }
     
-    .about-me-img-container img {
+    .about-me-img-container img,
+    portfolio-project-image-container img {
         width: 40%;
     }
     
