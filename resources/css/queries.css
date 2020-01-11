@@ -95,6 +95,8 @@
     .row {
         width: 95vw;
     }
+    
+    h1 { font-size: 300% }
 
     p {
         padding: 0;       
