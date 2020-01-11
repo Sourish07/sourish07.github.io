@@ -266,15 +266,8 @@ input[type=submit]:active {
 
 .about-me-content {
     display: flex;
-
-    /*
-    align-items: center;
-    height: 500px;
-    */
-
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .about-me-img-container {
@@ -287,10 +280,15 @@ input[type=submit]:active {
 .about-me-img-container img {
     display: inline-block;
     width: 80%;
+    padding: 25px;
 }
 
 .about-me-text {
     flex: 0 0 50%;
+}
+
+.about-me-text h3 {
+    text-align: center;
 }
 
 /* -------------------------------------------------- */
