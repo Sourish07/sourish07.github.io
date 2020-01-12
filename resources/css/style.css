@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -22,6 +23,9 @@ html, body {
 }
 
 
+/* -------------------------------------------------- */
+/* SCROLLBAR */
+/* -------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -184,12 +188,32 @@ input[type=submit]:active {
 /* HEADER NAVIGATION */
 /* -------------------------------------------------- */
 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+    box-sizing: border-box;
+    background-image: linear-gradient(#222, #222, #222,rgba(51, 51, 51, 0));
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    padding: 0 20px;
+    overflow: visible;
+}
+
 .header-name {
     display: inline-block;
-    float: left;
     font-size: 150%;
     font-weight: 100;
-    padding-top: 10px;
+    margin: 15px 0;
+}
+
+.header-name a {
+    text-decoration: none;
+    color: white;
+    
+    
 }
 
 .header-nav {
@@ -197,22 +221,17 @@ input[type=submit]:active {
     padding: 10px 10px;
     display: flex;
     flex-direction: row-reverse;
-    width: 395px;
+    width: 450px;
 }
 
 .header-nav li {
     list-style: none;
     text-align: center;
-    width: 75px;
+    width: 80px;
     align-items:center;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-.header-nav li caption {
-    display: inline-block;
-    text-align: center;
 }
 
 .header-nav li a:before {
@@ -241,8 +260,11 @@ input[type=submit]:active {
     color: #b30000;
 }
 
-/* For the words under the icons .header-nav li a:hover:before,
-.header-nav li a:active:before */
+/* For the words under the icons */
+.header-nav li a span {
+    
+}
+
 .header-nav li a:link span,
 .header-nav li a:visited span {
     color: rgba(255, 255, 255, 0);
@@ -252,6 +274,7 @@ input[type=submit]:active {
 .header-nav li a:hover span,
 .header-nav li a:active span {
     color: rgba(255, 255, 255);
+    text-shadow: 2px 2px 5px #000;
 }
 
 
@@ -324,7 +347,6 @@ input[type=submit]:active {
 
 #leidos {
     transform: rotate(90deg)scale(0.7);
-
 }
 
 .experience p {
