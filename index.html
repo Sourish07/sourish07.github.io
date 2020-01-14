@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <div class="header-name">
           <a href="index.html">sourish.dev</a>
         </div>
@@ -53,6 +53,19 @@
             >
           </li>
         </ul>
+        <script type="text/javascript">
+          var lastScrollTop = 0;
+          navbar = document.getElementById("navbar");
+          window.addEventListener("scroll", function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+              navbar.style.top = "-120px";
+            } else {
+              navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+          })
+        </script>
       </nav>
       <div class="row centerpiece">
         <img src="resources/images/Main%20Photo.png" alt="Picture of Sourish" />
