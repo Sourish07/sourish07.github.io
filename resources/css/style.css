@@ -200,6 +200,7 @@ nav {
     z-index: 2;
     padding: 0 20px;
     overflow: visible;
+    transition: top 0.3s;
 }
 
 .header-name {
