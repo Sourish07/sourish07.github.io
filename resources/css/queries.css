@@ -116,6 +116,15 @@
     }
 }
 
+@media only screen and (max-width: 610px) {
+    nav {
+        justify-content: center;
+    }
+    .header-name {
+        display: none;
+    }
+}
+
 /* -------------------------------------------------- */
 /* Small phones: from 0 to 480px */ 
 /* -------------------------------------------------- */

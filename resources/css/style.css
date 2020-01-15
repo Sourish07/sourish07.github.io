@@ -262,10 +262,6 @@ nav {
 }
 
 /* For the words under the icons */
-.header-nav li a span {
-    
-}
-
 .header-nav li a:link span,
 .header-nav li a:visited span {
     color: rgba(255, 255, 255, 0);
