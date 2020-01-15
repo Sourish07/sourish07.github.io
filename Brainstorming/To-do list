@@ -4,9 +4,9 @@
 
 
 
-Make header pop up when you scroll up and go away when you scroll down
 
-Make scroll bar dissappear when not scrolling
+
+
 
 
 
@@ -44,3 +44,9 @@ Import less fonts to speed things up
 Fix scrollbar and sidebar for Firefox user
 
 Make top left sourish.dev redirect to homepage
+
+Make header pop up when you scroll up and go away when you scroll down
+
+
+
+Not possible (With minimal effort): Make scroll bar dissappear when not scrolling
