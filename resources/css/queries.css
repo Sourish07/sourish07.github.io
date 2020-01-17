@@ -1,6 +1,16 @@
 /* -------------------------------------------------- */
-/* Big tablet to 1400px: from 1024px to 1400px (Widths smaller than the 1400px row) */ 
+/* Big tablet to 1400px: from 1024px to 1400px (Widths smaller than the 1400px row) */
 /* -------------------------------------------------- */
+@media only screen and (max-width: 1450px) {
+    /*.about-me-text h3 {*/
+    /*    font-size: 130%;*/
+    /*}*/
+
+    /*.about-me-text p {*/
+    /*    font-size: 110%;*/
+    /*}*/
+}
+
 @media only screen and (max-width: 1400px) {
     /*
     .header {
@@ -32,17 +42,30 @@
     background-repeat: no-repeat;
 }
     */
+    .about-me-text p {
+        font-size: 100%;
+    }
 }
 
 @media only screen and (max-width: 1366px) {
     .centerpiece img {
         width: 40%;
     }
+
+    .about-me-text p {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .sidebar-nav {
+        display: none;
+    }
 }
 
 
 /* -------------------------------------------------- */
-/* Small tablets to big tablet: from 768px to 1023px */ 
+/* Small tablets to big tablet: from 768px to 1023px */
 /* -------------------------------------------------- */
 
 @media only screen and (max-width: 1023px) {
@@ -51,19 +74,26 @@
         height: 100vh;
     }
 
-    .sidebar-nav { display: none; }
+    .sidebar-nav {
+        display: none;
+    }
+
     .centerpiece {
         width: 100%;
     }
-    .centerpiece img { 
+
+    .centerpiece img {
         width: 40%;
         height: auto;
     }
 
-    h1 { font-size: 350% }
+    h1 {
+        font-size: 350%
+    }
 
     p {
         padding: 15px;
+        font-size: 120%;
     }
 
     header {
@@ -73,8 +103,13 @@
         background-repeat: no-repeat;
     }
 
+
     .about-me-content {
         flex-direction: column;
+    }
+    .about-me-img-container img {
+        width: 50%;
+
     }
 
     .experience {
@@ -91,7 +126,7 @@
 }
 
 /* -------------------------------------------------- */
-/* Small phones to snall tablets: from 480px to 767px */ 
+/* Small phones to snall tablets: from 480px to 767px */
 /* -------------------------------------------------- */
 @media only screen and (max-width: 767px) {
     .header {
@@ -99,17 +134,22 @@
         flex-direction: column;
         align-items: center;
     }
+
     .row {
         width: 95vw;
     }
-    
-    h1 { font-size: 300% }
 
-    p {
-        padding: 0;       
+    h1 {
+        font-size: 300%
     }
 
-    section { margin: 0px 0 25px 0; }
+    p {
+        padding: 0;
+    }
+
+    section {
+        margin: 0 0 25px 0;
+    }
 
     .centerpiece img {
         width: 50%;
@@ -120,13 +160,14 @@
     nav {
         justify-content: center;
     }
+
     .header-name {
         display: none;
     }
 }
 
 /* -------------------------------------------------- */
-/* Small phones: from 0 to 480px */ 
+/* Small phones: from 0 to 480px */
 /* -------------------------------------------------- */
 @media only screen and (max-width: 480px) {
     html {
@@ -140,18 +181,18 @@
     .centerpiece {
         padding-top: 25px;
     }
-    
+
     .about-me-text {
         margin-bottom: 10px;
     }
-    
+
     h2 {
         font-size: 15vw;
     }
 }
 
 /* -------------------------------------------------- */
-/* Phones in landscape mode: (height) from 0px to 750px */ 
+/* Phones in landscape mode: (height) from 0px to 750px */
 /* -------------------------------------------------- */
 @media (max-height: 700px) {
     .centerpiece {
@@ -166,13 +207,15 @@
         margin-right: 10px;
     }
 
-    section { margin: 0px 0 25px 0; }
+    section {
+        margin: 0px 0 25px 0;
+    }
 
     h1 {
         font-size: 10vh;
     }
-    
-    
+
+
     .centerpiece {
         width: 100%;
         flex-direction: row;
@@ -183,31 +226,31 @@
         font-size: 4vh;
         word-spacing: 1px;
     }
-    
+
     .about-me-img-container img,
     .portfolio-project-image-container img {
         width: 40%;
     }
-    
+
     .about-me-text {
         margin-bottom: 10px;
     }
-    
+
     .my-experiences span {
         justify-content: center;
     }
-    
+
     .my-experiences img {
         width: 50%;
     }
-    
+
     .experience-image-container {
         justify-content: center;
     }
 }
 
 /* -------------------------------------------------- */
-/* Firefox unique scroll bar */ 
+/* Firefox unique scroll bar */
 /* -------------------------------------------------- */
 
 @-moz-document url-prefix() {
