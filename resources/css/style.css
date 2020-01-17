@@ -220,8 +220,6 @@ nav {
 .header-name a {
     text-decoration: none;
     color: white;
-
-
 }
 
 .header-nav {
@@ -230,6 +228,10 @@ nav {
     display: flex;
     flex-direction: row-reverse;
     width: 450px;
+}
+
+.header-nav li:first-of-type {
+    display: none;
 }
 
 .header-nav li {
@@ -257,7 +259,7 @@ nav {
 .header-nav li a:link,
 .header-nav li a:visited {
     text-decoration: none;
-    padding-left: 0px;
+    padding-left: 0;
     color: #FF2400;
     width: 150px;
     transition: color 0.2s;
@@ -277,6 +279,7 @@ nav {
 
 .header-nav li a:hover span,
 .header-nav li a:active span {
+    font-size: 80%;
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px 5px #000;
 }
