@@ -1,59 +1,13 @@
 /* -------------------------------------------------- */
 /* Big tablet to 1400px: from 1024px to 1400px (Widths smaller than the 1400px row) */
 /* -------------------------------------------------- */
-@media only screen and (max-width: 1450px) {
-    /*.about-me-text h3 {*/
-    /*    font-size: 130%;*/
-    /*}*/
-
-    /*.about-me-text p {*/
-    /*    font-size: 110%;*/
-    /*}*/
-}
-
 @media only screen and (max-width: 1400px) {
-    /*
-    .header {
-    margin-top: 0;
-    height: 100vh;
-}
 
-    .sidebar-nav { display: none; }
-
-    .centerpiece {
-    width: 100%;
-}
-
-    .centerpiece img { 
-    width: 50%;
-    height: auto;
-}
-
-    h1 { font-size: 350% }
-
-    p {
-    padding: 15px;
-}
-
-    header {
-
-    background-position: 60% 50%;
-
-    background-repeat: no-repeat;
-}
-    */
-    .about-me-text p {
-        font-size: 100%;
-    }
 }
 
 @media only screen and (max-width: 1366px) {
     .centerpiece img {
         width: 40%;
-    }
-
-    .about-me-text p {
-        font-size: 90%;
     }
 }
 
@@ -97,9 +51,7 @@
     }
 
     header {
-        /*background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7));*/
         background-position: 60% 50%;
-        /*background-size: 100%;*/
         background-repeat: no-repeat;
     }
 
