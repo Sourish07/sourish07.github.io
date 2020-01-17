@@ -1,4 +1,8 @@
+Things to add
 
+fix experiences to look like timeline
+
+Fix portfolio to hide text
 
 
 
@@ -14,13 +18,13 @@ Do photoshoot to get more cover photos
     Need one with red shirt and new black tie
 
 Finish portfolio section
-    Put Shotplotter on iPad
+    
     
 Finish resume and link that to website
 
 
 
-Need to fix background in header with responsive webdesign
+
 
 
 
@@ -43,4 +47,17 @@ Import less fonts to speed things up
 
 Fix scrollbar and sidebar for Firefox user
 
+<<<<<<< Updated upstream
 Make top left sourish.dev redirect to homepage
+=======
+Make top left sourish.dev redirect to homepage
+
+Make header pop up when you scroll up and go away when you scroll down
+
+Need to fix background in header with responsive webdesign
+
+
+Not possible (With minimal effort): Make scroll bar dissappear when not scrolling
+
+Put Shotplotter on iPad
+>>>>>>> Stashed changes
