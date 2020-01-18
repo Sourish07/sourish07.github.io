@@ -109,14 +109,13 @@
     }
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 650px) {
     nav {
         padding: 0;
+        display: flex;
+        justify-content: center;
     }
 
-    .header-nav {
-        width: 100%;
-    }
 
 
     .header-name {
@@ -136,7 +135,7 @@
         width: 70%;
     }
 
-    .header-nav {
+    nav {
         width: 100vw;
     }
 
@@ -150,6 +149,16 @@
 
     .skills {
         font-size: 80%;
+    }
+
+    .header-nav li a:before,
+    .menu-button:before {
+        font-size: 30px;
+    }
+
+    .header-nav li,
+    .dropdown-menu {
+        width: 60px;
     }
 }
 

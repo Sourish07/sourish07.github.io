@@ -227,7 +227,6 @@ nav {
     padding: 10px 0 10px 10px;
     display: flex;
     flex-direction: row-reverse;
-    width: 450px;
 }
 
 .header-right {
@@ -331,7 +330,6 @@ nav {
 .menu-button:visited {
     text-decoration: none;
     transition: color 0.2s;
-    font-size: 40px;
 }
 
 .menu-button li {
