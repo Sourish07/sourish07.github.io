@@ -375,14 +375,13 @@ nav {
     width: auto; /* Set the width of the sidebar */
     z-index: 1; /* Stay on top */
     position: fixed;
-    top: 100px;
+    top: 50%;
+    transform: translate(0, -50%);
     left: 15px;
     max-height: 100%;
     background-image: linear-gradient(#FF3636, #9B1500);
     padding: 40px 5px 50px;
     border-radius: 15px;
-
-    transform: translate(0, 25%);
 }
 
 .sidebar-nav li {
