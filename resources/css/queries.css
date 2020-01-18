@@ -167,7 +167,7 @@
 @media (max-height: 850px) and (min-width: 480px) {
     .centerpiece {
         height: 80%;
-        top: 350px;
+        margin: 25px 0 auto 0;
     }
     .centerpiece img {
         top: 120px;
