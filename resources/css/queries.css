@@ -166,7 +166,7 @@
 /* -------------------------------------------------- */
 @media (max-height: 850px) and (min-width: 480px) {
     .centerpiece {
-        height: 75vh;
+        height: 75%;
         width: auto;
     }
     .centerpiece img {
