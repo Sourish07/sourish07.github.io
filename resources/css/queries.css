@@ -16,6 +16,10 @@
         display: none;
     }
 
+    .dropdown-menu {
+        display: inline;
+    }
+
     .header-nav li:first-of-type {
         display: inline-block;
     }

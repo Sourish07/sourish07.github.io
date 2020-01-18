@@ -224,7 +224,7 @@ nav {
 
 .header-nav {
     float: right;
-    padding: 10px 10px;
+    padding: 10px 0 10px 10px;
     display: flex;
     flex-direction: row-reverse;
     width: 450px;
@@ -234,8 +234,7 @@ nav {
     display: flex;
 }
 
-.header-nav li,
-.menu-button li {
+.header-nav li {
     list-style: none;
     text-align: center;
     width: 80px;
@@ -245,24 +244,19 @@ nav {
     overflow: hidden;
 }
 
-.header-nav li a:before,
-.menu-button a:before {
+.header-nav li a:before {
     margin-left: 0;
     font-size: 40px;
 }
 
 .header-nav li a:hover:before,
-.header-nav li a:active:before,
-.menu-button li a:hover:before,
-.menu-button li a:active:before{
+.header-nav li a:active:before {
     font-size: 60px;
     transition: font-size 0.2s;
 }
 
 .header-nav li a:link,
-.header-nav li a:visited,
-.menu-button li a:link,
-.menu-button li a:visited {
+.header-nav li a:visited {
     text-decoration: none;
     padding-left: 0;
     color: #FF2400;
@@ -289,8 +283,43 @@ nav {
     text-shadow: 2px 2px 5px #000;
 }
 
-.dropdown-content {
+/* -------------------------------------------------- */
+/* DROPDOWN MENU */
+/* -------------------------------------------------- */
+
+.dropdown-menu {
     display: none;
+    width: 80px;
+    padding-top: 5px;
+}
+
+.menu-button:before {
+    font-size: 40px;
+    transition: font-size 0.2s;
+}
+
+.dropdown-menu:hover .menu-button:before {
+    font-size: 60px;
+}
+
+.dropdown-menu:hover .dropdown-content,
+.dropdown-menu:active .dropdown-content {
+    display: flex;
+}
+
+.menu-button {
+    text-decoration: none;
+    padding-left: 0;
+    color: #FF2400;
+    width: 150px;
+    transition: color 0.2s;
+}
+
+.menu-button:link,
+.menu-button:visited {
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 40px;
 }
 
 .menu-button li {
@@ -298,18 +327,23 @@ nav {
     list-style: none;
 }
 
-/*.menu-button {*/
-/*    display: none;*/
-/*}*/
-
 .menu-button:hover li a:before,
 .menu-button:active li a:before {
     font-size: 60px;
 }
 
-.menu-button:hover .dropdown-content,
-.menu-button:active .dropdown-content {
-    display: block;
+.dropdown-content {
+    display: none;
+    background-image: linear-gradient(#FF3636, #9B1500);
+    border-radius: 15px;
+    width: auto;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
 }
 
 /* Sidebar */
@@ -337,13 +371,10 @@ nav {
 .sidebar-nav li a {
     color: #fff;
     text-decoration: none;
-
-
 }
 
 .sidebar-nav li:last-child {
     margin-bottom: 0;
-
 }
 
 /* -------------------------------------------------- */
