@@ -160,10 +160,39 @@
     }
 }
 
+
+/* -------------------------------------------------- */
+/* 13" laptops */
+/* -------------------------------------------------- */
+@media (max-height: 850px) {
+    .centerpiece {
+        height: 75vh;
+        width: auto;
+    }
+    .centerpiece img {
+
+        width: auto;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .header-nav li a:hover:before,
+    .header-nav li a:active:before {
+        font-size: 50px;
+        transition: font-size 0.2s;
+    }
+
+    .dropdown-menu:hover .menu-button:before {
+        font-size: 50px;
+    }
+}
+
 /* -------------------------------------------------- */
 /* Phones in landscape mode: (height) from 0px to 750px */
 /* -------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 480px) {
+@media (max-height: 850px) and (min-width: 480px) and (max-width: 1200px){
     .centerpiece {
         height: 70%;
         width: auto;
