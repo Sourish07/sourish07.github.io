@@ -165,9 +165,18 @@
 /* 13" laptops */
 /* -------------------------------------------------- */
 @media (max-height: 850px) and (min-width: 480px) {
+    .centerpiece {
+        height: 80%;
+        top: 350px;
+    }
     .centerpiece img {
-        height: 50vh;
+        top: 120px;
+        height: 60vh;
         width: auto;
+    }
+
+    h1 {
+        font-size: 350%;
     }
 
     nav {
