@@ -350,6 +350,7 @@ nav {
     border-radius: 15px;
     width: auto;
     flex-direction: column;
+    float: right;
 }
 
 .dropdown-content a {
@@ -358,7 +359,9 @@ nav {
     padding: 10px;
 }
 
-/* Sidebar */
+/* -------------------------------------------------- */
+/* SIDEBAR */
+/* -------------------------------------------------- */
 
 .sidebar-nav {
     width: auto; /* Set the width of the sidebar */
