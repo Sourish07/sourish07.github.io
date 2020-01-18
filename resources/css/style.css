@@ -234,6 +234,10 @@ nav {
     display: none;
 }
 
+.header-nav li:first-of-type a::before {
+    color: #555555;
+}
+
 .header-nav li {
     list-style: none;
     text-align: center;
@@ -358,6 +362,7 @@ nav {
 .about-me-text h3 {
     text-align: center;
     font-size: 150%;
+    margin-top: 10px;
 }
 
 .about-me-text p {

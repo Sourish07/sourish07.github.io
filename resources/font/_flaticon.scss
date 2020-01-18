@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 01/01/2020 23:22
+    Creation date: 17/01/2020 23:44
     */
 
     @font-face {
@@ -42,9 +42,11 @@
 .flaticon-portfolio:before { content: "\f102"; }
 .flaticon-cat:before { content: "\f103"; }
 .flaticon-linkedin:before { content: "\f104"; }
+.flaticon-down-chevron:before { content: "\f105"; }
     
     $font-Flaticon-mail: "\f100";
     $font-Flaticon-briefcase: "\f101";
     $font-Flaticon-portfolio: "\f102";
     $font-Flaticon-cat: "\f103";
     $font-Flaticon-linkedin: "\f104";
+    $font-Flaticon-down-chevron: "\f105";
