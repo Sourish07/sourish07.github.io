@@ -291,6 +291,7 @@ nav {
     display: none;
     width: 80px;
     padding-top: 5px;
+    align-items: center;
 }
 
 .menu-button:before {
@@ -307,12 +308,23 @@ nav {
     display: flex;
 }
 
+.dropdown-button {
+    display: flex;
+    justify-items: center;
+}
+
 .menu-button {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     padding-left: 0;
     color: #FF2400;
     width: 150px;
     transition: color 0.2s;
+}
+
+.menu-button::before {
+    margin: 0 auto;
 }
 
 .menu-button:link,
