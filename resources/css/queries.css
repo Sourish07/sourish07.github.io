@@ -164,7 +164,7 @@
 /* -------------------------------------------------- */
 /* 13" laptops */
 /* -------------------------------------------------- */
-@media (max-height: 850px) {
+@media (max-height: 850px) and (min-width: 480px) {
     .centerpiece {
         height: 75vh;
         width: auto;
