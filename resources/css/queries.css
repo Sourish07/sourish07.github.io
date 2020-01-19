@@ -39,7 +39,6 @@
         width: 100%;
     }
 
-
     h1 {
         font-size: 350%
     }
@@ -54,6 +53,9 @@
         background-repeat: no-repeat;
     }
 
+    section {
+        padding: 25px 0;
+    }
 
     .about-me-content {
         flex-direction: column;
@@ -72,7 +74,8 @@
         align-items: center;
     }
 
-    #shotplotter {
+    #shotplotter,
+    #blender {
         flex-direction: column-reverse;
     }
 }
@@ -100,11 +103,16 @@
     }
 
     section {
-        margin: 0 0 25px 0;
+        padding: 25px 0;
     }
 
     .centerpiece img {
         width: 60vw;
+    }
+
+    .portfolio-project-text h3 {
+        padding: 0;
+        font-size: 120%;
     }
 }
 
@@ -114,7 +122,6 @@
         display: flex;
         justify-content: center;
     }
-
 
     .header-name {
         display: none;
@@ -135,6 +142,10 @@
 
     nav {
         width: 100vw;
+    }
+
+    section {
+        padding: 5px 0;
     }
 
     .centerpiece {
@@ -159,7 +170,6 @@
         width: 60px;
     }
 }
-
 
 /* -------------------------------------------------- */
 /* 13" laptops */
@@ -211,7 +221,7 @@
     }
 
     section {
-        margin: 0 0 25px 0;
+        padding: 50px 0;
     }
 
     h1 {
@@ -253,7 +263,6 @@
         font-size: 50px;
     }
 
-
     .about-me-text {
         margin-bottom: 10px;
     }
@@ -261,7 +270,6 @@
     .my-experiences span {
         justify-content: center;
     }
-
 
     .experience-image-container {
         justify-content: center;
