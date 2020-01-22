@@ -390,6 +390,7 @@ nav {
     margin-bottom: 50px;
     text-align: center;
     list-style: none;
+    padding: 0 5px;
 }
 
 .sidebar-nav li a {
