@@ -1,5 +1,5 @@
 /* -------------------------------------------------- */
-/* GENERAL SETUP (Official accent color: #FF3636, #b30000) */
+/* GENERAL SETUP (Official accent color: #e62b1e, #b30000) */
 /* -------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap');
@@ -39,7 +39,7 @@ html, body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #FF2400;
+    background: #e62b1e;
     border-radius: 10px;
 }
 
@@ -62,7 +62,7 @@ html, body {
 }
 
 section {
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -95,7 +95,7 @@ h2 {
 }
 
 h2 span {
-    border-bottom: 1.5px solid #FF3636;
+    border-bottom: 1.5px solid #e62b1e;
     display: inline-block;
     line-height: 0.95;
 }
@@ -105,7 +105,7 @@ h2 span {
 /* -------------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(CoverPhoto2.png);
+    background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(CoverPhoto.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -161,16 +161,16 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #FF3636;
-    border: 1px solid #FF3636;
+    background-color: #e62b1e;
+    border: 1px solid #e62b1e;
     color: #fff;
     margin-right: 12px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #FF3636;
-    color: #FF3636;
+    border: 1px solid #e62b1e;
+    color: #e62b1e;
 }
 
 .btn:hover,
@@ -346,7 +346,7 @@ nav {
 
 .dropdown-content {
     display: none;
-    background-image: linear-gradient(#FF3636, #9B1500);
+    background-image: linear-gradient(#e62b1e, #9B1500);
     border-radius: 15px;
     width: auto;
     flex-direction: column;
@@ -381,7 +381,7 @@ nav {
     transform: translate(0, -50%);
     left: 15px;
     max-height: 100%;
-    background-image: linear-gradient(#FF3636, #9B1500);
+    background-image: linear-gradient(#e62b1e, #9B1500);
     padding: 40px 5px 50px;
     border-radius: 15px;
 }
@@ -580,17 +580,38 @@ nav {
     opacity: 0.2;
 }
 
+.portfolio-project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .portfolio-project-text h3 {
     font-size: 95%;
     padding-left: 20px;
 }
 
+.contact a:link {
+    color: white;
+    /* text-decoration: none; */
+}
+
 /* -------------------------------------------------- */
 /* FOOTER */
 /* -------------------------------------------------- */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 50px;
+}
 .footer {
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between
+    
+    /* display: flex; */
+    /* justify-content: space-between */
+    
 }
 
+.footer span {
+    font-size: 80%;
+}
