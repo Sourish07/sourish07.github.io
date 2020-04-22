@@ -453,7 +453,22 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-.skills-content {
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 80%;
+}
+
+.skills ul span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 80%;
+}
+
+/* .skills-content {
     width: 50vw;
     max-width: 800px;
     
@@ -481,16 +496,16 @@ nav {
     flex-direction: column;
     
     align-items: center;
-}
+} */
 
-.skills-container {
+/* .skills-container {
     /* margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; */
-}
+/* } */
 
-.skills-content ul li {
+/* .skills-content ul li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -500,7 +515,7 @@ nav {
 .skills-content span li {
     font-size: 30%;
     list-style: square;
-}
+} */
 
 .ion-md-star,
 .ion-md-star-outline {
