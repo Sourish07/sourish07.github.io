@@ -1,10 +1,35 @@
 /* -------------------------------------------------- */
 /* 13 inch laptops: from 1025x to 1023px */
 /* -------------------------------------------------- */
-@media only screen and (max-width: 1270px) {
-    html {
-        font-size: 81.25%;
+@media only screen and (max-width: 1280px) {
+    h1 {
+        font-size: 4rem;
     }
+
+    .centerpiece {
+        top: 56%;
+    }
+
+    .centerpiece .subheader {
+        font-size: 1.8rem;
+    }
+
+    .sidebar-nav {    
+        top: 55%;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .image-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-nav li a {
+        font-size: 1.25rem;
+    }
+
 }
 
 /* -------------------------------------------------- */
@@ -27,8 +52,6 @@
     .header-nav li:first-of-type {
         display: inline-block;
     }
-
-    
 
     section {
         padding: 25px 0;
@@ -130,7 +153,8 @@
         font-size: 4rem;
     }
 
-    .header-nav li a:hover span, .header-nav li a:active span {
+    .header-nav li a:hover span, 
+    .header-nav li a:active span {
         font-size: 1rem;
     }
 
@@ -155,28 +179,37 @@
 /* -------------------------------------------------- */
 /* Small phones */
 /* -------------------------------------------------- */
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
     html {
         font-size: 13px;
     }
 }
 
 
-/* @media (max-height: 850px) and (min-width: 480px) { */
-@media (orientation: landscape) {
+/* -------------------------------------------------- */
+/* Large phones landscape */
+/* -------------------------------------------------- */
+@media (orientation: landscape) and (max-width: 1024px) {
     html {
         font-size: 81.25%;
     }
+
     .centerpiece {
         width: 95%;
         flex-direction: row;
         justify-content: center;
         margin: 25px 0 auto 0;
     }
+
     .centerpiece img {
         top: 120px;
         height: 60vh;
         width: auto;
+        margin-right: 10px;
+    }
+
+    .sidebar-nav {
+        display: none;
     }
 
     .row {
@@ -184,15 +217,17 @@
     }
 
     .experience-image-container img {
-    width: auto;
+        width: 50%;
     }
 
-    .portfolio-project-image-container img,
-    .experience-image-container img {
+    .portfolio-project-image-container img {
         max-height: 200px;
     }
 }
 
+/* -------------------------------------------------- */
+/* Small phones landscape */
+/* -------------------------------------------------- */
 @media (orientation: landscape) and (max-width: 700px) {
     h1 {
         font-size: 4rem;
