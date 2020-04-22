@@ -25,7 +25,8 @@
             <div class="header-right">
                 <ul class="header-nav">
                     <li>
-                        <a href="https://1drv.ms/b/s!AjWyRdNYlbeQgrYqBLiADtwX9cH-zQ" target="_blank" class="header-icons flaticon-portfolio"><span><br />Resume</span></a>
+                        <a href="https://1drv.ms/b/s!AjWyRdNYlbeQgrYqBLiADtwX9cH-zQ" target="_blank"
+                            class="header-icons flaticon-portfolio"><span><br />Resume</span></a>
                     </li>
                     <li>
                         <a href="mailto: skundu4@wisc.edu" class="header-icons flaticon-mail"
@@ -48,26 +49,16 @@
                         <a href="#" class="header-icons flaticon-down-chevron menu-button"></a>
                     </div>
                     <div class="dropdown-content">
-                        <a href="#about-me" class="dropdown-link">About me</a>
-                        <a href="#skills">Skills</a>
-                        <!-- <a href="#experiences">Experiences</a> -->
-                        <a href="#portfolio">Portfolio</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#about-me" class="quick-link">About me</a>
+                        <a href="#skills" class="quick-link">Skills</a>
+                        <a href="#experiences" class="quick-link">Experiences</a>
+                        <a href="#portfolio" class="quick-link">Portfolio</a>
+                        <a href="#contact" class="quick-link">Contact</a>
                     </div>
                 </div>
             </div>
             <script type="text/javascript">
-                var lastScrollTop = 0;
-                navbar = document.getElementById("navbar");
-                window.addEventListener("scroll", function () {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    if (scrollTop > lastScrollTop) {
-                        navbar.style.top = "-120px";
-                    } else {
-                        navbar.style.top = "0";
-                    }
-                    lastScrollTop = scrollTop;
-                })
+
             </script>
         </nav>
         <div class="row centerpiece">
@@ -78,18 +69,19 @@
                     An ambitious creator, passionate speaker, and insightful thinker
                 </div>
                 <div>
-                    <a class="btn btn-full" href="https://1drv.ms/b/s!AjWyRdNYlbeQgrYqBLiADtwX9cH-zQ" target="_blank">Resume</a>
+                    <a class="btn btn-full" href="https://1drv.ms/b/s!AjWyRdNYlbeQgrYqBLiADtwX9cH-zQ"
+                        target="_blank">Resume</a>
                     <a class="btn btn-ghost" href="#portfolio">Portfolio</a>
                 </div>
             </div>
         </div>
         <div class="sidebar-nav">
             <ul>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <!-- <li><a href="#experiences">Experiences</a></li> -->
-                <li><a href="#portfolio">Portfolio</a></li>
-                <!-- <li><a href="#contact">Contact</a></li> -->
+                <li><a href="#about-me" class="quick-link">About me</a></li>
+                <li><a href="#skills" class="quick-link">Skills</a></li>
+                <li><a href="#experiences" class="quick-link">Experience</a></li>
+                <li><a href="#portfolio" class="quick-link">Portfolio</a></li>
+                <li><a href="#contact" class="quick-link">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -138,10 +130,22 @@
         <div class="row">
             <h2><span>S</span>kills</h2>
             <div class="skills-content">
-                <div class="skills-container">
+                <div class="row skills-container">
                     <h3>Languages</h3>
                     <ul>
-                        <li>Java<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
+                        <li>Python</li>
+                        <span>
+                            <li>- Django</li>
+                            <li>- Numpy</li>
+                            <li>- Pandas</li>
+                            <li>- Matplotlib</li>
+                        </span>
+                        <li>Java</li>
+                        <li>MATLAB</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Swift</li>
+                        <!-- <li>Java<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i></span></li>
                         <li>Python<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
@@ -158,13 +162,16 @@
                                     class="icon ion-md-star-outline"></i></span></li>
                         <li>Swift<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i><i class="icon ion-md-star-outline"></i><i
-                                    class="icon ion-md-star-outline"></i></span></li>
+                                    class="icon ion-md-star-outline"></i></span></li> -->
                     </ul>
                 </div>
-                <div class="skills-container">
+                <div class="row skills-container">
                     <h3>Other</h3>
                     <ul>
-                        <li>Git/GitHub<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
+                        <li>Git/GitHub</li>
+                        <li>Android App Development</li>
+                        <li>Blender (3-D Modeling)</li>
+                        <!-- <li>Git/GitHub<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i></span></li>
                         <li>Django (Python)<span><i class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
@@ -177,45 +184,38 @@
                         <li>Blender (3-D Modeling)<span><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star"></i><i class="icon ion-md-star"></i><i
                                     class="icon ion-md-star-outline"></i><i class="icon ion-md-star-outline"></i></span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </div>
 
     </section>
-    <!-- <section class="my-experiences" id="experiences">
-    <div class="row">
-        <div class="row experiences__header">
-            <h2><span>E</span>xperiences</h2>
-        </div>
-        <div class="experiences">
-            <div class="row experience">
-                <div class="experience">
-                    <div class="experience-image-container">
-                        <img src="resources/images/Experiences-Leidos.jpg" id="leidos"/>
-                        <h3>Leidos</h3>
+    <section class="my-experiences" id="experiences">
+        <div class="row">
+            <div class="row experiences__header">
+                <h2><span>E</span>xperience</h2>
+            </div>
+            <div class="experiences">
+                <div class="row experience">
+                    <div class="experience">
+                        <div class="experience-image-container">
+                            <img src="resources/images/Experiences-Leidos.jpg" id="leidos" />
+                            <h3>Leidos</h3>
+                        </div>
+                        <p>
+                            I shadowed the software development team at Leidos, a company that works on air-traffic
+                            control software for the Federal Aviation Administration. I got the opportunity to work with
+                            agile and waterfall teams to gain more insight about working in the field of Computer
+                            Science. I also ran tests in Java and C++ to learn more about the software development
+                            process, along with the steps from planning and designing to debugging and launching.
+                        </p>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                        commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                        sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-                        imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-                        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-                        semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                        porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-                        ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                        viverra nulla ut metus varius laoreet.
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
-</section> -->
+    </section>
     <section class="portfolio-section" id="portfolio">
         <div class="row">
             <div class="row portfolio__header">
@@ -250,7 +250,8 @@
                         <p>
                             This application takes in Python code from the user as input, and then outputs the
                             equivalent Java code that performs the same task. Some features that are supported are
-                            loops, conditionals, try/catch blocks, user input, and more! Python's Django web framwork, HTML, CSS, and Javascript were used.
+                            loops, conditionals, try/catch blocks, user input, and more! Python's Django web framwork,
+                            HTML, CSS, and Javascript were used.
                         </p>
                     </div>
                 </div>
@@ -258,7 +259,12 @@
                     <div class="portfolio-project-text">
                         <h3>Shotplotter</h3>
                         <p>
-                            My team and I created this application for our high school's volleyball coach. He needed an efficient method to keep track of the opponents' shots during a match; he was initally using pen and paper, which was very tedious. Shotplotter allows the user to draw lines on the iPad&#8212;with different styles and colors representing different shot types and players&#8212;greatly streamlining the process of analyzing the opponents strengths and weaknesses.
+                            My team and I created this application for our high school's volleyball coach. He needed an
+                            efficient method to keep track of the opponents' shots during a match; he was initally using
+                            pen and paper, which was very tedious. Shotplotter allows the user to draw lines on the
+                            iPad&#8212;with different styles and colors representing different shot types and
+                            players&#8212;greatly streamlining the process of analyzing the opponents strengths and
+                            weaknesses.
                         </p>
                     </div>
 
@@ -273,7 +279,8 @@
                     <div class="portfolio-project-text">
                         <h3>Yahtzee</h3>
                         <p>
-                            This Android application virtualizes the five dice from the classic game of Yahtzee. The user can lock the rolls on dice they want to keep, while rerolling the other ones.
+                            This Android application virtualizes the five dice from the classic game of Yahtzee. The
+                            user can lock the rolls on dice they want to keep, while rerolling the other ones.
                         </p>
                     </div>
                 </div>
@@ -281,7 +288,8 @@
                     <div class="portfolio-project-text">
                         <h3>Blender</h3>
                         <p>
-                            Outside of coding , I'm also passionate in 3-D modelling using Blender. I enjoy creating simple, everyday objects while striving for photorealism.
+                            Outside of coding , I'm also passionate in 3-D modelling using Blender. I enjoy creating
+                            simple, everyday objects while striving for photorealism.
                         </p>
                     </div>
                     <div class="portfolio-project-image-container">
@@ -291,24 +299,49 @@
             </div>
         </div>
     </section>
-    <!-- <section class="contact" id="contact">
-    <div class="row">
-        <h2><span>C</span>ontact</h2>
-        <div class="contact-content">
-            <p>
-                Feel free to email me at <a href="mailto:skundu4@wisc.edu">skundu4@wisc.edu</a>!
-            </p>
+    <section class="contact" id="contact">
+        <div class="row">
+            <h2><span>C</span>ontact</h2>
+            <div class="contact-content">
+                <span>Email: <a href="mailto:skundu4@wisc.edu">skundu4@wisc.edu</a></span>
+
+                <span>LinkedIn: <a href="mailto:skundu4@wisc.edu">skundu4@wisc.edu</a></span>
+
+
+            </div>
         </div>
-    </div>
 
-</section>
-<footer>
+    </section>
+    <!-- <footer>
     &copy; SOURISH KUNDU <span>All Rights Reserved</span>
-    <!-- <div class="row footer">
+    <div class="row footer">
         
-    </div> -->
+    </div>
     </footer> -->
+    <script>
+        var lastScrollTop = 0;
+        navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-120px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
 
+        // quickLinks = document.getElementsByClassName("quick-link");
+        // var clickFunc = function () {
+        //     console.log("it's lit")
+        //     navbar.style.top = "-120px";
+        // }
+
+        // Array.from(quickLinks).forEach(function (element) {
+        //     console.log(element);
+        //     element.addEventListener("click", clickFunc)
+        // });
+    </script>
 </body>
 
 </html>

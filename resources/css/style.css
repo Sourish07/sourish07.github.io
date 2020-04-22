@@ -199,7 +199,6 @@ input[type=submit]:active {
 
 nav {
     position: fixed;
-    top: 0;
     width: 100vw;
     height: 120px;
     box-sizing: border-box;
@@ -457,27 +456,50 @@ nav {
 .skills-content {
     width: 50vw;
     max-width: 800px;
+    
+}
 
+.skills-content h3 {
+    font-size: 75%;
+}
+
+.skills-content h3:last-of-type {
+    margin-top: 10px;
 }
 
 .skills-content {
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 180%;
+    width: 100vw;
 }
 
 .skills-content ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
 }
 
 .skills-container {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 .skills-content ul li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    font-size: 50%;
+}
+
+.skills-content span li {
+    font-size: 30%;
+    list-style: square;
 }
 
 .ion-md-star,
@@ -511,7 +533,7 @@ nav {
 
 .experience-image-container img {
     display: block;
-    width: 100%;
+    width: 75%;
     transform: scale(1);
 
 }
@@ -547,7 +569,6 @@ nav {
     display: flex;
     height: auto;
     width: 100%;
-    margin-top: 20px;
 }
 
 .portfolio-project-image-container {
@@ -590,6 +611,18 @@ nav {
 .contact a:link {
     color: white;
     /* text-decoration: none; */
+}
+/* -------------------------------------------------- */
+/* CONTACT */
+/* -------------------------------------------------- */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-content span {
+    margin: 10px 0;
 }
 
 /* -------------------------------------------------- */
