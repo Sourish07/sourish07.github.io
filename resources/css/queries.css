@@ -163,7 +163,7 @@
 
 
 
-@media (orientation: landscape) {
+@media only screen (orientation: landscape) {
     html {
         font-size: 81.25%;
     }
@@ -174,7 +174,7 @@
         justify-content: center;
         margin: 25px 0 auto 0;
     }
-    
+
     .centerpiece img {
         top: 120px;
         height: 60vh;
