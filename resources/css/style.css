@@ -22,6 +22,9 @@ html, body {
     overflow-x: hidden;
 }
 
+img {
+    image-orientation: from-image;
+}
 
 /* -------------------------------------------------- */
 /* SCROLLBAR */
@@ -466,9 +469,9 @@ nav {
     width: 75%;
 }
 
-#leidos {
+/* #leidos {
     transform: rotate(90deg);
-}
+} */
 
 /* -------------------------------------------------- */
 /* PORTFOLIO SECTION */
