@@ -155,7 +155,7 @@
 /* -------------------------------------------------- */
 /* Small phones */
 /* -------------------------------------------------- */
-@media only screen and (max-width: 400px) {
+@media and (max-width: 400px) {
     html {
         font-size: 13px;
     }
@@ -163,7 +163,7 @@
 
 
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 1024px) {
     html {
         font-size: 81.25%;
     }
@@ -188,6 +188,10 @@
 
     .row {
         width: 95vw;
+    }
+
+    .experience-image-container img {
+        width: 50%;
     }
 }
 
