@@ -162,34 +162,32 @@
 }
 
 
-/* @media (max-height: 850px) and (min-width: 480px) { */
+
 @media (orientation: landscape) {
     html {
         font-size: 81.25%;
     }
+
     .centerpiece {
         width: 95%;
         flex-direction: row;
         justify-content: center;
         margin: 25px 0 auto 0;
     }
+    
     .centerpiece img {
         top: 120px;
         height: 60vh;
         width: auto;
+        margin-right: 10px;
+    }
+
+    .sidebar-nav {
+        display: none;
     }
 
     .row {
         width: 95vw;
-    }
-
-    .experience-image-container img {
-    width: auto;
-    }
-
-    .portfolio-project-image-container img,
-    .experience-image-container img {
-        max-height: 200px;
     }
 }
 
@@ -205,6 +203,8 @@
     .image-text h3 {
         font-size: 1.4rem;
     }
+
+    
 }
 
 /* -------------------------------------------------- */
