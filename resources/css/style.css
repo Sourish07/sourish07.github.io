@@ -22,6 +22,9 @@ html, body {
     overflow-x: hidden;
 }
 
+img {
+    image-orientation: from-image;
+}
 
 /* -------------------------------------------------- */
 /* SCROLLBAR */
@@ -466,10 +469,6 @@ nav {
     width: 75%;
 }
 
-#leidos {
-    transform: rotate(90deg);
-}
-
 /* -------------------------------------------------- */
 /* PORTFOLIO SECTION */
 /* -------------------------------------------------- */
@@ -522,6 +521,7 @@ nav {
     margin: 10px 0;
 }
 
-.contact a:link {
+.contact a:link,
+.contact a:visited {
     color: white;
 }
