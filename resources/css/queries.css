@@ -1,35 +1,21 @@
 /* -------------------------------------------------- */
-/* Big tablet to 1400px: from 1024px to 1400px (Widths smaller than the 1400px row) */
-/* -------------------------------------------------- */
-@media only screen and (max-width: 1400px) {
-
-}
-
-/* @media only screen and (max-width: 1366px) {
-    .centerpiece img {
-        width: 40vw;
-    }
-} */
-
-/* -------------------------------------------------- */
-/* 13 inch laptops: from 768px to 1023px */
+/* 13 inch laptops: from 1025x to 1023px */
 /* -------------------------------------------------- */
 @media only screen and (max-width: 1270px) {
     html {
-        font-size: 12px;
-    }
-
-    p,
-    .about-me-text {
-        font-size: 16px;
+        font-size: 81.25%;
     }
 }
 
 /* -------------------------------------------------- */
-/* Small tablets to big tablet: from 768px to 1023px */
+/* Landscape tablets: from 769px to 1024px */
 /* -------------------------------------------------- */
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 100%;
+    }
+
     .sidebar-nav {
         display: none;
     }
@@ -42,32 +28,7 @@
         display: inline-block;
     }
 
-    .centerpiece {
-        width: 100%;
-    }
-
-    .centerpiece img {
-        width: 50vw;
-    }
-
-    .centerpiece .subheader {
-        padding: 0 2em;
-    }
-
-    h1 {
-        /* font-size: 350% */
-    }
-
-    p {
-        /* padding: 15px; */
-        /* font-size: 120%; */
-    }
-
-    header {
-        background-position: 60% 50%;
-        background-repeat: no-repeat;
-        background-image: none;
-    }
+    
 
     section {
         padding: 25px 0;
@@ -81,11 +42,10 @@
         width: 50%;
     }
 
-    .skills-content {
-        /* font-size: 240%; */
+    #skills .row {
+        width: 20vw;
         
     }
-
 
     .experience {
         flex-direction: column;
@@ -93,7 +53,10 @@
 
     .portfolio-project {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .portfolio-project:not(:first-of-type) {
+        margin-top: 75px;
     }
 
     #shotplotter,
@@ -104,30 +67,17 @@
 }
 
 /* -------------------------------------------------- */
-/* Small phones to snall tablets: from 480px to 767px */
+/* Portrait tablets: from 480px to 768px */
 /* -------------------------------------------------- */
-@media only screen and (max-width: 767px) {
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@media only screen and (max-width: 768px) {
+
+    header {
+        background-image: none;
     }
 
     .row {
         width: 95vw;
     }
-
-    h1 {
-        /* font-size: 300% */
-    }
-
-    /* p {
-        padding: 0;
-    }
-
-    .about-me-text p {
-        padding: 100;
-    } */
 
     section {
         padding: 25px 0;
@@ -141,23 +91,26 @@
         width: 30vw;
     }
 
-    .skills-content {
-        /* font-size: 300%; */
-        
-    }
-    
-    .portfolio-project-text p,
-    .experience p {
-        /* padding: 0; */
+    p {
+        padding: 0;
     }
 
-    .portfolio-project-text h3 {
-        /* padding: 0; */
-        /* font-size: 120%; */
+    .image-text h4 {
+        padding: 10px 0 0 0;
+    }
+
+    #portfolio .image-text p:last-of-type {
+        padding: 0px 0 0 0;
+    }
+
+    
+
+    .image-text h3 {
+        padding-left: 0;
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 660px) {
     nav {
         padding: 0;
         display: flex;
@@ -170,40 +123,27 @@
 }
 
 /* -------------------------------------------------- */
-/* Small phones: from 0 to 480px */
+/* Phones: from 0 to 480px */
 /* -------------------------------------------------- */
 @media only screen and (max-width: 480px) {
-    .centerpiece img {
-        width: 75vw;
+    h1 {
+        font-size: 4rem;
     }
 
-    .about-me-img-container img {
-        width: 70%;
+    .header-nav li a:hover span, .header-nav li a:active span {
+        font-size: 1rem;
     }
 
-    nav {
-        width: 100vw;
+    h2 {
+        font-size: 3.5rem;
     }
 
-    section {
-        padding: 5px 0;
+    h3 {
+        font-size: 1.5rem;
     }
 
-    .centerpiece {
-        padding-top: 25px;
-    }
-
-    .about-me-text {
-        margin-bottom: 10px;
-    }
-
-    /* .skills {
-        font-size: 80%;
-    } */
-
-    .header-nav li a:before,
-    .menu-button:before {
-        /* font-size: 30px; */
+    #skills .row {
+        width: 40vw;
     }
 
     .header-nav li,
@@ -213,12 +153,24 @@
 }
 
 /* -------------------------------------------------- */
-/* 13" laptops */
+/* Small phones */
 /* -------------------------------------------------- */
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+
 /* @media (max-height: 850px) and (min-width: 480px) { */
 @media (orientation: landscape) {
+    html {
+        font-size: 81.25%;
+    }
     .centerpiece {
-        height: 80%;
+        width: 95%;
+        flex-direction: row;
+        justify-content: center;
         margin: 25px 0 auto 0;
     }
     .centerpiece img {
@@ -227,99 +179,33 @@
         width: auto;
     }
 
-    h1 {
-        /* font-size: 350%; */
+    .row {
+        width: 95vw;
     }
 
-    nav {
-        height: 100px;
+    .experience-image-container img {
+    width: auto;
     }
 
-    .header-nav li a:hover:before,
-    .header-nav li a:active:before {
-        /* font-size: 50px; */
-        transition: font-size 0.2s;
-    }
-
-    .dropdown-menu:hover .menu-button:before {
-        /* font-size: 50px; */
+    .portfolio-project-image-container img,
+    .experience-image-container img {
+        max-height: 200px;
     }
 }
 
-/* -------------------------------------------------- */
-/* Phones in landscape mode: (height) from 0px to 750px */
-/* -------------------------------------------------- */
-/*
-
-*/
-/* @media (max-height: 850px) and (min-width: 480px) and (max-width: 1100px){
-    .centerpiece {
-        height: 70%;
-        width: auto;
-    }
-
-    .centerpiece img {
-        height: 70%;
-        width: auto;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    section {
-        padding: 50px 0;
-    }
-
+@media (orientation: landscape) and (max-width: 700px) {
     h1 {
-        font-size: 10vh;
+        font-size: 4rem;
     }
 
-    nav {
-        height: 100px;
+    h2 {
+        font-size: 3.5rem;
     }
 
-    .centerpiece {
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
+    .image-text h3 {
+        font-size: 1.4rem;
     }
-
-    .centerpiece .subheader {
-        font-size: 4vh;
-        word-spacing: 1px;
-    }
-
-    .header-nav li a:before,
-    .menu-button:before {
-        font-size: 30px;
-    }
-
-    .header-nav li,
-    .dropdown-menu {
-        width: 60px;
-    }
-
-    .header-nav li a:hover:before,
-    .header-nav li a:active:before {
-        font-size: 50px;
-        transition: font-size 0.2s;
-    }
-
-    .dropdown-menu:hover .menu-button:before {
-        font-size: 50px;
-    }
-
-    .about-me-text {
-        margin-bottom: 10px;
-    }
-
-    .my-experiences span {
-        justify-content: center;
-    }
-
-    .experience-image-container {
-        justify-content: center;
-    }
-} */
+}
 
 /* -------------------------------------------------- */
 /* Firefox unique scroll bar */
