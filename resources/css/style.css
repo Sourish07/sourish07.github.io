@@ -551,7 +551,7 @@ nav {
     margin: 10px 0;
 }
 
-.contact a:link,
-.contact a:visited {
+#contact a:link,
+#contact a:visited {
     color: white;
 }
