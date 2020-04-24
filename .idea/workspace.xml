@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c83231e-5d11-44db-ac16-662931aed0e0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ayDFA67XBEQLkmuVpzFD8g85C1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sourish07.github.io" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c83231e-5d11-44db-ac16-662931aed0e0" name="Default Changelist" comment="" />
+      <created>1587698833373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587698833373</updated>
+      <workItem from="1587698834547" duration="989000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added a gitignore">
+      <created>1587699282802</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587699282802</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed some more files that were unneeded">
+      <created>1587699642975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587699642975</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added a gitignore" />
+    <MESSAGE value="Removed some more files that were unneeded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed some more files that were unneeded" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="872" y="186" key="CommitChangelistDialog2" timestamp="1587699642601">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="872" y="186" key="CommitChangelistDialog2/2560.224.900.1570/0.0.2560.1410/-1920.107.1920.1050@0.0.2560.1410" timestamp="1587699642601" />
+    <state x="1060" y="460" key="FileChooserDialogImpl" timestamp="1587699822995">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1060" y="460" key="FileChooserDialogImpl/2560.224.900.1570/0.0.2560.1410/-1920.107.1920.1050@0.0.2560.1410" timestamp="1587699822995" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1587699286713">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2/2560.224.900.1570/0.0.2560.1410/-1920.107.1920.1050@0.0.2560.1410" timestamp="1587699286713" />
+  </component>
+</project>
