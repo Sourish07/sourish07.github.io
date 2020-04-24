@@ -416,15 +416,31 @@ nav {
 
 #skills h3 {
     font-size: 1.75rem;
+    margin-bottom: 5px;
 }
 
-#skills h3:last-of-type {
+#skills h3:not(first-of-type) {
     margin-top: 10px;
 }
 
+.skills-row {
+    display: flex;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.skill img {
+    height: 100px;
+}
+
 #skills .row {
-    width: 12vw;
-    align-items: normal;
+    /*width: 12vw;*/
+    align-items: center;
 }
 
 #skills ul {
@@ -446,6 +462,8 @@ nav {
 
     font-size: 1rem;
 }
+
+
 
 
 /* -------------------------------------------------- */
