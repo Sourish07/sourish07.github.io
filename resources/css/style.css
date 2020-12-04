@@ -436,6 +436,8 @@ nav {
     align-items: center;
     padding: 10px 20px;
     object-fit: contain;
+    /*flex-basis: 20%;*/
+    /*width: 150px;*/
 }
 
 .skill img {
