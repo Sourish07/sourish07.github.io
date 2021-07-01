@@ -480,6 +480,10 @@ nav {
     position: relative;
 }
 
+.portfolio-project:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
 .portfolio-project-image-container {
     flex: 0 0 50%;
     margin: 25px 0;
