@@ -73,14 +73,12 @@
         flex-direction: column;
     }
 
-    .portfolio-project:not(:first-of-type) {
-        margin-top: 75px;
+    .portfolio-project:nth-child(odd) {
+        flex-direction: column;
     }
 
-    #shotplotter,
-    #blender,
-    #analyzer {
-        flex-direction: column-reverse;
+    .portfolio-project:not(:first-of-type) {
+        margin-top: 75px;
     }
 }
 
