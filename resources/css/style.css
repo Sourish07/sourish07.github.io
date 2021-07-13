@@ -344,7 +344,8 @@ nav {
 
 .dropdown-content {
     display: none;
-    background-image: linear-gradient(#e62b1e, #9B1500);
+    /*background-image: linear-gradient(#e62b1e, #9B1500);*/
+    background: #e62b1e;
     border-radius: 15px;
     width: auto;
     flex-direction: column;
@@ -376,16 +377,30 @@ nav {
     top: 50%;
     transform: translate(0, -50%);
     left: 15px;
-    background-image: linear-gradient(#e62b1e, #9B1500);
-    padding: 40px 5px 50px;
-    border-radius: 15px;
+    background: #e62b1e;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .sidebar-nav li {
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
+    padding: 30px 5px;
     text-align: center;
     list-style: none;
-    padding: 0 5px;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav li:hover,
+.sidebar-nav li:active {
+    background: white;
+
+}
+
+.sidebar-nav li:hover a,
+.sidebar-nav li:active a{
+    color: #EF3159;
+
 }
 
 .sidebar-nav li a {
@@ -394,9 +409,9 @@ nav {
     text-decoration: none;
 }
 
-.sidebar-nav li:last-child {
-    margin-bottom: 0;
-}
+/*.sidebar-nav li:last-child {*/
+/*    margin-bottom: 0;*/
+/*}*/
 
 /* -------------------------------------------------- */
 /* ABOUT ME SECTION */
