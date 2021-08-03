@@ -430,11 +430,15 @@ nav {
 }
 
 #skills h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 
 #skills h3:not(:first-of-type) {
     margin-top: 10px;
+}
+
+#skills h3 span {
+
 }
 
 .skills-row {
@@ -456,12 +460,12 @@ nav {
 }
 
 .skill img {
-    height: 100px;
+    height: 75px;
 }
 
 #DjangoLogo {
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    /*width: 150px;*/
 }
 
 /* -------------------------------------------------- */
