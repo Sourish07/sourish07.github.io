@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="resources/font/flaticon.css"/>
 
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"-->
+<!--            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
 
     <!-- <link rel="icon" href="resources/images/CenterPiecePhoto.JPG"/> -->
 
@@ -84,9 +86,6 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-
-        </script>
     </nav>
     <div class="row centerpiece">
         <img src="resources/images/CenterPiecePhoto.JPG" alt="Picture of Sourish"/>
@@ -134,7 +133,7 @@
 <section id="skills">
     <div class="row">
         <h2><span>S</span>kills</h2>
-        <h3>Languages</h3>
+        <h3><span>Languages</span></h3>
         <div class="skills-row">
             <div class="skill">
                 <img src="resources/images/SkillsLogos/PythonLogo.svg" alt="Python logo">
@@ -174,6 +173,11 @@
             <div class="skill">
                 <img src="resources/images/SkillsLogos/PyTorch.svg" id="PytorchLogo" alt="PyTorch logo">
                 <span>PyTorch</span>
+            </div>
+            <div class="skill">
+                <img src="resources/images/SkillsLogos/ScikitLearnLogo.svg" id="ScikitLearnLogo"
+                     alt="Scikit Learn logo">
+                <span>Scikit Learn</span>
             </div>
             <div class="skill">
                 <img src="resources/images/SkillsLogos/DjangoLogo.svg" id="DjangoLogo" alt="Django logo">
@@ -228,6 +232,10 @@
                 <span>Google Cloud</span>
             </div>
             <div class="skill">
+                <img src="resources/images/SkillsLogos/FirebaseLogo.svg" alt="Google Firebase">
+                <span>Google Firebase</span>
+            </div>
+            <div class="skill">
                 <img src="resources/images/SkillsLogos/AndroidAppDevLogo.svg" alt="Android logo">
                 <span>Android App<br>Development</span>
             </div>
@@ -264,6 +272,29 @@
 <section id="portfolio">
     <div class="row">
         <h2><span>P</span>ortfolio</h2>
+
+        <div class="portfolio-project" id="smbrl">
+            <div class="portfolio-project-image-container">
+                <img src="resources/images/Portfolio-SuperMarioBrosRL.png" alt="smbrl-picture"/>
+                <div class="image-links">
+                    <a href="/super-mario-bros-rl" class="btn btn-full" target="_blank">Check it
+                        out!</a>
+                    <a href="https://github.com/Sourish07/Super-Mario-Bros-RL"
+                       class="btn btn-ghost" target="_blank">View the code!</a>
+                </div>
+            </div>
+            <div class="image-text">
+                <h3>Super Mario Bros Reinforcement Learning</h3>
+                <p>
+                    I trained the computer to be able to beat Super Mario Bros NES using the popular Double Deep Q
+                    Learning algorithm. After optimizing the hyperparameters of the convolutional neural network and
+                    thousands of training iterations, the computer can now see the game's screen and determine which
+                    combination of buttons to press in order to make it to the end of the level.
+                </p>
+                <h4>Languages and tools used</h4>
+                <p>Python, PyTorch</p>
+            </div>
+        </div>
 
         <div class="portfolio-project" id="mlalgovis">
             <div class="portfolio-project-image-container">
