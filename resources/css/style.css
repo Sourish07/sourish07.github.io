@@ -394,6 +394,7 @@ nav {
 .sidebar-nav li:hover,
 .sidebar-nav li:active {
     background: white;
+    cursor: pointer;
 
 }
 

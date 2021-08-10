@@ -10,3 +10,6 @@ window.addEventListener("scroll", function () {
     lastScrollTop = scrollTop;
 });
 
+$(".sidebar-nav li").on("click", function () {
+    $(this).find("a")[0].click()
+})
