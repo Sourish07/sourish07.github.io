@@ -62,6 +62,10 @@ class BlogContent extends HTMLElement {
                 padding: 0 10px;
             }
             
+            .content p {
+                font-size: 18px;
+            }
+            
             /*https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40*/
             .reading-level-unselected {
                 cursor: pointer;
@@ -87,6 +91,14 @@ class BlogContent extends HTMLElement {
                 max-height: 50%;
             }
             
+            /*Footer*/
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 35px 0;
+            }
+            
         </style>
         <div class="blog-container">
             <div class="blog-header">
@@ -101,6 +113,11 @@ class BlogContent extends HTMLElement {
             </div>
             <div class="content">
             
+            </div>
+            <br/>
+            <hr style="width: 95%">
+            <div class="footer">
+                <div>Questions or comments? Contact me at <a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
             </div>
         </div>
     `;
