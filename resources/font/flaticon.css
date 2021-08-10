@@ -1,54 +1,41 @@
-/*
-  Flaticon icon font: Flaticon
-  Creation date: 17/01/2020 23:44
-  */
-
 @font-face {
-    font-family: "Flaticon";
-    src: url("./Flaticon.eot");
-    src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
-    url("./Flaticon.woff2") format("woff2"),
-    url("./Flaticon.woff") format("woff"),
-    url("./Flaticon.ttf") format("truetype"),
-    url("./Flaticon.svg#Flaticon") format("svg");
-    font-weight: normal;
-    font-style: normal;
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?97da1d765e7460059b30a1a7d1205384") format("truetype"),
+url("./flaticon.woff?97da1d765e7460059b30a1a7d1205384") format("woff"),
+url("./flaticon.woff2?97da1d765e7460059b30a1a7d1205384") format("woff2"),
+url("./flaticon.eot?97da1d765e7460059b30a1a7d1205384#iefix") format("embedded-opentype"),
+url("./flaticon.svg?97da1d765e7460059b30a1a7d1205384#flaticon") format("svg");
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    @font-face {
-        font-family: "Flaticon";
-        src: url("./Flaticon.svg#Flaticon") format("svg");
-    }
-}
-
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-    font-family: Flaticon;
-
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
     font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .flaticon-mail:before {
-    content: "\f100";
-}
-
-.flaticon-briefcase:before {
     content: "\f101";
 }
-
-.flaticon-portfolio:before {
+.flaticon-briefcase:before {
     content: "\f102";
 }
-
-.flaticon-cat:before {
+.flaticon-portfolio:before {
     content: "\f103";
 }
-
-.flaticon-linkedin:before {
+.flaticon-cat:before {
     content: "\f104";
 }
-
-.flaticon-down-chevron:before {
+.flaticon-linkedin:before {
     content: "\f105";
+}
+.flaticon-down-chevron:before {
+    content: "\f106";
+}
+.flaticon-menu:before {
+    content: "\f107";
 }

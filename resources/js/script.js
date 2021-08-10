@@ -1,15 +1,25 @@
-// var lastScrollTop = 0;
-// navbar = document.getElementById("navbar");
-// window.addEventListener("scroll", function () {
-//     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     if (scrollTop > lastScrollTop) {
-//         navbar.style.top = "-120px";
-//     } else {
-//         navbar.style.top = "0";
-//     }
-//     lastScrollTop = scrollTop;
-// });
-
 $(".sidebar-nav li").on("click", function () {
     $(this).find("a")[0].click();
 })
+
+const nav = $(".mobile-sidebar-nav");
+$(".header-nav li:first-child").on("click", function (e) {
+    nav.css("width", "180px");
+})
+
+nav.on("click", function (e) {
+    e.stopPropagation();
+})
+
+nav.find("a").on("click", function () {
+    nav.css("width", 0);
+})
+
+$(document).on("click", function (e) {
+    const nav = $(".mobile-sidebar-nav");
+    if (nav.css("width") !== "0px") {
+        nav.css("width", 0);
+    }
+})
+
+

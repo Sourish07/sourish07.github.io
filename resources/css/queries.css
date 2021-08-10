@@ -46,7 +46,7 @@
     }
 
     .dropdown-menu {
-        display: inline;
+        /*display: inline;*/
     }
 
     .header-nav li:first-of-type {
@@ -154,8 +154,12 @@
         font-size: 1.5rem;
     }
 
-    .header-nav li,
-    .dropdown-menu {
+    /*.header-nav li,*/
+    /*.dropdown-menu {*/
+    /*    width: 60px;*/
+    /*}*/
+
+    .header-nav li {
         width: 60px;
     }
 
