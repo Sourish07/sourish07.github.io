@@ -99,6 +99,11 @@ class BlogContent extends HTMLElement {
                 padding: 35px 0;
             }
             
+            .email-link {
+                text-decoration: none;
+                color: #e62b1e;
+            }
+            
         </style>
         <div class="blog-container">
             <div class="blog-header">
@@ -117,7 +122,9 @@ class BlogContent extends HTMLElement {
             <br/>
             <hr style="width: 95%">
             <div class="footer">
-                <div>Questions or comments? Contact me at <a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
+                <div>Questions or comments?</div>
+                <div>Contact me at <a class="email-link" 
+                                      href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
             </div>
         </div>
     `;
