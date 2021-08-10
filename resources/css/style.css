@@ -103,7 +103,13 @@ h1 {
 h2 {
     font-size: 4.5rem;
     font-weight: 300;
+    /*margin-bottom: 15px;*/
+}
+
+h4 {
     margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 100;
 }
 
 h2 span {
@@ -200,10 +206,8 @@ input[type=submit]:active {
 /* -------------------------------------------------- */
 
 nav {
-    /*position: fixed;*/
     width: 100vw;
     height: 120px;
-    /*background-image: linear-gradient(#111, #111, #111, rgba(51, 51, 51, 0));*/
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -268,15 +272,6 @@ nav {
     font-size: 2.5rem;
 }
 
-/*.header-icons:link,*/
-/*.header-icons:visited {*/
-/*    text-decoration: none;*/
-/*    padding-left: 0;*/
-/*    color: #FF2400;*/
-/*    width: 150px;*/
-/*    transition: color 0.2s;*/
-/*}*/
-
 .header-icons:hover {
     color: #b30000;
 }
@@ -316,14 +311,6 @@ nav {
     white-space: nowrap;
 }
 
-/*.mobile-sidebar-nav .closebtn {*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 20px;*/
-/*  font-size: 36px;*/
-/*  margin-left: 0;*/
-/*}*/
-
 .mobile-sidebar-nav a {
     color: white;
     text-decoration: none;
@@ -336,99 +323,6 @@ nav {
     background-color: #FFF;
     color: #FF2400;
 }
-
-/* -------------------------------------------------- */
-/* DROPDOWN MENU */
-/* -------------------------------------------------- */
-
-/*.dropdown-menu {*/
-/*    !*display: none;*!*/
-/*    position: absolute;*/
-/*    z-index: 99;*/
-/*    height: 100%;*/
-/*    top: 0;*/
-/*    right: 0;*/
-/*    width: 250px;*/
-/*    overflow-x: hidden;*/
-/*    padding-top: 5px;*/
-/*    align-items: center;*/
-/*    transition: 0.5s;*/
-/*}*/
-
-/*.menu-button:before {*/
-/*    font-size: 2.5rem;*/
-/*    transition: font-size 0.2s;*/
-/*}*/
-
-/*.dropdown-menu:hover .menu-button:before {*/
-/*    font-size: 3.75rem;*/
-/*}*/
-
-/*.dropdown-menu:hover .dropdown-content,*/
-/*.dropdown-menu:active .dropdown-content {*/
-/*    display: flex;*/
-/*}*/
-
-/*.dropdown-button {*/
-/*    display: flex;*/
-/*    justify-items: center;*/
-/*}*/
-
-/*.menu-button {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    text-decoration: none;*/
-/*    padding-left: 0;*/
-/*    color: #FF2400;*/
-/*    width: 150px;*/
-/*    transition: color 0.2s;*/
-/*}*/
-
-/*.menu-button::before {*/
-/*    margin: 0 auto;*/
-/*}*/
-
-/*.menu-button:link,*/
-/*.menu-button:visited {*/
-/*    text-decoration: none;*/
-/*    transition: color 0.2s;*/
-/*}*/
-
-/*.menu-button li {*/
-/*    padding-top: 10px;*/
-/*    list-style: none;*/
-/*}*/
-
-/*.menu-button:hover li a:before,*/
-/*.menu-button:active li a:before {*/
-/*    font-size: 3.75rem;*/
-/*}*/
-
-/*.dropdown-content {*/
-/*    display: none;*/
-/*    !*background-image: linear-gradient(#e62b1e, #9B1500);*!*/
-/*    background: #e62b1e;*/
-/*    border-radius: 15px;*/
-/*    width: auto;*/
-/*    flex-direction: column;*/
-/*    float: right;*/
-/*    font-size: 1.5rem;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.dropdown-content a {*/
-/*    text-decoration: none;*/
-/*    background-color: rgba(255, 255, 255, 0);*/
-/*    color: white;*/
-/*    padding: 10px;*/
-/*    transition: background-color 0.2s, color 0.2s;*/
-/*}*/
-
-/*.dropdown-content a:hover,*/
-/*.dropdown-content a:active {*/
-/*    background: white;*/
-/*    color: #EF3159;*/
-/*}*/
 
 /* -------------------------------------------------- */
 /* SIDEBAR */
@@ -471,10 +365,6 @@ nav {
     color: #fff;
     text-decoration: none;
 }
-
-/*.sidebar-nav li:last-child {*/
-/*    margin-bottom: 0;*/
-/*}*/
 
 /* -------------------------------------------------- */
 /* ABOUT ME SECTION */
@@ -623,8 +513,12 @@ nav {
 }
 
 /* -------------------------------------------------- */
-/* PORTFOLIO SECTION */
+/* BLOG SECTION */
 /* -------------------------------------------------- */
+#blog a {
+    text-decoration: none;
+    color: white;
+}
 
 .blog-post {
     width: 300px;
@@ -636,6 +530,15 @@ nav {
     align-items: center;
     width: 100%;
     max-height: 330px;
+}
+
+.blog-post h3 {
+    text-align: center;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    padding: 5px;
 }
 
 
