@@ -1,11 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    /*src: url("./flaticon.ttf?97da1d765e7460059b30a1a7d1205384") format("truetype"),*/
-    src: url("./flaticon.ttf") format("truetype"),
-        /*url("./flaticon.woff?97da1d765e7460059b30a1a7d1205384") format("woff"),*/ /*url("./flaticon.woff2?97da1d765e7460059b30a1a7d1205384") format("woff2"),*/ /*url("./flaticon.eot?97da1d765e7460059b30a1a7d1205384#iefix") format("embedded-opentype"),*/ /*url("./flaticon.svg?97da1d765e7460059b30a1a7d1205384#flaticon") format("svg");*/ url("./flaticon.woff") format("woff"),
-    url("./flaticon.woff2") format("woff2"),
-    url("./flaticon.eot#iefix") format("embedded-opentype"),
-    url("./flaticon.svg#flaticon") format("svg");
+    src: url("./Flaticon.ttf?97da1d765e7460059b30a1a7d1205384") format("truetype"),
+    url("./Flaticon.woff?97da1d765e7460059b30a1a7d1205384") format("woff"),
+    url("./Flaticon.woff2?97da1d765e7460059b30a1a7d1205384") format("woff2"),
+    url("./Flaticon.eot?97da1d765e7460059b30a1a7d1205384#iefix") format("embedded-opentype"),
+    url("./Flaticon.svg?97da1d765e7460059b30a1a7d1205384#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
