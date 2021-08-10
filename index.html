@@ -23,8 +23,8 @@
     <link rel="stylesheet" type="text/css" href="resources/font/flaticon.css"/>
 
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"-->
-<!--            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- <link rel="icon" href="resources/images/CenterPiecePhoto.JPG"/> -->
 
@@ -35,13 +35,12 @@
 
     <meta name="description" content="Check out my website for a showcase of my skills and projects!"/>
 
-
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Sourish's Portfolio</title>
+    <title>Sourish's Personal Website</title>
 </head>
 
 <body>
@@ -50,40 +49,56 @@
         <div class="header-name">
             <a href="">sourish.dev</a>
         </div>
-
         <div class="header-right">
             <ul class="header-nav">
                 <li>
-                    <a href="/resources/Resume-SourishKundu.pdf" target="_blank"
-                       class="header-icons flaticon-portfolio"><span><br/>Resume</span></a>
+                    <a>
+                        <i class="header-icons header-nav-menu-icon flaticon-menu"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="mailto: skundu4@wisc.edu" class="header-icons flaticon-mail"
-                       target="_blank"><span><br/>Email</span></a>
+                    <a href="/resources/Resume-SourishKundu.pdf" target="_blank">
+                        <i class="header-icons flaticon-portfolio">
+                            <span><br/>Resume</span>
+                        </i>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/sourish07/" class="header-icons flaticon-linkedin"
-                       target="_blank"><span><br/>LinkedIn</span></a>
+                    <a href="mailto: sourish@cs.wisc.edu" target="_blank">
+                        <i class="header-icons flaticon-mail">
+                            <span><br/>Email</span>
+                        </i>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://github.com/Sourish07" class="header-icons flaticon-cat"
-                       target="_blank"><span><br/>GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/sourish07/" target="_blank">
+                        <i class="header-icons flaticon-linkedin">
+                            <span><br/>LinkedIn</span>
+                        </i>
+                    </a>
                 </li>
                 <li>
-                    <a href="#portfolio" class="header-icons flaticon-briefcase"><span><br/>Portfolio</span></a>
+                    <a href="https://github.com/Sourish07" target="_blank">
+                        <i class="header-icons flaticon-cat">
+                            <span><br/>GitHub</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                        <i class="flaticon-briefcase header-icons">
+                            <span><br/>Portfolio</span>
+                        </i>
+                    </a>
                 </li>
             </ul>
-            <div class="dropdown-menu">
-                <div class="dropdown-button">
-                    <a href="#" class="header-icons flaticon-down-chevron menu-button"></a>
-                </div>
-                <div class="dropdown-content">
-                    <a href="#about-me" class="quick-link">About me</a>
-                    <a href="#skills" class="quick-link">Skills</a>
-                    <a href="#experiences" class="quick-link">Experiences</a>
-                    <a href="#portfolio" class="quick-link">Portfolio</a>
-                    <a href="#contact" class="quick-link">Contact</a>
-                </div>
+            <div class="mobile-sidebar-nav">
+                <a href="#about-me" class="quick-link">About me</a>
+                <a href="#skills" class="quick-link">Skills</a>
+                <a href="#experiences" class="quick-link">Experiences</a>
+                <a href="#portfolio" class="quick-link">Portfolio</a>
+                <a href="#blog" class="quick-link">Blog</a>
+                <a href="#contact" class="quick-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -106,6 +121,7 @@
             <li><a href="#skills" class="quick-link">Skills</a></li>
             <li><a href="#experiences" class="quick-link">Experience</a></li>
             <li><a href="#portfolio" class="quick-link">Portfolio</a></li>
+            <li><a href="#blog" class="quick-link">Blog</a></li>
             <li><a href="#contact" class="quick-link">Contact</a></li>
         </ul>
     </div>
@@ -116,11 +132,13 @@
         <h2><span>A</span>bout me</h2>
         <div class="about-me-text">
             <strong>Hello!</strong> I am junior in college who is striving to build their career around their
-            passion for computer science. I love working on projects which allow me to apply the knowledge I have
+            passion for computer science. My favorite subfield of CS is Machine Learning, but that doesn't mean I
+            don't enjoy picking up other skills as well. I love working on projects which allow me to apply the
+            knowledge I have
             acquired in the classroom while simultaneously obtaining new skills that I did not expect to learn.
             Outside of computer science, I have a vested interest in public speaking, international politics,
             economics, and 3-D modeling. In my free time, if I am not with friends, I am either playing video games or
-            reading about and researching topics that interest me about to continue expanding my knowledge base.
+            reading and researching topics that interest me to continue expanding my knowledge base.
             <br><br>
             I am currently studying at the University of Wisconsin-Madison and am pursuing a triple major in Computer
             Science, Economics, and Data Science. I am involved in several clubs such as the Software Development
@@ -133,7 +151,7 @@
 <section id="skills">
     <div class="row">
         <h2><span>S</span>kills</h2>
-        <h3><span>Languages</span></h3>
+        <h3>Languages</h3>
         <div class="skills-row">
             <div class="skill">
                 <img src="resources/images/SkillsLogos/PythonLogo.svg" alt="Python logo">
@@ -280,7 +298,7 @@
 <section id="portfolio">
     <div class="row">
         <h2><span>P</span>ortfolio</h2>
-
+        <h4>Check out all of the projects I've worked on!</h4>
         <div class="portfolio-project" id="smbrl">
             <div class="portfolio-project-image-container">
                 <img src="resources/images/Portfolio-SuperMarioBrosRL.png" alt="smbrl-picture"/>
@@ -519,7 +537,7 @@
             <div class="image-text">
                 <h3>3-D Modeling</h3>
                 <p>
-                    Outside of coding , I'm also passionate in 3-D modeling using Blender. I enjoy designing
+                    Outside of coding , I'm also passionate about 3-D modeling using Blender. I enjoy designing
                     simple, everyday objects while striving for photorealism.
                 </p>
                 <h4>Tools used</h4>
@@ -529,6 +547,30 @@
 
     </div>
 </section>
+
+<section id="blog">
+    <div class="row">
+        <h2><span>B</span>log</h2>
+        <h4>More articles coming soon!</h4>
+        <a href="/blog/reinforcement-learning">
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <img src="blog/images/reinforcement-learning/Diagram.jpg">
+                    <h3>Reinforcement Learning</h3>
+                    <p>Reinforcement learning (RL) is a subset of machine learning algorithms that involve an agent and
+                        an
+                        environment. The goal is to train the agent to take actions in its environment that maximize its
+                        return. Some common applications of RL are training the computer to play video games, trade
+                        stocks,
+                        or drive a car. The basic premise of training a computer to perform these human-like tasks is
+                        very
+                        similar to using positive reinforcement from psychology.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
 <section id="contact">
     <div class="row">
         <h2><span>C</span>ontact</h2>
