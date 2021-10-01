@@ -379,7 +379,7 @@ nav {
 /* -------------------------------------------------- */
 #skills h2,
 #skills h3 {
-    align-self: center;
+    text-align: center;
 }
 
 #skills h3 {
