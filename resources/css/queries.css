@@ -69,6 +69,10 @@
         flex-direction: column;
     }
 
+    .skills-row {
+        width: 100%;
+    }
+
     .portfolio-project {
         flex-direction: column;
     }
