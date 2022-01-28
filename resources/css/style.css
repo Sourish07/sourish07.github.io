@@ -433,6 +433,7 @@ nav {
 
 .experience-logos {
     width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: row;
     justify-content: center;
