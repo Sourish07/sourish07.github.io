@@ -32,12 +32,9 @@ destination: ../blog
 permalink: none
 source: ../jekyll
 
-<<<<<<< HEAD
-=======
 # Google Analytics
 google_analytics: 'G-Y9X7D11J18'
 
->>>>>>> dev
 # Build settings
 theme: minima
 plugins:
