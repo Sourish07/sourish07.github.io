@@ -1,2 +1,3 @@
 # sourish.dev
-Hello! This is my personal website where I showcase my portfolio! Please check it out!
+Hello and welcome to the repository for my portfolio website! 
+Learn a bit about me, my projects, and my experiences [here](https://www.sourish.dev) or check out my blog [here](https://www.sourish.dev/blog).
