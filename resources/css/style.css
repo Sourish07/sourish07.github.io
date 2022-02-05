@@ -1,0 +1,570 @@
+/* -------------------------------------------------- */
+/* GENERAL SETUP (Official accent color: #e62b1e, #b30000) */
+/* -------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    background-color: #151515;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    /* font-size: calc(14px + (24 - 14) * ((100vw - 480px) / (1920 - 480)));;; */
+    max-width: 100vw;
+    text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
+    overflow-x: hidden;
+}
+
+img {
+    image-orientation: from-image;
+}
+
+/* -------------------------------------------------- */
+/* SCROLLBAR */
+/* -------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e62b1e;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+/* -------------------------------------------------- */
+/* REUSEABLE COMPONENTS */
+/* -------------------------------------------------- */
+
+.row {
+    max-width: 1400px;
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    padding: 10px 0 75px 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+section:nth-child(odd) {
+    background-color: #111111;
+}
+
+p {
+    font-size: 1.25rem;
+    padding: 0 25px 25px 25px;
+}
+
+/* Used for the text next to the images in the Experience and Portfolio section*/
+.image-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-text h3 {
+    font-size: 1.75rem;
+    padding-left: 25px;
+}
+
+/* -------------------------------------------------- */
+/* HEADERS */
+/* -------------------------------------------------- */
+h1 {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    /*margin-bottom: 15px;*/
+}
+
+h5 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+h2 span {
+    border-bottom: 1.5px solid #e62b1e;
+    display: inline-block;
+    line-height: 0.95;
+}
+
+/* -------------------------------------------------- */
+/* CENTERPIECE */
+/* -------------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(CoverPhoto.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.centerpiece {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 70vh; */
+}
+
+.centerpiece img {
+    width: 25vw;
+    border-radius: 50%;
+}
+
+.centerpiece .subheader {
+    font-size: 2rem;
+    word-spacing: 3px;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.5rem;
+}
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e62b1e;
+    border: 1px solid #e62b1e;
+    color: #fff;
+    margin-right: 12px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e62b1e;
+    color: #e62b1e;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #b30000;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    border: 1px solid #b30000;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #b30000;
+    color: #fff;
+}
+
+/* -------------------------------------------------- */
+/* HEADER NAVIGATION */
+/* -------------------------------------------------- */
+
+nav {
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    overflow: visible;
+    transition: top 0.3s;
+    z-index: 2;
+}
+
+.header-name {
+    font-size: 2.25rem;
+    margin: 15px 0;
+}
+
+.header-name a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.header-nav {
+    float: right;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header-right {
+    display: flex;
+}
+
+.header-nav li {
+    padding: 10px 0 0 0;
+    list-style: none;
+    text-align: center;
+    width: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header-nav li:first-child {
+    display: none;
+    cursor: pointer;
+}
+
+.header-nav a {
+    text-decoration: none;
+}
+
+.header-icons:before {
+    color: #FF2400;
+    font-size: 2.5rem;
+}
+
+.header-icons:hover:before {
+    font-size: 3.4rem;
+    transition: font-size 0.2s;
+}
+
+.header-nav-menu-icon:hover:before {
+    font-size: 2.5rem;
+}
+
+.header-icons:hover {
+    color: #b30000;
+}
+
+/* For the words under the icons */
+.header-icons span {
+    color: rgba(255, 255, 255, 0);
+    transition: color 0.2s;
+    font-style: normal;
+}
+
+.header-icons:hover span {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* -------------------------------------------------- */
+/* DROPDOWN MENU */
+/* -------------------------------------------------- */
+
+.mobile-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FF2400;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    white-space: nowrap;
+}
+
+.mobile-sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.mobile-sidebar-nav a:hover,
+.mobile-sidebar-nav a:active {
+    background-color: #FFF;
+    color: #FF2400;
+}
+
+/* -------------------------------------------------- */
+/* SIDEBAR */
+/* -------------------------------------------------- */
+
+.sidebar-nav {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 15px;
+    background: #e62b1e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar-nav li {
+    /*margin-bottom: 50px;*/
+    padding: 30px 5px;
+    text-align: center;
+    list-style: none;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav li:hover,
+.sidebar-nav li:active {
+    background: white;
+    cursor: pointer;
+
+}
+
+.sidebar-nav li:hover a,
+.sidebar-nav li:active a {
+    color: #EF3159;
+
+}
+
+.sidebar-nav li a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* ABOUT ME SECTION */
+/* -------------------------------------------------- */
+.about-me-text {
+    font-size: 1.25rem;
+}
+
+
+/* -------------------------------------------------- */
+/* SKILLS SECTION */
+/* -------------------------------------------------- */
+#skills h2,
+#skills h3 {
+    text-align: center;
+}
+
+#skills h3 {
+    font-size: 2.4rem;
+}
+
+#skills h3:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+#skills h3 {
+    margin-bottom: 10px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    object-fit: contain;
+    /*flex-basis: 20%;*/
+    /*width: 150px;*/
+}
+
+.skill img {
+    height: 75px;
+}
+
+#DjangoLogo {
+    height: 75px;
+    /*width: 150px;*/
+}
+
+/* -------------------------------------------------- */
+/* EXPERIENCES SECTION */
+/* -------------------------------------------------- */
+
+.experience {
+    display: flex;
+    /*flex-direction: column;*/
+    height: auto;
+}
+
+.experience-logos {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience-logos img {
+    margin: 10px;
+    padding: 20px;
+    max-width: 200px;
+    max-height: 125px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+/* -------------------------------------------------- */
+/* PORTFOLIO SECTION */
+/* -------------------------------------------------- */
+
+.portfolio-project {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.portfolio-project:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.portfolio-project-image-container {
+    flex: 0 0 50%;
+    margin: 25px 0;
+    overflow: hidden;
+    max-height: 330px;
+    position: relative;
+}
+
+.portfolio-project-image-container img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 330px;
+    transform: scale(1);
+    transition: transform 0.5s, opacity 0.2s, filter 0.2s;
+}
+
+.portfolio-project-image-container:hover img {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+.image-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.image-links .btn {
+    margin: 5px 0;
+    /* padding: 5px 10px; */
+    width: auto;
+}
+
+.portfolio-project-image-container:hover .image-links {
+    opacity: 1;
+}
+
+.image-links a:link,
+.image-links a:visited {
+    color: white;
+
+}
+
+.image-text h4,
+#portfolio .image-text p:last-of-type {
+    font-size: 1.2rem;
+    padding: 0 0 0 20px;
+}
+
+/* -------------------------------------------------- */
+/* BLOG SECTION */
+/* -------------------------------------------------- */
+#blog a {
+    text-decoration: none;
+    color: white;
+}
+
+.blog-post {
+    width: 300px;
+}
+
+.blog-post img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 330px;
+}
+
+.blog-post h3 {
+    text-align: center;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+
+/* -------------------------------------------------- */
+/* CONTACT */
+/* -------------------------------------------------- */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.contact-content span {
+    margin: 10px 0;
+}
+
+#contact a:link,
+#contact a:visited {
+    color: white;
+}

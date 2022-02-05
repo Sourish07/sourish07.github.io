@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./Flaticon.ttf?97da1d765e7460059b30a1a7d1205384") format("truetype"),
+    url("./Flaticon.woff?97da1d765e7460059b30a1a7d1205384") format("woff"),
+    url("./Flaticon.woff2?97da1d765e7460059b30a1a7d1205384") format("woff2"),
+    url("./Flaticon.eot?97da1d765e7460059b30a1a7d1205384#iefix") format("embedded-opentype"),
+    url("./Flaticon.svg?97da1d765e7460059b30a1a7d1205384#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-mail:before {
+    content: "\f101";
+}
+
+.flaticon-briefcase:before {
+    content: "\f102";
+}
+
+.flaticon-portfolio:before {
+    content: "\f103";
+}
+
+.flaticon-cat:before {
+    content: "\f104";
+}
+
+.flaticon-linkedin:before {
+    content: "\f105";
+}
+
+.flaticon-down-chevron:before {
+    content: "\f106";
+}
+
+.flaticon-menu:before {
+    content: "\f107";
+}
