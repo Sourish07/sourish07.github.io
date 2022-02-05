@@ -1,10 +1,13 @@
+
 const nonTechnicalContent = $("#non-technical-content").detach();
 const technicalContent = $("#technical-content").detach();
-//$(".blog-container").append(nonTechnicalContent);
+technicalContent.css("display", "block");
+
 const content = $(".content")
 content.html(nonTechnicalContent);
 
 $("#non-technical-link").on("click", function () {
+    
     const nonTechnicalLink = $("#non-technical-link")
     if (nonTechnicalLink.hasClass("reading-level-selected")) {
         return
@@ -23,7 +26,7 @@ $("#non-technical-link").on("click", function () {
     content.fadeIn();
 })
 
-$("#technical-link").on("click", function () {
+$("#technical-link").on("click", function () {    
     const technicalLink = $("#technical-link");
     if (technicalLink.hasClass("reading-level-selected")) {
         return

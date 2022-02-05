@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+
+<div class="blog-container">
+    <div class="blog-header">
+        <h2>{{ page.title }}</h2>
+        <p class="author">By Sourish Kundu</p>
+        <!-- <img src="${img}"> -->
+        <p>{{ page.subheader }}</p>
+    </div>
+    {%- if page.cspost -%}
+    <div class="reading-level">
+        <div id="non-technical-link" class="reading-level-selected">Non-Technical</div>
+        <div id="technical-link" class="reading-level-unselected">Technical</div>
+    </div>
+    {%- endif -%}
+    <div class="content">
+        {{ content }}
+    </div>
+</div>
+
+{%- if page.cspost -%}
+<script src="{{ "/assets/js/script.js" | relative_url }}"></script>
+{%- endif -%}
