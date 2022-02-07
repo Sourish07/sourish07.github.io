@@ -12,7 +12,11 @@
     margin-bottom: 30px;
 }
 
-h2 {
+h2, h3 {
+    text-align: center;
+}
+
+post-list-heading {
     font-size: 2.5rem;
     margin: 0;
     padding: 20px 0 0 0;
@@ -52,10 +56,6 @@ h2 {
     padding: 0 10px;
 }
 
-.content {
-    padding-top: 30px;
-}
-
 .content p {
     font-size: 18px;
 }
@@ -69,6 +69,10 @@ img {
     display: flex;
     margin: auto;
     max-height: 200px;
+}
+
+.reading-level {
+    padding-bottom: 30px;
 }
 
 /*https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40*/
