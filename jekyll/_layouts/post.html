@@ -8,21 +8,19 @@ layout: default
 
 <div class="blog-container">
     <div class="blog-header">
-        <h2>{{ page.title }}</h2>
-        <h3>{{ page.subheader }}</h3>
+        <div class="title">{{ page.title }}</div>
+        <div class="header">{{ page.subheader }}</div>
         <p class="author">By Sourish Kundu</p>
         <!-- <img src="${img}"> -->
-        
     </div>
+
     {%- if page.cspost -%}
     <div class="reading-level">
         <div id="non-technical-link" class="reading-level-selected">Non-Technical</div>
         <div id="technical-link" class="reading-level-unselected">Technical</div>
     </div>
     {%- endif -%}
-    <div class="content">
-        {{ content }}
-    </div>
+    {{ content }}
 </div>
 
 {%- if page.cspost -%}
