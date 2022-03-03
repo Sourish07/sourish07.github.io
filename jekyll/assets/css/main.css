@@ -8,6 +8,11 @@ html, body {
     overflow-x: hidden;
 }
 
+.wrapper {
+    max-width: calc(1200px - (30px * 2));
+    max-width: -webkit-calc(1000px - (30px * 2));
+}
+
 .site-header {
     background-color: white;
     box-shadow: 5px 0px 10px;
@@ -31,7 +36,7 @@ a, a:visited {
 }
 
 .post {
-    height: 175px;
+    /* height: 175px; */
     margin: 10px;
 }
 
