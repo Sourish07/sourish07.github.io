@@ -104,12 +104,15 @@ These are for students that already have multiple projects under their belt. Ple
 | Social media app | Authentication, Databases | Node.js, Flask, Firebase |
 | Neural network from scratch | Machine learning | PyTorch, Tensorflow |
 | Handwriting recognition from scratch | Machine learning | PyTorch, Tensorflow |
-| Reinforcement learning | Machine learning | PyTorch, Tensorflow |
+| Reinforcement learning | Machine learning | PyTorch, Tensorflow, NVIDIA Isaac |
 | Writing a compiler | Compilers, OS | C, C++ |
 | Video game | Game development | Unity, Unreal |
 | AR Clothes App | Augmented Reality | ARKit, ARCore |
 | Song lyric generator | NLP, Transfer Learning | PyTorch, Tensorflow, Hugging Face API |
+| Implement a graphics raytracer | Physics, Graphics | - |
 | Contributing to an open source project | - | - |
+| Visualize or simulate an environment/natural process/algorithm | - | - |
+| Implement a paper | - | - |
 
 These three tiers are very blurry; One additional feature for an app could easily bump it up a tier. The difficultly also depends on how you choose to implement it. For example, you could use a pre-trained machine learning model or create your own from scratch to really learn the architecture.
 
