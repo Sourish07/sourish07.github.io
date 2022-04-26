@@ -113,13 +113,13 @@ I'll be assuming that the reader is familiar with the following topics:
 
 The algorithm to minimize a cost function iteratively is called Gradient Descent. For each iteration, we calculate which direction to travel in that decreases our output. We repeat this process until the algorithm converges, i.e., we've found a local minima. Don't worry if this doesn't make sense yet.
 
-Any line has two parameters, its slope and a constant term, or  the intercept. From the familiar equation $y=mx+b$, $m$ and $b$ are the parameters of our model. We can tune those to move the line around.
+Any line has two parameters, its slope and a constant term, or  the intercept. From the familiar equation $$y=mx+b$$, $$m$$ and $$b$$ are the parameters of our model. We can tune those to move the line around.
 
-From now on, let's write the equation for our line as $y=w_0 + w_1x$. $w_0$ is our new intercept term and $w_1$ the slope.
+From now on, let's write the equation for our line as $$y=w_0 + w_1x$$. $$w_0$$ is our new intercept term and $$w_1$$ the slope.
 
-Let's say we're given $n$ data points represented as $(x_i, y_i)$, where $0\le i < n$. This means $i$ represents the data point's index. Our goal is to find the optimal weights, $w_0$ and $w_1$, based on the input data.
+Let's say we're given $$n$$ data points represented as $$(x_i, y_i)$$, where $$0\le i < n$$. This means $$i$$ represents the data point's index. Our goal is to find the optimal weights, $$w_0$$ and $$w_1$$, based on the input data.
 
-Let's first represent our data as a matrix, $X$. We call each column a "feature". In the house prices example from the non-technical section, a feature might be the number of bathrooms in a house or its square footage. Each would be a column in the $X$ matrix.
+Let's first represent our data as a matrix, $$X$$. We call each column a "feature". In the house prices example from the non-technical section, a feature might be the number of bathrooms in a house or its square footage. Each would be a column in the $$X$$ matrix.
 
 $$
 X =
@@ -132,7 +132,7 @@ X =
 \end{bmatrix}
 $$
 
-We'll see why we have a column of ones in just a sec. For our weights and y-values, let's vectorize them. Our weight vector is as long as the number of columns in $X$.
+We'll see why we have a column of ones in just a sec. For our weights and y-values, let's vectorize them. Our weight vector is as long as the number of columns in $$X$$.
 
 $$
 w =
@@ -155,19 +155,19 @@ $$
 
 We now need a cost function, which is an equation that represents how inaccurate our model is. This equation will be a function of our weights. The more inaccurate our weights are with respect to our data, the larger the output of our cost function will be.
 
-We want to multiply our $X$ matrix by our $w$ vector to get the predicted values, which are represented by $\hat{y}$. This is why we have a column of ones in $X$.
+We want to multiply our $$X$$ matrix by our $$w$$ vector to get the predicted values, which are represented by $$\hat{y}$$. This is why we have a column of ones in $$X$$.
 
 $$
 \hat{y}=Xw
 $$
 
-When we multiply the matrix and vector, $w_0$ gets multiplied with each element in the first column and $w_1$ to the second. Then, as matrix multiplication dictates, we add the two values. This sum is our predicted value, $\hat{y}$.
+When we multiply the matrix and vector, $$w_0$$ gets multiplied with each element in the first column and $$w_1$$ to the second. Then, as matrix multiplication dictates, we add the two values. This sum is our predicted value, $$\hat{y}$$.
 
-So we now have $\hat{y_i}=w_0+w_1x_i$, which looks very similar to our original equation from above! We repeat this for all of the rows of $X$ to get all of the elements in $\hat{y}$, which is a column vector just like $y$.
+So we now have $$\hat{y_i}=w_0+w_1x_i$$, which looks very similar to our original equation from above! We repeat this for all of the rows of $$X$$ to get all of the elements in $$\hat{y}$$, which is a column vector just like $$y$$.
 
-In a perfect world, $y$ would equal $\hat{y}$.
+In a perfect world, $$y$$ would equal $$\hat{y}$$.
 
-Due to noise in the real world, we know we can't achieve a model where each of our predictions is equal to the actual value, so we want $\left\|\hat{y} - y\right\|_{2}^{2}$, i.e. the two-norm of the error vector squared (or its magnitude squared), to be as small as possible.
+Due to noise in the real world, we know we can't achieve a model where each of our predictions is equal to the actual value, so we want $$\left\|\hat{y} - y\right\|_{2}^{2}$$, i.e. the two-norm of the error vector squared (or its magnitude squared), to be as small as possible.
 
 Thus, our cost function is the following:
 
@@ -178,11 +178,11 @@ f(w) &= \left\|\hat{y}-y\right\|_{2}^{2}\\
 \end{split}
 $$
 
-Remember, $\hat{y} - y$ is our error vector. The two-norm of a vector is the square root of the sum of all of its elements squared.
+Remember, $$\hat{y} - y$$ is our error vector. The two-norm of a vector is the square root of the sum of all of its elements squared.
 
 Thus, in order to figure out how different our predictions are from their actual values, calculate the two-norm and square it. Remember, we want this value to be as small as possible.
 
-Because we want to minimize our cost function, we need the gradient for each of our weights. This is the vector of the partial derivatives with respect to each our our weights, which in this case are $w_0$ and $w_1$.
+Because we want to minimize our cost function, we need the gradient for each of our weights. This is the vector of the partial derivatives with respect to each our our weights, which in this case are $$w_0$$ and $$w_1$$.
 
 $$
 \begin{split}
@@ -194,9 +194,9 @@ f(w) &= \left\|Xw-y\right\|_{2}^{2}\\
 \end{split}
 $$
 
-We take our cost function and expand it out twice. First, is just the full version of two-norm squared, then we cross multiply everything before taking the gradient with respect to $w$.
+We take our cost function and expand it out twice. First, is just the full version of two-norm squared, then we cross multiply everything before taking the gradient with respect to $$w$$.
 
-The final result above is the gradient of our cost function. Because it represents the direction of steepest ascent, we must subtract it from our weight vector for each iteration in order to minimize our function. Below, $k$ represents the iteration number.
+The final result above is the gradient of our cost function. Because it represents the direction of steepest ascent, we must subtract it from our weight vector for each iteration in order to minimize our function. Below, $$k$$ represents the iteration number.
 
 $$
 \begin{split}
@@ -204,15 +204,15 @@ w^{(k+1)}=w^{(k)}-\tau X^t(Xw^{(k)}-y)
 \end{split}
 $$
 
-We repeatedly apply the above equation to our weight vector until the weights only change by a certain, miniscule amount, $\epsilon$, which we choose beforehand. Values that we manually pick are called hyperparameters.
+We repeatedly apply the above equation to our weight vector until the weights only change by a certain, miniscule amount, $$\epsilon$$, which we choose beforehand. Values that we manually pick are called hyperparameters.
 
-Once our weights change by only $\epsilon$, we know that the algorithm is very near convergence (finding the minimum of our cost function) and future iterations won't really make a difference.
+Once our weights change by only $$\epsilon$$, we know that the algorithm is very near convergence (finding the minimum of our cost function) and future iterations won't really make a difference.
 
-The $2$ from our gradient calculation has been replaced with $\tau$, which represents our step size. This also is a hyperparameter that we choose beforehand. The larger $\tau$ is, the bigger the steps the algorithm will take. 
+The $$2$$ from our gradient calculation has been replaced with $$\tau$$, which represents our step size. This also is a hyperparameter that we choose beforehand. The larger $$\tau$$ is, the bigger the steps the algorithm will take.
 
-If $\tau$ is too large, the algorithm will never converge, meaning it'll go on forever. However, if $\tau$ is too small, the algorithm will take a long time to converge, wasting computational resources.
+If $$\tau$$ is too large, the algorithm will never converge, meaning it'll go on forever. However, if $$\tau$$ is too small, the algorithm will take a long time to converge, wasting computational resources.
 
-We're not going to cover the proof for this here, but as long as $\tau$ is less than 1 over the two norm squared of $X$, or $\frac{1}{\left\|X\right\|_2^2}$, the algorithm is guaranteed to converge.
+We're not going to cover the proof for this here, but as long as $$\tau$$ is less than 1 over the two norm squared of $$X$$, or $$\frac{1}{\left\|X\right\|_2^2}$$, the algorithm is guaranteed to converge.
 
 Let's look at an example contour plot for a cost function.
 
@@ -230,29 +230,29 @@ Visually, Gradient descent is bringing us from the black point to the red star. 
 
 Each navy blue dot represents the weights after an iteration. We can see as the error starts to decrease (the color of the contours start to faint), the size of each step is also decreasing.
 
-If you look at the gradient descent equation, this makes sense; After each step, we're multiplying $\tau$ by a smaller value because $Xw^{(k)}-y$ is decreasing as we get closer to the star.
+If you look at the gradient descent equation, this makes sense; After each step, we're multiplying $$\tau$$ by a smaller value because $$Xw^{(k)}-y$$ is decreasing as we get closer to the star.
 
 A natural question to ask is: why doesn't the algorithm take us straight from the black point to the minimum? We have to recall the definition of the gradient: It's the vector of partial derivatives that points in the direction of steepest ascent. Meaning, when we subtract it from the weights, we can only travel in a direction that's perpendicular to the contour line we're currently on, as that's the direction that is the steepest.
 
-Let's take a look at what the contour plot will look like when we vary $\tau$. This is what we get when we set $\tau$ to a slightly larger amount.
+Let's take a look at what the contour plot will look like when we vary $$\tau$$. This is what we get when we set $$\tau$$ to a slightly larger amount.
 
 ![FirstContourPlot](../assets/images/lr/contour_plot_med_tau.png)
 
 As we see here, the algorithm still converges, but it doesn't go to the minium directly. It jumps to the other side of the star repeatedly, but it still makes progress as each iteration passes.
 
-If we increase $\tau$ by even more, we get the following graph:
+If we increase $$\tau$$ by even more, we get the following graph:
 
 ![FirstContourPlot](../assets/images/lr/contour_plot_high_tau.png)
 
 At each iteration, the algorithm is getting further and further away from the minimum.
 
-Since $\tau$ is too large, the algorithm is stepping past the minimum, resulting in a larger error than the starting point. This leads to an even larger step taken for the next one. As we can see, the algorithm will never reach the minimum; It'll go on forever without converging.
+Since $$\tau$$ is too large, the algorithm is stepping past the minimum, resulting in a larger error than the starting point. This leads to an even larger step taken for the next one. As we can see, the algorithm will never reach the minimum; It'll go on forever without converging.
 
 And if we have tau be incredibly small, the algorithm will take forever to converge.
 
 ![FirstContourPlot](../assets/images/lr/contour_plot_low_tau.png)
 
-The exact values of $\tau$ for each of these above cases will vary based on the dataset.
+The exact values of $$\tau$$ for each of these above cases will vary based on the dataset.
 
 Just to visualize the contour plot with what each iteration is doing exactly, I've inserted an animation with the line that we're trying to fit on the left and the contour plot on the right.
 
