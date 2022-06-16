@@ -26,8 +26,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <!-- <link rel="icon" href="resources/images/CenterPiecePhoto.JPG"/> -->
-
     <meta property="og:site_name" content="sourish.dev" />
     <meta property="og:title" content="Sourish's Personal Website" />
     <meta property="og:description" content="Check out my website for a showcase of my skills and projects!" />
@@ -159,6 +157,7 @@
             <h2><span>E</span>xperience</h2>
             <h5>I've had experience working both at big corporations and small startups.</h5>
             <div class="experience-logos">
+                <img src="resources/images/experience/ByteDance.svg" alt="bytedance">
                 <img src="resources/images/experience/AWSLogo.png" alt="AWS">
                 <img src="resources/images/experience/GallifyLogo.svg" alt="Gallify">
                 <img src="resources/images/experience/capitalone.svg" alt="Capital One">
@@ -218,13 +217,18 @@
             <h3>Libraries, Tools, and Frameworks</h3>
             <div class="skills-row">
                 <div class="skill">
+                    <img src="resources/images/SkillsLogos/PyTorch.svg" id="PytorchLogo" alt="PyTorch logo">
+                    <span>PyTorch</span>
+                </div>
+                <div class="skill">
+                    <img src="resources/images/SkillsLogos/CUDALogo.png" id="Cuda"
+                        alt="CUDA logo">
+                    <span>CUDA</span>
+                </div>
+                <div class="skill">
                     <img src="resources/images/SkillsLogos/TensorflowLogo.svg" id="TensorflowLogo"
                         alt="Tensorflow logo">
                     <span>Tensorflow</span>
-                </div>
-                <div class="skill">
-                    <img src="resources/images/SkillsLogos/PyTorch.svg" id="PytorchLogo" alt="PyTorch logo">
-                    <span>PyTorch</span>
                 </div>
                 <div class="skill">
                     <img src="resources/images/SkillsLogos/ScikitLearnLogo.svg" id="ScikitLearnLogo"
@@ -324,11 +328,32 @@
         <div class="row">
             <h2><span>P</span>ortfolio</h2>
             <h5>Check out all the projects I've worked on!</h5>
+
+            <div class="portfolio-project" id="cuda-nn">
+                <div class="portfolio-project-image-container">
+                    <img src="resources/images/Portfolio-Cuda-NN.png" alt="cudann-picture" />
+                    <div class="image-links">
+                        <!-- <a href="/projects/cuda-nn" class="btn btn-full" target="_blank">Check it
+                            out!</a> -->
+                        <a href="https://github.com/Sourish07/CUDA-Accelerated-Neural-Network" class="btn btn-ghost"
+                            target="_blank">View the code!</a>
+                    </div>
+                </div>
+                <div class="image-text">
+                    <h3>CUDA Accelerated Neural Network</h3>
+                    <p>
+                        I used NVIDIA's CUDA to write a neural network from scratch with C++ and train it on the MNIST hand-written digit dataset. With 96% accuracy, the network was able to go from 57 seconds per epoch without GPU acceleration to a whopping 3 seconds, for a 20x speedup!
+                    </p>
+                    <h4>Languages and tools used</h4>
+                    <p>Python, PyTorch</p>
+                </div>
+            </div>
+
             <div class="portfolio-project" id="smbrl">
                 <div class="portfolio-project-image-container">
                     <img src="resources/images/Portfolio-SuperMarioBrosRL.png" alt="smbrl-picture" />
                     <div class="image-links">
-                        <a href="/super-mario-bros-rl" class="btn btn-full" target="_blank">Check it
+                        <a href="projects/super-mario-bros-rl" class="btn btn-full" target="_blank">Check it
                             out!</a>
                         <a href="https://github.com/Sourish07/Super-Mario-Bros-RL" class="btn btn-ghost"
                             target="_blank">View the code!</a>
@@ -376,10 +401,10 @@
             <div class="portfolio-project" id="dinein">
                 <div class="portfolio-project-image-container">
                     <img src="resources/images/Portfolio-DineIn.png" alt="analyzer-picture" />
-                    <div class="image-links">
-                        <a href="https://www.dineinllc.com/home/" class="btn btn-full" target="_blank">Check it
+                    <!-- <div class="image-links">
+                        <a href="" class="btn btn-full" target="_blank">Check it
                             out!</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="image-text">
                     <h3>Dine In LLC</h3>
@@ -390,7 +415,7 @@
                         the
                         entire experience contactless, which is important during a pandemic. The restaurants can also
                         update the menu in real-time, allowing them to immediately spread word of specials at certain
-                        times/dates, out-of-stock items, or changes in prices, resulting in lowered menu costs.
+                        times/dates, out-of-stock items, or changes in prices, resulting in lowered menu costs. Unfortunately, Dine In LLC is no longer active.
                     </p>
                     <h4>Languages and tools used</h4>
                     <p>Python, Django, Javascript, and Heroku</p>
@@ -400,10 +425,10 @@
             <div class="portfolio-project" id="dining-capacity">
                 <div class="portfolio-project-image-container">
                     <img src="resources/images/Portfolio-Dining-Capacity.png" alt="analyzer-picture" />
-                    <div class="image-links">
+                    <!-- <div class="image-links">
                         <a href="https://diningcapacity.housing.wisc.edu" class="btn btn-full" target="_blank">Check it
                             out!</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="image-text">
                     <h3>Real Time Dining Capacity</h3>
@@ -411,7 +436,7 @@
                         The University of Wisconsin-Madison needed an application to track the capacity of their dining
                         halls in realtime to ensure that students that dine there are safe due to COVID-19. This
                         application allows the University to track the halls' capacities and any student on campus can
-                        then view the count in real-time, allowing them to make a safe decision on where to dine.
+                        then view the count in real-time, allowing them to make a safe decision on where to dine. UW-Madison no longer needed the application after Spring of 2021.
                     </p>
                     <h4>Languages and tools used</h4>
                     <p>Google Firebase, Google Cloud, and Javascript</p>
@@ -422,7 +447,7 @@
                 <div class="portfolio-project-image-container">
                     <img src="resources/images/Portfolio-Rap-Generator.png" alt="analyzer-picture" />
                     <div class="image-links">
-                        <a href="/rap-generator" class="btn btn-full" target="_blank">Check it
+                        <a href="projects/rap-generator" class="btn btn-full" target="_blank">Check it
                             out!</a>
                         <a href="https://github.com/Sourish07/RapLyricsGenerator" class="btn btn-ghost"
                             target="_blank">View the code!</a>

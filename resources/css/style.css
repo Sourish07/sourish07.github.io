@@ -486,6 +486,14 @@ nav {
     opacity: 0.2;
 }
 
+#dining-capacity .portfolio-project-image-container:hover img,
+#dinein .portfolio-project-image-container:hover img {
+    transform: scale(1);
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
 .image-links {
     position: absolute;
     top: 50%;
