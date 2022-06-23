@@ -78,13 +78,15 @@ After summing up the areas, we get that the one on the left has a combined area 
 
 The next question you might be asking yourself is: Hey, neither of those above lines seem like the most optimal one. How can we calculate that?
 
-This is where the machine learning algorithm called Gradient Descent comes in. An animation of the process is inserted below. We begin the line with a slope of zero and a y-intercept of zero.
+This is where the machine learning algorithm called Gradient Descent comes in. An animation of the process is inserted below. Its second half is sped up because the algorithm makes smaller and smaller changes as the line gets closer and closer to optimal.
+
+The line begins with a slope and y-intercept of zero.
 
 <video playsinline autoplay muted loop>
     <source src="../assets/images/lr/lr-anim.mp4" type="video/mp4">
 </video>
 
-This algorithm also extends to lines of higher degrees.
+This algorithm also extends to lines of higher degrees (again, sped up).
 
 <video playsinline autoplay muted loop>
     <source src="../assets/images/lr/quad.mp4" type="video/mp4">
