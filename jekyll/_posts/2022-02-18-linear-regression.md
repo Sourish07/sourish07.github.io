@@ -128,9 +128,9 @@ X =
 \begin{bmatrix}
 1 & x_0    \\
 1 & x_1  \\
-... & ...\\
+\cdots & \cdots\\
 1 & x_{n-2}\\
-1 & x_{n-1}\\
+1 & x_{n-1}
 \end{bmatrix}
 $$
 
