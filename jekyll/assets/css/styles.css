@@ -80,6 +80,11 @@ a, a:visited {
     --p: 100%;
 }
 
+@media print
+{
+* {page-break-inside:avoid}
+}
+
 /* a {
     cursor: pointer;
     background: 
