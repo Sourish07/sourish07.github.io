@@ -46,7 +46,7 @@ For those that are absolute beginners, I personally recommend creating a simple 
 
 If you prefer JavaScript, you can use Node.js. You can’t go wrong with either of these options as Python and JS are both valuable languages sought after in the industry.
 
-Creating a web app allows for you to dive right into frontend, backend, APIs, and networking. Additionally, it’s easy to host and share with others, which will also teach you about the cloud. Then, you can put the URL on your resume to show recruiters! Check out the tutorial for a Stock Price checker app that I made [here](../tutorials/flask.html)!
+Creating a web app allows for you to dive right into frontend, backend, APIs, and networking. Additionally, it’s easy to host and share with others, which will also teach you about the cloud. Then, you can put the URL on your resume to show recruiters! Check out the tutorial for a Stock Price checker app that I made [here](../tutorial/flask.html)!
 
 ## The Idea
 

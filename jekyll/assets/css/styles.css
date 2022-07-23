@@ -51,7 +51,7 @@ h3 {
 }
 
 img {
-    /* box-shadow: 0 0 10px; */
+    box-shadow: 0 0 10px;
 }
 
 a, a:visited {
@@ -78,11 +78,6 @@ a, a:visited {
 .reading-level-unselected:hover {
     --d: 100%;
     --p: 100%;
-}
-
-@media print
-{
-* {page-break-inside:avoid}
 }
 
 /* a {

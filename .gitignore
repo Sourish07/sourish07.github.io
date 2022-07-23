@@ -1,0 +1,8 @@
+.gitignore
+.DS_Store
+/.vscode/
+/Brainstorming/
+/.idea/
+/blog/
+.jekyll-cache/
+jekyll/.jekyll-cache/
