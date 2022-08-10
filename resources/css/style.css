@@ -152,6 +152,11 @@ header {
 /* Buttons */
 .btn {
     font-size: 1.5rem;
+    margin: 0 6px 0 6px;
+}
+
+.btn:not(:last-of-type) {
+    /* margin-right: 12px; */
 }
 
 .btn:link,
@@ -172,7 +177,6 @@ input[type=submit] {
     background-color: #e62b1e;
     border: 1px solid #e62b1e;
     color: #fff;
-    margin-right: 12px;
 }
 
 .btn-ghost:link,
@@ -195,10 +199,34 @@ input[type=submit]:active {
     border: 1px solid #b30000;
 }
 
+.btn-mid:link,
+.btn-mid:visited {
+    color: #FFF;
+    background-color: #444;
+}
+
+.btn-mid:hover,
+.btn-mid:active {
+    background-color: #222;
+    color: #fff;
+}
+
 .btn-ghost:hover,
 .btn-ghost:active {
     border: 1px solid #b30000;
     color: #fff;
+}
+
+#resume-btn {
+    order: 1;
+}
+
+#portfolio-btn {
+    order: 2;
+}
+
+#blog-btn {
+    order: 3;
 }
 
 /* -------------------------------------------------- */

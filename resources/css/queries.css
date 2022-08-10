@@ -158,10 +158,13 @@
         font-size: 1.5rem;
     }
 
-    /*.header-nav li,*/
-    /*.dropdown-menu {*/
-    /*    width: 60px;*/
-    /*}*/
+    #portfolio-btn {
+        order: 3;
+    }
+    
+    #blog-btn {
+        order: 2;
+    }
 
     .header-nav li {
         width: 60px;
