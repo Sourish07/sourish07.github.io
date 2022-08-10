@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="resources/images/supermariobrosrl/8-bit%20Mario.png">
-    <link href="resources/css/supermariobrosrl/supermariobros.css" rel="stylesheet"/>
+    <link rel="icon" href="../resources/images/supermariobrosrl/8-bit%20Mario.png">
+    <link href="../resources/css/supermariobrosrl/supermariobros.css" rel="stylesheet" />
     <title>Super Mario Bros RL</title>
 </head>
+
 <body>
 
-<div class="menu-links">
-    <a href="https://www.sourish.dev">About the Creator</a>
-</div>
+    <div class="menu-links">
+        <a href="https://www.sourish.dev">About the Creator</a>
+    </div>
 
-<h1>Super Mario Bros Reinforcement Learning</h1>
-<img src="resources/images/supermariobrosrl/SuperMarioBros.jpg">
+    <h1>Super Mario Bros Reinforcement Learning</h1>
+    <img src="../resources/images/supermariobrosrl/SuperMarioBros.jpg">
 
-<p class="centered-text">Watch the computer learn how to play one of the most iconic video games of all time!</p>
-<div class="text-container">
-    <p>All footage below is the computer playing the game with no human intervention. An "iteration"
-    is one playthrough of the game, regardless of whether the computer beats the level or dies. As each iteration
-    progresses, the computer slowly learns which buttons to press based on what's on the screen.</p>
-</div>
-<p class="centered-text">The code for this project was inspired by the following paper:</p>
-<button><a href="https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf">Human-level control through deep reinforcement learning</a></button>
-<p class="centered-text">To fully understand how the computer is learning from each iteration, check out my blog
+    <h2>Watch the computer learn how to play one of the most iconic video games of all time!</h2>
+    <div class="text-container">
+        <p>We use Reinforcement Learning, a subfield of Machine Learning, to teach the computer how to play the game. In
+            RL, we reinforce behaviors we want the computer, i.e. our agent, to exhibit. Think about training a dog to
+            perform a
+            trick. The goal is for the furry canine to complete the entirety of
+            the trick. If the trick is an obstacle course, the trainer would want to give the dog a treat every time it
+            completes part of the course, relaying to the dog it is on the right track and it should go further next
+            time for
+            more treats. If the dog fails the obstacle in front of it, the trainer will not give the dog a treat.
+            Eventually,
+            the dog learns which actions earn it a treat and which ones do not, leading to the dog completing the
+            course. The
+            computer works in a very similar fashion.</p>
+        <p>In this scenario, the computer is given a positive reward for moving right, a negative reward for standing
+            still,
+            and an even more negative reward for dying. Using neural networks, it starts to learn which actions to take
+            in order to maximize its rewards, just like our dog!</p>
+        <p>All footage below is the computer playing the game with no human intervention. An "iteration"
+            is one playthrough of the game, regardless of whether the computer beats the level or dies. This agent is
+            using
+            the Double Deep Q Learning algorithm.</p>
+    </div>
+    <p class="centered-text">The code for this project was inspired by the following paper:</p>
+    <button><a
+            href="https://web.stanford.edu/class/psych309/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf">Human-level
+            control through deep reinforcement learning</a></button>
+    <!-- <p class="centered-text">To fully understand how the computer is learning from each iteration, check out my blog
     post about Reinforcement Learning:</p>
-<button><a href="blog/reinforcement-learning">Sourish Shares!</a></button>
+<button><a href="blog/reinforcement-learning">Sourish Shares!</a></button> -->
 
-<h2>Zero iterations</h2>
-<video playsinline autoplay muted loop>
-  <source src="resources/images/supermariobrosrl/0-iterations.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="text-container">
-    <p>At the very beginning, with no experience, the computer clearly doesn't know much about the game. It only
-        knows to go right without jumping; It doesn't even know that a goomba is deadly.</p>
-</div>
+    <h3>Zero iterations</h3>
+    <video playsinline autoplay muted loop>
+        <source src="../resources/images/supermariobrosrl/0-iterations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+        <p>At the very beginning, with no experience, the computer clearly doesn't know much about the game. It only
+            knows to go right without jumping; It doesn't even know that a goomba is deadly.</p>
+    </div>
 
-<h2>1000 iterations</h2>
-<video playsinline autoplay muted loop>
-  <source src="resources/images/supermariobrosrl/1000-iterations.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="text-container">
-    <p>After 1,000 iterations, the computer knows how to jump and avoid the goombas, but unfortunately it falls into
-        the hole.</p>
-</div>
+    <h3>1000 iterations</h3>
+    <video playsinline autoplay muted loop>
+        <source src="../resources/images/supermariobrosrl/1000-iterations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+        <p>After 1,000 iterations, the computer knows how to jump and avoid the goombas, but unfortunately it falls into
+            the hole.</p>
+    </div>
 
-<h2>5000 iterations</h2>
-<video playsinline autoplay muted loop>
-  <source src="resources/images/supermariobrosrl/5000-iterations.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="text-container">
-    <p>After 5,000 iterations, the computer knows how to maneuver with more confidence, but it still makes some
-        mistakes, leading to its demise.</p>
-</div>
+    <h3>5000 iterations</h3>
+    <video playsinline autoplay muted loop>
+        <source src="../resources/images/supermariobrosrl/5000-iterations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+        <p>After 5,000 iterations, the computer knows how to maneuver with more confidence, but it still makes some
+            mistakes, leading to its demise.</p>
+    </div>
 
-<h2>10000 iterations</h2>
-<video playsinline autoplay muted loop>
-  <source src="resources/images/supermariobrosrl/10000-iterations.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="text-container">
-    <p>After 10,000 iterations, we see the computer finally completes the level! It knows which objects on the screen
-    are obstacles and what to do when approaching one.</p>
-</div>
+    <h3>10000 iterations</h3>
+    <video playsinline autoplay muted loop>
+        <source src="../resources/images/supermariobrosrl/10000-iterations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-container">
+        <p>After 10,000 iterations, we see the computer finally completes the level! It knows which objects on the
+            screen
+            are obstacles and what to do when approaching one.</p>
+    </div>
 
 </body>
+
 </html>
