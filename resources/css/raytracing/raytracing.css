@@ -54,6 +54,7 @@ a:visited,
 a:hover,
 a:active {
   color: purple;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -71,6 +72,7 @@ p {
 .scene {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 .scene div {
