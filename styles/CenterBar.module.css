@@ -1,0 +1,34 @@
+.CenterBar {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.sidebarLink {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebarLink:hover,
+.sidebarLink:active {
+    background: white;
+    cursor: pointer;
+
+}
+
+.sidebarLink:hover span,
+.sidebarLink:active span {
+    color: var(--red);
+
+}
+
+.sidebarLink a {
+    /*margin-bottom: 50px;*/
+    padding: 30px 5px;
+    text-align: center;
+    list-style: none;
+
+    transition: background-color 0.2s, color 0.2s;
+}

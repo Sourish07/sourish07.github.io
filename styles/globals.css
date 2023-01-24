@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap');
+
+:root {
+    --red: #e62b1e;
+    --dark-red: #b30000;
+    --background-color: #151515;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    /* max-width: 100vw; */
+    text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
+    overflow-x: hidden;
+}
+
+.row {
+    width: 95vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
