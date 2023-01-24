@@ -1,5 +1,4 @@
 import Link from "next/link"
-import styles from '../styles/CenterBar.module.css'
 
 export default function CenterBar() {
     const navbarItems = [
@@ -32,11 +31,11 @@ export default function CenterBar() {
     return (
         <div style={{
             "display": "flex", 
-            "justify-content": "center", 
+            "justifyContent": "center", 
             "flexWrap": "wrap"
             }}>
             {navbarItems.map((item) => (
-                <Button icon={item.icon} href={item.href} text={item.name} />
+                <Button key={item.name} icon={item.icon} href={item.href} text={item.name} />
             ))}
         </div>
     )
@@ -46,17 +45,11 @@ function Button(props) {
 
     return (
         <Link href={props.href} style={{
-                // "background-color": "#888",
-                // "border": "none",
-                // "cursor": "pointer",
                 display: "flex",
-                // "flex-direction": "column",
                 alignItems: "center",
-                // "justify-content": "center",
                 margin: "10px",
                 }}>
-            <img src={props.icon} alt="Button" width={35} style={{}}/>
-            {/* <div>{props.text}</div> */}
+            <img src={props.icon} alt="Button" width={35} />
         </Link>
     )
 }

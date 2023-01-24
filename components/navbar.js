@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Button from './centerbar.js';
 import styles from '../styles/CenterBar.module.css';
 
 export default function Navbar() {
@@ -8,13 +7,14 @@ export default function Navbar() {
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
                 <div >
-                    <a href style={{ display: "none" }}>sourish.dev</a>
+                    <a href="" style={{ display: "none" }}>sourish.dev</a>
                 </div>
+                
                 <div style={{ display: "flex" }}>
                     {navbarItems.map((item) => (
-                        <NavbarLink href={"#" + item.toLowerCase()} text={item} style={{ display: "none" }} />
+                        <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} style={{ display: "none" }} />
                     ))}
-                    <NavbarMore />
+                    <NavbarMoreIcon />
                 </div>
             </nav>
             <Sidebar items={navbarItems} />
@@ -28,7 +28,7 @@ function Sidebar(props) {
             <div onClick={hideSidebar} style={{background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1"}}></div>
             <div style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "60px", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
                 {props.items.map((item) => (
-                    <NavbarLink href={"#" + item.toLowerCase()} text={item} className={styles.sidebarLink} />
+                    <NavbarLink key={item} href={"#" + item.toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
             </div>
         </div>
@@ -39,7 +39,7 @@ function Sidebar(props) {
 function NavbarLink(props) {
     return (
         <Link href={props.href ? props.href : ""} style={props.style ? props.style : {}} className={props.className ? props.className : ""}>
-            <span>{props.text}</span>
+            {props.text}
         </Link>
     )
 }
@@ -53,8 +53,8 @@ function hideSidebar() {
 }
 
 
-function NavbarMore() {
+function NavbarMoreIcon() {
     return (
-        <img src="icon.svg" alt="Button" width={35} onClick={showSidebar} style={{}} />
+        <img src="icon.svg" alt="Button" width={35} onClick={showSidebar} />
     )
 }

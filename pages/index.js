@@ -6,7 +6,7 @@ import Head from 'next/head';
 import Row from '../components/row';
 import CenterBar from '../components/centerbar';
 import Navbar from '../components/navbar';
-
+import AboutMe from '../components/aboutMe';
 
 export default function Index() {
     return (
@@ -27,12 +27,13 @@ export default function Index() {
                     <CenterBar />
                 </div>
             </header>
+            <AboutMe />
         </>
     );
 }
 
 function SourishPic() {
     return (
-        <img src="me.jpg" alt="Picture of Sourish" style={{"width": "60vw", "border-radius": "50%", maxWidth: "500px"}}/>
+        <img src="me.jpg" alt="Picture of Sourish" style={{width: "60vw", borderRadius: "50%", maxWidth: "400px"}}/>
     );
 }

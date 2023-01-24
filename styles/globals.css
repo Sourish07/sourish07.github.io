@@ -18,8 +18,7 @@ html, body {
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    /* max-width: 100vw; */
-    text-rendering: optimizeLegibility; /* Makes fonts render in a perfect way */
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
 
