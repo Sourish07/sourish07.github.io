@@ -8,6 +8,8 @@ import CenterBar from '../components/centerbar';
 import Navbar from '../components/navbar';
 import AboutMe from '../components/aboutMe';
 import Experience from '../components/experience';
+import Skills from '../components/skills';
+import Portfolio from '../components/porfolio';
 
 export default function Index() {
     return (
@@ -30,6 +32,8 @@ export default function Index() {
             </header>
             <AboutMe />
             <Experience />
+            <Skills />
+            <Portfolio />
         </>
     );
 }
