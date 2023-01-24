@@ -28,7 +28,7 @@ function Sidebar(props) {
             <div onClick={hideSidebar} style={{background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1"}}></div>
             <div style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "60px", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
                 {props.items.map((item) => (
-                    <NavbarLink key={item} href={"#" + item.toLowerCase()} text={item} className={styles.sidebarLink} />
+                    <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
             </div>
         </div>
@@ -37,9 +37,11 @@ function Sidebar(props) {
 }
 
 function NavbarLink(props) {
+    console.log(props)
     return (
-        <Link href={props.href ? props.href : ""} style={props.style ? props.style : {}} className={props.className ? props.className : ""}>
-            {props.text}
+        // props.style ? props.style : {}
+        <Link href={props.href ? props.href : ""} >
+            <a style={props.style} className={props.className}>{props.text}</a>
         </Link>
     )
 }

@@ -1,4 +1,4 @@
-import SectionTitle from './sectionTitle';
+import {SectionTitle} from './sectionTitle';
 
 const AboutMe = () => {
     return (

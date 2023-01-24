@@ -7,6 +7,7 @@ import Row from '../components/row';
 import CenterBar from '../components/centerbar';
 import Navbar from '../components/navbar';
 import AboutMe from '../components/aboutMe';
+import Experience from '../components/experience';
 
 export default function Index() {
     return (
@@ -28,6 +29,7 @@ export default function Index() {
                 </div>
             </header>
             <AboutMe />
+            <Experience />
         </>
     );
 }
