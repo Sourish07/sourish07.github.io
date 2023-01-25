@@ -13,21 +13,24 @@ const Skills = () => {
     const other = getOther(path, style);
 
     return (
-        <div className="row">
-            <style>
+        <div className="section">
+            <style jsx>
                 {`
                     h2 {
                         font-weight: bold;
-                        margin-top: 15px
                     }
                 `}
             </style>
             <SectionTitle title="Skills" />
             <h2>Languages</h2>
             <ImageRow images={languages} caption={true}/>
-
+            
+            <hr/>
+            
             <h2>Libraries, Tools, and Frameworks</h2>
             <ImageRow images={frameworks} caption={true}/>
+            
+            <hr/>
             
             <h2>Other</h2>
             <ImageRow images={other} caption={true}/>

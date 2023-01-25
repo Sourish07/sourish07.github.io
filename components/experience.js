@@ -20,7 +20,7 @@ const Experience = () => {
         }
     })
     return (
-        <div className="row">
+        <div className="section">
             <SectionTitle title="Experience" />
             <SectionSubheader text="I've had experience working both at big corporations and small startups." />
             <ImageRow images={images}/>

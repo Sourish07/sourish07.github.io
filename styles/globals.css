@@ -4,6 +4,8 @@
     --red: #e62b1e;
     --dark-red: #b30000;
     --background-color: #151515;
+    --background-color-2: #111;
+    --gray: rgb(40, 40, 40);
 }
 
 * {
@@ -14,7 +16,7 @@
 }
 
 html, body {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -22,12 +24,28 @@ html, body {
     overflow-x: hidden;
 }
 
-.row {
-    width: 95vw;
+.section {
+    padding: 40px 10px;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.section:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+.section:nth-child(even) {
+    background-color: var(--background-color-2);
+}
+
+hr {
+    width: 100%;
+    margin: 20px;
+    background-color: var(--gray);
+    border-color: var(--gray);
+    color: var(--gray);
 }
 

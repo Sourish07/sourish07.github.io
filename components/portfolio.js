@@ -3,18 +3,21 @@ import { SectionTitle, SectionSubheader } from './sectionTitle.js';
 const Portfolio = () => {
     const projects = getProjects();
     return (
-        <div className="row">
+        <div className="section">
+            <style jsx>
+                {`
+                    hr:last-of-type {
+                        display: none;
+                    }
+                `}
+            </style>
             <SectionTitle title="Portfolio" />
             <SectionSubheader text="Check out the projects I've worked on!" />
             {projects.map((project) => (
-                <Project
-                    title={project.title}
-                    description={project.description}
-                    languages={project.languages}
-                    src={project.src}
-                    projectLink={project.projectLink}
-                    codeLink={project.codeLink}
-                />
+                <>
+                <Project {...project} />
+                <hr/>
+                </>
             ))}
         </div>
     )
@@ -22,14 +25,13 @@ const Portfolio = () => {
 
 const Project = (props) => {
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
-            <img src={props.src} alt={props.alt} style={{width: "100%", maxWidth: "300px"}}/>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
+            <img src={props.src} alt={props.alt} style={{width: "100%", maxWidth: "400px"}}/>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>{props.title}</h3>
+                <h2 style={{textAlign: "center"}}>{props.title}</h2>
                 <p>{props.description}</p>
-
-                <h4>Languages and Tools Used</h4>
-                <p>{props.languages}</p>
+                <h3 style={{marginTop: "15px"}}>Languages and Tools Used</h3>
+                <p>{props.tools}</p>
             </div>
         </div>
     )

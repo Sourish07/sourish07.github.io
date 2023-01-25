@@ -5,6 +5,7 @@ import AboutMe from '../components/aboutMe';
 import Experience from '../components/experience';
 import Skills from '../components/skills';
 import Portfolio from '../components/portfolio';
+import Footer from '../components/footer';
 
 export default function Index() {
     return (
@@ -20,6 +21,7 @@ export default function Index() {
             <Experience />
             <Skills />
             <Portfolio />
+            <Footer />
         </>
     );
 }

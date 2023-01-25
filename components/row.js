@@ -1,6 +1,6 @@
 export default function Row() {
     return (
-      <div className="row">
+      <div className="section">
         <p>Test</p>
 
       </div>
