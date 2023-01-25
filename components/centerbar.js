@@ -1,41 +1,44 @@
 import Link from "next/link"
 
 export default function CenterBar() {
+    const path = "resources/icons/"
     const navbarItems = [
         {
             name: "Resume",
-            icon: "icon.svg",
+            icon: "resume.svg",
             href: "/resume"
         },
         {
             name: "Portfolio",
-            icon: "icon.svg",
+            icon: "portfolio.svg",
             href: "#portfolio"
         },
         {
             name: "Blog",
-            icon: "icon.svg",
+            icon: "blog.svg",
             href: "/blog"
         },
         {
             name: "GitHub",
-            icon: "icon.svg",
+            icon: "github.svg",
             href: "https://github.com/Sourish07"
         },
         {
             name: "LinkedIn",
-            icon: "icon.svg",
+            icon: "linkedin.svg",
             href: "https://www.linkedin.com/in/sourish07/"
         },
     ];
     return (
-        <div style={{
+        <div id="center-bar" style={{
             "display": "flex", 
-            "justifyContent": "center", 
-            "flexWrap": "wrap"
+            "justifyContent": "space-evenly", 
+            "flexWrap": "wrap",
+            "marginTop": "20px",
+            
             }}>
             {navbarItems.map((item) => (
-                <Button key={item.name} icon={item.icon} href={item.href} text={item.name} />
+                <Button key={item.name} icon={path + item.icon} href={item.href} text={item.name} />
             ))}
         </div>
     )
@@ -45,7 +48,7 @@ function Button(props) {
 
     return (
         <Link href={props.href}>
-            <img src={props.icon} alt="Button" width={35} style={{margin: "10px", filter: "var(--red-filter)"}}/>
+            <img src={props.icon} alt="Button" height={35} style={{filter: "var(--red-filter)"}}/>
         </Link>
     )
 }

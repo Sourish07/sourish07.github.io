@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Vectornator (http://vectornator.io/) -->
+
+<svg
+   height="873"
+   stroke-miterlimit="10"
+   style="clip-rule:evenodd;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round"
+   version="1.1"
+   viewBox="0 0 625 873"
+   width="625"
+   xml:space="preserve"
+   id="svg23"
+   sodipodi:docname="resume.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:vectornator="http://vectornator.io"><sodipodi:namedview
+   id="namedview25"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="1.0029297"
+   inkscape:cx="315.07692"
+   inkscape:cy="403.81694"
+   inkscape:window-width="3440"
+   inkscape:window-height="1369"
+   inkscape:window-x="1432"
+   inkscape:window-y="549"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg23" />
+<defs
+   id="defs2" />
+<g
+   id="Layer-1"
+   vectornator:layerName="Layer 1"
+   transform="translate(-193.125,-108.062)">
+<path
+   d="m 316.875,120.562 v 111.25 h -111.25 v 736.75 h 600 v -848 z"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-width="25"
+   id="path4" />
+<path
+   d="m 205.625,231.812 111.25,-111.25"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="bevel"
+   stroke-width="25"
+   id="path6" />
+</g>
+<g
+   id="Layer-2"
+   vectornator:layerName="Layer 2"
+   transform="translate(-193.125,-108.062)">
+<path
+   d="m 255.62,544.56 h 500"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="bevel"
+   stroke-width="25"
+   id="path9" />
+<path
+   d="m 255.62,756.56 h 500"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="bevel"
+   stroke-width="25"
+   id="path11" />
+<path
+   d="m 255.62,862.56 h 250"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="bevel"
+   stroke-width="25"
+   id="path13" />
+<path
+   d="m 255.62,650.56 h 500"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="bevel"
+   stroke-width="25"
+   id="path15" />
+</g>
+<g
+   id="Layer-3"
+   vectornator:layerName="Layer 3"
+   transform="translate(-193.125,-108.062)">
+<path
+   d="m 620.781,303.875 c -27.656,7.696 -48.818,30.924 -53.625,59.687 h 147.375 c -4.705,-28.155 -25.108,-50.953 -51.906,-59.124 -5.893,3.886 -12.944,6.187 -20.531,6.187 -7.944,0 -15.259,-2.522 -21.313,-6.75 z"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-width="25"
+   id="path18" />
+<path
+   d="m 604.747,234.251 c 0,-20.632 16.725,-37.357 37.357,-37.357 20.631,0 37.357,16.725 37.357,37.357 0,20.631 -16.726,37.357 -37.357,37.357 -20.632,0 -37.357,-16.726 -37.357,-37.357 z"
+   fill="none"
+   opacity="1"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   stroke-width="25"
+   id="path20" />
+</g>
+</svg>

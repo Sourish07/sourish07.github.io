@@ -53,8 +53,8 @@ function hideSidebar() {
 }
 
 
-function NavbarMoreIcon() {
+function NavbarMoreIcon(props) {
     return (
-        <img src="icon.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
+        <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
     )
 }

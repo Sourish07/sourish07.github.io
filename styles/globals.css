@@ -137,4 +137,8 @@ a:visited {
     nav a {
         display: inline!important;
     }
+
+    #center-bar img {
+        height: 50px;
+    }
 }
