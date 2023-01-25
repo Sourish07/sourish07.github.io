@@ -100,10 +100,6 @@ a:visited {
     text-decoration: none;
 }
 
-
-
-
-
 /* Landscape Phones */
 @media (orientation: landscape) and (min-width: 576px) and (max-width: 767px) {
     #hero .section {
@@ -123,13 +119,18 @@ a:visited {
     #portfolio p {
         font-size: 0.7rem;
     }
-
-    .project__image-container img {
-        max-width: 400px;
-    }
 }
 
+/* Tablets and Desktops */
 @media (min-width: 768px) {
+    #hero {
+        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("coverphoto.png");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+
     #navbar-more-icon {
         display: none;
     }
@@ -138,7 +139,5 @@ a:visited {
         display: inline!important;
     }
 
-    #center-bar img {
-        height: 50px;
-    }
+    
 }

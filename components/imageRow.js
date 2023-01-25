@@ -9,7 +9,7 @@ const ImageRow = (props) => {
                 alt={image.alt}
                 style={image.style}
             />
-            {props.caption ? <p style={{width: "100px", textAlign: "center"}}>{image.name}</p> : null}
+            {props.caption ? <p style={{width: "100px", textAlign: "center"}}>{image.name}</p> : <></>}
         </div>
         ))}
     </div>

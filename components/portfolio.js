@@ -27,10 +27,10 @@ const Project = (props) => {
     return (
         <div className={styles.project} style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
             <div className={styles.imageContainer}>
-                <img src={props.src} alt={props.alt} className={(props.projectLink || props.codeLink) ? styles.transition : null} />
+                <img src={props.src} alt={props.alt} className={(props.projectLink || props.codeLink) ? styles.transition : <></>} />
                 <div className={styles.links}>
-                    {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : null}
-                    {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : null}
+                    {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : <></>}
+                    {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : <></>}
                 </div>
             </div>
             <div className={styles.textContainer} style={{ display: "flex", flexDirection: "column" }}>

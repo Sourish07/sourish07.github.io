@@ -1,0 +1,26 @@
+.centerBar {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.centerBar img {
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.centerBar img:hover {
+    transform: scale(1.5);
+}
+
+.centerBar img:hover + span {
+    opacity: 1!important;
+}
+
+@media (min-width: 768px) {
+    .centerBar img {
+        height: 50px;
+    }
+}
