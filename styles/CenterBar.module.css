@@ -16,7 +16,7 @@
 }
 
 .centerBar img:hover + span {
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
 @media (min-width: 768px) {

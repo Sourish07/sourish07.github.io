@@ -9,10 +9,16 @@ export default function Navbar() {
                 <div >
                     <a href="" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
                 </div>
-                
+
                 <div style={{ display: "flex" }}>
                     {navbarItems.map((item) => (
-                        <NavbarLink key={item} className="navbar-link" href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }} />
+                        <NavbarLink
+                            key={item}
+                            className="navbar-link"
+                            href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()}
+                            text={item}
+                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
+                        />
                     ))}
                     <NavbarMoreIcon />
                 </div>
@@ -24,15 +30,15 @@ export default function Navbar() {
 
 function Sidebar(props) {
     return (
-        <div id="sidebar" style={{display: "flex", position: "fixed", width: "0", height: "100%", top: "0", right: "0", overflowX: "hidden", transition: "0.5s", zIndex: "1"}}>
-            <div onClick={hideSidebar} style={{background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1"}}></div>
-            <div id="sidebarContent" style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "20px", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
+        <div id="sidebar" style={{ display: "flex", position: "fixed", width: "0", height: "100%", top: "0", right: "0", overflowX: "hidden", transition: "0.5s", zIndex: "1" }}>
+            <div onClick={hideSidebar} style={{ background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1" }}></div>
+            <div id="sidebarContent"
+                style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "20px", position: "absolute", right: "0", display: "flex", flexDirection: "column" }}>
                 {props.items.map((item) => (
                     <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
             </div>
         </div>
-
     )
 }
 
@@ -55,6 +61,6 @@ function hideSidebar() {
 
 function NavbarMoreIcon(props) {
     return (
-        <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
+        <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)" }} />
     )
 }

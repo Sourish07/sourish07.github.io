@@ -67,7 +67,7 @@
 }
 
 .links div:hover img {
-    filter: var(--red-filter)!important;
+    filter: var(--red-filter) !important;
 }
 
 .links div:hover span {
@@ -76,14 +76,14 @@
 
 @media (min-width: 768px) {
     .project:nth-of-type(even) {
-        flex-direction: row!important;
+        flex-direction: row !important;
     }
     .project:nth-of-type(even) .textContainer {
         padding-left: 20px;
     }
 
     .project:nth-of-type(odd) {
-        flex-direction: row-reverse!important;
+        flex-direction: row-reverse !important;
     }
 
     .project:nth-of-type(odd) .textContainer {
