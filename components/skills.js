@@ -1,5 +1,5 @@
 import ImageRow from "./imageRow";
-import {SectionTitle} from "./sectionTitle"
+import Section from "./section";
 
 const Skills = () => {
     const path = "resources/images/skills/"
@@ -13,7 +13,7 @@ const Skills = () => {
     const other = getOther(path, style);
 
     return (
-        <div className="section">
+        <Section id="skills" title="Skills">
             <style jsx>
                 {`
                     h2 {
@@ -21,7 +21,6 @@ const Skills = () => {
                     }
                 `}
             </style>
-            <SectionTitle title="Skills" />
             <h2>Languages</h2>
             <ImageRow images={languages} caption={true}/>
             
@@ -34,7 +33,7 @@ const Skills = () => {
             
             <h2>Other</h2>
             <ImageRow images={other} caption={true}/>
-        </div>
+        </Section>
     );
 }
 

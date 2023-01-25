@@ -1,9 +1,9 @@
-import { SectionTitle, SectionSubheader } from './sectionTitle.js';
+import Section from "./section";
 
 const Portfolio = () => {
     const projects = getProjects();
     return (
-        <div className="section">
+        <Section id="portfolio" title="Portfolio" text="Check out the projects I've worked on!">
             <style jsx>
                 {`
                     hr:last-of-type {
@@ -11,15 +11,13 @@ const Portfolio = () => {
                     }
                 `}
             </style>
-            <SectionTitle title="Portfolio" />
-            <SectionSubheader text="Check out the projects I've worked on!" />
             {projects.map((project) => (
                 <>
                 <Project {...project} />
                 <hr/>
                 </>
             ))}
-        </div>
+        </Section>
     )
 };
 

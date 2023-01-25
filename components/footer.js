@@ -1,14 +1,12 @@
-import { SectionSubheader, SectionTitle } from "./sectionTitle";
+import Section from "./section";
 
 const Footer = () => {
-  return (
-    <div className="section">
+    return (
         <footer>
-            <SectionTitle title="Contact" />
-            <SectionSubheader text="Feel free to reach out!" />
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <style jsx>
-                    {`
+            <Section id="footer" title="Contact" subheader="Feel free to reach out!">
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <style jsx>
+                        {`
                         div {
                             margin: 10px;
                         }
@@ -24,13 +22,13 @@ const Footer = () => {
                             color: var(--white);
                         }
                     `}
-                </style>
-                <div><span>Email: </span><a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
-                <div><span>LinkedIn: </span><a href="www.linkedin.com/in/sourish07/">linkedin.com/in/sourish07/</a></div>
-            </div>
+                    </style>
+                    <div><span>Email: </span><a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
+                    <div><span>LinkedIn: </span><a href="www.linkedin.com/in/sourish07/">linkedin.com/in/sourish07/</a></div>
+                </div>
+            </Section>
         </footer>
-    </div>
-  );
+    );
 };
 
 export default Footer;

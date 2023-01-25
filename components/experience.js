@@ -1,5 +1,5 @@
 import ImageRow from "./imageRow";
-import {SectionTitle, SectionSubheader} from "./sectionTitle"
+import Section from "./section";
 
 const Experience = () => {
     const path = "resources/images/experience/"
@@ -20,11 +20,9 @@ const Experience = () => {
         }
     })
     return (
-        <div className="section">
-            <SectionTitle title="Experience" />
-            <SectionSubheader text="I've had experience working both at big corporations and small startups." />
+        <Section id="experience" title="Experience" text="I've had experience working both at big corporations and small startups.">
             <ImageRow images={images}/>
-        </div>
+        </Section>
     );
 };
 
