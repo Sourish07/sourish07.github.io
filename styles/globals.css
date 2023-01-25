@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap');
+
+:root {
+    --red: #e62b1e;
+    --dark-red: #b30000;
+    --background-color: #151515;
+    --background-color-2: #111;
+    --gray: rgb(40, 40, 40);
+    --red-filter: brightness(0) saturate(100%) invert(11%) sepia(91%) saturate(5515%) hue-rotate(358deg) brightness(113%) contrast(115%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-red);
+}
+
+.navbar-link:hover {
+    color: var(--red);
+}
+
+section {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    padding: 0 10px;
+    width: clamp(375px, 95vw, 1100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+section:nth-child(even) {
+    background-color: var(--background-color-2);
+}
+
+hr {
+    width: 100%;
+    margin: 20px;
+    background-color: var(--gray);
+    border-color: var(--gray);
+    color: var(--gray);
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* Landscape Phones */
+@media (orientation: landscape) and (min-width: 576px) and (max-width: 767px) {
+    #hero .section {
+        flex-direction: row;
+    }
+
+    #me-pic {
+        height: 75vh;
+        margin-right: 2px;
+    }
+
+    #sidebarContent {
+        padding-top: 10px;
+    }
+
+    #about-me p,
+    #portfolio p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Tablets and Desktops */
+@media (min-width: 768px) {
+    #hero {
+        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/resources/images/coverphoto.png");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+
+    #navbar-more-icon {
+        display: none;
+    }
+
+    nav a {
+        display: inline !important;
+    }
+
+    
+}

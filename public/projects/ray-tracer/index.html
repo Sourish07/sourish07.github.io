@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J796TLFH87');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../../resources/images/raytracing/rt-sphere.png">
+    <link href="../../resources/css/raytracing/raytracing.css" rel="stylesheet" />
+    <title>Ray Tracer from Scratch</title>
+</head>
+
+<body>
+
+    <div class="menu-links">
+        <a href="https://www.sourish.dev" style="font-weight: 300;">About the Creator</a>
+    </div>
+
+    <h1>Ray Tracer from Scratch</h1>
+
+    <h2 class="centered-text">The defining technique for the current generation of computer graphics</h2>
+    <div class="text-container">
+        <p>Ray tracing is a computer graphics technique which simulates light's behavior in the real world. This leads
+            to much more realistic shading, shadows, and reflections in a scene, which is extremely valuable for
+            modern-day computer graphics in video games and movies. A brute force approach is sending millions of
+            light rays from all of the light sources in the scene and having them react to the objects and materials
+            appropriately. If the light ray hits a diffuse material, it should be scattered randomly. If it hits a glass
+            object, it should either reflect or refract as light does with regards to glass in the real world. We then
+            would keep track of all of the rays that enter the camera and use them to draw a picture of the scene.</p>
+        <p>Because a lot of light rays shot into the scene will never make it into the camera, a lot of the computations
+            are wasted. One optimization that all ray tracers make is to shoot the rays from the camera, rather than the
+            light sources. This essentially is tracing the path of the light backwards, which guarantees that all ray
+            calculations will contribute to the final render.</p>
+        <p>I have coded a simple ray tracer which has global illumination, anti-aliasing, caustics, and subsurface
+            scattering. For each
+            render shown below, you'll see the complementary scene made in Blender. While the results aren't exact, it's
+            very rewarding to see how closely the shadows, reflections, and shading resemble a more professional
+            solution.</p>
+        <p>The code for this project can be found <a
+                href="https://github.com/Sourish07/RayTracer-From-Scratch">here</a>. Feel free to check it out and
+            either try it or give me any feedback. As a side note, a lot of my code and knowledge base about ray tracing
+            is heavily derived and adapted from Peter Shirley's <a href="https://raytracing.github.io/">book series</a>,
+            so special
+            thanks to him for writing it.</p>
+        <p>Python isn't the most ideal language for writing a ray tracer, but by using pypy, the render times are much
+            more reasonable. For the future, I plan on implementing many more features, such as:</p>
+        <ul>
+            <li>Real time rendering on the GPU with C++ and OpenGL</li>
+            <li>Moveable camera for animations</li>
+            <li>Textures</li>
+            <li>Skybox</li>
+            <li>More shapes like hearts and toruses</li>
+            <li>Support for mesh models</li>
+            <li>Importance sampling</li>
+            <li>Bidirectional path tracing</li>
+        </ul>
+        <p>Stay tuned for these features to be released!</p>
+    </div>
+    <div class="scene">
+        <div>
+            <h2>My ray tracer</h2>
+        </div>
+        <div>
+            <h2>Blender</h2>
+        </div>
+    </div>
+    <div class="scene">
+        <div>
+            <img src="../../resources/images/raytracing/red-sphere-scratch.png">
+
+        </div>
+        <div>
+            <img src="../../resources/images/raytracing/red-sphere-blender.png">
+        </div>
+    </div>
+    <div class="scene">
+        <div>
+            <img src="../../resources/images/raytracing/cubes-scratch.png">
+        </div>
+        <div>
+            <img src="../../resources/images/raytracing/cubes-blender.png">
+        </div>
+    </div>
+    <div class="scene">
+        <div>
+            <img src="../../resources/images/raytracing/glass-cube-and-sphere-scratch.png">
+
+        </div>
+        <div>
+            <img src="../../resources/images/raytracing/glass-cube-and-sphere-blender.png">
+        </div>
+    </div>
+</body>
+
+</html>
