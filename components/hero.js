@@ -8,7 +8,7 @@ const Hero = () => {
             <Navbar />
             <Section id="hero" divStyle={{ height: "100vh", justifyContent: "center" }} sectionStyle={{ padding: "0" }}>
 
-                <img src="me.jpg" id="me-pic" alt="Picture of Sourish" style={{ borderRadius: "50%", width: "clamp(325px, 50vw, 400px)" }} />
+                <img src="sourish.jpg" id="me-pic" alt="Picture of Sourish" style={{ borderRadius: "50%", width: "clamp(325px, 50vw, 400px)" }} />
 
                 <div>
 
