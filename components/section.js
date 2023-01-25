@@ -20,7 +20,7 @@ export const SectionTitle = ({ title }) => {
 
 export const SectionSubheader = ({ text }) => {
   return (
-      <h3 style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "center"}}>
+      <h3 style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "center", marginBottom: "20px"}}>
           {text}
       </h3>
   );
