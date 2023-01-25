@@ -79,7 +79,7 @@ function getFrameworks(path, style) {
         { name: "NumPy", src: "numpy.svg"},
         { name: "Pandas", src: "pandas.svg"},
         { name: "Matplotlib", src: "matplotlib.svg"},
-        { name: "react", src: "react.svg"},
+        { name: "React", src: "react.svg"},
         { name: "jQuery", src: "jquery.svg"},
         { name: "AJAX", src: "ajax.svg"},
         { name: "Postgresql", src: "postgresql.svg"},

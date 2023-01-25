@@ -37,9 +37,7 @@ function Sidebar(props) {
 }
 
 function NavbarLink(props) {
-    console.log(props)
     return (
-        // props.style ? props.style : {}
         <Link href={props.href ? props.href : ""} >
             <a style={props.style} className={props.className}>{props.text}</a>
         </Link>

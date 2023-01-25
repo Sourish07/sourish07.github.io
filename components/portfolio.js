@@ -26,7 +26,7 @@ const Project = (props) => {
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
             <img src={props.src} alt={props.alt} style={{width: "100%", maxWidth: "400px"}}/>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <h2 style={{textAlign: "center"}}>{props.title}</h2>
+                <h2 style={{textAlign: "center", margin: "10px"}}>{props.title}</h2>
                 <p>{props.description}</p>
                 <h3 style={{marginTop: "15px"}}>Languages and Tools Used</h3>
                 <p>{props.tools}</p>
