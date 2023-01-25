@@ -44,10 +44,11 @@ const Project = (props) => {
 }
 
 const ProjectLink = (props) => {
+    const path = "resources/icons/"
     return (
         <Link href={props.projectLink ? props.projectLink : props.codeLink}>
             <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
-                <img src="icon.svg" alt="icon" style={{ width: "50px", marginRight: "10px" }} />
+                <img src={path + (props.projectLink ? "view.svg" : "code.svg")} alt="icon" style={{ width: "50px", marginRight: "10px", filter: "invert(100%)" }} />
                 <span>{props.projectLink ? "Check it out" : "View the code"}</span>
             </div>
         </Link>

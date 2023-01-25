@@ -11,12 +11,10 @@ export default function Index() {
     return (
         <>
             <Head>
-                <html lang="en"/>
                 <title>Sourish's Personal Website</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            
             <Hero />
             <AboutMe />
             <Experience />

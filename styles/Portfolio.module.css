@@ -67,7 +67,7 @@
 }
 
 .links div:hover img {
-    filter: var(--red-filter);
+    filter: var(--red-filter)!important;
 }
 
 .links div:hover span {
