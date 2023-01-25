@@ -28,7 +28,7 @@ export default function Index() {
                 <meta property="og:site_name" content="sourish.dev" />
                 <meta property="og:title" content="Sourish's Personal Website" />
                 <meta property="og:description" content="Check out my website for a showcase of my skills and projects!" />
-                <meta property="og:image" content="/resources/images/link-thumbnail.png" />
+                <meta property="og:image" content="resources/images/link-thumbnail-copy.png" />
                 <meta name="description" content="Check out my website for a showcase of my skills and projects!" />
                 
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
