@@ -37,7 +37,7 @@ section {
 
 .section {
     padding: 0 10px;
-    width: clamp(375px, 75vw, 1400px);
+    width: clamp(375px, 95vw, 992px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,3 +63,18 @@ p {
     font-size: 1.1rem;
 }
 
+/* Landscape Phones */
+@media (orientation: landscape) and (min-width: 576px) and (max-width: 768px) {
+    #hero .section {
+        flex-direction: row;
+    }
+
+    #me-pic {
+        height: 75vh;
+        margin-right: 2px;
+    }
+
+    #sidebarContent {
+        padding-top: 10px;
+    }
+}

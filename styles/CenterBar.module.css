@@ -25,10 +25,8 @@
 }
 
 .sidebarLink a {
-    /*margin-bottom: 50px;*/
     padding: 30px 5px;
     text-align: center;
     list-style: none;
-
     transition: background-color 0.2s, color 0.2s;
 }

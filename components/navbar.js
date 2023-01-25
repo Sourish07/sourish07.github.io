@@ -26,7 +26,7 @@ function Sidebar(props) {
     return (
         <div id="sidebar" style={{display: "flex", position: "fixed", width: "0", height: "100%", top: "0", right: "0", overflowX: "hidden", transition: "0.5s", zIndex: "1"}}>
             <div onClick={hideSidebar} style={{background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1"}}></div>
-            <div style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "60px", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
+            <div id="sidebarContent" style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "clamp(0, 60px, 5vh)", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
                 {props.items.map((item) => (
                     <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
