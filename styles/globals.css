@@ -124,7 +124,7 @@ a:visited {
 /* Tablets and Desktops */
 @media (min-width: 768px) {
     #hero {
-        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("coverphoto.png");
+        background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/resources/images/coverphoto.png");
         background-size: cover;
         background-position: center;
         height: 100vh;
