@@ -20,7 +20,7 @@ const Experience = () => {
         }
     })
     return (
-        <Section id="experience" title="Experience" text="I've had experience working both at big corporations and small startups.">
+        <Section id="experience" title="Experience" subheader="I've had experience working both at big corporations and small startups.">
             <ImageRow images={images}/>
         </Section>
     );

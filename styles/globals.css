@@ -127,13 +127,17 @@ p {
     opacity: 1;
 }
 
-.project__container__links div img {
-    fill: red;
-    transition: filter 0.2s;
+.project__container__links div img,
+.project__container__links div span {
+    transition: color 0.2s filter 0.2s;
 }
 
 .project__container__links div:hover img {
-    filter: invert(11%) sepia(91%) saturate(5515%) hue-rotate(358deg) brightness(113%) contrast(115%);
+    filter: var(--red-filter);
+}
+
+.project__container__links div:hover span {
+    color: var(--red);
 }
 
 #dine-in-llc:hover .project__background-img,

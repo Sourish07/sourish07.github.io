@@ -5,7 +5,7 @@ import Section from "./section";
 const Portfolio = () => {
     const projects = getProjects();
     return (
-        <Section id="portfolio" title="Portfolio" text="Check out the projects I've worked on!">
+        <Section id="portfolio" title="Portfolio" subheader="Check out the projects I've worked on!">
             <style jsx>
                 {`
                     hr:last-of-type {
@@ -47,8 +47,8 @@ const ProjectLink = (props) => {
     return (
         <Link href={props.projectLink ? props.projectLink : props.codeLink}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <img src="icon.svg" alt="icon" style={{ width: "100px" }} />
-                {props.projectLink ? "Check it out" : "View the code"}
+                <img src="icon.svg" alt="icon" style={{ width: "50px" }} />
+                <span>{props.projectLink ? "Check it out" : "View the code"}</span>
             </div>
         </Link>
     )
