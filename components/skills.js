@@ -16,23 +16,28 @@ const Skills = () => {
         <Section id="skills" title="Skills">
             <style jsx>
                 {`
-                    h2 {
+                    h3 {
                         font-weight: bold;
                         text-align: center;
+                        font-size: 1.5rem;
+                    }
+
+                    h3:first-of-type {
+                        margin-top: 20px;
                     }
                 `}
             </style>
-            <h2>Languages</h2>
+            <h3>Languages</h3>
             <ImageRow images={languages} caption={true}/>
             
             <hr/>
             
-            <h2>Libraries, Tools, and Frameworks</h2>
+            <h3>Libraries, Tools, and Frameworks</h3>
             <ImageRow images={frameworks} caption={true}/>
             
             <hr/>
             
-            <h2>Other</h2>
+            <h3>Other</h3>
             <ImageRow images={other} caption={true}/>
         </Section>
     );
