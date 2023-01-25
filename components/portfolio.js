@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { isContext } from "vm";
 import Section from "./section";
 
 const Portfolio = () => {
@@ -13,8 +15,8 @@ const Portfolio = () => {
             </style>
             {projects.map((project) => (
                 <>
-                <Project {...project} />
-                <hr/>
+                    <Project {...project} />
+                    <hr />
                 </>
             ))}
         </Section>
@@ -23,15 +25,32 @@ const Portfolio = () => {
 
 const Project = (props) => {
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
-            <img src={props.src} alt={props.alt} style={{width: "100%", maxWidth: "400px"}}/>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-                <h2 style={{textAlign: "center", margin: "10px"}}>{props.title}</h2>
+        <div className="project" id={props.title.replaceAll(' ', '-').toLowerCase()} style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
+            <div className="project__image-container">
+                <img src={props.src} alt={props.alt} className="project__background-img"/>
+                <div className="project__container__links">
+                    {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : null}
+                    {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : null}
+                </div>
+            </div>
+            <div className="project__text-container" style={{ display: "flex", flexDirection: "column" }}>
+                <h2 style={{ textAlign: "center", margin: "10px" }}>{props.title}</h2>
                 <p>{props.description}</p>
-                <h3 style={{marginTop: "15px"}}>Languages and Tools Used</h3>
+                <h3 style={{ marginTop: "15px" }}>Languages and Tools Used</h3>
                 <p>{props.tools}</p>
             </div>
         </div>
+    )
+}
+
+const ProjectLink = (props) => {
+    return (
+        <Link href={props.projectLink ? props.projectLink : props.codeLink}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <img src="icon.svg" alt="icon" style={{ width: "100px" }} />
+                {props.projectLink ? "Check it out" : "View the code"}
+            </div>
+        </Link>
     )
 }
 

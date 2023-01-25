@@ -45,7 +45,7 @@ function Button(props) {
 
     return (
         <Link href={props.href}>
-            <img src={props.icon} alt="Button" width={35} style={{margin: "10px"}}/>
+            <img src={props.icon} alt="Button" width={35} style={{margin: "10px", filter: "var(--red-filter)"}}/>
         </Link>
     )
 }

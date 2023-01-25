@@ -13,7 +13,7 @@ const Experience = () => {
                 maxWidth: "200px",
                 maxHeight: "125px",
                 margin: "10px",
-                padding: "20px",
+                padding: "15px",
                 borderRadius: "10px",
                 backgroundColor: "white",
             }

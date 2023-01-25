@@ -55,6 +55,6 @@ function hideSidebar() {
 
 function NavbarMoreIcon() {
     return (
-        <img src="icon.svg" alt="Button" width={35} onClick={showSidebar} />
+        <img src="icon.svg" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
     )
 }
