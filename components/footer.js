@@ -2,9 +2,9 @@ import Section from "./section";
 
 const Footer = () => {
     return (
-        <footer>
-            <Section id="footer" title="Contact" subheader="Feel free to reach out!">
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Section id="contact" title="Contact" subheader="Feel free to reach out!">
+            <footer>
+                <div className="section">
                     <style jsx>
                         {`
                         div {
@@ -26,8 +26,8 @@ const Footer = () => {
                     <div><span>Email: </span><a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
                     <div><span>LinkedIn: </span><a href="www.linkedin.com/in/sourish07/">linkedin.com/in/sourish07/</a></div>
                 </div>
-            </Section>
-        </footer>
+            </footer>
+        </Section>
     );
 };
 

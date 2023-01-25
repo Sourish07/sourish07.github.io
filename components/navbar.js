@@ -2,17 +2,17 @@ import Link from 'next/link';
 import styles from '../styles/CenterBar.module.css';
 
 export default function Navbar() {
-    const navbarItems = ["About me", "Experience", "Skills", "Porfolio", "Blog", "Contact"];
+    const navbarItems = ["About me", "Experience", "Skills", "Portfolio", "Blog", "Contact"];
     return (
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
                 <div >
-                    <a href="" style={{ display: "none" }}>sourish.dev</a>
+                    <a href="" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
                 </div>
                 
                 <div style={{ display: "flex" }}>
                     {navbarItems.map((item) => (
-                        <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} style={{ display: "none" }} />
+                        <NavbarLink key={item} className="navbar-link" href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }} />
                     ))}
                     <NavbarMoreIcon />
                 </div>
@@ -26,7 +26,7 @@ function Sidebar(props) {
     return (
         <div id="sidebar" style={{display: "flex", position: "fixed", width: "0", height: "100%", top: "0", right: "0", overflowX: "hidden", transition: "0.5s", zIndex: "1"}}>
             <div onClick={hideSidebar} style={{background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1"}}></div>
-            <div id="sidebarContent" style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "clamp(0, 60px, 5vh)", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
+            <div id="sidebarContent" style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "20px", position: "absolute", right: "0", display: "flex", flexDirection: "column"}}>
                 {props.items.map((item) => (
                     <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
@@ -55,6 +55,6 @@ function hideSidebar() {
 
 function NavbarMoreIcon() {
     return (
-        <img src="icon.svg" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
+        <img src="icon.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{filter: "var(--red-filter)"}}/>
     )
 }
