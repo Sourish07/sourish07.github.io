@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '../styles/CenterBar.module.css';
+import styles from '../styles/NavBar.module.css';
 
 export default function Navbar() {
     const navbarItems = ["About me", "Experience", "Skills", "Portfolio", "Blog", "Contact"];
