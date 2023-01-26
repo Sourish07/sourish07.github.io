@@ -78,6 +78,7 @@ function getFrameworks(path, style) {
         { name: "Tensorflow", src: "tensorflow.svg"},
         { name: "Scikit Learn", src: "scikitlearn.svg"},
         { name: "Docker", src: "docker.svg"},
+        { name: "Nginx", src: "nginx.svg"},
         { name: "ARKit", src: "arkit.png"},
         { name: "RealityKit", src: "realitykit.png"},
         { name: "SceneKit", src: "scenekit.png"},
