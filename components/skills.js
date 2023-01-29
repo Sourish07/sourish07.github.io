@@ -66,7 +66,7 @@ function getLanguages(path, style) {
         { name: "CSS", src: "css.svg"},
         { name: "JavaScript", src: "javascript.svg"},
         { name: "SQL", src: "sql.svg"},
-        { name: "MATLAB", src: "matlab.png"},
+        { name: "MATLAB", src: "matlab.webp"},
     ]
     return format(languages, path, style);
 }
@@ -74,14 +74,14 @@ function getLanguages(path, style) {
 function getFrameworks(path, style) {
     let frameworks = [
         { name: "PyTorch", src: "pytorch.svg"},
-        { name: "CUDA", src: "cuda.png"},
+        { name: "CUDA", src: "cuda.webp"},
         { name: "Tensorflow", src: "tensorflow.svg"},
         { name: "Scikit Learn", src: "scikitlearn.svg"},
         { name: "Docker", src: "docker.svg"},
         { name: "Nginx", src: "nginx.svg"},
-        { name: "ARKit", src: "arkit.png"},
-        { name: "RealityKit", src: "realitykit.png"},
-        { name: "SceneKit", src: "scenekit.png"},
+        { name: "ARKit", src: "arkit.webp"},
+        { name: "RealityKit", src: "realitykit.webp"},
+        { name: "SceneKit", src: "scenekit.webp"},
         { name: "Django", src: "django.svg"},
         { name: "Flask", src: "flask.svg"},
         { name: "NumPy", src: "numpy.svg"},
