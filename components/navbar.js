@@ -35,7 +35,7 @@ function Sidebar(props) {
             <div id="sidebarContent"
                 style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "20px", position: "absolute", right: "0", display: "flex", flexDirection: "column" }}>
                 {props.items.map((item) => (
-                    <NavbarLink key={item} href={"#" + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
+                    <NavbarLink key={item} href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
                 ))}
             </div>
         </div>
