@@ -7,7 +7,7 @@ export default function Navbar() {
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
                 <div >
-                    <a href="" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
+                    <a href="/" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
                 </div>
 
                 <div style={{ display: "flex" }}>
