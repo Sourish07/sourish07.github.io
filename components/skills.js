@@ -1,7 +1,7 @@
 import ImageRow from "./imageRow";
 import Section from "./section";
 
-const Skills = () => {
+export default function Skills() {
     const path = "resources/images/skills/"
     const style = {
         height: "75px",
@@ -110,5 +110,3 @@ function getOther(path, style) {
     ]
     return format(other, path, style);
 }
-
-export default Skills;

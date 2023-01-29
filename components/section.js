@@ -1,4 +1,4 @@
-const Section = (props) => {
+export default function Section(props) {
   return (
     <section id={props.id} style={props.sectionStyle}>
       <div className="section" style={props.divStyle}>
@@ -25,5 +25,3 @@ export const SectionSubheader = ({ text }) => {
       </h3>
   );
 };
-
-export default Section;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '../styles/NavBar.module.css';
+import styles from '@/styles/NavBar.module.css';
 
 export default function Navbar() {
     const navbarItems = ["About me", "Experience", "Skills", "Portfolio", "Blog", "Contact"];
@@ -59,7 +59,7 @@ function hideSidebar() {
 }
 
 
-function NavbarMoreIcon(props) {
+function NavbarMoreIcon() {
     return (
         <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)" }} />
     )

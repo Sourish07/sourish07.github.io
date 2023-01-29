@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script'
 
-const SkHead = ({ title, children }) => {
+export default function SkHead({ title, children }) {
     return (
         <Head>
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87" />
@@ -31,5 +31,3 @@ const SkHead = ({ title, children }) => {
         </Head>
     )
 }
-
-export default SkHead;

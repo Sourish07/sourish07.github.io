@@ -1,6 +1,6 @@
 import Section from "./section";
 
-const Footer = () => {
+export default function Footer() {
     return (
         <Section id="contact" title="Contact" subheader="Feel free to reach out!">
             <footer>
@@ -30,5 +30,3 @@ const Footer = () => {
         </Section>
     );
 };
-
-export default Footer;

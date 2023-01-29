@@ -1,4 +1,4 @@
-const ImageRow = (props) => {
+export default function ImageRow() {
   return (
     <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
       {props.images.map((image) => (
@@ -15,5 +15,3 @@ const ImageRow = (props) => {
     </div>
     );
 };
-
-export default ImageRow;

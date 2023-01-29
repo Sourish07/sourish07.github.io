@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from '../styles/CenterBar.module.css';
+import styles from '@/styles/CenterBar.module.css';
 
 export default function CenterBar() {
     const path = "resources/icons/"

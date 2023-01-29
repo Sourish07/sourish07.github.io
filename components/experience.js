@@ -1,7 +1,7 @@
 import ImageRow from "./imageRow";
 import Section from "./section";
 
-const Experience = () => {
+export default function Experience() {
     const path = "resources/images/experience/"
     let images = ["bytedance-copy.svg", "aws.webp", "gallify.svg", "capitalone.svg", "xaipient.webp", "dinein.webp", "leidos.svg"]
     images = images.map((image) => {
@@ -26,4 +26,3 @@ const Experience = () => {
     );
 };
 
-export default Experience;

@@ -2,7 +2,7 @@ import CenterBar from './centerbar';
 import Navbar from './navbar';
 import Section from './section';
 
-const Hero = () => {
+export default function Hero() {
     return (
         <header>
             <Navbar />
@@ -25,4 +25,3 @@ const Hero = () => {
     )
 }
 
-export default Hero;

@@ -1,6 +1,6 @@
 import Section from './section';
 
-const AboutMe = () => {
+export default function AboutMe() {
     return (
         <Section id="about-me" title="About Me">
             <style jsx>
@@ -17,4 +17,3 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
