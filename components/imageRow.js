@@ -1,4 +1,4 @@
-export default function ImageRow() {
+export default function ImageRow(props) {
   return (
     <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
       {props.images.map((image) => (
