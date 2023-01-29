@@ -3,7 +3,7 @@ import Section from "./section";
 
 const Experience = () => {
     const path = "resources/images/experience/"
-    let images = ["bytedance-copy.svg", "aws.png", "gallify.svg", "capitalone.svg", "xaipient.png", "dinein.png", "leidos.svg"]
+    let images = ["bytedance-copy.svg", "aws.webp", "gallify.svg", "capitalone.svg", "xaipient.webp", "dinein.webp", "leidos.svg"]
     images = images.map((image) => {
         return {
             name: image,

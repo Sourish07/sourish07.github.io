@@ -66,7 +66,7 @@ function getLanguages(path, style) {
         { name: "CSS", src: "css.svg"},
         { name: "JavaScript", src: "javascript.svg"},
         { name: "SQL", src: "sql.svg"},
-        { name: "MATLAB", src: "matlab.png"},
+        { name: "MATLAB", src: "matlab.webp"},
     ]
     return format(languages, path, style);
 }
@@ -74,18 +74,21 @@ function getLanguages(path, style) {
 function getFrameworks(path, style) {
     let frameworks = [
         { name: "PyTorch", src: "pytorch.svg"},
-        { name: "CUDA", src: "cuda.png"},
+        { name: "CUDA", src: "cuda.webp"},
         { name: "Tensorflow", src: "tensorflow.svg"},
         { name: "Scikit Learn", src: "scikitlearn.svg"},
-        { name: "ARKit", src: "arkit.png"},
-        { name: "RealityKit", src: "realitykit.png"},
-        { name: "SceneKit", src: "scenekit.png"},
+        { name: "Docker", src: "docker.svg"},
+        { name: "Nginx", src: "nginx.svg"},
+        { name: "ARKit", src: "arkit.webp"},
+        { name: "RealityKit", src: "realitykit.webp"},
+        { name: "SceneKit", src: "scenekit.webp"},
         { name: "Django", src: "django.svg"},
         { name: "Flask", src: "flask.svg"},
         { name: "NumPy", src: "numpy.svg"},
         { name: "Pandas", src: "pandas.svg"},
         { name: "Matplotlib", src: "matplotlib.svg"},
         { name: "React", src: "react.svg"},
+        { name: "Next.js", src: "nextjs.svg"},
         { name: "jQuery", src: "jquery.svg"},
         { name: "AJAX", src: "ajax.svg"},
         { name: "Postgresql", src: "postgresql.svg"},
@@ -100,6 +103,7 @@ function getOther(path, style) {
         { name: "Git/GitHub", src: "git.svg"},
         { name: "AWS", src: "aws.svg"},
         { name: "Google Cloud", src: "googlecloud.svg"},
+        { name: "Proxmox", src: "proxmox.svg"},
         { name: "Google Firebase", src: "firebase.svg"},
         { name: "Android App Development", src: "android.svg"},
         { name: "Blender", src: "blender.svg"},
