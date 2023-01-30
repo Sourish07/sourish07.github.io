@@ -8,6 +8,7 @@ export default function ImageRow(props) {
                 src={image.src}
                 alt={image.alt}
                 style={image.style}
+                loading="lazy"
             />
             {props.caption ? <p style={{width: "100px", textAlign: "center"}}>{image.name}</p> : <></>}
         </div>
