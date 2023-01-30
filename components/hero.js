@@ -8,7 +8,10 @@ export default function Hero() {
             <Navbar />
             <Section id="hero" divStyle={{ height: "100vh", justifyContent: "center" }} sectionStyle={{ padding: "0" }}>
 
-                <img src="sourish.webp" id="me-pic" alt="Picture of Sourish" style={{ borderRadius: "50%", width: "clamp(325px, 30vw, 600px)" }} />
+                <img src="sourish.webp" 
+                     id="sourish-pic" 
+                     alt="Picture of Sourish" 
+                     style={{ borderRadius: "50%", width: "clamp(325px, 30vw, 600px)" }} />
 
                 <div>
 
