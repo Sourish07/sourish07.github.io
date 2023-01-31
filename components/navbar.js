@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '@/styles/NavBar.module.css';
 
 export default function Navbar() {
@@ -61,6 +62,6 @@ function hideSidebar() {
 
 function NavbarMoreIcon() {
     return (
-        <img src="resources/icons/hamburger.svg" id={styles.navbarMoreIcon} alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)", cursor: "pointer" }} />
+        <Image src="resources/icons/hamburger.svg" id={styles.navbarMoreIcon} alt="Button" width={35} height={35} onClick={showSidebar} style={{ filter: "var(--red-filter)", cursor: "pointer" }} />
     )
 }
