@@ -6,7 +6,6 @@
 }
 
 .centerBar img {
-    height: 35px;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -20,7 +19,7 @@
 }
 
 @media (min-width: 768px) {
-    .centerBar img {
-        height: 50px;
+    .centerBar div {
+        width: 50px !important;
     }
 }
