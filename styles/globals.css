@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Lato:100,300&display=swap'); */
 
 :root {
     --red: #e62b1e;
@@ -19,8 +19,6 @@
 html, body {
     background-color: var(--background-color);
     color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
@@ -50,10 +48,6 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--dark-red);
-}
-
-.navbar-link:hover {
-    color: var(--red);
 }
 
 section {
@@ -130,14 +124,4 @@ a:visited {
         height: 100vh;
         background-attachment: fixed;
     }
-
-    #navbar-more-icon {
-        display: none;
-    }
-
-    nav a {
-        display: inline !important;
-    }
-
-    
 }
