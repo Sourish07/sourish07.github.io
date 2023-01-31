@@ -6,8 +6,8 @@ export default function Navbar() {
     return (
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
-                <div className={styles.navbarLink} style={{ display: "none", fontSize: "2rem" }}>
-                    <Link href="/">sourish.dev</Link>
+                <div>
+                    <Link href="/" className={styles.navbarLink} style={{ display: "none", fontSize: "2rem" }}>sourish.dev</Link>
                 </div>
 
                 <div style={{ display: "flex" }}>
