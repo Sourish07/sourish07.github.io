@@ -6,15 +6,15 @@ export default function Navbar() {
     return (
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
-                <div >
-                    <a href="/" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
+                <div className={styles.navbarLink} style={{ display: "none", fontSize: "2rem" }}>
+                    <Link href="/">sourish.dev</Link>
                 </div>
 
                 <div style={{ display: "flex" }}>
                     {navbarItems.map((item) => (
                         <NavbarLink
                             key={item}
-                            className="navbar-link"
+                            className={styles.navbarLink}
                             href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()}
                             text={item}
                             style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
@@ -45,7 +45,7 @@ function Sidebar(props) {
 function NavbarLink(props) {
     return (
         <Link href={props.href ? props.href : ""} >
-            <a style={props.style} className={props.className}>{props.text}</a>
+            <div style={props.style} className={props.className}>{props.text}</div>
         </Link>
     )
 }
@@ -61,6 +61,6 @@ function hideSidebar() {
 
 function NavbarMoreIcon() {
     return (
-        <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)" }} />
+        <img src="resources/icons/hamburger.svg" id={styles.navbarMoreIcon} alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)", cursor: "pointer" }} />
     )
 }

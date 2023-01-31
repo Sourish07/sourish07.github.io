@@ -24,9 +24,22 @@
 
 }
 
-.sidebarLink a {
+.sidebarLink div {
     padding: 30px 5px;
     text-align: center;
     list-style: none;
     transition: background-color 0.2s, color 0.2s;
+}
+
+.navbarLink:hover {
+    color: var(--red);
+}
+
+@media (min-width: 768px) {
+    .navbarLink {
+        display: inline !important;
+    }
+    #navbarMoreIcon {
+        display: none;
+    }
 }

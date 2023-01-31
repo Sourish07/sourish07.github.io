@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Section from "./section";
 
 export default function Footer() {
@@ -23,8 +24,8 @@ export default function Footer() {
                         }
                     `}
                     </style>
-                    <div><span>Email: </span><a href="mailto:sourish@cs.wisc.edu">sourish@cs.wisc.edu</a></div>
-                    <div><span>LinkedIn: </span><a href="https://www.linkedin.com/in/sourish07/">linkedin.com/in/sourish07/</a></div>
+                    <Link href="mailto:sourish@cs.wisc.edu"><span>Email: </span>sourish@cs.wisc.edu</Link>
+                    <Link href="https://www.linkedin.com/in/sourish07/"><span>LinkedIn: </span></Link>
                 </div>
             </footer>
         </Section>
