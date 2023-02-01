@@ -2,15 +2,10 @@ import Image from "next/image";
 import Section from "./section";
 
 export default function Skills() {
-    const path = "resources/images/skills/"
-    const style = {
-        height: "75px",
-        margin: "10px",
-        padding: "10px",
-    }
-    const languages = getLanguages(path, style);
-    const frameworks = getFrameworks(path, style);
-    const other = getOther(path, style);
+    const path = "/resources/images/skills/"
+    const languages = getLanguages(path);
+    const frameworks = getFrameworks(path);
+    const other = getOther(path);
 
     return (
         <Section id="skills" title="Skills">
@@ -28,9 +23,6 @@ export default function Skills() {
                     
                     div {
                         height: 75px !important;
-                    }
-
-                    @media (min-width: 768px) {
                     }
                 `}
             </style>
@@ -52,7 +44,7 @@ export default function Skills() {
 
 export function ImageRow(props) {
     return (
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
             <style jsx>
                 {`                  
                     @media (min-width: 576px) {
@@ -64,8 +56,8 @@ export function ImageRow(props) {
                 `}
             </style>
             {props.images.map((image) => (
-                <div key={image.name} style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 5px"}}>
-                    <div className="imgWrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", height: "50px"}}>
+                <div key={image.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 5px" }}>
+                    <div className="imgWrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", height: "50px" }}>
                         <Image
                             key={image.name}
                             src={image.src}
@@ -82,19 +74,18 @@ export function ImageRow(props) {
     );
 };
 
-function format(items, path, style) {
+function format(items, path) {
     return items.map((item) => {
         return {
             name: item.name,
             src: path + item.src,
             alt: item.name,
-            style: style
         }
     })
 }
 
 
-function getLanguages(path, style) {
+function getLanguages(path) {
     let languages = [
         { name: "Python", src: "python.svg" },
         { name: "C++", src: "c++.svg" },
@@ -107,10 +98,10 @@ function getLanguages(path, style) {
         { name: "SQL", src: "sql.svg" },
         { name: "MATLAB", src: "matlab.webp" },
     ]
-    return format(languages, path, style);
+    return format(languages, path);
 }
 
-function getFrameworks(path, style) {
+function getFrameworks(path) {
     let frameworks = [
         { name: "PyTorch", src: "pytorch.svg" },
         { name: "CUDA", src: "cuda.webp" },
@@ -133,10 +124,10 @@ function getFrameworks(path, style) {
         { name: "Postgresql", src: "postgresql.svg" },
         { name: "Bootstrap", src: "bootstrap.svg" },
     ]
-    return format(frameworks, path, style);
+    return format(frameworks, path);
 }
 
-function getOther(path, style) {
+function getOther(path) {
     let other = [
         { name: "Linux", src: "linux.svg" },
         { name: "Git/GitHub", src: "git.svg" },
@@ -147,5 +138,5 @@ function getOther(path, style) {
         { name: "Android App Development", src: "android.svg" },
         { name: "Blender", src: "blender.svg" },
     ]
-    return format(other, path, style);
+    return format(other, path);
 }
