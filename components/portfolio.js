@@ -7,18 +7,8 @@ export default function Portfolio() {
     const projects = getProjects();
     return (
         <Section id="portfolio" title="Portfolio" subheader="Check out the projects I've worked on!">
-            <style jsx>
-                {`
-                    hr:last-of-type {
-                        display: none;
-                    }
-                `}
-            </style>
             {projects.map((project) => (
-                <>
-                    <Project {...project} />
-                    <hr />
-                </>
+                <Project key={project.title} {...project} />
             ))}
         </Section>
     )
@@ -26,21 +16,24 @@ export default function Portfolio() {
 
 const Project = (props) => {
     return (
-        <div className={styles.project} style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
-            <div className={styles.imageContainer}>
-                <Image src={props.src} alt={props.title} fill className={(props.projectLink || props.codeLink) ? styles.transition : <></>} />
-                <div className={styles.links}>
-                    {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : <></>}
-                    {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : <></>}
+        <>
+            <div className={styles.project} style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
+                <div className={styles.imageContainer}>
+                    <Image src={props.src} alt={props.title} fill className={(props.projectLink || props.codeLink) ? styles.transition : <></>} />
+                    <div className={styles.links}>
+                        {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : <></>}
+                        {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : <></>}
+                    </div>
+                </div>
+                <div className={styles.textContainer} style={{ display: "flex", flexDirection: "column" }}>
+                    <h2 style={{ textAlign: "center", margin: "10px" }}>{props.title}</h2>
+                    <p>{props.description}</p>
+                    <h3 style={{ marginTop: "15px" }}>Languages and Tools Used</h3>
+                    <p>{props.tools}</p>
                 </div>
             </div>
-            <div className={styles.textContainer} style={{ display: "flex", flexDirection: "column" }}>
-                <h2 style={{ textAlign: "center", margin: "10px" }}>{props.title}</h2>
-                <p>{props.description}</p>
-                <h3 style={{ marginTop: "15px" }}>Languages and Tools Used</h3>
-                <p>{props.tools}</p>
-            </div>
-        </div>
+            <hr />
+        </>
     )
 }
 
@@ -48,7 +41,7 @@ const ProjectLink = (props) => {
     const path = "resources/icons/"
     return (
         <Link href={props.projectLink ? props.projectLink : props.codeLink}>
-            <div style={{ display: "flex", alignItems: "center"}}>
+            <div style={{ display: "flex", alignItems: "center" }}>
                 <Image src={path + (props.projectLink ? "view.svg" : "code.svg")} alt="icon" width={50} height={50} style={{ marginRight: "10px", filter: "invert(100%)" }} />
                 <span>{props.projectLink ? "Check it out" : "View the code"}</span>
             </div>
