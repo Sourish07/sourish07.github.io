@@ -56,13 +56,13 @@ export function ImageRow(props) {
                 `}
             </style>
             {props.images.map((image) => (
-                <div key={image.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 5px" }}>
-                    <div className="imgWrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", height: "50px" }}>
+                <div key={image.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 7px" }}>
+                    <div className="imgWrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", maxWidth: "100px", height: "50px" }}>
                         <Image
                             key={image.name}
                             src={image.src}
                             alt={image.alt}
-                            style={{ width: "100%", height: "100%", objectFit: "contain", maxWidth: "100px", maxHeight: "75px" }}
+                            style={{ width: "100%", height: "100%", objectFit: "contain"}}
                             width={100}
                             height={100}
                         />
