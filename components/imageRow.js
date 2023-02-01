@@ -15,7 +15,7 @@ export default function ImageRow(props) {
                 key={image.name}
                 src={image.src}
                 alt={image.alt}
-                //style={{width: "100%", height: "100%", objectFit: "contain"}}
+                style={{width: "100%", height: "100%", objectFit: "contain"}}
                 fill="contain"
             /> */}
             {props.caption ? <p style={{width: "100px", textAlign: "center"}}>{image.name}</p> : <></>}
