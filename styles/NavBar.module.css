@@ -11,7 +11,6 @@
     height: 100%;
     top: 0;
     right: 0;
-    /* overflow-x: hidden; */
     transition: 0.5s;
     z-index: 1;
 }
@@ -74,6 +73,10 @@
 @media (min-width: 768px) {
     .navbarLink {
         display: inline !important;
+    }
+
+    #sidebar {
+        display: none;
     }
 
     #navbarIcon {
