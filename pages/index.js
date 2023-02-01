@@ -9,7 +9,9 @@ import Footer from '@/components/footer';
 export default function Index() {
     return (
         <>
-            <SkHead title="Sourish's Personal Website" />
+            <SkHead title="Sourish's Personal Website" >
+                <link rel="canonical" href="https://www.sourish.dev" />
+            </SkHead>
             <main>
                 <Hero />
                 <AboutMe />

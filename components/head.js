@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script'
 
-const SkHead = ({ title, children }) => {
+export default function SkHead({ title, children }) {
     return (
         <Head>
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87" />
@@ -27,9 +27,9 @@ const SkHead = ({ title, children }) => {
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
             <link rel="manifest" href="/site.webmanifest" />
+            <meta name="msapplication-TileColor" content="#da532c" />
+            <meta name="theme-color" content="#ffffff" />
             {children}
         </Head>
     )
 }
-
-export default SkHead;

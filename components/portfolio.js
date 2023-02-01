@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Section from "./section";
-import styles from '../styles/Portfolio.module.css';
+import styles from '@/styles/Portfolio.module.css';
 
-const Portfolio = () => {
+export default function Portfolio() {
     const projects = getProjects();
     return (
         <Section id="portfolio" title="Portfolio" subheader="Check out the projects I've worked on!">
@@ -153,5 +153,3 @@ function getProjects() {
         },
     ]
 }
-
-export default Portfolio;
