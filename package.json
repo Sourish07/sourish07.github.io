@@ -1,7 +1,9 @@
 {
   "scripts": {
     "dev": "next dev",
-    "export": "next build && next export"
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@next/font": "^13.1.6",
