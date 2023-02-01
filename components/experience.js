@@ -1,5 +1,5 @@
-import ImageRow from "./imageRow";
 import Section from "./section";
+import Image from "next/image";
 
 export default function Experience() {
     const path = "resources/images/experience/"
@@ -21,7 +21,20 @@ export default function Experience() {
     })
     return (
         <Section id="experience" title="Experience" subheader="I've had experience working both at big corporations and small startups.">
-            <ImageRow images={images}/>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+                {images.map((image) => (
+                    <div key={image.name} style={{padding: "15px", backgroundColor: "white", margin: "15px", borderRadius: "10px"}}>
+                        <div style={{position: "relative", width: "200px", height: "100px" }}>
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                                fill
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
         </Section>
     );
 };

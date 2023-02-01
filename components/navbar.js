@@ -1,26 +1,27 @@
 import Link from 'next/link';
 import styles from '@/styles/NavBar.module.css';
 
+
 export default function Navbar() {
     const navbarItems = ["About me", "Experience", "Skills", "Portfolio", "Blog", "Contact"];
     return (
         <>
             <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
-                <div >
-                    <a href="/" style={{ display: "none", fontSize: "2rem" }}>sourish.dev</a>
+                <div>
+                    <Link href="/" className={styles.navbarLink} style={{ display: "none", fontSize: "2rem" }}>sourish.dev</Link>
                 </div>
 
                 <div style={{ display: "flex" }}>
                     {navbarItems.map((item) => (
                         <NavbarLink
                             key={item}
-                            className="navbar-link"
+                            className={styles.navbarLink}
                             href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()}
                             text={item}
                             style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
                         />
                     ))}
-                    <NavbarMoreIcon />
+                    <button id={styles.navbarIcon} onClick={toggleSidebar} aria-label="menu"></button>
                 </div>
             </nav>
             <Sidebar items={navbarItems} />
@@ -30,12 +31,16 @@ export default function Navbar() {
 
 function Sidebar(props) {
     return (
-        <div id="sidebar" style={{ display: "flex", position: "fixed", width: "0", height: "100%", top: "0", right: "0", overflowX: "hidden", transition: "0.5s", zIndex: "1" }}>
-            <div onClick={hideSidebar} style={{ background: "rgba(4, 4, 4, 0)", height: "100%", flexGrow: "1" }}></div>
-            <div id="sidebarContent"
-                style={{ height: "100%", width: "180px", backgroundColor: "var(--red)", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px", paddingTop: "20px", position: "absolute", right: "0", display: "flex", flexDirection: "column" }}>
+        <div id={styles.sidebar}>
+            <div id={styles.sidebarContent}>
                 {props.items.map((item) => (
-                    <NavbarLink key={item} href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} />
+                    <NavbarLink 
+                        key={item} 
+                        href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} 
+                        text={item} 
+                        className={styles.sidebarLink} 
+                        onClick={toggleSidebar}
+                    />
                 ))}
             </div>
         </div>
@@ -44,23 +49,23 @@ function Sidebar(props) {
 
 function NavbarLink(props) {
     return (
-        <Link href={props.href ? props.href : ""} >
-            <a style={props.style} className={props.className}>{props.text}</a>
+        <Link href={props.href} onClick={props.onClick} alt={props.text}>
+            <div style={props.style} className={props.className}>{props.text}</div>
         </Link>
     )
 }
 
-function showSidebar() {
-    document.getElementById("sidebar").style.width = "100%";
-}
+function toggleSidebar() {
+    let sidebar = document.getElementById(styles.sidebar);
+    let icon = document.getElementById(styles.navbarIcon);
 
-function hideSidebar() {
-    document.getElementById("sidebar").style.width = "0";
-}
-
-
-function NavbarMoreIcon() {
-    return (
-        <img src="resources/icons/hamburger.svg" id="navbar-more-icon" alt="Button" width={35} onClick={showSidebar} style={{ filter: "var(--red-filter)" }} />
-    )
+    if (sidebar.style.transform === "translateX(0%)") { // If sidebar is open
+        sidebar.style.transform = "translateX(100%)";
+        icon.style.backgroundImage = `url(resources/icons/hamburger.svg)`;
+        icon.style.filter = "var(--red-filter)";
+    } else { // If sidebar is closed
+        sidebar.style.transform = "translateX(0%)";
+        icon.style.backgroundImage = `url(resources/icons/close.svg)`;
+        icon.style.filter = "brightness(0) invert(1)";
+    }
 }
