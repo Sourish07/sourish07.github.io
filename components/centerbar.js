@@ -45,7 +45,7 @@ function Button(props) {
     return (
         <Link href={props.href}>
             <div style={{display: "flex", flexDirection: "column", alignItems: "center", position: "relative", width: "35px", aspectRatio : "1/1"}}>
-                <Image src={props.icon} alt="Button" fill="contain" style={{filter: "var(--red-filter)"}}/>
+                <Image src={props.icon} alt="Button" fill="contain" placeholder="blur" style={{filter: "var(--red-filter)"}}/>
                 <span style={{opacity: "0", position: "absolute", bottom: "-90%", left: "50%", transform: "translate(-50%)", fontSize: "1.4rem", transition: "all 0.2s"}}>{props.text}</span>
             </div>
         </Link>

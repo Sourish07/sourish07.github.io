@@ -1,17 +1,14 @@
 import '@/styles/globals.css';
-import { Lato } from '@next/font/google';
+import "@fontsource/lato/100.css";
+import "@fontsource/lato/300.css";
 
-const lato = Lato({
-    weight: ['100', '300'],
-    subsets: ['latin'],
-});
 
 export default function App({ Component, pageProps }) {
     return (
         <>
             <style jsx global>{`
             html {
-              font-family: ${lato.style.fontFamily};
+              font-family: "Lato", sans-serif;
               font-weight: 300;
             }
           `}</style>
