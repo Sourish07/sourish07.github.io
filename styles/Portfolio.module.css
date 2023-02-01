@@ -47,8 +47,8 @@
     text-decoration: none;
 }
 
-.links div:not(:only-child):first-of-type {
-    margin-bottom: 25px;
+.links a:not(:only-child):first-of-type {
+    margin-bottom: 20px;
 }
 
 .links div {
