@@ -3,31 +3,24 @@ import Section from "./section";
 
 export default function Footer() {
     return (
-        <Section id="contact" title="Contact" subheader="Feel free to reach out!">
-            <footer>
-                <div className="section">
-                    <style jsx>
-                        {`
-                        div {
-                            margin: 10px;
-                        }
-
-                        a {
-                            color: var(--white)
-                        }
-
-                        a:hover,
-                        a:focus,
-                        a:active,
-                        a:visited {
-                            color: var(--white);
+        <footer>
+            <Section id="contact" title="Contact" subheader="Feel free to reach out!">
+                <style jsx>
+                    {`
+                        span {
+                            font-size: 1.2rem;
                         }
                     `}
-                    </style>
-                    <Link href="mailto:sourish@cs.wisc.edu"><span>Email: </span>sourish@cs.wisc.edu</Link>
-                    <Link href="https://www.linkedin.com/in/sourish07/"><span>LinkedIn: </span></Link>
+                </style>
+                <div className="section">
+                    <Link href="mailto:sourish@cs.wisc.edu" style={{ marginBottom: "10px", font: "1rem" }}>
+                        <span>Email: sourish@cs.wisc.edu</span>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/sourish07/">
+                        <span>LinkedIn: linkedin.com/in/sourish07/</span>
+                    </Link>
                 </div>
-            </footer>
-        </Section>
+            </Section>
+        </footer>
     );
 };

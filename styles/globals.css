@@ -25,6 +25,7 @@ html, body {
 
 body {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Scroll bar */
@@ -107,11 +108,6 @@ a:visited {
 
     #sidebarContent {
         padding-top: 10px;
-    }
-
-    #about-me p,
-    #portfolio p {
-        font-size: 0.7rem;
     }
 }
 
