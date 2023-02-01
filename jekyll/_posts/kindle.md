@@ -2,7 +2,7 @@
 layout: post
 title:  "Why I love my Kindle"
 subheader: "Single-handedly my favorite purchase ever"
-date:   2022-03-31
+date:   "2022-03-31"
 categories: life
 ---
 

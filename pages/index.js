@@ -1,10 +1,10 @@
-import SkHead from '@/components/head';
-import Hero from '@/components/hero';
-import AboutMe from '@/components/aboutMe';
-import Experience from '@/components/experience';
-import Skills from '@/components/skills';
-import Portfolio from '@/components/portfolio';
-import Footer from '@/components/footer';
+import SkHead from '@/components/main/head';
+import Hero from '@/components/main/hero';
+import AboutMe from '@/components/main/aboutMe';
+import Experience from '@/components/main/experience';
+import Skills from '@/components/main/skills';
+import Portfolio from '@/components/main/portfolio';
+import Footer from '@/components/main/footer';
 
 export default function Index() {
     return (

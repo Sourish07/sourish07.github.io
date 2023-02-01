@@ -3,7 +3,7 @@ layout: post
 cspost: yes
 title:  "Linear Regression"
 subheader: "Starting to open the black box of machine learning"
-date:   2022-02-18
+date:   "2022-02-18"
 categories: tutorials
 ---
 

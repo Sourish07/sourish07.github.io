@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Create a Python Web App with Flask"
 subheader: "Complete Flask tutorial from start to finish"
-date: 2022-02-11
+date: "2022-02-11"
 categories: tutorials
 ---
 {% raw %}

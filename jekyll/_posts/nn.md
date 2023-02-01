@@ -3,7 +3,7 @@ layout: post
 cspost: yes
 title:  "Neural Networks"
 subheader: "Examining the building blocks of modern-day deep learning"
-date:   2022-04-21
+date:   "2022-04-21"
 categories: tutorials
 ---
 

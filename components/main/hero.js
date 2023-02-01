@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import sourishPic from '../public/sourish.webp';
+import sourishPic from '@/public/sourish.webp';
 import CenterBar from './centerbar';
 import Navbar from './navbar';
 import Section from './section';

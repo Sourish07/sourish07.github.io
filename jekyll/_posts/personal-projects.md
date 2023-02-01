@@ -2,7 +2,7 @@
 layout: post
 title:  "Personal Projects: A Guide for Beginners"
 subheader: "How to impress companies for that internship"
-date:   2022-02-25
+date:   "2022-02-25"
 categories: industry
 ---
 
