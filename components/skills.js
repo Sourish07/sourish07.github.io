@@ -47,14 +47,15 @@ export function ImageRow(props) {
     return (
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
             {props.images.map((image) => (
-                <div style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 0"}}>
-                    <div key={image.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", height: "75px", width: "75px" }}>
+                <div key={image.name} style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 5px"}}>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", minHeight: "75px"}}>
                         <Image
                             key={image.name}
                             src={image.src}
                             alt={image.alt}
-                            style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                            fill
+                            style={{ width: "100%", height: "100%", objectFit: "contain", maxWidth: "100px", maxHeight: "75px" }}
+                            width={100}
+                            height={100}
                         />
                     </div>
                     <p style={{ width: "100px", textAlign: "center" }}>{image.name}</p>
