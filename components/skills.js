@@ -1,4 +1,3 @@
-// import ImageRow from "./imageRow";
 import Image from "next/image";
 import Section from "./section";
 
