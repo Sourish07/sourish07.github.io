@@ -25,6 +25,13 @@ export default function Skills() {
                     h3:first-of-type {
                         margin-top: 20px;
                     }
+                    
+                    div {
+                        height: 75px !important;
+                    }
+
+                    @media (min-width: 768px) {
+                    }
                 `}
             </style>
             <h3>Languages</h3>
@@ -46,9 +53,19 @@ export default function Skills() {
 export function ImageRow(props) {
     return (
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+            <style jsx>
+                {`                  
+                    @media (min-width: 576px) {
+                        .imgWrapper {
+                            height: 75px !important;
+                            min-width: 75px !important;
+                        }
+                    }
+                `}
+            </style>
             {props.images.map((image) => (
                 <div key={image.name} style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "10px 5px"}}>
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", minHeight: "75px"}}>
+                    <div className="imgWrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", minWidth: "50px", height: "50px"}}>
                         <Image
                             key={image.name}
                             src={image.src}
