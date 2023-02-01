@@ -22,7 +22,7 @@ export default function Navbar() {
                             style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
                         />
                     ))}
-                    <NavbarIcon />
+                    <button id={styles.navbarIcon} onClick={toggleSidebar} aria-label="menu"></button>
                 </div>
             </nav>
             <Sidebar items={navbarItems} />
@@ -35,7 +35,13 @@ function Sidebar(props) {
         <div id={styles.sidebar}>
             <div id={styles.sidebarContent}>
                 {props.items.map((item) => (
-                    <NavbarLink key={item} href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} text={item} className={styles.sidebarLink} onClick={toggleSidebar}/>
+                    <NavbarLink 
+                        key={item} 
+                        href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} 
+                        text={item} 
+                        className={styles.sidebarLink} 
+                        onClick={toggleSidebar}
+                    />
                 ))}
             </div>
         </div>
@@ -44,7 +50,7 @@ function Sidebar(props) {
 
 function NavbarLink(props) {
     return (
-        <Link href={props.href ? props.href : ""} onClick={props.onClick}>
+        <Link href={props.href} onClick={props.onClick} alt={props.text}>
             <div style={props.style} className={props.className}>{props.text}</div>
         </Link>
     )
@@ -63,10 +69,4 @@ function toggleSidebar() {
         icon.style.backgroundImage = `url(resources/icons/close.svg)`;
         icon.style.filter = "brightness(0) invert(1)";
     }
-}
-
-function NavbarIcon() {
-    return (
-        <button id={styles.navbarIcon} onClick={toggleSidebar}></button>
-    )
 }
