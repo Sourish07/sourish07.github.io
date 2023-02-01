@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.project:last-of-type + hr {
+    display: none;
+}
+
 .imageContainer {
     flex: 0 0 50%;
     overflow: hidden;
