@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Section from "./section";
 import styles from '@/styles/Portfolio.module.css';
 
@@ -27,7 +28,7 @@ const Project = (props) => {
     return (
         <div className={styles.project} style={{ display: "flex", flexDirection: "column", alignItems: "center", }}>
             <div className={styles.imageContainer}>
-                <img src={props.src} alt={props.title} className={(props.projectLink || props.codeLink) ? styles.transition : <></>} />
+                <Image src={props.src} alt={props.title} fill className={(props.projectLink || props.codeLink) ? styles.transition : <></>} />
                 <div className={styles.links}>
                     {props.projectLink ? <ProjectLink projectLink={props.projectLink} /> : <></>}
                     {props.codeLink ? <ProjectLink codeLink={props.codeLink} /> : <></>}
@@ -48,7 +49,7 @@ const ProjectLink = (props) => {
     return (
         <Link href={props.projectLink ? props.projectLink : props.codeLink}>
             <div style={{ display: "flex", alignItems: "center"}}>
-                <img src={path + (props.projectLink ? "view.svg" : "code.svg")} alt="icon" style={{ width: "50px", marginRight: "10px", filter: "invert(100%)" }} />
+                <Image src={path + (props.projectLink ? "view.svg" : "code.svg")} alt="icon" width={50} height={50} style={{ marginRight: "10px", filter: "invert(100%)" }} />
                 <span>{props.projectLink ? "Check it out" : "View the code"}</span>
             </div>
         </Link>
@@ -56,7 +57,7 @@ const ProjectLink = (props) => {
 }
 
 function getProjects() {
-    const path = "resources/images/portfolio/"
+    const path = "/resources/images/portfolio/"
     return [
         {
             title: "Ray Tracer from Scratch",
