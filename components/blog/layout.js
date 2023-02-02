@@ -13,7 +13,6 @@ export default function Layout({ children, title }) {
                     root.style.setProperty('--background-color', '#FFF');
                     root.style.setProperty('--text-color', '#000');
                     root.style.setProperty('--gray', '#FFF');
-                    console.log("HELLO");
                 `}</script>
 
                 <style>

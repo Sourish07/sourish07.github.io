@@ -34,8 +34,6 @@ export function getSortedPostsData() {
         };
     });
 
-    console.log(allPostsData);
-
     // Sort posts by date
     return allPostsData.sort((a, b) => {
         if (a.date < b.date) {
@@ -78,8 +76,8 @@ export async function getPostData(id) {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    //Use unified to process the markdown content, then compile it to HTML
-    // remark processes markdown and rehype processes HTML?
+    // Use unified to process the markdown content, then compile it to HTML
+    // remark processes markdown and rehype processes HTML
     const processedContent = await unified()
         .data('settings', { fragment: true })
         .use(remarkParse)
@@ -87,8 +85,8 @@ export async function getPostData(id) {
         .use(remarkGfm)
         .use(remarkRehype)
         .use(rehypeKatex)
-        .use(rehypeStringify)
         .use(rehypeHighlight)
+        .use(rehypeStringify)
         .process(matterResult.content);
 
     const contentHtml = processedContent.toString();

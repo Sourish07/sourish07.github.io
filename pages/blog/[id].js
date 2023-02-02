@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '@/utils/posts';
+import { getAllPostIds, getPostData } from '@/utils/processPosts';
 
 import Layout from '@/components/blog/layout';
 import blogStyles from '@/styles/blog/Blog.module.css';
@@ -70,8 +70,6 @@ export function chooseTechnical() {
     const technicalLink = document.querySelector("#technicalLink")
     const nonTechnicalContent = document.querySelector("#nonTechnicalContent")
     const technicalContent = document.querySelector("#technicalContent")
-
-    console.log(nonTechnicalLink, technicalLink, nonTechnicalContent, technicalContent)
 
     if (technicalLink.classList.contains(styles.readingLevelSelected)) {
         return;

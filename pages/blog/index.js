@@ -1,7 +1,7 @@
 import styles from '@/styles/blog/Blog.module.css';
 
 import Layout from '@/components/blog/layout';
-import { getSortedPostsData } from '@/utils/posts';
+import { getSortedPostsData } from '@/utils/processPosts';
 import Link from 'next/link';
 
 
