@@ -7,8 +7,6 @@ date:   "2022-02-18"
 categories: tutorials
 ---
 
-<div id="nonTechnicalContent">
-
 Linear regression is a machine learning algorithm used to predict an output value based on a set of input values. For example, if we’re trying to predict housing prices during the pandemic, we might look at values of various houses for which we have data for.
 
 Some variables of interest might be square footage, number of bedrooms, number of bathrooms, the inflation in the area, etc. In this case, the price of each house would be the dependent variable, or the variable we’re trying to predict. The remaining variables are known as the independent variables. These variables will help us try to predict the dependent variable.
@@ -103,9 +101,7 @@ This step is done by defining a cost function that takes in the parameters defin
 
 Click the technical link above to learn more! Beware, there will be math involved.
 
-</div>
-
-<div id="technicalContent">
+split
 
 Let's open the black box of linear regression a bit more by getting our hands dirty with the math. We will be needing linear algebra and a little bit of calculus.
 
@@ -268,5 +264,3 @@ As the line becomes a better fit for the data, the weights travel closer and clo
 </video>
 
 I hope this gave a deeper peek into what the black box of machine learning holds! ML is an ever expansive topic and this blog post barely grazes the surface of it. Please reach out if you have any questions or comments.
-
-</div>
