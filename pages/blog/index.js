@@ -38,7 +38,6 @@ export default function Blog({ allPostsData }) {
                         </div>
                     </Link>
                 </div>
-
             ))}
         </Layout>
     );

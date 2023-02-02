@@ -12,7 +12,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeRaw from 'rehype-raw'
 
-const postsDirectory = path.join(process.cwd(), 'jekyll/_posts');
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getSortedPostsData() {
     // Get file names in posts directory
@@ -46,22 +46,13 @@ export function getSortedPostsData() {
     });
 }
 
+// Returns an array of file names in the posts directory
+// Called from getStaticPaths in pages/blog/[id].js
+// Return format is an array of objects with a params property
+// The params property is an object with an id property [{params: {id: '...'}, ...]
 export function getAllPostIds() {
+    // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
-
-    // Returns an array that looks like this:
-    // [
-    //   {
-    //     params: {
-    //       id: 'ssg-ssr'
-    //     }
-    //   },
-    //   {
-    //     params: {
-    //       id: 'pre-rendering'
-    //     }
-    //   }
-    // ]
     return fileNames.map((fileName) => {
         return {
             params: {
@@ -91,8 +82,6 @@ export async function getPostData(id) {
         .process(matterResult.content);
 
     const contentHtml = processedContent.toString();
-    console.log(contentHtml)
-    contentHtml.replace("</pre>\n<pre>", "")
     
     // If the post has a cspost tag, split the content into two parts
     if (matterResult.data.cspost) {

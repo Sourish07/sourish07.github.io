@@ -14,11 +14,11 @@ export default function Footer() {
                     </div>
                     <div className={styles.socials}>
                         <Link href="https://github.com/Sourish07">
-                            <Image src="/resources/icons/github.svg" width={20} height={20}></Image>
+                            <Image src="/resources/icons/github.svg" width={20} height={20} alt="github"></Image>
                             <span>sourish07</span>
                         </Link>
                         <Link href="https://www.linkedin.com/in/sourish07/">
-                            <Image src="/resources/icons/linkedin.svg" width={20} height={20}></Image>
+                            <Image src="/resources/icons/linkedin.svg" width={20} height={20} alt="linkedin"></Image>
                             <span>sourish07</span>
                         </Link>
                     </div>

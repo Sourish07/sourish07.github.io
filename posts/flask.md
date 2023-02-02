@@ -57,7 +57,7 @@ Use a production WSGI server instead.
 
 You can go to that link in your web browser to see what we've created so far! You should see a quite atrocious looking page. But don't worry, that's what the rest of this article is for.
 
-![BeginningFlaskApp](../assets/images/flask/BeginningFlaskApp.png)
+![BeginningFlaskApp](../blogAssets/images/flask/BeginningFlaskApp.png)
 
 ## Creating a HTML Page
 
@@ -124,7 +124,7 @@ If the server from earlier was already running, it should detect a change main i
 
 You should see the following:
 
-![ConnectingPagetoApp](../assets/images/flask/ConnectingPagetoApp.png)
+![ConnectingPagetoApp](../blogAssets/images/flask/ConnectingPagetoApp.png)
 
 The `h1` tag is a header tag, which tells the browser that the text "Stock Price Checker" should be displayed as a header.
 
@@ -145,7 +145,7 @@ Next, we want to be able to take in user input, more specifically, what ticker s
 
 We're using the `form` tag to create a form that has a singular text box and a submit button at the bottom. Refreshing your web browser should give you this:
 
-![TextField](../assets/images/flask/TextField.png)
+![TextField](../blogAssets/images/flask/TextField.png)
 
 If you look at the form's attributes, you'll see `method="POST"` and `action="info"`. `POST` means when the user clicks the submit button, this form will perform a HTTP POST request, i.e., it will "post" some data to the Flask server. In this case, it's the data that the user enters.
 
@@ -187,7 +187,7 @@ The `action` attribute is important because it tells the web browser where to go
 
 Resulting in this:
 
-![FormWithRadioButtons](../assets/images/flask/FormWithRadioButtons.png)
+![FormWithRadioButtons](../blogAssets/images/flask/FormWithRadioButtons.png)
 
 These are radio buttons that belong to the same group, dictated by the `name` attribute. This means the user can only have one selected at a time.
 
@@ -250,7 +250,7 @@ Let's add some text to help the user out and better their overall experience. Yo
 
 Remember though that we don't have the `/info` route set up in `main.py`. This means if you click submit, you'll be greeted with the following screen:
 
-![NotFound](../assets/images/flask/NotFound.png)
+![NotFound](../blogAssets/images/flask/NotFound.png)
 
 Let's fix this! Add the following code to `main.py` under the `index` function.
 
@@ -262,7 +262,7 @@ def info():
 
 We don't have an `info.html` page created, but there's another problem. When you click submit now, you'll see this error message:
 
-![MethodNotAllowed](../assets/images/flask/MethodNotAllowed.png)
+![MethodNotAllowed](../blogAssets/images/flask/MethodNotAllowed.png)
 
 This is because our form is sending a HTTP POST request to Flask. We need to tell our method to accept POST requests. Make the following change:
 
@@ -276,7 +276,7 @@ The reason why we're accepting both GET and POST is if the user accidentally (or
 
 Now, if we click submit, we're greeted with the following error:
 
-![NotFound](../assets/images/flask/TemplateNotFound.png)
+![NotFound](../blogAssets/images/flask/TemplateNotFound.png)
 
 ## Jinja 2
 
@@ -374,7 +374,7 @@ Now let's learn to use the Alpha Vantage API. We'll only be using the Core Stock
 
 First, you'll need an API key, which tells Alpha Vantage's server who is requesting the data. It's free and all you'll need is an email. You can request one [here](https://www.alphavantage.co/support/#api-key).
 
-![AlphaVantageAPI](../assets/images/flask/AlphaVantageAPI.png)
+![AlphaVantageAPI](../blogAssets/images/flask/AlphaVantageAPI.png)
 
 Once you get your key, copy it and DO NOT SHARE IT WITH ANYONE! API keys are meant to be kept a secret, and it's good practice to adhere to that, even if the consequences of not doing so aren't that severe (at least, for these purposes).
 
@@ -759,7 +759,7 @@ We're using the fact that we named our parameter `info` in the previous step. Wh
 
 When we save this and submit some data in our form, we get the following screen!
 
-![GraphPage](../assets/images/flask/GraphPage.png)
+![GraphPage](../blogAssets/images/flask/GraphPage.png)
 
 Clicking on the "Go Back" button links to the root page, `/`, which brings us back to the form.
 
@@ -771,7 +771,7 @@ One last feature we want to add to our app is error handling. What if the user e
 
 As of right now, the app crashes with improper input.
 
-![KeyError](../assets/images/flask/KeyError.png)
+![KeyError](../blogAssets/images/flask/KeyError.png)
 
 In `index.html`, add the following line right after form:
 
@@ -818,17 +818,17 @@ def index():
 
 Because the error parameter won't always be there, we're checking for it. If it's there, then we grab the parameter's value using `request.args['error']` and pass it to `index.html`. Otherwise, we just render the template as usual. The error message should look like:
 
-![ErrorMessage](../assets/images/flask/InvalidTickerError.png)
+![ErrorMessage](../blogAssets/images/flask/InvalidTickerError.png)
 
 ## Basic Styling
 
 While our app is certainly working, it doesn't look the sexiest. I'm not going to dive into the CSS changes I made with Bootstrap (which is a CSS library), but after some tweaking, I managed to make the app look like this:
 
-![Bootstrap1](../assets/images/flask/Bootstrap1.png)
+![Bootstrap1](../blogAssets/images/flask/Bootstrap1.png)
 
-![Bootstrap2](../assets/images/flask/Bootstrap2.png)
+![Bootstrap2](../blogAssets/images/flask/Bootstrap2.png)
 
-![Bootstrap3](../assets/images/flask/Bootstrap3.png)
+![Bootstrap3](../blogAssets/images/flask/Bootstrap3.png)
 
 All of these changes are present in my repo where this app is hosted. Just a heads up, I did have to make some slight refactoring to the code base we worked on together.
 

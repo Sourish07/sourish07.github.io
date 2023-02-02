@@ -11,19 +11,19 @@ Neural Networks are the foundation of all things Deep Learning so it’s pretty 
 
 The piece that all neural networks are built on is the neuron. It takes in some inputs and yields an output, very similar to how the neurons in our brain work.
 
-![Network with Activation Function](../assets/images/nn/neuron_act_func.svg)
+![Network with Activation Function](../blogAssets/images/nn/neuron_act_func.svg)
 
 Think about each circle as a neuron and each line as a connection between the input and the output. In a computer, each circle and line are simply represented by a number. The gray circle is considered a bias term, whose value is always 1. However, this doesn’t mean the line associated with it is too.
 
 The way the output is calculated is by taking a weighted sum of all of the inputs and then passing the result into the activation function; The lines are considered the weights. For now, let's assume the activation function is the sign function; It outputs 1 if the input is positive and -1 if it's not.
 
-![Neuron](../assets/images/nn/WeightedSum.svg)
+![Neuron](../blogAssets/images/nn/WeightedSum.svg)
 
 It is through simple addition and multiplication that allows us to calculate the output for each neuron.
 
 Below is a diagram of a fully connected neural network. It's simply a bunch of neuron arranged together in layers, with the dotted circles representing the bias terms.
 
-![Network](../assets/images/nn/full_network_non_tech.svg)
+![Network](../blogAssets/images/nn/full_network_non_tech.svg)
 
 We have four neurons in the input layer (red), two neurons in the hidden layer (blue), and four neurons in the output layer (yellow). The number of neurons per layer is dependent on the task at hand, and may require tuning by you, the computer scientist. Each layer, besides the output layer, also has its own bias unit.
 
@@ -37,17 +37,17 @@ We explore activation functions more in-depth in the technical section of this p
 
 The value of the first blue neuron in the hidden layer is the sum of each of the four neurons in the input layer times the corresponding weight connecting each red neuron to the blue neuron, plus the weight represented by the dotted line between the red bias term and the blue neuron passed into the activation function.
 
-![Network](../assets/images/nn/full_network_non_tech_gray.svg)
+![Network](../blogAssets/images/nn/full_network_non_tech_gray.svg)
 
 The same process goes for the other neuron in the hidden layer and the rest of ones in the output layer. We do not calculate anything for the bias neurons; They're always one.
 
 For our network to be useful, we need some data. Let’s say we’re tackling the hand-written digit classification task (the "Hello World" of neural nets) using the MNIST dataset. Inserted below are 64 sample inputs from the dataset, each an image of a hand-written digit.
 
-![MNIST Digits](../assets/images/nn/many_digits.svg)
+![MNIST Digits](../blogAssets/images/nn/many_digits.svg)
 
 The way each digit is represented in the computer is by a 28x28 grid of numbers. Black pixels are given a value of 0, while white ones are given a value of 1. Any number in between is a relative shade of gray.
 
-<img src="../assets/images/nn/7_2.svg" style="max-height: 1000px">
+<img src="../blogAssets/images/nn/7_2.svg" style="max-height: 1000px">
 
 We take each row of the image and stack it into a giant list of 784 (28 times 28) numbers; This will be the input to our neural network. For this case the input layer would need to have 784 neurons, one for each input. The output layer would need to have 10 neurons, one for each digit. We can choose to have however many hidden layers we'd like, and however many neurons in each.
 
@@ -107,7 +107,7 @@ With the help of some linear algebra and calculus, we can build upon our intuiti
 
 An ML model doesn't provide any value if it's unable to properly learn the trends in the data it's trained on. Models are commonly plagued with two issues, overfitting and underfitting.
 
-![Fitting](../assets/images/nn/fitting1.svg)
+![Fitting](../blogAssets/images/nn/fitting1.svg)
 
 Let's say we train our model on the above dataset. The first line is doing a terrible job at it; Its predictions across the whole dataset are very incorrect. The model is unable to account for the quadratic nature of the data.
 
@@ -115,11 +115,11 @@ The middle model is doing a very reasonable job, while the last model is doing a
 
 We might be inclined to lean towards the final model, but we also need to account for the fact that our model might not generalize to new data points very well, which is the entire goal of training a model: To be robust to the infinitely possible data points the real world might throw at it.
 
-![Fitting2](../assets/images/nn/fitting2.svg)
+![Fitting2](../blogAssets/images/nn/fitting2.svg)
 
 The black star represents a new data point the model hasn't seen before. The x-value for it is 5 and the true y-value is 25. It was sampled from the same random process that generated the rest of the data points.
 
-![Fitting3](../assets/images/nn/fitting3.svg)
+![Fitting3](../blogAssets/images/nn/fitting3.svg)
 
 The orange dot represents the model's prediction for when x is equal to 5. The first model is wrong, but only by about 15. The second model is off by a much smaller amount, while the overfitting model's prediction is off by over 250! 
 
@@ -158,7 +158,7 @@ After having gone through the entire test dataset, it calculates its accuracy. W
 
 Linear Algebra provides us with some minimalist notation and extra tools to properly utilize vectors and matrices. Take a look at the diagram of a neuron with two inputs again. 
 
-![Neuron](../assets/images/nn/NNAdvancedNeuron.svg)
+![Neuron](../blogAssets/images/nn/NNAdvancedNeuron.svg)
 
 The output of the neuron is the weighted sum of the inputs plus the bias term, passed into the activation function. Let's call the activation function $$f(x)$$ for now.
 
@@ -194,7 +194,7 @@ The weighted sum can now be written with just three variables because of the con
 
 Let's move on to a neural network.
 
-![Network](../assets/images/nn/FullNetwork.svg)
+![Network](../blogAssets/images/nn/FullNetwork.svg)
 
 Our input, $$x$$, will be a vector of size four because we have four neurons in the input layer. We never count the bias unit as a neuron; It's present in all layers except the output. The first bias will be a vector of size two because there are two neurons in the hidden layer. Our weights for each neuron in the hidden layer will be represented as rows in a matrix, $$W_1$$. The superscript represents which neuron in the hidden layer we’re on. The subscript represents which number weight for that neuron. 
 
@@ -245,25 +245,25 @@ After the linear transformation for each layer, the result is then passed into t
 ### Sigmoid
 The Sigmoid function is one of the most common activation functions. At 0, it's equal to 0.5 and as it approaches infinity, it asymptotes towards 1. As it approaches negative infinity, it approaches 0.
 
-![Sigmoid Function](../assets/images/nn/sigmoid_func.svg)
+![Sigmoid Function](../blogAssets/images/nn/sigmoid_func.svg)
 
 ### Tanh
 
 The Tanh function is very similar to the sigmoid, but its asymptote as it approaches negative infinity is -1.
 
-![Activation Functions](../assets/images/nn/tanh_func.svg)
+![Activation Functions](../blogAssets/images/nn/tanh_func.svg)
 
 ### ReLu
 
 The ReLu function, or the Rectified Linear Unit, is a unique one because of its kink at 0, meaning it's not differentiable there. It's a piecewise function that returns 0 for all negative inputs and the input itself for all positive numbers. It essentially acts as a hard gate, letting all positive numbers through, but not negative ones.
 
-![Activation Functions](../assets/images/nn/relu_func.svg)
+![Activation Functions](../blogAssets/images/nn/relu_func.svg)
 
 ### GeLu
 
 The GeLu, or the Gaussian Error Linear Unit, aims to mirror the shape of ReLu, but avoids having the kink, making it differentiable everywhere. It's equal to $$x$$ times the Gaussian cumulative distribution function, which is represented by $$\phi$$.
 
-![Activation Functions](../assets/images/nn/gelu_func.svg)
+![Activation Functions](../blogAssets/images/nn/gelu_func.svg)
 
 &nbsp;
 - - -
@@ -404,7 +404,7 @@ The Sparse Categorical CE has the same equation as the Categorical CE but is use
 
 This is the complicated part of a neural network, the training process. I’ve redrawn the neural network from above in a slightly different manner. This format will help us understand the calculus more easily.
 
-<img src="../assets/images/nn/ReformattedNetwork.svg" style="height: 300px">
+<img src="../blogAssets/images/nn/ReformattedNetwork.svg" style="height: 300px">
 
 The colors represent each layer and each rectangle represents an operation that’s performed in the network. The output of one function is the input for the next one. We pass $$x$$ into the first linear transformation, $$z_1(x, W_1, b_1)$$, then into the ReLu activation function, $$R(x)$$, then into the second linear transformation, $$z_2(a_1, W_2, b_2)$$, then into the sigmoid activation function, $$\sigma(x)$$, and finally into the loss function, $$\mathcal{L}(a_2, y)$$, to calculate the error.
 
