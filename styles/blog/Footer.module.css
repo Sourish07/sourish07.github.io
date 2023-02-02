@@ -1,0 +1,60 @@
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 40px 0;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.links {
+    display: flex;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.links div {
+    flex-basis: 50%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact span,
+.bio {
+    color: var(--light-gray);
+}
+
+.socials {
+    display:flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.bio p {
+    font-size: 1rem;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+}
+
+.socials a:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.socials a span {
+    padding: 0 5px
+}
+
+.socials img {
+    filter: var(--red-filter);
+}
