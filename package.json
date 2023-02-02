@@ -15,6 +15,7 @@
     "micromark-extension-math": "^2.0.2",
     "next": "^13.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sharp": "^0.31.3"
   }
 }

@@ -11,6 +11,13 @@ export default function Index() {
         <>
             <Head title="Sourish's Personal Website" >
                 <link rel="canonical" href="https://www.sourish.dev" />
+                <style>
+                    {`
+                        * {
+                            scroll-behavior: smooth !important;
+                        }
+                    `}
+                </style>
             </Head>
             <main>
                 <Hero />

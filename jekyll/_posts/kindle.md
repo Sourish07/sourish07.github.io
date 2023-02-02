@@ -66,13 +66,13 @@ Let’s say I have managed to convince you to buy a Kindle! Naturally, the next 
 
 In terms of storage options, get the 8 GB option; E-books don’t take up much space and 8 GB will allow for thousands of books. The 32 GB option is nice for audio books if you want to connect bluetooth headphones to your Kindle, but there are no specific benefits to listening on your Kindle compared to your phone.
 
-One more unfortunate consideration Amazon requires us to make is whether we want ads on our Kindle. To get the ad-free version it costs an extra $20, which might upset some people, or maybe showing ads lets Amazon lower the price by $20; depends on if you view the glass half full or half empty. Thankfully, the ads are very non-intrusive and only show up on the lockscreen when you aren’t using the device.
+One more unfortunate consideration Amazon requires us to make is whether we want ads on our Kindle. To get the ad-free version it costs an extra \$20, which might upset some people, or maybe showing ads lets Amazon lower the price by \$20; depends on if you view the glass half full or half empty. Thankfully, the ads are very non-intrusive and only show up on the lockscreen when you aren’t using the device.
 
-Nonetheless, because I view my Kindle as a long-term investment, I’d rather spend the $20 to not have ads. All the prices below are the ads version, so make sure to add $20 to each price if you also don’t want ads. If you aren’t sure, go with the ads version and you can pay the $20 later if you choose to do so.
+Nonetheless, because I view my Kindle as a long-term investment, I’d rather spend the \$20 to not have ads. All the prices below are the ads version, so make sure to add \$20 to each price if you also don’t want ads. If you aren’t sure, go with the ads version and you can pay the \$20 later if you choose to do so.
 
 ### Kindle (2019)
 
-Price: $89.99 (8 GB)
+Price: \$89.99 (8 GB)
 
 This is the base level Kindle, ideal for those that aren’t into reading but want to try to get into it. This allows for a very low upfront cost and provides 80% of the entire Kindle experience. If you plan on reading PDFs, opt for the larger Kindle Paperwhite (2021).
 
@@ -97,7 +97,7 @@ Missing features:
 
 ### Kindle Paperwhite (2021)
 
-Price: $139.99 (8 GB)
+Price: \$139.99 (8 GB)
 
 This is the Kindle for those that know for sure they’ll use it on a regular basis, which justifies the slightly higher upfront cost. This Kindle provides 97% of the entire Kindle experience.
 
@@ -120,13 +120,13 @@ Missing features:
 
 ### Kindle Paperwhite Signature Edition (2021)
 
-Price: $189.99 (32 GB)
+Price: \$189.99 (32 GB)
 
-This is the exact same as the Kindle Paperwhite 2021, but has wireless charging (wireless charger sold separately for $29.99) and an auto-adjusting light.
+This is the exact same as the Kindle Paperwhite 2021, but has wireless charging (wireless charger sold separately for \$29.99) and an auto-adjusting light.
 
 ### Kindle Oasis (2019)
 
-Price: $249.99 (8 GB), $279.99 (32 GB)
+Price: \$249.99 (8 GB), \$279.99 (32 GB)
 
 There’s not much justification for buying this model, and it’s the one I have (The newer Kindles weren’t out at the time I bought mine). The price tag is too high for the marginal increase in utility from the additional features, which are:
 
@@ -141,7 +141,7 @@ Not to mention, you’d be downgrading to micro-USB charging from USB-C.
 
 ### Kindle Paperwhite Kids
 
-Price: $159.99 (8 GB)
+Price: \$159.99 (8 GB)
 
 This one is exactly the same as the regular Kindle Paperwhite 2021, but with:
 
@@ -152,8 +152,8 @@ This one is exactly the same as the regular Kindle Paperwhite 2021, but with:
 
 Suffices to say that this is only if you want to get your kid to start reading, in which case this is the best option!
 
-&nbsp;
+<!-- &nbsp;
 - - -
-&nbsp;
+&nbsp; -->
 
 The Kindle has torn down the barrier between me and reading. It combines my passion for technology and learning, while allowing me to pursue it without the harms of a blue-light screen. I hope reading this has at least made you consider the benefits a Kindle has to offer and leads to you integrating one into your life.

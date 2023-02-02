@@ -7,7 +7,8 @@ date:   "2022-02-18"
 categories: tutorials
 ---
 
-{% capture nontechnical %}
+<div id="nonTechnicalContent">
+
 Linear regression is a machine learning algorithm used to predict an output value based on a set of input values. For example, if we’re trying to predict housing prices during the pandemic, we might look at values of various houses for which we have data for.
 
 Some variables of interest might be square footage, number of bedrooms, number of bathrooms, the inflation in the area, etc. In this case, the price of each house would be the dependent variable, or the variable we’re trying to predict. The remaining variables are known as the independent variables. These variables will help us try to predict the dependent variable.
@@ -101,9 +102,11 @@ What's happening here is, given a starting line, we tell the computer to move th
 This step is done by defining a cost function that takes in the parameters defining the line and using gradients (yay calculus) to minimize the total error iteratively. This means after each iteration, the line is a little bit more accurate to the dataset. Over time, the algorithm should converge to the optimal weights.
 
 Click the technical link above to learn more! Beware, there will be math involved.
-{% endcapture %}
 
-{% capture technical %}
+</div>
+
+<div id="technicalContent">
+
 Let's open the black box of linear regression a bit more by getting our hands dirty with the math. We will be needing linear algebra and a little bit of calculus.
 
 I'll be assuming that the reader is familiar with the following topics:
@@ -119,7 +122,7 @@ Any line has two parameters, its slope and a constant term, or  the intercept. F
 
 From now on, let's write the equation for our line as $$y=w_0 + w_1x$$. $$w_0$$ is our new intercept term and $$w_1$$ the slope.
 
-Let's say we're given $$n$$ data points represented as $$(x_i, y_i)$$, where $$0\le i < n$$. This means $$i$$ represents the data point's index. Our goal is to find the optimal weights, $$w_0$$ and $$w_1$$, based on the input data.
+Let's say we're given $$n$$ data points represented as $$(x_i, y_i)$$, where $$0\le i <div n$$. This means $$i$$ represents the data point's index. Our goal is to find the optimal weights, $$w_0$$ and $$w_1$$, based on the input data.
 
 Let's first represent our data as a matrix, $$X$$. We call each column a "feature". In the house prices example from the non-technical section, a feature might be the number of bathrooms in a house or its square footage. Each would be a column in the $$X$$ matrix.
 
@@ -265,6 +268,5 @@ As the line becomes a better fit for the data, the weights travel closer and clo
 </video>
 
 I hope this gave a deeper peek into what the black box of machine learning holds! ML is an ever expansive topic and this blog post barely grazes the surface of it. Please reach out if you have any questions or comments.
-{% endcapture %}
 
-{% include blog_content.html %}
+</div>
