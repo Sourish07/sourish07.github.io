@@ -104,7 +104,7 @@ function fadeOut(fade) {
     intervalID = setInterval(function() {
   
         if (opacity > 0) {
-            opacity = opacity - 0.01;
+            opacity = opacity - 0.02;
             fade.style.opacity = opacity;
         } else {
             clearInterval(intervalID);
@@ -119,7 +119,7 @@ function fadeIn(fade) {
     intervalID = setInterval(function() {
   
         if (opacity < 1) {
-            opacity = opacity + 0.01
+            opacity = opacity + 0.02;
             fade.style.opacity = opacity;
         } else {
             clearInterval(intervalID);
