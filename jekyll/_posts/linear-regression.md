@@ -82,17 +82,17 @@ This is where the machine learning algorithm called Gradient Descent comes in. A
 The line begins with a slope and y-intercept of zero.
 
 <video playsinline autoplay muted loop>
-    <source src="../assets/images/lr/lr-anim.mp4" type="video/mp4">
+    <source src="../assets/images/lr/lr-anim.webm" type="video/webm">
 </video>
 
 This algorithm also extends to lines of higher degrees (again, sped up).
 
 <video playsinline autoplay muted loop>
-    <source src="../assets/images/lr/quad.mp4" type="video/mp4">
+    <source src="../assets/images/lr/quad.webm" type="video/webm">
 </video>
 
 <video playsinline autoplay muted loop>
-    <source src="../assets/images/lr/cubic.mp4" type="video/mp4">
+    <source src="../assets/images/lr/cubic.webm" type="video/webm">
 </video>
 
 What's happening here is, given a starting line, we tell the computer to move the line in a direction that minimizes the sum of the errors (a.k.a. the combined area of the squares).
@@ -260,7 +260,7 @@ Just to visualize the contour plot with what each iteration is doing exactly, I'
 As the line becomes a better fit for the data, the weights travel closer and closer to the minimum.
 
 <video playsinline autoplay muted loop>
-    <source src="../assets/images/lr/contourplotwithline.mp4" type="video/mp4">
+    <source src="../assets/images/lr/contourplotwithline.webm" type="video/webm">
 </video>
 
 I hope this gave a deeper peek into what the black box of machine learning holds! ML is an ever expansive topic and this blog post barely grazes the surface of it. Please reach out if you have any questions or comments.

@@ -7,7 +7,6 @@ date:   "2022-04-21"
 categories: tutorials
 ---
 
-
 Neural Networks are the foundation of all things Deep Learning so it’s pretty natural to be wondering how exactly they work. While they may seem like a black box to most, we find that the box isn’t actually that deep upon opening. With some simple, intuitive diagrams, let’s examine how these fascinating mathematical models learn to play video games, classify animals, and drive cars.
 
 The piece that all neural networks are built on is the neuron. It takes in some inputs and yields an output, very similar to how the neurons in our brain work.
