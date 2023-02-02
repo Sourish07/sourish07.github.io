@@ -70,9 +70,13 @@ export default function Post({ postData }) {
                     }
                     
                     code {
-                      padding: 0 5px;
                       background-color: #eef;
                       font-size: 1rem;
+                    }
+
+                    p code {
+                        padding: 0 5px;
+                        border-radius: 3px;
                     }
                     
                     pre,
