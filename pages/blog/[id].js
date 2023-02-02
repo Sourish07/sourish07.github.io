@@ -62,10 +62,11 @@ export default function Post({ postData }) {
                       padding: 10px;
                       overflow: auto;
                       border-radius: 5px;
+                      margin-bottom: 15px;
                     }
                     
                     pre + pre {
-                      margin-top: 10px;
+                      margin-top: 15px;
                     }
                     
                     code {
