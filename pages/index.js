@@ -1,4 +1,4 @@
-import SkHead from '@/components/main/head';
+import Head from '@/components/main/head';
 import Hero from '@/components/main/hero';
 import AboutMe from '@/components/main/aboutMe';
 import Experience from '@/components/main/experience';
@@ -9,9 +9,9 @@ import Footer from '@/components/main/footer';
 export default function Index() {
     return (
         <>
-            <SkHead title="Sourish's Personal Website" >
+            <Head title="Sourish's Personal Website" >
                 <link rel="canonical" href="https://www.sourish.dev" />
-            </SkHead>
+            </Head>
             <main>
                 <Hero />
                 <AboutMe />
