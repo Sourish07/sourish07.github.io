@@ -27,9 +27,13 @@
   max-width: 100%;
 }
 
-.content p {
+.content p,
+.content li {
   line-height: 1.5;
   font-size: 1.25rem;
+}
+
+.content p {
   margin-bottom: 15px;
 }
 

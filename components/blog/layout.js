@@ -26,6 +26,11 @@ export default function Layout({ children, title }) {
                             width: -webkit-calc(1000px - (30px * 2)) !important;
                             max-width: 95vw !important;
                         }
+
+                        p a {
+                            color: var(--red) !important;
+                            text-decoration: underline !important;
+                        }
                     `}
                 </style>
             </Head>

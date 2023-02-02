@@ -37,7 +37,7 @@ export default function Index() {
 
                         /* Handle on hover */
                         ::-webkit-scrollbar-thumb:hover {
-                        background: var(--dark-red);
+                            background: var(--dark-red);
                         }
                     `}
                 </style>

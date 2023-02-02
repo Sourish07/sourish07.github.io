@@ -36,7 +36,9 @@ export default function Post({ postData }) {
                     <div className={styles.author}>By Sourish Kundu</div>
                 </div>
             </div>
-            {postData.cspost ? cspost(postData) : <div id="content" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+            <div id="content" style={{width: "100%"}}>
+                {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+            </div>
         </Layout>
     )
 }
@@ -49,7 +51,7 @@ export function cspost(postData) {
                 <div id="technicalLink" className={styles.readingLevelUnselected} onClick={chooseTechnical}>Technical</div>
             </div>
             <div id="nonTechnicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.nonTechnicalContent }} />
-            <div id="technicalContent" className={styles.content} style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
+            <div id="technicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
         </>
     )
 }
@@ -60,19 +62,18 @@ export function chooseNonTechnical() {
     const nonTechnicalContent = document.querySelector("#nonTechnicalContent")
     const technicalContent = document.querySelector("#technicalContent")
 
-    if (nonTechnicalLink.classList.contains("readingLevelSelected")) {
+    if (nonTechnicalLink.classList.contains(styles.readingLevelSelected)) {
         return;
     }
 
-    nonTechnicalLink.classList.add(styles.readingLevelSelected)
-    nonTechnicalLink.classList.remove(styles.readingLevelUnselected)
-
-    technicalLink.classList.remove(styles.readingLevelSelected)
-    technicalLink.classList.add(styles.readingLevelUnselected)
+    nonTechnicalLink.className = styles.readingLevelSelected;
+    technicalLink.className = styles.readingLevelUnselected;
 
 
+    fadeOut(technicalContent);
     technicalContent.style.display = "none";
     nonTechnicalContent.style.display = "block";
+    fadeIn(nonTechnicalContent);
 }
 
 export function chooseTechnical() {
@@ -85,12 +86,43 @@ export function chooseTechnical() {
         return;
     }
 
-    technicalLink.classList.add(styles.readingLevelSelected)
-    technicalLink.classList.remove(styles.readingLevelUnselected)
-
-    nonTechnicalLink.classList.remove(styles.readingLevelSelected)
-    nonTechnicalLink.classList.add(styles.readingLevelUnselected)
-
+    technicalLink.className = styles.readingLevelSelected;
+    nonTechnicalLink.className = styles.readingLevelUnselected;
+    
+    fadeOut(nonTechnicalContent);
     nonTechnicalContent.style.display = "none";
     technicalContent.style.display = "block";
+    fadeIn(technicalContent);
+}
+
+let intervalID;
+
+function fadeOut(fade) {
+    clearInterval(intervalID);
+    var opacity = 1;
+    fade.style.opacity = 1;
+    intervalID = setInterval(function() {
+  
+        if (opacity > 0) {
+            opacity = opacity - 0.01;
+            fade.style.opacity = opacity;
+        } else {
+            clearInterval(intervalID);
+        }
+    }, 10);
+}
+
+function fadeIn(fade) {
+    clearInterval(intervalID);
+    var opacity = 0;
+    fade.style.opacity = 0;
+    intervalID = setInterval(function() {
+  
+        if (opacity < 1) {
+            opacity = opacity + 0.01
+            fade.style.opacity = opacity;
+        } else {
+            clearInterval(intervalID);
+        }
+    }, 10);
 }
