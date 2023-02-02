@@ -118,7 +118,7 @@ Any line has two parameters, its slope and a constant term, or  the intercept. F
 
 From now on, let's write the equation for our line as $$y=w_0 + w_1x$$. $$w_0$$ is our new intercept term and $$w_1$$ the slope.
 
-Let's say we're given $$n$$ data points represented as $$(x_i, y_i)$$, where $$0\le i <div n$$. This means $$i$$ represents the data point's index. Our goal is to find the optimal weights, $$w_0$$ and $$w_1$$, based on the input data.
+Let's say we're given $$n$$ data points represented as $$(x_i, y_i)$$, where $$0\le i < n$$. This means $$i$$ represents the data point's index. Our goal is to find the optimal weights, $$w_0$$ and $$w_1$$, based on the input data.
 
 Let's first represent our data as a matrix, $$X$$. We call each column a "feature". In the house prices example from the non-technical section, a feature might be the number of bathrooms in a house or its square footage. Each would be a column in the $$X$$ matrix.
 
