@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+
+import {micromark} from 'micromark'
+import {math, mathHtml} from 'micromark-extension-math'
+import {gfm, gfmHtml} from 'micromark-extension-gfm'
 
 const postsDirectory = path.join(process.cwd(), 'jekyll/_posts');
 
@@ -72,10 +74,18 @@ export async function getPostData(id) {
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    // const processedContent = await remark()
+    //     .use(html)
+    //     .process(matterResult.content);
+    // const contentHtml = processedContent.toString();
+
+    const contentHtml = micromark(matterResult.content, {
+        allowDangerousHtml: true,
+        extensions: [math(), gfm()],
+        htmlExtensions: [mathHtml(), gfmHtml()]
+      })
+
+      console.log(contentHtml);
 
     // Combine the data with the id and contentHtml
     return {
