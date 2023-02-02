@@ -27,7 +27,6 @@ export function getSortedPostsData() {
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
-        console.log(matterResult.data)
 
         matterResult.data.date = matterResult.data.date.toString();
         // Combine the data with the id
@@ -92,6 +91,8 @@ export async function getPostData(id) {
         .process(matterResult.content);
 
     const contentHtml = processedContent.toString();
+    console.log(contentHtml)
+    contentHtml.replace("</pre>\n<pre>", "")
     
     // If the post has a cspost tag, split the content into two parts
     if (matterResult.data.cspost) {

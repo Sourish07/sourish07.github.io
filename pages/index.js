@@ -16,6 +16,29 @@ export default function Index() {
                         * {
                             scroll-behavior: smooth !important;
                         }
+
+                        /* Scroll bar */
+                        /* width */
+                        ::-webkit-scrollbar {
+                        width: 5px;
+                        }
+
+                        /* Track */
+                        ::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 5px grey;
+                        border-radius: 5px;
+                        }
+
+                        /* Handle */
+                        ::-webkit-scrollbar-thumb {
+                        background: var(--red);
+                        border-radius: 5px;
+                        }
+
+                        /* Handle on hover */
+                        ::-webkit-scrollbar-thumb:hover {
+                        background: var(--dark-red);
+                        }
                     `}
                 </style>
             </Head>

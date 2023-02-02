@@ -38,9 +38,6 @@ export default function Post({ postData }) {
                 </div>
             </div>
             {postData.cspost ? cspost(postData) : <div id="content" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
-            {/*  */}
-
-
         </Layout>
     )
 }

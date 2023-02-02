@@ -3,30 +3,31 @@ import Header from './header';
 import styles from '@/styles/blog/Blog.module.css';
 import Footer from '@/components/blog/footer';
 import Script from 'next/script';
+
 export default function Layout({ children, title }) {
     return (
         <>
             <Head title={title} >
-                {/* <link rel="canonical" href="https://www.sourish.dev/blog" /> */}
-                <script>{`
-                    var root = document.querySelector(":root");
-                    root.style.setProperty('--background-color', '#FFF');
-                    root.style.setProperty('--text-color', '#000');
-                    root.style.setProperty('--gray', '#FFF');
-                `}</script>
 
+                <link rel="stylesheet" prefetch href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
                 <style>
                     {`
                         * {
                             scroll-behavior: auto !important;
                         }
-                        ::-webkit-scrollbar-thumb {
-                            background: var(--light-gray) !important;
-                          }
+                        
+                        :root {
+                            --background-color: #FFF !important;
+                            --text-color: #000 !important;
+                        }
+
+                        hr {
+                            border: 1px solid #ccc !important;
+                            width: -webkit-calc(1000px - (30px * 2)) !important;
+                            max-width: 95vw !important;
+                        }
                     `}
                 </style>
-                {/* <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> */}
-                <link rel="stylesheet" prefetch href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"/>
             </Head>
             <Header />
             <main style={{ padding: "30px 0 0 0" }}>
