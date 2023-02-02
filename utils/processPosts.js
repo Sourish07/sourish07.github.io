@@ -10,6 +10,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
+import rehypeRaw from 'rehype-raw'
 
 const postsDirectory = path.join(process.cwd(), 'jekyll/_posts');
 
@@ -82,7 +83,8 @@ export async function getPostData(id) {
         .use(remarkParse)
         .use(remarkMath)
         .use(remarkGfm)
-        .use(remarkRehype)
+        .use(remarkRehype, {allowDangerousHtml: true})
+        .use(rehypeRaw)
         .use(rehypeKatex)
         .use(rehypeHighlight)
         .use(rehypeStringify)
@@ -97,7 +99,6 @@ export async function getPostData(id) {
         const technicalContent = content[1];
         return {
             id,
-            contentHtml,
             nonTechnicalContent, 
             technicalContent,
             ...matterResult.data,
