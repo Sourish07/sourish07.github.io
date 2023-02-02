@@ -2,9 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import {micromark} from 'micromark'
-import {math, mathHtml} from 'micromark-extension-math'
-import {gfm, gfmHtml} from 'micromark-extension-gfm'
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkMath from 'remark-math'
+import remarkRehype from 'remark-rehype'
+import rehypeKatex from 'rehype-katex'
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
 
 const postsDirectory = path.join(process.cwd(), 'jekyll/_posts');
 
@@ -73,19 +78,20 @@ export async function getPostData(id) {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    // Use remark to convert markdown into HTML string
-    // const processedContent = await remark()
-    //     .use(html)
-    //     .process(matterResult.content);
-    // const contentHtml = processedContent.toString();
+    //Use unified to process the markdown content, then compile it to HTML
+    // remark processes markdown and rehype processes HTML?
+    const processedContent = await unified()
+        .data('settings', { fragment: true })
+        .use(remarkParse)
+        .use(remarkMath)
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeKatex)
+        .use(rehypeStringify)
+        .use(rehypeHighlight)
+        .process(matterResult.content);
 
-    const contentHtml = micromark(matterResult.content, {
-        allowDangerousHtml: true,
-        extensions: [math(), gfm()],
-        htmlExtensions: [mathHtml(), gfmHtml()]
-      })
-
-      console.log(contentHtml);
+    const contentHtml = processedContent.toString();
 
     // Combine the data with the id and contentHtml
     return {

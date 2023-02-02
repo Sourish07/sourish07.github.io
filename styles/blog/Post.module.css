@@ -1,12 +1,14 @@
 .title {
     font-size: 4.5rem;
     font-weight: 700;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .subheader {
     font-size: 2.25rem;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .author {

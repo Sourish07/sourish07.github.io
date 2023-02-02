@@ -5,7 +5,6 @@ subheader: "Complete Flask tutorial from start to finish"
 date: "2022-02-11"
 categories: tutorials
 ---
-{% raw %}
 
 Web applications are amongst the most popular types of applications in the world, and conveniently, they are also the simplest to delve into for beginners. Gone are the days where a developer must tussle with sockets, thread management, and the other pains that came along with web development.
 
@@ -44,7 +43,7 @@ Finally, we have an if statement that only evaluates to be true when we run the 
 
 Run `main.py` in your terminal; The following will be displayed:
 
-```zsh
+```shell
 * Serving Flask app 'main' (lazy loading)
 * Environment: production
 WARNING: This is a development server. Do not use it in a production deployment.

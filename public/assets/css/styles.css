@@ -1,0 +1,100 @@
+.reading-level {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.reading-level-selected {
+    color: #e62b1e;
+    cursor: pointer;
+    
+    background: 
+        linear-gradient(currentColor 0 0)
+        100% 100% / 100% 2px
+        no-repeat;
+}
+
+img, video {
+    max-height: 300px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.title {
+    font-size: 3.5em;
+}
+
+.header {
+    font-size: 1.75em;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-size: 1.25em;
+    text-align: right;
+}
+
+.blog-container {
+    font-size: 20px;
+}
+
+h2, h3 {
+    margin-top: 50px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+img {
+    /* box-shadow: 0 0 10px; */
+}
+
+a, a:visited {
+    color: #e62b1e;
+}
+
+@media (max-width: 1000px)  {
+    table {
+      overflow-x: auto;
+      width: 100%;
+    }
+  }
+
+/*https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40*/
+.reading-level-unselected {
+    cursor: pointer;
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% / var(--d, 0) 2px 
+        no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+}
+
+.reading-level-unselected:hover {
+    --d: 100%;
+    --p: 100%;
+}
+
+@media print
+{
+* {page-break-inside:avoid}
+}
+
+/* a {
+    cursor: pointer;
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% / var(--d, 0) 2px 
+        no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+}
+
+a:hover {
+    --d: 100%;
+    --p: 100%;
+} */
