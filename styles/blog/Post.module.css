@@ -102,7 +102,8 @@
   border-top: 1px solid var(--color-border-muted);
 }
 
-.content tr:nth-child(2n) {
+.content tr:nth-child(2n),
+.content th {
   background-color: var(--color-canvas-subtle);
 }
 

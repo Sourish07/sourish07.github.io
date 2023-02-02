@@ -2,16 +2,16 @@ import Head from './head';
 import Header from './header';
 import styles from '@/styles/blog/Blog.module.css';
 import Footer from '@/components/blog/footer';
-import Script from 'next/script';
+import 'katex/dist/katex.min.css';
 
 export default function Layout({ children, title }) {
     return (
         <>
             <Head title={title} >
-
-                <link rel="stylesheet" prefetch href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
                 <style>
                     {`
+                        <!-- Global CSS styles for blog -->
+                        
                         * {
                             scroll-behavior: auto !important;
                         }

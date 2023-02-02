@@ -68,6 +68,7 @@ export async function getPostData(id) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    
     // Use unified to process the markdown content, then compile it to HTML
     // remark processes markdown and rehype processes HTML
     const processedContent = await unified()
