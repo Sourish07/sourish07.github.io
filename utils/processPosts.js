@@ -79,7 +79,6 @@ export async function getPostData(id) {
     // Use unified to process the markdown content, then compile it to HTML
     // remark processes markdown and rehype processes HTML
     const processedContent = await unified()
-        .data('settings', { fragment: true })
         .use(remarkParse)
         .use(remarkMath)
         .use(remarkGfm)
@@ -90,6 +89,20 @@ export async function getPostData(id) {
         .process(matterResult.content);
 
     const contentHtml = processedContent.toString();
+    
+    // If the post has a cspost tag, split the content into two parts
+    if (matterResult.data.cspost) {
+        const content = contentHtml.split("<p>split</p>");
+        const nonTechnicalContent = content[0];
+        const technicalContent = content[1];
+        return {
+            id,
+            contentHtml,
+            nonTechnicalContent, 
+            technicalContent,
+            ...matterResult.data,
+        };
+    }
 
     // Combine the data with the id and contentHtml
     return {

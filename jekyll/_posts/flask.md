@@ -837,5 +837,3 @@ All of these changes are present in my repo where this app is hosted. Just a hea
 I hope that after this simple tutorial, you are able to extrapolate these new skills to personal projects of your own! Flask is a very versatile framework that handles the complicated parts of web development for you while leaving your imagination unrestricted.
 
 *If you have any specific questions about this post or about Flask in general, please feel free to contact me. I'd love to answer any questions!*
-
-{% endraw %}

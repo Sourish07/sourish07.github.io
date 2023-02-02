@@ -7,7 +7,6 @@ date:   "2022-04-21"
 categories: tutorials
 ---
 
-<div id="nonTechnicalContent">
 
 Neural Networks are the foundation of all things Deep Learning so it’s pretty natural to be wondering how exactly they work. While they may seem like a black box to most, we find that the box isn’t actually that deep upon opening. With some simple, intuitive diagrams, let’s examine how these fascinating mathematical models learn to play video games, classify animals, and drive cars.
 
@@ -101,9 +100,7 @@ It's through this process of passing a data point forward, comparing it with the
 
 In the technical section, we’ll see how the back propagation algorithm minimizes this function to obtain the weights that maximize our accuracy. There we'll dive into the linear algebra and calculus for neural networks.
 
-</div>
-
-<div id="technicalContent" style="display: none">
+split
 
 With the help of some linear algebra and calculus, we can build upon our intuition of how neural networks work by understanding the math behind it.
 
@@ -621,5 +618,3 @@ Don't forget that all of this was for just one data point. The entire process ne
 &nbsp; -->
 
 I hope the math that goes behind a neural network isn't as daunting for you now. If you have any questions or comments, please don't hesitate to reach out.
-
-</div>

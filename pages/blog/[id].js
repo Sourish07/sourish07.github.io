@@ -16,6 +16,7 @@ export function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
+    // console.log(postData);
     return {
         props: {
             postData,
@@ -24,23 +25,29 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-    return (            
+    return (
         <Layout title={postData.title}>
             <div className={styles.title}>{postData.title}</div>
             <div className={styles.subheader}>{postData.subheader}</div>
             <div className={styles.author}>By Sourish Kundu</div>
-            {postData.cspost ? chooseReadingLvl() : null}
-            <div id="content" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            {postData.cspost ? cspost(postData) : <div id="content" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+            {/*  */}
+
+
         </Layout>
     )
 }
 
-export function chooseReadingLvl() {
+export function cspost(postData) {
     return (
-        <div className={styles.readingLevel}>
-            <div id="nonTechnicalLink" className={styles.readingLevelSelected} onClick={chooseNonTechnical}>Non-Technical</div>
-            <div id="technicalLink" className={styles.readingLevelUnselected} onClick={chooseTechnical}>Technical</div>
-        </div>
+        <>
+            <div className={styles.readingLevel}>
+                <div id="nonTechnicalLink" className={styles.readingLevelSelected} onClick={chooseNonTechnical}>Non-Technical</div>
+                <div id="technicalLink" className={styles.readingLevelUnselected} onClick={chooseTechnical}>Technical</div>
+            </div>
+            <div id="nonTechnicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.nonTechnicalContent }} />
+            <div id="technicalContent" className={styles.content} style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
+        </>
     )
 }
 
