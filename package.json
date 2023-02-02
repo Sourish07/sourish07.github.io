@@ -9,6 +9,7 @@
     "dependencies": {
         "@fontsource/lato": "^4.5.10",
         "@next/font": "^13.1.6",
+        "date-fns": "^2.29.3",
         "eslint-config-next": "^13.1.6",
         "gray-matter": "^4.0.3",
         "next": "^13.1.6",

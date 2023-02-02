@@ -27,6 +27,8 @@ export function getSortedPostsData() {
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
+        console.log(matterResult.data)
+
         matterResult.data.date = matterResult.data.date.toString();
         // Combine the data with the id
         return {
@@ -76,7 +78,6 @@ export async function getPostData(id) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
     // Use unified to process the markdown content, then compile it to HTML
     // remark processes markdown and rehype processes HTML
     const processedContent = await unified()

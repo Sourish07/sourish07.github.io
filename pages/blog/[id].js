@@ -1,10 +1,9 @@
 import { getAllPostIds, getPostData } from '@/utils/processPosts';
 
 import Layout from '@/components/blog/layout';
-import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
-
-import Script from 'next/script';
+import blogStyles from '@/styles/blog/Blog.module.css';
+import Date from '@/components/blog/date';
 
 export function getStaticPaths() {
     const paths = getAllPostIds();
@@ -29,7 +28,15 @@ export default function Post({ postData }) {
         <Layout title={postData.title}>
             <div className={styles.title}>{postData.title}</div>
             <div className={styles.subheader}>{postData.subheader}</div>
-            <div className={styles.author}>By Sourish Kundu</div>
+            <div className={styles.postInfo}>
+                <Date dateString={postData.date} />
+                <div style={{ display: "flex", alignItems: "center", width: "100%", marginTop: "5px" }}>
+                    <div className={blogStyles.category} >
+                        {postData.categories}
+                    </div>
+                    <div className={styles.author}>By Sourish Kundu</div>
+                </div>
+            </div>
             {postData.cspost ? cspost(postData) : <div id="content" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
             {/*  */}
 
