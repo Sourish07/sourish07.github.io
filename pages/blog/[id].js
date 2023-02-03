@@ -72,6 +72,8 @@ export default function Post({ postData }) {
                     code {
                       background-color: #eef;
                       font-size: 1rem;
+                      font-family: 'Source Code Pro', monospace;
+                      font-weight: 400;
                     }
 
                     p code {
