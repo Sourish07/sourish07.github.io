@@ -169,7 +169,7 @@ export function cspost(postData) {
                 <div id="technicalLink" className={styles.readingLevelUnselected} onClick={chooseTechnical}>Technical</div>
             </div>
             <div id="nonTechnicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.nonTechnicalContent }} />
-            <div id="technicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
+            <div id="technicalContent" className={styles.content} style={{display: "none"}} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
         </>
     )
 }
