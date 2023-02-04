@@ -1,4 +1,5 @@
 import { getAllPostIds, getPostData } from '@/utils/processPosts';
+import { useState } from 'react';
 
 import Layout from '@/components/blog/layout';
 import styles from '@/styles/blog/Post.module.css';
@@ -37,8 +38,8 @@ export default function Post({ postData }) {
                     <div className={styles.author}>By Sourish Kundu</div>
                 </div>
             </div>
-            <link rel="stylesheet" href="/blogAssets/css/code.css"/>
             <div id="content" style={{width: "100%"}}>
+                <link rel="stylesheet" href="/blogAssets/css/code.css"/>
                 {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
             </div>
         </Layout>
@@ -46,11 +47,13 @@ export default function Post({ postData }) {
 }
 
 export function cspost(postData) {
+    const [showNonTech, setShowNonTech] = useState(true);
+
     return (
         <>
             <div className={styles.readingLevel}>
-                <div id="nonTechnicalLink" className={styles.readingLevelSelected} onClick={chooseNonTechnical}>Non-Technical</div>
-                <div id="technicalLink" className={styles.readingLevelUnselected} onClick={chooseTechnical}>Technical</div>
+                <div id="nonTechnicalLink" className={showNonTech ? styles.readingLevelSelected : styles.readingLevelUnselected} onClick={()=>{setShowNonTech(true); showNonTechnical()}}>Non-Technical</div>
+                <div id="technicalLink" className={showNonTech ? styles.readingLevelUnselected : styles.readingLevelSelected} onClick={()=>{setShowNonTech(false); showTechnical()}}>Technical</div>
             </div>
             <div id="nonTechnicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.nonTechnicalContent }} />
             <div id="technicalContent" className={styles.content} style={{display: "none"}} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} />
@@ -58,19 +61,9 @@ export function cspost(postData) {
     )
 }
 
-export function chooseNonTechnical() {
-    const nonTechnicalLink = document.querySelector("#nonTechnicalLink")
-    const technicalLink = document.querySelector("#technicalLink")
+export function showNonTechnical() {
     const nonTechnicalContent = document.querySelector("#nonTechnicalContent")
     const technicalContent = document.querySelector("#technicalContent")
-
-    if (nonTechnicalLink.classList.contains(styles.readingLevelSelected)) {
-        return;
-    }
-
-    nonTechnicalLink.className = styles.readingLevelSelected;
-    technicalLink.className = styles.readingLevelUnselected;
-
 
     fadeOut(technicalContent);
     technicalContent.style.display = "none";
@@ -78,19 +71,10 @@ export function chooseNonTechnical() {
     fadeIn(nonTechnicalContent);
 }
 
-export function chooseTechnical() {
-    const nonTechnicalLink = document.querySelector("#nonTechnicalLink")
-    const technicalLink = document.querySelector("#technicalLink")
+export function showTechnical() {
     const nonTechnicalContent = document.querySelector("#nonTechnicalContent")
     const technicalContent = document.querySelector("#technicalContent")
 
-    if (technicalLink.classList.contains(styles.readingLevelSelected)) {
-        return;
-    }
-
-    technicalLink.className = styles.readingLevelSelected;
-    nonTechnicalLink.className = styles.readingLevelUnselected;
-    
     fadeOut(nonTechnicalContent);
     nonTechnicalContent.style.display = "none";
     technicalContent.style.display = "block";
