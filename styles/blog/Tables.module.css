@@ -1,0 +1,13 @@
+/* Light theme. */
+
+  
+  /* Dark theme. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-canvas-default: #0d1117;
+      --color-canvas-subtle: #161b22;
+      --color-border-default: #30363d;
+      --color-border-muted: #21262d;
+    }
+  }
+  

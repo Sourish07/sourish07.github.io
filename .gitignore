@@ -1,5 +1,5 @@
 .vscode/
-blog/
+# blog/
 jekyll/.jekyll-cache
 
 # dependencies
