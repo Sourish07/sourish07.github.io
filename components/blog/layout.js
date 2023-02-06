@@ -28,6 +28,10 @@ export default function Layout({ children, title }) {
                             max-width: 95vw !important;
                         }
 
+                        a:hover {
+                            color: var(--red) !important;
+                        }
+
                         p a {
                             color: var(--red) !important;
                             text-decoration: underline !important;

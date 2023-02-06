@@ -2,6 +2,7 @@ import Layout from "@/components/blog/layout";
 import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
 import { getAllPostCategories, getPostsInCategory } from "@/utils/processPosts";
+import Link from "next/link";
 
 export function getStaticPaths() {
     const paths = getAllPostCategories();
@@ -25,6 +26,7 @@ export default function BlogCategory({ category, postsData }) {
     return (
         <Layout>
             <h1 className={styles.pageTitle}>Category: {category}</h1>
+            <Link href="/blog" style={{width: "100%", textAlign: "end"}}>Back to all posts</Link>
             <PostList posts={postsData} />
         </Layout>
     );
