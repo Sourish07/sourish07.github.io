@@ -33,7 +33,7 @@ export default function Post({ postData }) {
                 <Date dateString={postData.date} />
                 <div style={{ display: "flex", alignItems: "center", width: "100%", marginTop: "5px" }}>
                     <div className={blogStyles.category} >
-                        {postData.categories}
+                        {postData.category}
                     </div>
                     <div className={styles.author}>By Sourish Kundu</div>
                 </div>

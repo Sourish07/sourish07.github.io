@@ -54,9 +54,13 @@ export function getAllPostIds() {
     // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
         return {
             params: {
                 id: fileName.replace(/\.md$/, ''),
+                category: matterResult.data.category,
             },
         };
     });

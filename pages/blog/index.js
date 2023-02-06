@@ -19,9 +19,9 @@ export default function Blog({ allPostsData }) {
     return (
         <Layout title="Sourish Shares">
             <h1 className={styles.pageTitle}>Posts</h1>
-            {allPostsData.map(({ id, date, title, subheader, categories }) => (
+            {allPostsData.map(({ id, date, title, subheader, category }) => (
                 <div className={styles.post} key={id}>
-                    <Link href={`/blog/${id}`}>
+                    <Link href={`/blog/${category}/${id}`}>
                         <div className={styles.postTitle}>
                             {title}
                         </div>
@@ -30,7 +30,7 @@ export default function Blog({ allPostsData }) {
                         </div>
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                             <div className={styles.category}>
-                                {categories}
+                                {category}
                             </div>
                             <div className={styles.date}>
                                 <Date dateString={date} />
