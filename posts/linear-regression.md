@@ -29,7 +29,7 @@ One might ask, how exactly does a computer achieve this? Believe it or not, the 
 
 Let’s take a simpler, two-dimensional example that we can graph. Say we have the following points that we’re trying to fit a line to.
 
-![Data points](../blogAssets/images/lr/noline.png)
+![Data points](/blogAssets/images/lr/noline.png)
 
 To measure the best line to fit through all these points, we need some sort of numeric metric that’s objective and allows us to compare different lines. We are looking for a line that doesn’t necessarily go through all the points, or any for that matter. We want a line that, holistically, is the best fit for all the points, not just some.
 
@@ -39,25 +39,25 @@ The line is a function that when given an x-value, will output a y-value. We wan
 
 Which of the following lines is the better fit, i.e., predicts the data more accurately? How did you know?
 
-![Data points](../blogAssets/images/lr/sample-line-0-0.png)
+![Data points](/blogAssets/images/lr/sample-line-0-0.png)
 
-![Data points](../blogAssets/images/lr/sample-line-0.32011133-0.77293936.png)
+![Data points](/blogAssets/images/lr/sample-line-0.32011133-0.77293936.png)
 
 Given that this is quite a stylized example, it’s quite easy and objective to determine which one is the better line.
 
 What about this one?
 
-![Data points](../blogAssets/images/lr/sample-line-0.5-0.5.png)
+![Data points](/blogAssets/images/lr/sample-line-0.5-0.5.png)
 
-![Data points](../blogAssets/images/lr/sample-line--0.2-1.2.png)
+![Data points](/blogAssets/images/lr/sample-line--0.2-1.2.png)
 
 This example is much more subjective. Thus, it’s imperative for us to have a metric to compare lines.
 
 One common metric is called Ordinary Least Squares. One draws a line from each point (the original data point) straight up or down to the line (the predicted value). This distance represents the error of the model, i.e., the line.
 
-![Data points](../blogAssets/images/lr/sample-line-with-lines-0.5-0.5.png)
+![Data points](/blogAssets/images/lr/sample-line-with-lines-0.5-0.5.png)
 
-![Data points](../blogAssets/images/lr/sample-line-with-lines--0.2-1.2.png)
+![Data points](/blogAssets/images/lr/sample-line-with-lines--0.2-1.2.png)
 
 For each point, we just take the predicted value (the y-coordinate of the red circles on the line) and subtract it from the actual value (the y-coordinate of the blue points).
 
@@ -65,9 +65,9 @@ Before we sum everything up to measure our error, we have to remember that some 
 
 A negative error doesn't make sense. If we add up all the lengths, we would be cancelling out some of our error, resulting in an inaccurate metric. We square each error before summing up across all points to accommodate for this.
 
-![Data points](../blogAssets/images/lr/sample-line-with-squares-0.5-0.5.png)
+![Data points](/blogAssets/images/lr/sample-line-with-squares-0.5-0.5.png)
 
-![Data points](../blogAssets/images/lr/sample-line-with-squares--0.2-1.2.png)
+![Data points](/blogAssets/images/lr/sample-line-with-squares--0.2-1.2.png)
 
 Each square represents the error of its associated point. The larger the square, the further away the point is from the line.
 
@@ -82,17 +82,17 @@ This is where the machine learning algorithm called Gradient Descent comes in. A
 The line begins with a slope and y-intercept of zero.
 
 <video playsinline autoplay muted loop>
-    <source src="../blogAssets/images/lr/lr-anim.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/lr-anim.webm" type="video/webm">
 </video>
 
 This algorithm also extends to lines of higher degrees (again, sped up).
 
 <video playsinline autoplay muted loop>
-    <source src="../blogAssets/images/lr/quad.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/quad.webm" type="video/webm">
 </video>
 
 <video playsinline autoplay muted loop>
-    <source src="../blogAssets/images/lr/cubic.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/cubic.webm" type="video/webm">
 </video>
 
 What's happening here is, given a starting line, we tell the computer to move the line in a direction that minimizes the sum of the errors (a.k.a. the combined area of the squares).
@@ -217,7 +217,7 @@ We're not going to cover the proof for this here, but as long as $$\tau$$ is les
 
 Let's look at an example contour plot for a cost function.
 
-![FirstContourPlot](../blogAssets/images/lr/contour_plot_start.png)
+![FirstContourPlot](/blogAssets/images/lr/contour_plot_start.png)
 
 The contour plot is a representation of a 3D paraboloid in 2D. Each contour represents a z-value. The darker the blue contours are, the higher the value of the function is at those points. Because we want to minimize the cost function, we want to find the lowest point on this graph, which is represented by the red star.
 
@@ -227,7 +227,7 @@ The black point represents our starting point, where the two weights are both ze
 
 Visually, Gradient descent is bringing us from the black point to the red star. This graph outlines the steps the algorithm takes at each iteration.
 
-![FirstContourPlot](../blogAssets/images/lr/contour_plot_full_gd.png)
+![FirstContourPlot](/blogAssets/images/lr/contour_plot_full_gd.png)
 
 Each navy blue dot represents the weights after an iteration. We can see as the error starts to decrease (the color of the contours start to faint), the size of each step is also decreasing.
 
@@ -237,13 +237,13 @@ A natural question to ask is: why doesn't the algorithm take us straight from th
 
 Let's take a look at what the contour plot will look like when we vary $$\tau$$. This is what we get when we set $$\tau$$ to a slightly larger amount.
 
-![FirstContourPlot](../blogAssets/images/lr/contour_plot_med_tau.png)
+![FirstContourPlot](/blogAssets/images/lr/contour_plot_med_tau.png)
 
 As we see here, the algorithm still converges, but it doesn't go to the minium directly. It jumps to the other side of the star repeatedly, but it still makes progress as each iteration passes.
 
 If we increase $$\tau$$ by even more, we get the following graph:
 
-![FirstContourPlot](../blogAssets/images/lr/contour_plot_high_tau.png)
+![FirstContourPlot](/blogAssets/images/lr/contour_plot_high_tau.png)
 
 At each iteration, the algorithm is getting further and further away from the minimum.
 
@@ -251,7 +251,7 @@ Since $$\tau$$ is too large, the algorithm is stepping past the minimum, resulti
 
 And if we have tau be incredibly small, the algorithm will take forever to converge.
 
-![FirstContourPlot](../blogAssets/images/lr/contour_plot_low_tau.png)
+![FirstContourPlot](/blogAssets/images/lr/contour_plot_low_tau.png)
 
 The exact values of $$\tau$$ for each of these above cases will vary based on the dataset.
 
@@ -260,7 +260,7 @@ Just to visualize the contour plot with what each iteration is doing exactly, I'
 As the line becomes a better fit for the data, the weights travel closer and closer to the minimum.
 
 <video playsinline autoplay muted loop>
-    <source src="../blogAssets/images/lr/contourplotwithline.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/contourplotwithline.webm" type="video/webm">
 </video>
 
 I hope this gave a deeper peek into what the black box of machine learning holds! ML is an ever expansive topic and this blog post barely grazes the surface of it. Please reach out if you have any questions or comments.
