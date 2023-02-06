@@ -1,9 +1,10 @@
+import "@fontsource/pt-mono";
+import 'katex/dist/katex.min.css';
+
+import Footer from '@/components/blog/footer';
 import Head from './head';
 import Header from './header';
 import styles from '@/styles/blog/Blog.module.css';
-import Footer from '@/components/blog/footer';
-import 'katex/dist/katex.min.css';
-import "@fontsource/pt-mono";
 
 export default function Layout({ children, title }) {
     return (

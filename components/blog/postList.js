@@ -1,6 +1,6 @@
+import Date from '@/components/blog/date';
 import Link from 'next/link';
 import styles from '@/styles/blog/Blog.module.css';
-import Date from '@/components/blog/date';
 
 export default function PostList({ posts }) {
     return (

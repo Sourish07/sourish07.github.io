@@ -1,6 +1,5 @@
+import Link from 'next/link';
 import styles from '@/styles/blog/Blog.module.css';
-
-import Link from 'next/link'
 
 export default function Header() {
     return (

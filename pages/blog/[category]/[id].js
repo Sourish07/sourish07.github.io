@@ -1,12 +1,11 @@
 import { getAllPostIds, getPostData } from '@/utils/processPosts';
-import { useState } from 'react';
-import Link from 'next/link';
-
-import Layout from '@/components/blog/layout';
-import styles from '@/styles/blog/Post.module.css';
-import blogStyles from '@/styles/blog/Blog.module.css';
 
 import Date from '@/components/blog/date';
+import Layout from '@/components/blog/layout';
+import Link from 'next/link';
+import blogStyles from '@/styles/blog/Blog.module.css';
+import styles from '@/styles/blog/Post.module.css';
+import { useState } from 'react';
 
 export function getStaticPaths() {
     const paths = getAllPostIds();

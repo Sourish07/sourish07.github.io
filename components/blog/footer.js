@@ -1,6 +1,6 @@
-import styles from '@/styles/blog/Footer.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@/styles/blog/Footer.module.css';
 
 export default function Footer() {
     return (

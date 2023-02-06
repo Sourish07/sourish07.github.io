@@ -1,9 +1,8 @@
-import Link from 'next/link';
-
-import styles from '@/styles/blog/Blog.module.css';
 import Layout from '@/components/blog/layout';
+import Link from 'next/link';
 import PostList from '@/components/blog/postList';
 import { getSortedPostsData } from '@/utils/processPosts';
+import styles from '@/styles/blog/Blog.module.css';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();

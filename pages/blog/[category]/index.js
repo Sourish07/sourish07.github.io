@@ -1,8 +1,9 @@
+import { getAllPostCategories, getPostsInCategory } from "@/utils/processPosts";
+
 import Layout from "@/components/blog/layout";
+import Link from "next/link";
 import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
-import { getAllPostCategories, getPostsInCategory } from "@/utils/processPosts";
-import Link from "next/link";
 
 export function getStaticPaths() {
     const paths = getAllPostCategories();
