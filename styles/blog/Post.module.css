@@ -1,0 +1,132 @@
+.title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.subheader {
+  font-size: 2.25rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.author {
+  text-align: end;
+  width: 100%;
+  font-size: 1.5rem;
+  /* margin-bottom: 15px; */
+}
+
+.postInfo {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.content {
+  max-width: 100%;
+}
+
+.content p,
+.content li {
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.content p {
+  margin-bottom: 15px;
+}
+
+.content img,
+.content video {
+  max-height: 300px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.content ol,
+.content ul {
+  margin-left: 30px;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.content ol ul {
+  margin-bottom: 0px;
+}
+
+.readingLevel {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.readingLevelSelected {
+  color: #e62b1e;
+  cursor: pointer;
+
+  background: linear-gradient(currentColor 0 0) 100% 100% / 100% 2px no-repeat;
+}
+
+.readingLevelUnselected {
+  cursor: pointer;
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+    2px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
+}
+
+.readingLevelUnselected:hover {
+  --d: 100%;
+  --p: 100%;
+}
+
+/* COPIED CSS FOR TABLES */
+.content table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.content tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.content tr:nth-child(2n),
+.content th {
+  background-color: var(--color-canvas-subtle);
+}
+
+.content td,
+.content th {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.content th {
+  font-weight: 600;
+}
+
+.content table img {
+  background-color: transparent;
+}

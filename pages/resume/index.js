@@ -1,4 +1,4 @@
-import SkHead from "@/components/head";
+import SkHead from "@/components/main/head";
 
 const Resume = () => {
     return (
