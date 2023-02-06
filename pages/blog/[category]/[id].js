@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '@/utils/processPosts';
 import { useState } from 'react';
+import Link from 'next/link';
 
 import Layout from '@/components/blog/layout';
 import styles from '@/styles/blog/Post.module.css';
@@ -32,9 +33,12 @@ export default function Post({ postData }) {
             <div className={styles.postInfo}>
                 <Date dateString={postData.date} />
                 <div style={{ display: "flex", alignItems: "center", width: "100%", marginTop: "5px" }}>
-                    <div className={blogStyles.category} >
+                    {/* <div className={blogStyles.category} >
                         {postData.category}
-                    </div>
+                    </div> */}
+                    <Link href={`/blog/${postData.category}`} className={blogStyles.category}>
+                            {postData.category}
+                        </Link>
                     <div className={styles.author}>By Sourish Kundu</div>
                 </div>
             </div>

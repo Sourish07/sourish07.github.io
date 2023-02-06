@@ -41,7 +41,8 @@
 }
 
 #header a:hover,
-.post a:hover {
+.post a:hover,
+.category:hover {
   color: var(--red);
 }
 

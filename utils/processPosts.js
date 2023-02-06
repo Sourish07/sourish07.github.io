@@ -14,6 +14,52 @@ import rehypeRaw from 'rehype-raw'
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+// Required for getStaticPaths in pages/blog/[category]/index.js
+// [{params: {category: '...'}, ...]
+export function getAllPostCategories() {
+    const fileNames = fs.readdirSync(postsDirectory);
+    let categories = new Set();
+    fileNames.forEach((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        categories.add(matterResult.data.category);
+    });
+
+    let categoriesArray = Array.from(categories);
+    return categoriesArray.map((category) => {
+        return {
+            params: {
+                category: category,
+            },
+        };
+    });
+}
+
+export function getPostsInCategory(category) {
+    const fileNames = fs.readdirSync(postsDirectory);
+    let posts = [];
+    fileNames.forEach((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        if (matterResult.data.category === category) {
+            posts.push({
+                id: fileName.replace(/\.md$/, ''),
+                ...matterResult.data,
+            });
+        }
+    });
+
+    return posts.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+}
+
 export function getSortedPostsData() {
     // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
