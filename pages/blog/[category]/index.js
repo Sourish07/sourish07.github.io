@@ -12,7 +12,6 @@ export function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    let x = params.category;
     const postsData = getPostsInCategory(params.category);
     return {
         props: {
@@ -23,12 +22,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function BlogCategory({ category, postsData }) {
-    console.log("PROPS: " + postsData)
     return (
         <Layout>
             <h1 className={styles.pageTitle}>Category: {category}</h1>
             <PostList posts={postsData} />
-            {console.log(postsData)}
         </Layout>
     );
 }
