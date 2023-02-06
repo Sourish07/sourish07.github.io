@@ -3,7 +3,7 @@ layout: post
 title:  "How to Create a Python Web App with Flask"
 subheader: "Complete Flask tutorial from start to finish"
 date: "2022-02-11"
-categories: tutorials
+category: tutorials
 ---
 
 Web applications are amongst the most popular types of applications in the world, and conveniently, they are also the simplest to delve into for beginners. Gone are the days where a developer must tussle with sockets, thread management, and the other pains that came along with web development.

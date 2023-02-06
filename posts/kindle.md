@@ -3,7 +3,7 @@ layout: post
 title:  "Why I love my Kindle"
 subheader: "Single-handedly my favorite purchase ever"
 date:   "2022-03-31"
-categories: life
+category: life
 ---
 
 I wanted to start out this blog post with an insightful quote about reading, but I don’t think I need to convince anyone that reading is good for you. I think the area most people are struggling with is developing the habit of reading; I know I’ve been stuck here for the longest time. Thus, the Amazon Kindle has single handedly been my favorite purchase. In terms of the most value for my money, it is at the top of my list. No other investment of mine has made something as rewarding as reading so accessible.

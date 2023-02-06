@@ -3,7 +3,7 @@ layout: post
 title:  "Personal Projects: A Guide for Beginners"
 subheader: "How to impress companies for that internship"
 date:   "2022-02-25"
-categories: industry
+category: industry
 ---
 
 Personal projects are a quintessential aspect of being a Computer Science student. While my classwork has been instrumental in my learning, it pales in comparison to the role my personal projects have played in establishing the current knowledge base I have.

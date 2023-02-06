@@ -4,7 +4,7 @@ cspost: yes
 title:  "Linear Regression"
 subheader: "Starting to open the black box of machine learning"
 date:   "2022-02-18"
-categories: tutorials
+category: tutorials
 ---
 
 Linear regression is a machine learning algorithm used to predict an output value based on a set of input values. For example, if we’re trying to predict housing prices during the pandemic, we might look at values of various houses for which we have data for.
