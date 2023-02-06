@@ -35,6 +35,7 @@ export function getAllPostCategories() {
     });
 }
 
+// Returns an array of all posts in a given category sorted by date
 export function getPostsInCategory(category) {
     const fileNames = fs.readdirSync(postsDirectory);
     let posts = [];
@@ -59,6 +60,7 @@ export function getPostsInCategory(category) {
     });
 }
 
+// Returns an array of all posts sorted by date
 export function getSortedPostsData() {
     // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
@@ -111,6 +113,7 @@ export function getAllPostIds() {
     });
 }
 
+// Given a post id, return the full markdown for that post
 export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
