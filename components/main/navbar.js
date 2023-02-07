@@ -16,7 +16,7 @@ export default function Navbar() {
                         <NavbarLink
                             key={item}
                             className={styles.navbarLink}
-                            href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()}
+                            href={"#" + item.replaceAll(' ', '-').toLowerCase()}
                             text={item}
                             style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
                         />
@@ -36,7 +36,7 @@ function Sidebar(props) {
                 {props.items.map((item) => (
                     <NavbarLink 
                         key={item} 
-                        href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} 
+                        href={"#" + item.replaceAll(' ', '-').toLowerCase()} 
                         text={item} 
                         className={styles.sidebarLink} 
                         onClick={toggleSidebar}
