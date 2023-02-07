@@ -36,7 +36,6 @@ function Sidebar(props) {
                 {props.items.map((item) => (
                     <NavbarLink
                         key={item}
-                        href={"#" + item.replaceAll(' ', '-').toLowerCase()}
                         text={item}
                         className={styles.sidebarLink}
                         onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase(), true)}
@@ -49,7 +48,7 @@ function Sidebar(props) {
 
 function NavbarLink(props) {
     return (
-        <div href={props.href} onClick={props.onClick} alt={props.text} style={props.style} className={props.className}>
+        <div onClick={props.onClick} style={props.style} className={props.className}>
             {props.text}
         </div>
     )
