@@ -5,7 +5,7 @@ import Head from '@/components/main/head';
 import Hero from '@/components/main/hero';
 import Portfolio from '@/components/main/portfolio';
 import Skills from '@/components/main/skills';
-import Blog from '@/components/main/blog';
+import Blog from '@/components/main/blogSection';
 import { AboutMeText } from '@/utils/aboutMe';
 import { getSortedPostsData } from '@/utils/processPosts';
 

@@ -2,10 +2,25 @@ import Section from "./section";
 import Link from "next/link";
 import Date from "../blog/date";
 import styles from "@/styles/blog/Blog.module.css";
+import { SectionSubheader } from "./section";
 
 export default function Blog({ posts }) {
     return (
-        <Section id="blog" title="Blog" subheader="Feel free to read some of my blog posts!">
+        <Section id="blog" title="Blog">
+            <style jsx>
+                {`
+                    #blogLink {
+                        text-decoration: underline;
+                    }
+
+                    #blogLink:hover {
+                        color: var(--red);
+                    }
+                `}
+            </style>
+            <SectionSubheader>
+                See my recent articles below or my full blog <Link href="/blog"><span id="blogLink">here</span></Link>!
+            </SectionSubheader>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
                 {posts.map((post) => (
                     <BlogPost key={post.id} post={post} />
