@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Experience() {
     const path = "/resources/images/experience/"
-    let images = ["bytedance-copy.svg", "aws.webp", "gallify.svg", "capitalone.svg", "xaipient.webp", "dinein.webp", "leidos.svg"]
+    let images = ["seafare.svg", "bytedance-copy.svg", "aws.webp", "gallify.svg", "capitalone.svg", "xaipient.webp", "dinein.webp", "leidos.svg"]
     images = images.map((image) => {
         return {
             name: image,
