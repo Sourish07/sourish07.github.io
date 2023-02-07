@@ -49,10 +49,10 @@ function BlogPost({ post }) {
                         flexDirection: "column",
                         justifyContent: "space-between",
                         width: "300px",
-                        height: "125px",
+                        height: "130px",
                     }}>
                     <div id="blogInfo" >
-                        <h3>{post.title}</h3>
+                        <h2>{post.title}</h2>
                         <p>{post.subheader}</p>
                     </div>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
