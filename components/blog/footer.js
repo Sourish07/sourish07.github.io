@@ -26,6 +26,7 @@ export default function Footer() {
                 <div className={styles.bio}>
                     <p>Welcome to my blog! Here, I write about various topics about Computer Science, the industry in general, and about life too. If you have any thoughts, comments, or questions, please don't hesitate to reach out.</p>
                 </div>
+                <div style={{marginTop: "15px"}}>© 2022 Sourish Kundu</div>
             </div>
         </footer>
     )
