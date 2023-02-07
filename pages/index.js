@@ -28,7 +28,7 @@ export default function Index({ aboutMeText, posts }) {
                 <style>
                     {`
                         html {
-                            scroll-behavior: smooth !important;
+                            scroll-behavior: smooth;
                         }
 
                         /* Scroll bar */
