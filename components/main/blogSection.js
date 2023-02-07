@@ -10,11 +10,12 @@ export default function Blog({ posts }) {
             <style jsx>
                 {`
                     #blogLink {
-                        text-decoration: underline;
+                        border-bottom: 1px solid #FFF;
                     }
 
                     #blogLink:hover {
                         color: var(--red);
+                        border-bottom: 1px solid var(--red);
                     }
                 `}
             </style>
