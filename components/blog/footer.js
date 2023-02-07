@@ -10,23 +10,26 @@ export default function Footer() {
                 <div className={styles.links}>
                     <div className={styles.contact}>
                         <span>Sourish Kundu</span>
-                        <Link href="mailto:sourishkundu07@gmail.com">sourishkundu07@gmail.com</Link>
+                        <div>
+
+                        <Link href="/">sourish.dev</Link>
+                        </div>
                     </div>
                     <div className={styles.socials}>
-                        <Link href="https://github.com/Sourish07">
-                            <Image src="/resources/icons/github.svg" width={20} height={20} alt="github"></Image>
-                            <span>sourish07</span>
+                        <Link href="mailto:sourishkundu07@gmail.com">
+                            <Image src="/resources/icons/mail.svg" width={20} height={20} alt="github"></Image>
+                            <span>Email</span>
                         </Link>
                         <Link href="https://www.linkedin.com/in/sourish07/">
                             <Image src="/resources/icons/linkedin.svg" width={20} height={20} alt="linkedin"></Image>
-                            <span>sourish07</span>
+                            <span>LinkedIn</span>
                         </Link>
                     </div>
                 </div>
                 <div className={styles.bio}>
-                    <p>Welcome to my blog! Here, I write about various topics about Computer Science, the industry in general, and about life too. If you have any thoughts, comments, or questions, please don't hesitate to reach out.</p>
+                    <p>Welcome to my blog! Here, I write about various topics about computer science, the broader tech industry, and about life too. If you have any thoughts, comments, or questions, please don't hesitate to reach out.</p>
                 </div>
-                <div style={{marginTop: "15px"}}>© 2022 Sourish Kundu</div>
+                <div style={{ marginTop: "15px" }}>© 2022 Sourish Kundu</div>
             </div>
         </footer>
     )
