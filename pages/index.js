@@ -1,22 +1,32 @@
-import Head from '@/components/main/head';
-import Hero from '@/components/main/hero';
 import AboutMe from '@/components/main/aboutMe';
 import Experience from '@/components/main/experience';
-import Skills from '@/components/main/skills';
-import Portfolio from '@/components/main/portfolio';
 import Footer from '@/components/main/footer';
+import Head from '@/components/main/head';
+import Hero from '@/components/main/hero';
+import Portfolio from '@/components/main/portfolio';
+import Skills from '@/components/main/skills';
+import Blog from '@/components/main/blogSection';
+import { AboutMeText } from '@/utils/aboutMe';
+import { getSortedPostsData } from '@/utils/processPosts';
 
-export default function Index() {
+export async function getStaticProps() {
+    const aboutMeText = await AboutMeText();
+    const posts = getSortedPostsData().slice(0, 6);
+    return {
+        props: {
+            aboutMeText,
+            posts,
+        },
+    };
+}
+
+export default function Index({ aboutMeText, posts }) {
     return (
         <>
             <Head title="Sourish's Personal Website" >
                 <link rel="canonical" href="https://www.sourish.dev" />
                 <style>
                     {`
-                        * {
-                            scroll-behavior: smooth !important;
-                        }
-
                         /* Scroll bar */
                         /* width */
                         ::-webkit-scrollbar {
@@ -44,10 +54,11 @@ export default function Index() {
             </Head>
             <main>
                 <Hero />
-                <AboutMe />
+                <AboutMe text={aboutMeText} />
                 <Experience />
                 <Skills />
                 <Portfolio />
+                <Blog posts={posts} />
                 <Footer />
             </main>
         </>

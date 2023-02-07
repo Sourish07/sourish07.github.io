@@ -1,11 +1,11 @@
 import { getAllPostIds, getPostData } from '@/utils/processPosts';
-import { useState } from 'react';
-
-import Layout from '@/components/blog/layout';
-import styles from '@/styles/blog/Post.module.css';
-import blogStyles from '@/styles/blog/Blog.module.css';
 
 import Date from '@/components/blog/date';
+import Layout from '@/components/blog/layout';
+import Link from 'next/link';
+import blogStyles from '@/styles/blog/Blog.module.css';
+import styles from '@/styles/blog/Post.module.css';
+import { useState } from 'react';
 
 export function getStaticPaths() {
     const paths = getAllPostIds();
@@ -32,9 +32,12 @@ export default function Post({ postData }) {
             <div className={styles.postInfo}>
                 <Date dateString={postData.date} />
                 <div style={{ display: "flex", alignItems: "center", width: "100%", marginTop: "5px" }}>
-                    <div className={blogStyles.category} >
-                        {postData.categories}
-                    </div>
+                    {/* <div className={blogStyles.category} >
+                        {postData.category}
+                    </div> */}
+                    <Link href={`/blog/${postData.category}`} className={blogStyles.category}>
+                            {postData.category}
+                        </Link>
                     <div className={styles.author}>By Sourish Kundu</div>
                 </div>
             </div>

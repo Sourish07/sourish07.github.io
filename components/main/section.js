@@ -18,10 +18,11 @@ export const SectionTitle = ({ title }) => {
   );
 };
 
-export const SectionSubheader = ({ text }) => {
+export const SectionSubheader = ({ text, children }) => {
   return (
       <h3 style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "center", marginBottom: "20px"}}>
-          {text}
+          {text ? text : <></>}
+          {children ? children : <></>}
       </h3>
   );
 };

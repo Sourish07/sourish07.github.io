@@ -97,6 +97,7 @@ function getLanguages(path) {
         { name: "JavaScript", src: "javascript.svg" },
         { name: "SQL", src: "sql.svg" },
         { name: "MATLAB", src: "matlab.webp" },
+        { name: "R", src: "r.svg" },
     ]
     return format(languages, path);
 }

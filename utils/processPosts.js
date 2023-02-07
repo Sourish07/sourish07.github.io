@@ -1,19 +1,66 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
-
-import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkMath from 'remark-math'
-import remarkRehype from 'remark-rehype'
-import rehypeKatex from 'rehype-katex'
-import rehypeStringify from 'rehype-stringify'
-import remarkGfm from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
-import rehypeRaw from 'rehype-raw'
+import path from 'path';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+// Required for getStaticPaths in pages/blog/[category]/index.js
+// [{params: {category: '...'}, ...]
+export function getAllPostCategories() {
+    const fileNames = fs.readdirSync(postsDirectory);
+    let categories = new Set();
+    fileNames.forEach((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        categories.add(matterResult.data.category);
+    });
+
+    let categoriesArray = Array.from(categories);
+    return categoriesArray.map((category) => {
+        return {
+            params: {
+                category: category,
+            },
+        };
+    });
+}
+
+// Returns an array of all posts in a given category sorted by date
+export function getPostsInCategory(category) {
+    const fileNames = fs.readdirSync(postsDirectory);
+    let posts = [];
+    fileNames.forEach((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        if (matterResult.data.category === category) {
+            posts.push({
+                id: fileName.replace(/\.md$/, ''),
+                ...matterResult.data,
+            });
+        }
+    });
+
+    return posts.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+}
+
+// Returns an array of all posts sorted by date
 export function getSortedPostsData() {
     // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
@@ -54,14 +101,19 @@ export function getAllPostIds() {
     // Get file names in posts directory
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
         return {
             params: {
                 id: fileName.replace(/\.md$/, ''),
+                category: matterResult.data.category,
             },
         };
     });
 }
 
+// Given a post id, return the full markdown for that post
 export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');

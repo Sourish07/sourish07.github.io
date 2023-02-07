@@ -1,0 +1,9 @@
+#
+
+I am a 21-year-old striving to build my career around my passion for computer science & business. My favorite subfields of CS are Machine Learning, Computer Graphics, and High Performance Computing, but that doesn't mean I don't enjoy learning about other areas as well. In the professional realm, I've had the opportunity to intern at many tech companies working on various projects such as Machine Learning Systems, Natural Language Processing with chatbots, and Artificial Intelligence explainability. I have also founded my own startup in Madison, Wisconsin where I learned that the intersection of tech and business is what I want to delve deeper into.
+
+Additionally, I love working on personal projects which allow me to apply the knowledge I have acquired in the classroom while simultaneously obtaining new experiences I did not expect, whether its creating my own homelab server or upgrading my 3-D printer. I have come to learn that building things that can benefit the lives of others is what I am passionate about. The enjoyment and pleasure gained from learning while creating is a feeling for which I am still seeking the words to describe.
+
+I also have a blog where I write technical tutorials, about my experiences and thoughts about the broader tech industry, and about life. It's an outlet for me to express my introspective side. My only goal is to write about topics or questions that really catch my interest and share my perspective with others.
+
+Outside of computer science, I have a vested interest in rock climbing, working out, 3-D modeling, public speaking, politics, and business. In my free time, if I am not with friends, I am either playing video games, watching TV, or listening to rap music/podcasts, alongside reading, writing, and researching topics that intrigue me in order to continue expanding my knowledge base.

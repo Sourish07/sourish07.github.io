@@ -16,9 +16,9 @@ export default function Navbar() {
                         <NavbarLink
                             key={item}
                             className={styles.navbarLink}
-                            href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()}
                             text={item}
-                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
+                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s", cursor: "pointer" }}
+                            onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase())}
                         />
                     ))}
                     <button id={styles.navbarIcon} onClick={toggleSidebar} aria-label="menu"></button>
@@ -34,12 +34,11 @@ function Sidebar(props) {
         <div id={styles.sidebar}>
             <div id={styles.sidebarContent}>
                 {props.items.map((item) => (
-                    <NavbarLink 
-                        key={item} 
-                        href={(item === "Blog" ? "/" : "#") + item.replaceAll(' ', '-').toLowerCase()} 
-                        text={item} 
-                        className={styles.sidebarLink} 
-                        onClick={toggleSidebar}
+                    <NavbarLink
+                        key={item}
+                        text={item}
+                        className={styles.sidebarLink}
+                        onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase(), true)}
                     />
                 ))}
             </div>
@@ -49,10 +48,18 @@ function Sidebar(props) {
 
 function NavbarLink(props) {
     return (
-        <Link href={props.href} onClick={props.onClick} alt={props.text}>
-            <div style={props.style} className={props.className}>{props.text}</div>
-        </Link>
+        <div onClick={props.onClick} style={props.style} className={props.className}>
+            {props.text}
+        </div>
     )
+}
+
+function scrollTo(id, sidebarOpen = false) {
+    return function () {
+        if (sidebarOpen) toggleSidebar();
+        let element = document.getElementById(id);
+        element.scrollIntoView({ behavior: "smooth" });
+    }
 }
 
 function toggleSidebar() {
