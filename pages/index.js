@@ -5,8 +5,18 @@ import Head from '@/components/main/head';
 import Hero from '@/components/main/hero';
 import Portfolio from '@/components/main/portfolio';
 import Skills from '@/components/main/skills';
+import { AboutMeText } from '@/utils/aboutMe';
 
-export default function Index() {
+export async function getStaticProps() {
+    const aboutMeText = await AboutMeText();
+    return {
+        props: {
+            aboutMeText,
+        },
+    };
+}
+
+export default function Index({ aboutMeText }) {
     return (
         <>
             <Head title="Sourish's Personal Website" >
@@ -44,7 +54,7 @@ export default function Index() {
             </Head>
             <main>
                 <Hero />
-                <AboutMe />
+                <AboutMe text={aboutMeText} />
                 <Experience />
                 <Skills />
                 <Portfolio />
