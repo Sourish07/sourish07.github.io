@@ -11,18 +11,13 @@ export default function Layout({ children, title }) {
         <>
             <Head title={title} >
                 <style>
+                    {/* Global CSS styles for blog */}
                     {`
-                        <!-- Global CSS styles for blog -->
-                        
-                        * {
-                            scroll-behavior: auto !important;
-                        }
-                        
                         :root {
                             --background-color: #FFF !important;
                             --text-color: #000 !important;
                         }
-
+                        
                         hr {
                             border: 1px solid #ccc !important;
                             width: -webkit-calc(1000px - (30px * 2)) !important;

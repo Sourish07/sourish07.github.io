@@ -17,7 +17,7 @@ export default function Navbar() {
                             key={item}
                             className={styles.navbarLink}
                             text={item}
-                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s" }}
+                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s", cursor: "pointer" }}
                             onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase())}
                         />
                     ))}
@@ -34,11 +34,11 @@ function Sidebar(props) {
         <div id={styles.sidebar}>
             <div id={styles.sidebarContent}>
                 {props.items.map((item) => (
-                    <NavbarLink 
-                        key={item} 
-                        href={"#" + item.replaceAll(' ', '-').toLowerCase()} 
-                        text={item} 
-                        className={styles.sidebarLink} 
+                    <NavbarLink
+                        key={item}
+                        href={"#" + item.replaceAll(' ', '-').toLowerCase()}
+                        text={item}
+                        className={styles.sidebarLink}
                         onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase(), true)}
                     />
                 ))}
@@ -49,14 +49,14 @@ function Sidebar(props) {
 
 function NavbarLink(props) {
     return (
-        <div href={props.href} onClick={props.onClick} alt={props.text} style={{cursor: "pointer"}}>
-            <div style={props.style} className={props.className}>{props.text}</div>
+        <div href={props.href} onClick={props.onClick} alt={props.text} style={props.style} className={props.className}>
+            {props.text}
         </div>
     )
 }
 
-function scrollTo(id, sidebarOpen=false) {
-    return function() {
+function scrollTo(id, sidebarOpen = false) {
+    return function () {
         if (sidebarOpen) toggleSidebar();
         let element = document.getElementById(id);
         element.scrollIntoView({ behavior: "smooth" });

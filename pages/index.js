@@ -27,10 +27,6 @@ export default function Index({ aboutMeText, posts }) {
                 <link rel="canonical" href="https://www.sourish.dev" />
                 <style>
                     {`
-                        html {
-                            scroll-behavior: smooth;
-                        }
-
                         /* Scroll bar */
                         /* width */
                         ::-webkit-scrollbar {
