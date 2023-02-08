@@ -2,7 +2,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "export": "next build && next export",
+        "export": "cross-env STATIC_BUILD=1 next build && next export",
         "start": "next start",
         "prod": "next build && next start"
     },
@@ -10,6 +10,7 @@
         "@fontsource/lato": "^4.5.10",
         "@fontsource/pt-mono": "^4.5.11",
         "@next/font": "^13.1.6",
+        "cross-env": "^7.0.3",
         "date-fns": "^2.29.3",
         "eslint-config-next": "^13.1.6",
         "gray-matter": "^4.0.3",

@@ -3,17 +3,7 @@ import Script from 'next/script'
 
 export default function SkHead({ title, children }) {
     return (
-        <Head>
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87" />
-            <Script>
-                {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-J796TLFH87');
-                    `}
-            </Script>
-
+        <Head>          
             <title>{title}</title>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />

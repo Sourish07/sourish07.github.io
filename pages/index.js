@@ -52,6 +52,7 @@ export default function Index({ aboutMeText, posts }) {
                     `}
                 </style>
             </Head>
+            
             <main>
                 <Hero />
                 <AboutMe text={aboutMeText} />
