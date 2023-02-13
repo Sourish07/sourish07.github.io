@@ -19,13 +19,10 @@ export default function Hero() {
                 />
 
                 <div>
-
                     <h1 style={{ textAlign: "center", fontWeight: "100", fontSize: "3.5rem" }}>Sourish Kundu</h1>
-
                     <p style={{ textAlign: "center", justifyContent: "center", fontSize: "1.5rem" }}>
-                        An ambitious creator, passionate speaker, and insightful thinker
+                        An ambitious creator, passionate speaker, and insightful writer
                     </p>
-
                     <CenterBar />
                 </div>
             </Section>

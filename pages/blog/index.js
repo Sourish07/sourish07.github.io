@@ -1,8 +1,8 @@
+import Head from '@/components/blog/head';
 import Layout from '@/components/blog/layout';
-import Link from 'next/link';
 import PostList from '@/components/blog/postList';
-import { getSortedPostsData } from '@/utils/processPosts';
 import styles from '@/styles/blog/Blog.module.css';
+import { getSortedPostsData } from '@/utils/processPosts';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -15,9 +15,16 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
     return (
-        <Layout title="Sourish Shares">
-            <h1 className={styles.pageTitle}>Posts</h1>
-            <PostList posts={allPostsData} />
-        </Layout>
+        <>
+            <Head 
+                title="Sourish Shares - Welcome to my blog!"
+                description="Here, I write about various topics about CS, the broader tech industry, and life."
+                siteName="sourish.dev/blog"
+            />
+            <Layout>
+                <h1 className={styles.pageTitle}>Posts</h1>
+                <PostList posts={allPostsData} />
+            </Layout>
+        </>
     );
 }
