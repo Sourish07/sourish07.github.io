@@ -27,7 +27,7 @@ Below is a diagram of a fully connected neural network. It's simply a bunch of n
 
 We have four neurons in the input layer (red), two neurons in the hidden layer (blue), and four neurons in the output layer (yellow). The number of neurons per layer is dependent on the task at hand, and may require tuning by you, the computer scientist. Each layer, besides the output layer, also has its own bias unit.
 
-The input numbers will be given by whatever dataset we're using, but the values of each neuron in subsequent layers is the weighted sum of all the neurons in the previous layer, as mentioned above. The process of training a neural network is mathematically calculates out what values these weights should be. 
+The input numbers will be given by whatever dataset we're using, but the values of each neuron in subsequent layers is the weighted sum of all the neurons in the previous layer, as mentioned above. The process of training a neural network is mathematically calculates out what values these weights should be.
 
 At a fundamental level, a neural network just performs a sequence of multiplications and additions.
 
@@ -104,7 +104,7 @@ split
 With the help of some linear algebra and calculus, we can build upon our intuition of how neural networks work by understanding the math behind it.
 
 ## Data
-
+<!--- Maybe move this data section to the non-technical? -->
 An ML model doesn't provide any value if it's unable to properly learn the trends in the data it's trained on. Models are commonly plagued with two issues, overfitting and underfitting.
 
 ![Fitting](/blogAssets/images/nn/fitting1.svg)
@@ -121,7 +121,7 @@ The black star represents a new data point the model hasn't seen before. The x-v
 
 ![Fitting3](/blogAssets/images/nn/fitting3.svg)
 
-The orange dot represents the model's prediction for when x is equal to 5. The first model is wrong, but only by about 15. The second model is off by a much smaller amount, while the overfitting model's prediction is off by over 250! 
+The orange dot represents the model's prediction for when x is equal to 5. The first model is wrong, but only by about 15. The second model is off by a much smaller amount, while the overfitting model's prediction is off by over 250!
 
 If you look closely at the graph of the third model above, you'll see that it reaches a local maximum when x is 4 and starts to decline as x continues to increase. It correctly predicts the data points it has already seen, but cannot predict the new point correctly, even though it's a point that fits the trend of the dataset.
 
@@ -156,13 +156,13 @@ After having gone through the entire test dataset, it calculates its accuracy. W
 
 ## Linear Algebra
 
-Linear Algebra provides us with some minimalist notation and extra tools to properly utilize vectors and matrices. Take a look at the diagram of a neuron with two inputs again. 
+Linear Algebra provides us with some minimalist notation and extra tools to properly utilize vectors and matrices. Take a look at the diagram of a neuron with two inputs again.
 
 ![Neuron](/blogAssets/images/nn/NNAdvancedNeuron.svg)
 
 The output of the neuron is the weighted sum of the inputs plus the bias term, passed into the activation function. Let's call the activation function $$f(x)$$ for now.
-
-$$output=f(w_0 + w_1x_1 + w_2x_2)$$
+<!--- Center the following: -->
+$$\text{output}=f(w_0 + w_1x_1 + w_2x_2)$$
 
 This notation will become quite cumbersome as the number of inputs and weights increases. Let's rewrite our inputs and weights as vectors.
 
@@ -231,7 +231,7 @@ $$
 The bias term is necessary because it adds some flexibility to our network. Think about the equation for a simple line: $$y=mx+b$$. The $$b$$ indicates the line's y-intercept. Without it, all lines would be required to cross the origin point, which is a severe restriction when trying to model real world scenarios. The bias vector here plays the same role.
 
 The exact process is repeated to get the values for the output layer. The weight matrix for the output layer, $$W_2$$ will be a 3 x 2 matrix. Each row in $$W_2$$ represents the weights for each neuron in the output layer. Each column represents the weights from a neuron from the hidden layer. The output layer will have a bias vector of length 3. Let's call the values in the hidden layer $$h$$ and the activation function for the output layer $$g(x)$$ .
-
+<!--- Center the following -->
 $$\text{output layer} = g(W_2h+b_2)$$
 
 As a rule of thumb, the dimensions for any given weight matrix will be the number of neurons in the current layer by the number of neurons in the previous layer. The length of the bias vector will be the number of neurons in the current layer.
@@ -243,6 +243,7 @@ Activation functions introduce non-linearity to the neural network. This gives t
 After the linear transformation for each layer, the result is then passed into that layer's activation function to get the layer's output.
 
 ### Sigmoid
+
 The Sigmoid function is one of the most common activation functions. At 0, it's equal to 0.5 and as it approaches infinity, it asymptotes towards 1. As it approaches negative infinity, it approaches 0.
 
 ![Sigmoid Function](/blogAssets/images/nn/sigmoid_func.svg)
@@ -287,14 +288,14 @@ GeLu'(x)&=\phi(x)+xP(X=x)
 \end{align*}
 $$
 
-As a side note, $$P(X=x)$$ is the value of the PDF of the standard normal curve at $$x$$.
+As a side note, $$P(X=x)$$ is the value of the PDF of the standard normal curve at $$x$$, and $$\phi(x)$$ is the value of the CDF of the standard normal curve at $$x$$.
 
 One useful feature of the derivatives for the sigmoid and tanh functions is that the derivative is a function of the original output, which makes calculating the derivatives simple.
 
 ### Softmax
 
 Another activation function I want to mention is the softmax function. It doesn't have a graph, because its input is all of the layer's neurons arranged in a vector.
-
+<!--- Center the following -->
 $$S(x)=\frac{e^{x_i}}{\sum^{N}_{k=1}e^{x_k}}$$
 
 The useful feature of the softmax activation function is that all of the values now add up to 1, allowing us to interpret the result as probabilities. This is useful for multiclass classification problems.
@@ -331,6 +332,8 @@ The index value of the neuron with the highest value in the output layer is cons
 
 If we wanted to, we could write the whole network on one line. It's probably clear why we don't though. It'll get harder to read as the number of layers increase.
 
+<!--- Center the following: -->
+
 $$\text{output layer}=\sigma(W_2(R(W_1x+b_1))+b_2)$$
 
 This insight will come in handy when we start to calculate the derivatives soon.
@@ -353,7 +356,7 @@ $$
         0\\
         0
     \end{bmatrix}
-\right) >
+\right) <
 \mathcal{L}\left(
     \begin{bmatrix}
         0.23\\
@@ -368,7 +371,7 @@ $$
 \right)
 $$
 
-The goal of training is to minimize our cost function across all training examples. This means we need a way to measure how different our predictions are from the ground truth and the function needs to be differentiable.
+We want our loss function to return a smaller value for the pair of inputs on the left, because the prediction vector is closer to the ground truth vector. The goal of training is to minimize our cost function across all training examples. This means we need a way to measure how different our predictions are from the ground truth and the function needs to be differentiable.
 
 ### MSE
 
@@ -383,6 +386,8 @@ For a singular training example, we'll be minimizing the following:
 $$\frac{\left(y-\hat y\right)^2}{2}$$
 
 The $$2$$ in the denominator will cancel out when we take the derivative of the function, which is $$-(y-\hat y)$$.
+
+<!--- Add derivatives for the following three cost functions. -->
 
 ### Binary Cross Entropy
 
@@ -408,7 +413,7 @@ This is the complicated part of a neural network, the training process. I’ve r
 
 The colors represent each layer and each rectangle represents an operation that’s performed in the network. The output of one function is the input for the next one. We pass $$x$$ into the first linear transformation, $$z_1(x, W_1, b_1)$$, then into the ReLu activation function, $$R(x)$$, then into the second linear transformation, $$z_2(a_1, W_2, b_2)$$, then into the sigmoid activation function, $$\sigma(x)$$, and finally into the loss function, $$\mathcal{L}(a_2, y)$$, to calculate the error.
 
-This extends the insight of how a neural network is a bunch of nested functions.
+I hope this reinforces the insight of how a neural network is a bunch of nested functions.
 
 ### Chain Rule Review
 
@@ -438,9 +443,11 @@ $$
 
 ### Partial Derivatives Review
 
-Let's say we have the following equation, $$f(x, y) = x^2y$$. Partial derivatives represent the change in the output of the equation when one of the input variables is changed by a small amount. The partial derivative of $$f(x, y)$$ is how the output of the function will be affected when changing $$x$$ by a small while keeping $$y$$ constant. The partial derivative with respect to $$y$$ is how the output of the function will be affected when changing $$y$$ by a small while keeping $$x$$ constant. 
+Let's say we have the following equation, $$f(x, y) = x^2y$$. Partial derivatives represent the change in the output of the equation when one of the input variables is changed by a small amount. The partial derivative of $$f(x, y)$$ is how the output of the function will be affected when changing $$x$$ by a small while keeping $$y$$ constant. The partial derivative with respect to $$y$$ is how the output of the function will be affected when changing $$y$$ by a small while keeping $$x$$ constant.
 
 To calculate the partial derivatives, we take the derivative like normal but pretend one of the variables is just like any other constant.
+
+If either the chain rule or the partial derivatives are confusing, I recommend watching [this video](https://www.youtube.com/watch?v=YG15m2VwSjA) about the chain rule by 3Blue1Brown or [this video](https://www.youtube.com/watch?v=AXqhWeUEtQU) about partial derivatives by Khan Academy.
 
 $$
 \begin{align*}
@@ -464,6 +471,8 @@ $$
 The premise of the backpropagation algorithm is that we need to take the partial derivative of the cost function with respect to each of the weight matrices and bias vectors. There are four partial derivatives in total we want to calculate: $$\frac{\partial \mathcal{L}}{\partial W_1}$$, $$\frac{\partial \mathcal{L}}{\partial b_1}$$, $$\frac{\partial \mathcal{L}}{\partial W_2}$$, and $$\frac{\partial \mathcal{L}}{\partial b_2}$$.
 
 These are the four parameters of our network, the ones we want to optimize. We can now use the chain rule to write the equations for each of these.
+
+<!--- Make a comment telling the reader to not worry and maybe walk them through the first one to see how we calculated it. -->
 
 $$
 \begin{align*}
@@ -494,6 +503,8 @@ $$
 $$
 
 Moving on to the derivative of the sigmoid. We've already seen it, but here it is one more time.
+
+<!--- Center the following: -->
 
 $$\sigma'(z_2)=\sigma(z_2)(1-\sigma(z_2))$$
 
@@ -601,6 +612,7 @@ After all of the gradients are calculated for all the parameters of the network,
 
 The $$:=$$ symbol means you're assigning the value on the right side as the new value of what is on the left.
 
+<!--- Clarify the difference between the \alpha and a because they look similar in the rendered Latex -->
 $$
 \begin{align*}
 W_{new}&:=W_{current}-\alpha \delta a\\
@@ -611,9 +623,5 @@ $$
 The learning rate, $$\alpha$$, is a hyperparameter that controls how quickly the network learns. If it's too small, then the network will take a long time, thus costing more computational resources. If it's too large, the network will never converge, i.e., a set of optimal weights will never be found. As with all other hyperparameters, the computer scientist is tasked with experimentation to figure out the ideal learning rate for their given use case.
 
 Don't forget that all of this was for just one data point. The entire process needs to be repeated for each data point in the train dataset to complete one epoch. Additionally, multiple epochs may be needed.
-
-<!-- &nbsp;
-- - -
-&nbsp; -->
 
 I hope the math that goes behind a neural network isn't as daunting for you now. If you have any questions or comments, please don't hesitate to reach out.
