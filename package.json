@@ -31,5 +31,9 @@
         "remark-rehype": "^10.1.0",
         "sharp": "^0.31.3",
         "unified": "^10.1.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.35.0",
+        "eslint-plugin-react": "^7.32.2"
     }
 }
