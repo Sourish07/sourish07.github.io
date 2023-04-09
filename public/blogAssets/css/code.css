@@ -25,6 +25,13 @@ base0E  #C792EA  Keywords, Storage, Selector, Markup Italic, Diff Changed
 base0F  #FF5370  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 */
 
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('/blogAssets/css/CascadiaCode.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+}
+
 pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -39,7 +46,6 @@ code {
 code.hljs {
   padding: 3px 5px;
   font-family: 'Cascadia Code';
-  font-weight: 350;
   margin-bottom: 5px;
 }
 
