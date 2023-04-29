@@ -7,11 +7,14 @@ import Hero from '@/components/main/hero';
 import Portfolio from '@/components/main/portfolio';
 import Skills from '@/components/main/skills';
 import { AboutMeText } from '@/utils/aboutMe';
-import { getSortedPostsData } from '@/utils/processPosts';
+import { allPosts } from '@/.contentlayer/generated';
+import { compareDesc } from 'date-fns';
 
 export async function getStaticProps() {
     const aboutMeText = await AboutMeText();
-    const posts = getSortedPostsData().slice(0, 6);
+    const posts = allPosts.sort((a, b) => {
+        return compareDesc(new Date(a.date), new Date(b.date))
+    }).slice(0, 6);
     return {
         props: {
             aboutMeText,

@@ -1,13 +1,19 @@
-import { getAllPostCategories, getPostsInCategory } from "@/utils/processPosts";
-
 import Head from '@/components/blog/head';
 import Layout from "@/components/blog/layout";
 import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
 import Link from "next/link";
+import { allPosts } from '@/.contentlayer/generated';
+import { compareDesc, format, parseISO } from 'date-fns'
 
 export function getStaticPaths() {
-    const paths = getAllPostCategories();
+    let paths = allPosts.map((post) => {
+        return {
+            params: {
+                category: post.category.toLowerCase(),
+            },
+        };
+    });
     return {
         paths,
         fallback: false, // Returns 404 when pages isn't found
@@ -15,7 +21,12 @@ export function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postsData = getPostsInCategory(params.category);
+    const filteredPosts = allPosts.filter((post) => {
+        return post.category.toLowerCase() === params.category;
+    });
+    const postsData = filteredPosts.sort((a, b) => {
+        return compareDesc(new Date(a.date), new Date(b.date))
+    })
     return {
         props: {
             postsData,

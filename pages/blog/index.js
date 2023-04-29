@@ -1,19 +1,18 @@
-import Head from '@/components/blog/head';
-import Layout from '@/components/blog/layout';
-import PostList from '@/components/blog/postList';
-import styles from '@/styles/blog/Blog.module.css';
-import { getSortedPostsData } from '@/utils/processPosts';
+import Head from "@/components/blog/head";
+import Layout from "@/components/blog/layout";
+import PostList from "@/components/blog/postList";
+import styles from "@/styles/blog/Blog.module.css";
+import { compareDesc } from "date-fns";
+import { allPosts } from "contentlayer/generated";
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData();
-    return {
-        props: {
-            allPostsData,
-        },
-    };
+    const posts = allPosts.sort((a, b) => {
+        return compareDesc(new Date(a.date), new Date(b.date));
+    });
+    return { props: { posts } };
 }
 
-export default function Blog({ allPostsData }) {
+export default function Blog({ posts }) {
     return (
         <>
             <Head 
@@ -23,7 +22,7 @@ export default function Blog({ allPostsData }) {
             />
             <Layout>
                 <h1 className={styles.pageTitle}>Posts</h1>
-                <PostList posts={allPostsData} />
+                <PostList posts={posts} />
             </Layout>
         </>
     );

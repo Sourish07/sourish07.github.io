@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from '@/styles/blog/Blog.module.css';
+import Link from "next/link";
+import styles from "@/styles/blog/Blog.module.css";
 
 export default function Header() {
     return (
@@ -9,6 +9,6 @@ export default function Header() {
                 <Link href="/">sourish.dev</Link>
             </div>
         </header>
-    )
+    );
 
 }

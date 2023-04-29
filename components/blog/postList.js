@@ -5,9 +5,9 @@ import styles from '@/styles/blog/Blog.module.css';
 export default function PostList({ posts }) {
     return (
         <>
-            {posts.map(({ id, date, title, subheader, category }) => (
+            {posts.map(({ id, url, categoryUrl, date, title, subheader, category }) => (
                 <div className={styles.post} key={id}>
-                    <Link href={`/blog/${category}/${id}`}>
+                    <Link href={url}>
                         <div className={styles.postTitle}>
                             {title}
                         </div>
@@ -16,7 +16,7 @@ export default function PostList({ posts }) {
                         </div>
                     </Link>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        <Link href={`/blog/${category}`} className={styles.category}>
+                        <Link href={categoryUrl} className={styles.category}>
                             {category}
                         </Link>
                         <div className={styles.date}>

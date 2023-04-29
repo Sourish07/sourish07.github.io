@@ -1,116 +1,77 @@
-/*
-  Atom One Dark by Daniel Gamage
-  Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-  base:    #282c34
-  mono-1:  #abb2bf
-  mono-2:  #818896
-  mono-3:  #5c6370
-  hue-1:   #56b6c2
-  hue-2:   #61aeee
-  hue-3:   #c678dd
-  hue-4:   #98c379
-  hue-5:   #e06c75
-  hue-5-2: #be5046
-  hue-6:   #d19a66
-  hue-6-2: #e6c07b
-*/
-
-pre {
-  padding: 10px;
-  overflow: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-pre + pre {
-  margin-top: 15px;
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/blogAssets/css/CascadiaCode.ttf") format("truetype");
+  font-weight: 350;
 }
 
 code {
-  background-color: #eef;
-  font-size: 1rem;
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
+  font-family: "Cascadia Code", monospace;
+  counter-reset: line;
 }
 
-p code {
-  padding: 0 5px;
+code span {
+  font-style: normal !important;
+}
+
+pre > code > .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: gray;
+}
+
+[data-rehype-pretty-code-fragment] {
+  margin-bottom: 15px;
+}
+
+[data-rehype-pretty-code-fragment] pre {
+    border-radius: 3px;
+}
+
+[data-rehype-pretty-code-fragment] :not(p) > code {
+  display: grid;
+  min-width: 100%;
+  word-break: break-word;
+  background-color: transparent;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: black;
+  box-decoration-break: clone;
+  overflow-x: auto;
+}
+
+[data-rehype-pretty-code-fragment] .line {
+  padding: 0.25rem 0.5rem;
+}
+
+[data-rehype-pretty-code-fragment] .highlighted {
+  background-color: rgba(204, 255, 255, 0.1);
+}
+
+[data-rehype-pretty-code-fragment] .word {
+  border-radius: 0.375rem;
+  background-color: rgba(204, 255, 255, 0.1);
+  padding: 0.25rem;
+}
+
+[data-rehype-pretty-code-title] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  margin-top: 0;
+}
+
+/* Select the code blocks that are not children of pre tags */
+:not(pre) > code {
+  background-color: #eeeeff !important;
+  font-size: 17px;
+  padding: 0px 3px;
   border-radius: 3px;
-}
-
-pre,
-.hljs {
-  color: #abb2bf;
-  background: #282c34;
-  font-size: 1rem;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #5c6370;
-  font-style: italic;
-}
-
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #c678dd;
-}
-
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #e06c75;
-}
-
-.hljs-literal {
-  color: #56b6c2;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta .hljs-string {
-  color: #98c379;
-}
-
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #d19a66;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #61aeee;
-}
-
-.hljs-built_in,
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: #e6c07b;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-link {
-  text-decoration: underline;
 }

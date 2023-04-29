@@ -14,10 +14,8 @@ export default function Layout({ children, title }) {
                     {children}
                 </div>
             </main>
-            <hr />
-            <div className={styles.wrapper}>
-                <Footer />
-            </div>
+
+            <Footer />
         </>
     )
 }

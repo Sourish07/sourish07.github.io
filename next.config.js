@@ -1,3 +1,5 @@
+const { withContentlayer } = require("next-contentlayer")
+
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
@@ -10,4 +12,4 @@ if (process.env.STATIC_BUILD) {
   }
 }
 
-module.exports = nextConfig
+module.exports = withContentlayer(nextConfig)
