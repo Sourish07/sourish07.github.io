@@ -46,7 +46,7 @@ For our network to be useful, we need some data. Let’s say we’re tackling th
 
 The way each digit is represented in the computer is by a 28x28 grid of numbers. Black pixels are given a value of 0, while white ones are given a value of 1. Any number in between is a relative shade of gray.
 
-<img src="/blogAssets/images/nn/7_2.svg" style="max-height: 1000px"></img>
+<img src="/blogAssets/images/nn/7_2.svg" style={{maxHeight: "1000px"}}></img>
 
 We take each row of the image and stack it into a giant list of 784 (28 times 28) numbers; This will be the input to our neural network. For this case the input layer would need to have 784 neurons, one for each input. The output layer would need to have 10 neurons, one for each digit. We can choose to have however many hidden layers we'd like, and however many neurons in each.
 
@@ -209,7 +209,7 @@ We have eight solid, purple lines and two dotted, purple lines in the diagram ab
 
 Arranging the weights like so allows us to use a neat property of matrix multiplication. When we multiply $$W_1$$ by $$x$$, we'll get a vector with a length of 2. Adding that to our bias vector, $$b_1$$, grants us the values for our hidden layer. Again, $$f(x)$$ is the activation function for the hidden layer.
 
-Feel free to learn more about matrix multiplication ![here](https://www.mathsisfun.com/algebra/matrix-multiplying.html).
+Feel free to learn more about matrix multiplication [here](https://www.mathsisfun.com/algebra/matrix-multiplying.html).
 
 $$
 \begin{gather}
@@ -403,7 +403,7 @@ The Sparse Categorical CE has the same equation as the Categorical CE but is use
 
 This is the complicated part of a neural network, the training process. I’ve redrawn the neural network from above in a slightly different manner. This format will help us understand the calculus more easily.
 
-<img src="/blogAssets/images/nn/ReformattedNetwork.svg" style="height: 300px"></img>
+<img src="/blogAssets/images/nn/ReformattedNetwork.svg" style={{height: "300px"}}></img>
 
 The colors represent each layer and each rectangle represents an operation that’s performed in the network. The output of one function is the input for the next one. We pass $$x$$ into the first linear transformation, $$z_1(x, W_1, b_1)$$, then into the ReLu activation function, $$R(x)$$, then into the second linear transformation, $$z_2(a_1, W_2, b_2)$$, then into the sigmoid activation function, $$\sigma(x)$$, and finally into the loss function, $$\mathcal{L}(a_2, y)$$, to calculate the error.
 
