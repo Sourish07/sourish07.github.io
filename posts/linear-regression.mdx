@@ -1,9 +1,9 @@
 ---
 layout: post
 cspost: true
-title:  "Linear Regression"
+title: "Linear Regression"
 subheader: "Starting to open the black box of machine learning"
-date:   "2022-02-18"
+date: "2022-02-18"
 category: tutorials
 ---
 
@@ -14,14 +14,14 @@ Some variables of interest might be square footage, number of bedrooms, number o
 This is what some sample data might look like.
 
 | Square footage | # of bedrooms | # of bathrooms | Distance to nearest school | Crime rate (per 100k population) | Price of house |
-| --- | --- | --- | --- | --- | --- |
-| 3,200 sqft | 3 | 2 | 1.5 mi | 98 | $400,000 |
-| 1,800 sqft | 2 | 2 | 1.8 mi | 100 | $325,000 |
-| 2,250 sqft | 2 | 1 | 0.8 mi | 67 | $350,000 |
-| 1,200 sqft | 1 | 1 | 2.2 mi | 12 | $120,000 |
-| 1,500 sqft | 2 | 2 | 2.4 mi | 45 | ??? |
+| -------------- | ------------- | -------------- | -------------------------- | -------------------------------- | -------------- |
+| 3,200 sqft     | 3             | 2              | 1.5 mi                     | 98                               | $400,000       |
+| 1,800 sqft     | 2             | 2              | 1.8 mi                     | 100                              | $325,000       |
+| 2,250 sqft     | 2             | 1              | 0.8 mi                     | 67                               | $350,000       |
+| 1,200 sqft     | 1             | 1              | 2.2 mi                     | 12                               | $120,000       |
+| 1,500 sqft     | 2             | 2              | 2.4 mi                     | 45                               | ???            |
 
-*How can we best predict the price of the final house given the data for the preceding houses?* is the question we're trying to solve.
+_How can we best predict the price of the final house given the data for the preceding houses?_ is the question we're trying to solve.
 
 Naturally, instead of a human diving into the data and trying to figure out the numbers, we’re delegating it to the machine that can do it much more efficiently and deterministically.
 
@@ -82,17 +82,17 @@ This is where the machine learning algorithm called Gradient Descent comes in. A
 The line begins with a slope and y-intercept of zero.
 
 <video playsinline autoplay muted loop>
-    <source src="/blogAssets/images/lr/lr-anim.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/lr-anim.webm" type="video/webm"></source>
 </video>
 
 This algorithm also extends to lines of higher degrees (again, sped up).
 
 <video playsinline autoplay muted loop>
-    <source src="/blogAssets/images/lr/quad.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/quad.webm" type="video/webm"></source>
 </video>
 
 <video playsinline autoplay muted loop>
-    <source src="/blogAssets/images/lr/cubic.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/cubic.webm" type="video/webm"></source>
 </video>
 
 What's happening here is, given a starting line, we tell the computer to move the line in a direction that minimizes the sum of the errors (a.k.a. the combined area of the squares).
@@ -114,7 +114,7 @@ I'll be assuming that the reader is familiar with the following topics:
 
 The algorithm to minimize a cost function iteratively is called Gradient Descent. For each iteration, we calculate which direction to travel in that decreases our output. We repeat this process until the algorithm converges, i.e., we've found a local minima. Don't worry if this doesn't make sense yet.
 
-Any line has two parameters, its slope and a constant term, or  the intercept. From the familiar equation $$y=mx+b$$, $$m$$ and $$b$$ are the parameters of our model. We can tune those to move the line around.
+Any line has two parameters, its slope and a constant term, or the intercept. From the familiar equation $$y=mx+b$$, $$m$$ and $$b$$ are the parameters of our model. We can tune those to move the line around.
 
 From now on, let's write the equation for our line as $$y=w_0 + w_1x$$. $$w_0$$ is our new intercept term and $$w_1$$ the slope.
 
@@ -260,7 +260,7 @@ Just to visualize the contour plot with what each iteration is doing exactly, I'
 As the line becomes a better fit for the data, the weights travel closer and closer to the minimum.
 
 <video playsinline autoplay muted loop>
-    <source src="/blogAssets/images/lr/contourplotwithline.webm" type="video/webm">
+    <source src="/blogAssets/images/lr/contourplotwithline.webm" type="video/webm"></source>
 </video>
 
 I hope this gave a deeper peek into what the black box of machine learning holds! ML is an ever expansive topic and this blog post barely grazes the surface of it. Please reach out if you have any questions or comments.

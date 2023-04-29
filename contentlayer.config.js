@@ -94,8 +94,4 @@ export default makeSource({
     remarkPlugins: [remarkMath, remarkGfm],
     rehypePlugins: [[rehypePrettyCode, options], rehypeKatex, rehypeHighlight],
   },
-  // markdown: {
-  //   remarkPlugins: [remarkMath, remarkGfm],
-  //   rehypePlugins: [[rehypePrettyCode, options], rehypeKatex, rehypeHighlight],
-  // },
 })

@@ -8,6 +8,7 @@ import styles from '@/styles/blog/Post.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
 import { allPosts } from '@/.contentlayer/generated';
+import { useMDXComponent } from 'next-contentlayer/hooks'
 
 export function getStaticPaths() {
     const paths = allPosts.map((post) => {
@@ -40,6 +41,7 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
     // console.log(postData);
+    const MDX = useMDXComponent(postData.body.code)
     return (
         <>
             <Head 
@@ -61,7 +63,9 @@ export default function Post({ postData }) {
                 </div>
                 <div id="content" style={{ width: "100%" }}>
                     {/* <link rel="stylesheet" href="/blogAssets/css/code.css" /> */}
-                    {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.body.html }} />}
+                    <link rel="stylesheet" href="/blogAssets/css/blog.css" />
+                    {/* {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.body.html }} />} */}
+                    <MDX/>
                 </div>
             </Layout>
         </>
