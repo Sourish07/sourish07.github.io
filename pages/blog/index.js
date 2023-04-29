@@ -1,15 +1,15 @@
-import Head from '@/components/blog/head';
-import Layout from '@/components/blog/layout';
-import PostList from '@/components/blog/postList';
-import styles from '@/styles/blog/Blog.module.css';
-import { compareDesc, format, parseISO } from 'date-fns'
-import { allPosts } from 'contentlayer/generated'
+import Head from "@/components/blog/head";
+import Layout from "@/components/blog/layout";
+import PostList from "@/components/blog/postList";
+import styles from "@/styles/blog/Blog.module.css";
+import { compareDesc } from "date-fns";
+import { allPosts } from "contentlayer/generated";
 
 export async function getStaticProps() {
     const posts = allPosts.sort((a, b) => {
-        return compareDesc(new Date(a.date), new Date(b.date))
-      })
-      return { props: { posts } }
+        return compareDesc(new Date(a.date), new Date(b.date));
+    });
+    return { props: { posts } };
 }
 
 export default function Blog({ posts }) {

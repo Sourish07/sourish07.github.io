@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '@/styles/blog/Footer.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import styles from "@/styles/blog/Footer.module.css";
 
 export default function Footer() {
     return (
@@ -32,5 +32,5 @@ export default function Footer() {
                 <div style={{ marginTop: "15px" }}>© 2022 Sourish Kundu</div>
             </div>
         </footer>
-    )
+    );
 }
