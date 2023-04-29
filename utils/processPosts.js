@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
+import rehypePrettyCode from 'rehype-pretty-code';
 import { unified } from 'unified';
 
 const postsDirectory = path.join(process.cwd(), 'posts');

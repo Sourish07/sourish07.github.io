@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '@/utils/processPosts';
+// import { getAllPostIds, getPostData } from '@/utils/processPosts';
 
 import Date from '@/components/blog/date';
 import Head from '@/components/blog/head';
@@ -7,9 +7,17 @@ import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
+import { allPosts } from '@/.contentlayer/generated';
 
 export function getStaticPaths() {
-    const paths = getAllPostIds();
+    const paths = allPosts.map((post) => {
+        return {
+            params: {
+                id: post.id.toString(),
+                category: post.category.toLowerCase(),
+            },
+        };
+    });
     return {
         paths,
         fallback: false, // Returns 404 when pages isn't found
@@ -17,7 +25,12 @@ export function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
+    const post = allPosts.find((post) => {
+        return post.id === params.id;
+    });
+    const postData = {
+        ...post,
+    };
     return {
         props: {
             postData,
@@ -26,6 +39,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
+    // console.log(postData);
     return (
         <>
             <Head 
@@ -46,8 +60,8 @@ export default function Post({ postData }) {
                     </div>
                 </div>
                 <div id="content" style={{ width: "100%" }}>
-                    <link rel="stylesheet" href="/blogAssets/css/code.css" />
-                    {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+                    {/* <link rel="stylesheet" href="/blogAssets/css/code.css" /> */}
+                    {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.body.html }} />}
                 </div>
             </Layout>
         </>
