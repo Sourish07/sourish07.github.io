@@ -1,6 +1,14 @@
 import { useState, useMemo } from 'react';
 import styles from '@/styles/blog/Post.module.css';
 
+export function ArticleContent({ children }) {
+    return (
+        <div className={styles.content}>
+            {children}
+        </div>
+    )
+}
+
 export function MultiLevelArticleContent({ children }) {
     const [showNonTech, setShowNonTech] = useState(true);
 

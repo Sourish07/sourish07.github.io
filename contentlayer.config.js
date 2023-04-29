@@ -31,9 +31,9 @@ export const Post = defineDocumentType(() => ({
       description: 'The category of the post',
       required: true,
     },
-    cspost: {
+    multilevelarticle: {
       type: 'boolean',
-      description: 'Whether the post is a cs post',
+      description: 'Whether the post has multiple technical levels',
       required: false,
     }
   },

@@ -1,5 +1,3 @@
-// import { getAllPostCategories, getPostsInCategory } from "@/utils/processPosts";
-
 import Head from '@/components/blog/head';
 import Layout from "@/components/blog/layout";
 import PostList from "@/components/blog/postList";

@@ -4,9 +4,10 @@ import Layout from '@/components/blog/layout';
 import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
 import Link from 'next/link';
+
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import { MultiLevelArticleContent } from '@/components/blog/cspost';
+import { ArticleContent, MultiLevelArticleContent } from '@/components/blog/articleContent';
 
 export function getStaticPaths() {
     const paths = allPosts.map((post) => {
@@ -19,7 +20,7 @@ export function getStaticPaths() {
     });
     return {
         paths,
-        fallback: false, // Returns 404 when pages isn't found
+        fallback: false, // Returns 404 when page isn't found
     };
 }
 
@@ -38,8 +39,14 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-    console.log(postData);
-    const PostBody = useMDXComponent(postData.body.code)
+    const PostBody = useMDXComponent(postData.body.code);
+
+    const components = {
+        a: ({ href, children }) => <Link href={href.toString()}>{children}</Link>,
+        ArticleContent: postData.multilevelarticle ? MultiLevelArticleContent : ArticleContent,
+    };
+
+
     return (
         <>
             <Head
@@ -59,10 +66,9 @@ export default function Post({ postData }) {
                         <div className={styles.author}>By Sourish Kundu</div>
                     </div>
                 </div>
-                <div id="content" style={{ width: "100%" }}>
-                    <link rel="stylesheet" href="/blogAssets/css/blog.css" />
-                    {/* Passing in the Cscode component so it can split the content between technical and non-technical */}
-                    <PostBody components={{MultiLevelArticleContent}} />
+                <div style={{ width: "100%" }}>
+                    {/* If MultiLevelArticleContent component is passed in, it's so it can split the content between technical and non-technical */}
+                    <PostBody components={components} />
                 </div>
             </Layout>
         </>
