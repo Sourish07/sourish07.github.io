@@ -4,31 +4,13 @@ import styles from '@/styles/blog/Post.module.css';
 export function Cspost({ children }) {
     const [showNonTech, setShowNonTech] = useState(true);
 
+    // useMemo is used to store the results of this calculation
     const { nonTechnicalContent, technicalContent } = useMemo(() => {
         let index = children.findIndex((child) => child.type === 'split');;
         let nonTechnicalContent = children.slice(0, index);
         let technicalContent = children.slice(index + 1);
-        console.log("HI")
         return { nonTechnicalContent, technicalContent };
     }, [children]);
-
-    // const { nonTechnicalContent, technicalContent } = useMemo(() => {
-    //     return children.reduce(
-    //         (acc, child) => {
-    //             if (child.type === 'split') {
-    //                 acc.beforeSplit = false;
-    //             } else {
-    //                 acc.beforeSplit
-    //                     ? acc.nonTechnicalContent.push(child)
-    //                     : acc.technicalContent.push(child);
-    //             }
-    //             console.log("HI");
-    //             return acc;
-    //         },
-    //         { nonTechnicalContent: [], technicalContent: [], beforeSplit: true }
-    //     );
-    // }, [children]);
-
 
     return (
         <>
@@ -36,8 +18,6 @@ export function Cspost({ children }) {
                 <div id="nonTechnicalLink" className={showNonTech ? styles.readingLevelSelected : styles.readingLevelUnselected} onClick={() => { setShowNonTech(true); showNonTechnical() }}>Non-Technical</div>
                 <div id="technicalLink" className={showNonTech ? styles.readingLevelUnselected : styles.readingLevelSelected} onClick={() => { setShowNonTech(false); showTechnical() }}>Technical</div>
             </div>
-            {/* <div id="nonTechnicalContent" className={styles.content} dangerouslySetInnerHTML={{ __html: postData.nonTechnicalContent }} /> */}
-            {/* <div id="technicalContent" className={styles.content} style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: postData.technicalContent }} /> */}
             <div id="nonTechnicalContent" className={styles.content}>
                 {nonTechnicalContent}
             </div>

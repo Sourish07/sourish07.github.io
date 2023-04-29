@@ -42,8 +42,8 @@ const components = {
 }
 
 export default function Post({ postData }) {
-    // console.log(postData);
-    const MDX = useMDXComponent(postData.body.code)
+    console.log(postData);
+    const PostBody = useMDXComponent(postData.body.code)
     return (
         <>
             <Head
@@ -64,10 +64,8 @@ export default function Post({ postData }) {
                     </div>
                 </div>
                 <div id="content" style={{ width: "100%" }}>
-                    {/* <link rel="stylesheet" href="/blogAssets/css/code.css" /> */}
                     <link rel="stylesheet" href="/blogAssets/css/blog.css" />
-                    {/* {postData.cspost ? cspost(postData) : <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.body.html }} />} */}
-                    <MDX components={components}/>
+                    <PostBody components={components}/>
                 </div>
             </Layout>
         </>
