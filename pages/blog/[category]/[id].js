@@ -37,10 +37,6 @@ export async function getStaticProps({ params }) {
     };
 }
 
-const components = {
-    Cspost: ({children}) => <Cspost>{children}</Cspost>,
-}
-
 export default function Post({ postData }) {
     console.log(postData);
     const PostBody = useMDXComponent(postData.body.code)
@@ -65,7 +61,8 @@ export default function Post({ postData }) {
                 </div>
                 <div id="content" style={{ width: "100%" }}>
                     <link rel="stylesheet" href="/blogAssets/css/blog.css" />
-                    <PostBody components={components}/>
+                    {/* Passing in the Cscode component so it can split the content between technical and non-technical */}
+                    <PostBody components={{Cspost}} />
                 </div>
             </Layout>
         </>
