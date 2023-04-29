@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "How to Create a Python Web App with Flask"
+title: "How to Create a Python Web App with Flask"
 subheader: "Complete Flask tutorial from start to finish"
 date: "2022-02-11"
 category: tutorials
 ---
+
+<ArticleContent>
 
 Web applications are amongst the most popular types of applications in the world, and conveniently, they are also the simplest to delve into for beginners. Gone are the days where a developer must tussle with sockets, thread management, and the other pains that came along with web development.
 
@@ -66,15 +68,15 @@ The next step is to actually use an HTML page that our web browser can render wi
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Price Checker</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Stock Price Checker</h1>
-</body>
+  </body>
 </html>
 ```
 
@@ -120,7 +122,7 @@ We're importing another built-in function, `render_template`, that Flask has, al
 
 If the server from earlier was already running, it should detect a change main in `main.py` and automatically reload, else you can simply rerun the file in your terminal.
 
-*If at any point, your browser says "This site can't be reached" make sure your server is running in your terminal!*
+_If at any point, your browser says "This site can't be reached" make sure your server is running in your terminal!_
 
 You should see the following:
 
@@ -134,12 +136,12 @@ Next, we want to be able to take in user input, more specifically, what ticker s
 
 ```html
 <form method="POST" action="info">
-    <div>
-        <label for="symbol">Ticker Symbol</label>
-        <input type="text" name="symbol" placeholder="Enter ticker symbol"/>
-    </div>
-    <!-- Radio buttons will be placed here in the next step. -->
-    <button type="submit">Submit</button>
+  <div>
+    <label for="symbol">Ticker Symbol</label>
+    <input type="text" name="symbol" placeholder="Enter ticker symbol" />
+  </div>
+  <!-- Radio buttons will be placed here in the next step. -->
+  <button type="submit">Submit</button>
 </form>
 ```
 
@@ -153,35 +155,29 @@ The `action` attribute is important because it tells the web browser where to go
 
 ```html
 <div>
-    <input
-        type="radio"
-        id="daily"
-        name="interval"
-        value="TIME_SERIES_DAILY"
-        checked
-    />
-    <label for="daily">Daily</label>
-
+  <input
+    type="radio"
+    id="daily"
+    name="interval"
+    value="TIME_SERIES_DAILY"
+    checked
+  />
+  <label for="daily">Daily</label>
 </div>
 
 <div>
-    <input
-        type="radio"
-        id="weekly"
-        name="interval"
-        value="TIME_SERIES_WEEKLY"
-    />
-    <label for="weekly">Weekly</label>
+  <input type="radio" id="weekly" name="interval" value="TIME_SERIES_WEEKLY" />
+  <label for="weekly">Weekly</label>
 </div>
 
 <div>
-    <input
-        type="radio"
-        id="monthly"
-        name="interval"
-        value="TIME_SERIES_MONTHLY"
-    />
-    <label for="monthly">Monthly</label>
+  <input
+    type="radio"
+    id="monthly"
+    name="interval"
+    value="TIME_SERIES_MONTHLY"
+  />
+  <label for="monthly">Monthly</label>
 </div>
 ```
 
@@ -196,55 +192,57 @@ Let's add some text to help the user out and better their overall experience. Yo
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Price Checker</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Stock Price Checker</h1>
-    <p>Enter a ticker symbol and a time interval to get a graph of the price!</p>
+    <p>
+      Enter a ticker symbol and a time interval to get a graph of the price!
+    </p>
     <form method="POST" action="info">
-        <div>
-            <label for="symbol">Ticker Symbol</label>
-            <input type="text" name="symbol" placeholder="Enter ticker symbol"/>
-        </div>
-        <p>Interval</p>
-        <div>
-            <input
-                type="radio"
-                id="daily"
-                name="interval"
-                value="TIME_SERIES_DAILY"
-                checked
-            />
-            <label for="daily">Daily</label>
-        </div>
-    
-        <div>
-            <input
-                type="radio"
-                id="weekly"
-                name="interval"
-                value="TIME_SERIES_WEEKLY"
-            />
-            <label for="weekly">Weekly</label>
-        </div>
-    
-        <div>
-            <input
-                type="radio"
-                id="monthly"
-                name="interval"
-                value="TIME_SERIES_MONTHLY"
-            />
-            <label for="monthly">Monthly</label>
-        </div>
-    
-        <button type="submit" value="Submits">Submit</button>
+      <div>
+        <label for="symbol">Ticker Symbol</label>
+        <input type="text" name="symbol" placeholder="Enter ticker symbol" />
+      </div>
+      <p>Interval</p>
+      <div>
+        <input
+          type="radio"
+          id="daily"
+          name="interval"
+          value="TIME_SERIES_DAILY"
+          checked
+        />
+        <label for="daily">Daily</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          id="weekly"
+          name="interval"
+          value="TIME_SERIES_WEEKLY"
+        />
+        <label for="weekly">Weekly</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          id="monthly"
+          name="interval"
+          value="TIME_SERIES_MONTHLY"
+        />
+        <label for="monthly">Monthly</label>
+      </div>
+
+      <button type="submit" value="Submits">Submit</button>
     </form>
-</body>
+  </body>
 </html>
 ```
 
@@ -308,9 +306,7 @@ Inside `index.html` add `{% block content %}` right after the opening `body` tag
 This doesn't change the appearance of `index.html`, but it does make it easier for us to create `info.html`. Once you've created `info.html` in the `templates` folder, insert the following code.
 
 ```html
-{% extends "index.html" %}
-
-{% block content %}
+{% extends "index.html" %} {% block content %}
 <h1>Historical Stock Data</h1>
 {% endblock %}
 ```
@@ -411,7 +407,7 @@ The first line loads in the `.env` file (assuming it's in the root directory) an
 The way we grab specific data is through a URL. The format is outlined below for the Core Stock API.
 
 ```css
-https://www.alphavantage.co/query?function=[function]&symbol=[symbol]&apikey=[AV_KEY]
+https: //www.alphavantage.co/query?function=[function]&symbol=[symbol]&apikey=[AV_KEY];
 ```
 
 `function`, `symbol`, and `apikey` are the three parameters that the URL takes in. If we fill out that URL (replacing the brackets as well) with `function` as `TIME_SERIES_DAILY`, `symbol` as `AAPL`, and our API key, and navigate to it in my browser, I am greeted with the following:
@@ -455,7 +451,7 @@ def info():
     form_data = request.form
     symbol = form_data["symbol"]
     function = form_data["interval"]
-    
+
     url = f"https://www.alphavantage.co/query?function={function}&symbol={symbol}&apikey={AV_KEY}"
 
     return render_template('info.html')
@@ -476,7 +472,7 @@ Then, inside `info()`, after the line where you assemble the URL based on the us
 url = f"https://www.alphavantage.co/query?function={function}&symbol={symbol}&apikey={AV_KEY}"
 
 stock_data = requests.get(url).json()
-    
+
 return render_template('info.html')
 ```
 
@@ -555,6 +551,7 @@ I know I've already used the Matryoshka dolls analogy once, but it applies here 
         "5. volume": "71285038"
     },
 ...
+}
 ```
 
 As we can see, we have a bunch of dates as the keys, and for each value, we have another dictionary with four prices and a volume quantity. Let's choose to graph the highest price for each datapoint.
@@ -568,7 +565,7 @@ time_series = stock_data[func_key]
 
 dates = []
 prices = []
-    
+
 for k, v in time_series.items():
     dates.append(k)
     prices.append(float(v['2. high']))
@@ -619,11 +616,11 @@ def info():
     function = form_data["interval"]
 
     url = f"https://www.alphavantage.co/query?function={function}&symbol={symbol}&apikey={AV_KEY}"
-    
+
     stock_data = requests.get(url).json()
     func_key = function_mapping[function]
     time_series = stock_data[func_key]
-    
+
     dates = []
     prices = []
 
@@ -634,7 +631,7 @@ def info():
 
     dates.reverse()
     prices.reverse()
-    
+
     return render_template('info.html')
 ```
 
@@ -658,9 +655,9 @@ def info():
     company_name = company_overview["Name"]
 
     url = f"https://www.alphavantage.co/query?function={function}&symbol={symbol}&apikey={AV_KEY}"
-    
+
     stock_data = requests.get(url).json()
-    func_key = function_mapping[function
+    func_key = function_mapping[function]
 ...
 ```
 
@@ -689,7 +686,7 @@ def get_graph(dates, prices, company_name):
     ax.set_title(f"Stock Price of {company_name}")
     ax.set_xlabel("Year")
     ax.set_ylabel("Price (USD)")
-    ax.plot(dates, prices)    
+    ax.plot(dates, prices)
 
     buf = StringIO()
     fig.savefig(buf, format="svg")
@@ -745,9 +742,7 @@ We're defining a parameter `info` to which we're assigning a dictionary that hol
 We're going to make some changes to `info.html`.
 
 ```html
-{% extends "index.html" %}
-
-{% block content %}
+{% extends "index.html" %} {% block content %}
 <h1>Historical Stock data for {{ info.company_name }}</h1>
 <h2>Ticker symbol: {{ info.symbol|upper }}</h2>
 {{ info.graph }}
@@ -785,7 +780,7 @@ In `index.html`, add the following line right after form:
 
 When you refresh the home page, nothing will change because the `error` variable is blank, so the if statement evaluates to be false.
 
-Let's figure out how to identify an error. After some experimentation, it appears that when the ticker symbol is invalid, the result from the Company Overview API is either an empty dictionary or has an error message. 
+Let's figure out how to identify an error. After some experimentation, it appears that when the ticker symbol is invalid, the result from the Company Overview API is either an empty dictionary or has an error message.
 
 We can perform a simple check for the `Name` key after we grab the company overview data. Before you make the following change, make sure you import `url_for` up top.
 
@@ -836,4 +831,6 @@ All of these changes are present in my repo where this app is hosted. Just a hea
 
 I hope that after this simple tutorial, you are able to extrapolate these new skills to personal projects of your own! Flask is a very versatile framework that handles the complicated parts of web development for you while leaving your imagination unrestricted.
 
-*If you have any specific questions about this post or about Flask in general, please feel free to contact me. I'd love to answer any questions!*
+_If you have any specific questions about this post or about Flask in general, please feel free to contact me. I'd love to answer any questions!_
+
+</ArticleContent>

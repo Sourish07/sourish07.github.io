@@ -1,18 +1,19 @@
 ---
 layout: post
-cspost: yes
+multilevelarticle: true
 title:  "Neural Networks"
 subheader: "Examining the building blocks of modern-day deep learning"
 date:   "2022-07-22"
 category: tutorials
 ---
 
+<ArticleContent>
+
 Neural Networks are the foundation of all things Deep Learning so it’s pretty natural to be wondering how exactly they work. While they may seem like a black box to most, we find that the box isn’t actually that deep upon opening. With some simple, intuitive diagrams, let’s examine how these fascinating mathematical models learn to play video games, classify animals, and drive cars.
 
 The piece that all neural networks are built on is the neuron. It takes in some inputs and yields an output, very similar to how the neurons in our brain work.
 
 ![Network with Activation Function](/blogAssets/images/nn/neuron_act_func.svg)
-
 Think about each circle as a neuron and each line as a connection between the input and the output. In a computer, each circle and line are simply represented by a number. The gray circle is considered a bias term, whose value is always 1. However, this doesn’t mean the line associated with it is too.
 
 The way the output is calculated is by taking a weighted sum of all of the inputs and then passing the result into the activation function; The lines are considered the weights. For now, let's assume the activation function is the sign function; It outputs 1 if the input is positive and -1 if it's not.
@@ -47,7 +48,7 @@ For our network to be useful, we need some data. Let’s say we’re tackling th
 
 The way each digit is represented in the computer is by a 28x28 grid of numbers. Black pixels are given a value of 0, while white ones are given a value of 1. Any number in between is a relative shade of gray.
 
-<img src="/blogAssets/images/nn/7_2.svg" style="max-height: 1000px">
+<img src="/blogAssets/images/nn/7_2.svg" style={{maxHeight: "1000px"}}></img>
 
 We take each row of the image and stack it into a giant list of 784 (28 times 28) numbers; This will be the input to our neural network. For this case the input layer would need to have 784 neurons, one for each input. The output layer would need to have 10 neurons, one for each digit. We can choose to have however many hidden layers we'd like, and however many neurons in each.
 
@@ -99,7 +100,7 @@ It's through this process of passing a data point forward, comparing it with the
 
 In the technical section, we’ll see how the back propagation algorithm minimizes this function to obtain the weights that maximize our accuracy. There we'll dive into the linear algebra and calculus for neural networks.
 
-split
+<split></split>
 
 With the help of some linear algebra and calculus, we can build upon our intuition of how neural networks work by understanding the math behind it.
 
@@ -121,7 +122,7 @@ The black star represents a new data point the model hasn't seen before. The x-v
 
 ![Fitting3](/blogAssets/images/nn/fitting3.svg)
 
-The orange dot represents the model's prediction for when x is equal to 5. The first model is wrong, but only by about 15. The second model is off by a much smaller amount, while the overfitting model's prediction is off by over 250! 
+The orange dot represents the model's prediction for when x is equal to 5. The first model is wrong, but only by about 15. The second model is off by a much smaller amount, while the overfitting model's prediction is off by over 250 
 
 If you look closely at the graph of the third model above, you'll see that it reaches a local maximum when x is 4 and starts to decline as x continues to increase. It correctly predicts the data points it has already seen, but cannot predict the new point correctly, even though it's a point that fits the trend of the dataset.
 
@@ -129,7 +130,7 @@ Think about a student that memorizes the study sheet for an upcoming test render
 
 The overfitting model is doing exactly what the first student did, while the second model is equivalent to the student that doesn't memorize, but rather seeks to learn the underlying concepts.
 
-*Extending the analogy to the first model: One could say it's like a student that didn't bother studying at all!*
+*Extending the analogy to the first model: One could say it's like a student that didn't bother studying at all*
 
 To avoid the problem of overfitting, the dataset is split into two batches, a train dataset and a test dataset. Some common splits are 70-30 or 80-20. We train our model on the train dataset and check if the accuracy of our test dataset improves. If the train accuracy is high, but the test accuracy is low, we know our model is overfitting. If both accuracies are low, we're underfitting. If both are high, we're golden.
 
@@ -152,7 +153,7 @@ The testing phase is when we give the trained network the test data, data it has
 
 After having gone through the entire test dataset, it calculates its accuracy. We want this metric to increase with each epoch to ensure our model isn't overfitting.
 
-*The weights of the network are not tuned when the test data is passed in! This means that the model isn't learning from the test data so it'll be unable to "memorize" any of the test examples.*
+*The weights of the network are not tuned when the test data is passed in This means that the model isn't learning from the test data so it'll be unable to "memorize" any of the test examples.*
 
 ## Linear Algebra
 
@@ -201,8 +202,8 @@ Our input, $$x$$, will be a vector of size four because we have four neurons in 
 $$
 W_1=
 \begin{bmatrix}
-w^{[1]}_1 & w^{[1]}_2 & w^{[1]}_3 & w^{[1]}_4\\
-w^{[2]}_1 & w^{[2]}_2 & w^{[2]}_3 & w^{[2]}_4
+w^{![1]}_1 & w^{![1]}_2 & w^{![1]}_3 & w^{![1]}_4\\
+w^{![2]}_1 & w^{![2]}_2 & w^{![2]}_3 & w^{![2]}_4
 \end{bmatrix}
 $$
 
@@ -217,12 +218,12 @@ $$
 \text{hidden layer} = f(W_1x+b_1)\\
 =f\left(
 \begin{bmatrix}
-w^{[1]}_1x_1 + w^{[1]}_2x_2 + w^{[1]}_3x_3 + w^{[1]}_4x_4\\
-w^{[2]}_1x_1 + w^{[2]}_2x_2 + w^{[2]}_3x_3 + w^{[2]}_4x_4
+w^{![1]}_1x_1 + w^{![1]}_2x_2 + w^{![1]}_3x_3 + w^{![1]}_4x_4\\
+w^{![2]}_1x_1 + w^{![2]}_2x_2 + w^{![2]}_3x_3 + w^{![2]}_4x_4
 \end{bmatrix}+
 \begin{bmatrix}
-w^{[1]}_0\\
-w^{[2]}_0
+w^{![1]}_0\\
+w^{![2]}_0
 \end{bmatrix}
 \right)
 \end{gather}
@@ -376,7 +377,7 @@ The most basic cost function is the Mean Squared Error loss.
 
 $$MSE=\frac{1}{2N}\sum^{N-1}_{k=0}\left(y_k - \hat y_k\right)^2$$
 
-We're taking our prediction vector and subtracting it from our ground truth, squaring it, and summing across all training examples. Check out my post about linear regression [here](./linear-regression.html) for a deeper intuition as to what exactly is happening.
+We're taking our prediction vector and subtracting it from our ground truth, squaring it, and summing across all training examples. Check out my post about linear regression ![here](./linear-regression.html) for a deeper intuition as to what exactly is happening.
 
 For a singular training example, we'll be minimizing the following:
 
@@ -404,7 +405,7 @@ The Sparse Categorical CE has the same equation as the Categorical CE but is use
 
 This is the complicated part of a neural network, the training process. I’ve redrawn the neural network from above in a slightly different manner. This format will help us understand the calculus more easily.
 
-<img src="/blogAssets/images/nn/ReformattedNetwork.svg" style="height: 300px">
+<img src="/blogAssets/images/nn/ReformattedNetwork.svg" style={{height: "300px"}}></img>
 
 The colors represent each layer and each rectangle represents an operation that’s performed in the network. The output of one function is the input for the next one. We pass $$x$$ into the first linear transformation, $$z_1(x, W_1, b_1)$$, then into the ReLu activation function, $$R(x)$$, then into the second linear transformation, $$z_2(a_1, W_2, b_2)$$, then into the sigmoid activation function, $$\sigma(x)$$, and finally into the loss function, $$\mathcal{L}(a_2, y)$$, to calculate the error.
 
@@ -587,7 +588,7 @@ W_2^T \left(-(y-a_2)*\sigma'(z_2)\right)*R'(z_1)x^T&\rightarrow (2\times 4)
 \end{align*}
 $$
 
-It looks like everything lines up!
+It looks like everything lines up
 
 A neat feature of the backpropagation algorithm is if we choose to change the activation functions for any of the layers, we don't need to calculate everything from scratch. We can just replace the derivative of the old activation function with the new one.
 
@@ -595,7 +596,7 @@ A neat feature of the backpropagation algorithm is if we choose to change the ac
 
 The final step after calculating all of the gradients is actually updating the weights.
 
-*The weights and biases are updated simultaneously after all the gradients have been calculated! Do not update the weights or biases as you calculate the gradients.*
+*The weights and biases are updated simultaneously after all the gradients have been calculated Do not update the weights or biases as you calculate the gradients.*
 
 After all of the gradients are calculated for all the parameters of the network, the final update takes place. $$\alpha$$ is our learning rate, $$\delta$$ our error term, and $$a$$ is the input from the previous layer. Remember, $$\delta$$ times $$a$$ is our gradient for that given layer.
 
@@ -612,8 +613,8 @@ The learning rate, $$\alpha$$, is a hyperparameter that controls how quickly the
 
 Don't forget that all of this was for just one data point. The entire process needs to be repeated for each data point in the train dataset to complete one epoch. Additionally, multiple epochs may be needed.
 
-<!-- &nbsp;
 - - -
-&nbsp; -->
 
 I hope the math that goes behind a neural network isn't as daunting for you now. If you have any questions or comments, please don't hesitate to reach out.
+
+</ArticleContent>

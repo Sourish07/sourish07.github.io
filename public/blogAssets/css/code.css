@@ -1,115 +1,77 @@
-/*!
-  Theme: Material Palenight
-  Author: Nate Peterson
-  License: ~ MIT (or more permissive) [via base16-schemes-source]
-  Maintainer: @highlightjs/core-team
-  Version: 2021.09.0
-*/
-
-/*
-base00  #292D3E  Default Background
-base01  #444267  Lighter Background (Used for status bars, line number and folding marks)
-base02  #32374D  Selection Background
-base03  #676E95  Comments, Invisibles, Line Highlighting
-base04  #8796B0  Dark Foreground (Used for status bars)
-base05  #959DCB  Default Foreground, Caret, Delimiters, Operators
-base06  #959DCB  Light Foreground (Not often used)
-base07  #FFFFFF  Light Background (Not often used)
-base08  #F07178  Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-base09  #F78C6C  Integers, Boolean, Constants, XML Attributes, Markup Link Url
-base0A  #FFCB6B  Classes, Markup Bold, Search Text Background
-base0B  #C3E88D  Strings, Inherited Class, Markup Code, Diff Inserted
-base0C  #89DDFF  Support, Regular Expressions, Escape Characters, Markup Quotes
-base0D  #82AAFF  Functions, Methods, Attribute IDs, Headings
-base0E  #C792EA  Keywords, Storage, Selector, Markup Italic, Diff Changed
-base0F  #FF5370  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
-*/
-
 @font-face {
   font-family: "Cascadia Code";
   src: url("/blogAssets/css/CascadiaCode.ttf") format("truetype");
   font-weight: 350;
-  font-style: normal;
-}
-
-pre {
-  padding: 10px;
-  overflow: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-pre + pre {
-  margin-top: 15px;
 }
 
 code {
-  background-color: #eef;
-  font-size: 1rem;
   font-family: "Cascadia Code", monospace;
-  /* font-weight: 400; */
+  counter-reset: line;
 }
 
-p code {
-  padding: 0 5px;
+code span {
+  font-style: normal !important;
+}
+
+pre > code > .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: gray;
+}
+
+[data-rehype-pretty-code-fragment] {
+  margin-bottom: 15px;
+}
+
+[data-rehype-pretty-code-fragment] pre {
+    border-radius: 3px;
+}
+
+[data-rehype-pretty-code-fragment] :not(p) > code {
+  display: grid;
+  min-width: 100%;
+  word-break: break-word;
+  background-color: transparent;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: black;
+  box-decoration-break: clone;
+  overflow-x: auto;
+}
+
+[data-rehype-pretty-code-fragment] .line {
+  padding: 0.25rem 0.5rem;
+}
+
+[data-rehype-pretty-code-fragment] .highlighted {
+  background-color: rgba(204, 255, 255, 0.1);
+}
+
+[data-rehype-pretty-code-fragment] .word {
+  border-radius: 0.375rem;
+  background-color: rgba(204, 255, 255, 0.1);
+  padding: 0.25rem;
+}
+
+[data-rehype-pretty-code-title] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  margin-top: 0;
+}
+
+/* Select the code blocks that are not children of pre tags */
+:not(pre) > code {
+  background-color: #eeeeff !important;
+  font-size: 17px;
+  padding: 0px 3px;
   border-radius: 3px;
-}
-
-pre,
-.hljs {
-  color: #abb2bf;
-  background: #292d3e;
-  font-size: 1rem;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #5c6370;
-  font-style: italic;
-}
-
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #c678dd;
-}
-
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #e06c75;
-}
-
-.hljs-literal {
-  color: #56b6c2;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta .hljs-string {
-  color: #98c379;
-}
-
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #d19a66;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #61aeee;
 }
