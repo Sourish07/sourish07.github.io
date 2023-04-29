@@ -4,7 +4,7 @@ import styles from '@/styles/blog/Footer.module.css';
 
 export default function Footer() {
     return (
-        <footer style={{ width: "100%" }}>
+        <footer style={{ width: "100%", display: "flex", justifyContent: "center", boxShadow: "5px 0 3px", marginTop: "50px" }}>
             <div className={styles.footer}>
                 <h2 className={styles.title}>Sourish Shares</h2>
                 <div className={styles.links}>
@@ -12,7 +12,7 @@ export default function Footer() {
                         <span>Sourish Kundu</span>
                         <div>
 
-                        <Link href="/">sourish.dev</Link>
+                            <Link href="/">sourish.dev</Link>
                         </div>
                     </div>
                     <div className={styles.socials}>
