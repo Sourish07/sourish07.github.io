@@ -50,14 +50,6 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       resolve: (post) => post._raw.flattenedPath,
     },
-    // nonTechnicalContent: {
-    //   type: 'string',
-    //   resolve: (post) => (post.cspost ? post.body.html.split("<p>split</p>")[0] : ""),
-    // },
-    // technicalContent: {
-    //   type: 'string',
-    //   resolve: (post) => {post.cspost ? post.body.html.split("<p>split</p>")[1] : ""},
-    // }
   },
 }))
 
