@@ -4,6 +4,7 @@ import styles from '@/styles/blog/Post.module.css';
 export function ArticleContent({ children }) {
     return (
         <div className={styles.content}>
+            <link rel='stylesheet' href='/blogAssets/css/code.css' />
             {children}
         </div>
     )
