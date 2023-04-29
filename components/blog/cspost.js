@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import styles from '@/styles/blog/Post.module.css';
 
-export function Cspost({ children }) {
+export function MultiLevelArticleContent({ children }) {
     const [showNonTech, setShowNonTech] = useState(true);
 
     // useMemo is used to store the results of this calculation

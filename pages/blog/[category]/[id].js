@@ -6,7 +6,7 @@ import styles from '@/styles/blog/Post.module.css';
 import Link from 'next/link';
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import { Cspost } from '@/components/blog/cspost';
+import { MultiLevelArticleContent } from '@/components/blog/cspost';
 
 export function getStaticPaths() {
     const paths = allPosts.map((post) => {
@@ -62,7 +62,7 @@ export default function Post({ postData }) {
                 <div id="content" style={{ width: "100%" }}>
                     <link rel="stylesheet" href="/blogAssets/css/blog.css" />
                     {/* Passing in the Cscode component so it can split the content between technical and non-technical */}
-                    <PostBody components={{Cspost}} />
+                    <PostBody components={{MultiLevelArticleContent}} />
                 </div>
             </Layout>
         </>
