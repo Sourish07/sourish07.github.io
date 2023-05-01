@@ -4,7 +4,7 @@ import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
 import Link from "next/link";
 import { allPosts } from '@/.contentlayer/generated';
-import { compareDesc, format, parseISO } from 'date-fns'
+import { compareDesc } from 'date-fns'
 
 export function getStaticPaths() {
     let paths = allPosts.map((post) => {
