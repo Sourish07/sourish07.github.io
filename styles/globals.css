@@ -7,7 +7,6 @@
   --light-gray: #828282;
   --red-filter: brightness(0) saturate(100%) invert(11%) sepia(91%)
     saturate(5515%) hue-rotate(358deg) brightness(113%) contrast(115%);
-  
 
   --color-canvas-default: #ffffff;
   --color-canvas-subtle: #f6f8fa;
@@ -29,4 +28,8 @@ html {
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+hr {
+  margin: 30px 0;
 }
