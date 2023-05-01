@@ -9,6 +9,7 @@ import Skills from '@/components/main/skills';
 import { AboutMeText } from '@/utils/aboutMe';
 import { allPosts } from '@/.contentlayer/generated';
 import { compareDesc } from 'date-fns';
+import mainGlobal from '@/styles/mainGlobal';
 
 export async function getStaticProps() {
     const aboutMeText = await AboutMeText();
@@ -28,8 +29,8 @@ export default function Index({ aboutMeText, posts }) {
         <>
             <SkHead title="Sourish's Personal Website" >
                 <link rel="canonical" href="https://www.sourish.dev" />
-                <link rel="stylesheet" href="/mainGlobal.css" />
             </SkHead>
+            <style jsx>{mainGlobal}</style>
             <main>
                 <Hero />
                 <AboutMe text={aboutMeText} />

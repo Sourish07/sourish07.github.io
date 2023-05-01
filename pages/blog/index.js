@@ -4,6 +4,7 @@ import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import blogGlobal from "@/styles/blogGlobal";
 
 export async function getStaticProps() {
     const posts = allPosts.sort((a, b) => {
@@ -20,6 +21,7 @@ export default function Blog({ posts }) {
                 description="Here, I write about various topics about CS, the broader tech industry, and life."
                 siteName="sourish.dev/blog"
             />
+            <style jsx>{blogGlobal}</style>
             <Layout>
                 <h1 className={styles.pageTitle}>Posts</h1>
                 <PostList posts={posts} />

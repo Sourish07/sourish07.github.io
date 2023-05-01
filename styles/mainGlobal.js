@@ -1,4 +1,8 @@
+import css from "styled-jsx/css";
+
 /* Styling for all components on main page */
+export default css.global`
+
 :root {
   --background-color: #151515;
   --text-color: #fff;
@@ -113,3 +117,4 @@ p {
     background-attachment: fixed;
   }
 }
+`;
