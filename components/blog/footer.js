@@ -4,7 +4,7 @@ import styles from "@/styles/blog/Footer.module.css";
 
 export default function Footer() {
     return (
-        <footer style={{ width: "100%", display: "flex", justifyContent: "center", boxShadow: "5px 0 3px", marginTop: "50px" }}>
+        <footer style={{ width: "100%", display: "flex", justifyContent: "center", boxShadow: "0 -5px 5px -5px rgba(0, 0, 0, 0.2)", marginTop: "50px" }}>
             <div className={styles.footer}>
                 <h2 className={styles.title}>Sourish Shares</h2>
                 <div className={styles.links}>
