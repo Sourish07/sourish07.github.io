@@ -1,9 +1,11 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 import Date from '@/components/blog/date';
 import Head from '@/components/blog/head';
 import Layout from '@/components/blog/layout';
 import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
-import Link from 'next/link';
 
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks'
@@ -43,6 +45,7 @@ export default function Post({ postData }) {
 
     const components = {
         a: ({ href, children }) => <Link href={href.toString()}>{children}</Link>,
+        img: ({ src, alt }) => <Image src={src} alt={alt} width={1000} height={300} />,
         ArticleContent: postData.multilevelarticle ? MultiLevelArticleContent : ArticleContent,
     };
 

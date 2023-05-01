@@ -10,6 +10,9 @@ if (process.env.STATIC_BUILD) {
   nextConfig.images = {
     unoptimized: true,
   }
+  nextConfig.env = {
+    NEXT_PUBLIC_GITHUB_BUILD: true
+  }
 }
 
 module.exports = withContentlayer(nextConfig)
