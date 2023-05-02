@@ -5,11 +5,10 @@ import useSWR from 'swr';
 
 async function fetchQuotes() {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY;
-    const FILE_ID = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID;
-
+    const sheetId = "1dh0wJPbDnUAQ7NKElK8KVubQIAf3oawN1_wClPQ8uHg";
     const sheetName = 'quotes';
     const range = 'A1:B10';
-    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${FILE_ID}/values/${sheetName}!${range}?key=${API_KEY}`;
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!${range}?key=${API_KEY}`;
 
     // Make request
     const res = await fetch(apiUrl);
