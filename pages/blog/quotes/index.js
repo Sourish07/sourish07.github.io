@@ -7,7 +7,7 @@ async function fetchQuotes() {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY;
     const sheetId = "1dh0wJPbDnUAQ7NKElK8KVubQIAf3oawN1_wClPQ8uHg";
     const sheetName = 'quotes';
-    const range = 'A1:B10';
+    const range = 'A1:B500';
     const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!${range}?key=${API_KEY}`;
 
     // Make request
