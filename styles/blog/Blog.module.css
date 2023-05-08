@@ -20,13 +20,33 @@
   padding: 0 15px;
 }
 
-#header a:first-of-type {
+#title {
   font-size: 2rem;
 }
 
-#header a:nth-of-type(2) {
+#header .navbarlinks {
   display: none;
 }
+
+.navbarlinksDrawer {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbarlinksDrawer a {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.navbarlinksDrawer a span {
+  margin-left: 10px;
+}
+
+
 
 .pageTitle {
   text-align: center;
@@ -61,8 +81,16 @@
   border-radius: 5px;
 }
 
-@media (min-width: 568px) {
-  #header a:nth-of-type(2) {
-    display: block;
+@media (min-width: 768px) {
+  #header .navbarlinks {
+    display: flex;
+  }
+  
+  #header .navbarlinks a {
+    padding-left: 15px;
+  }
+
+  #header .drawerIcon {
+    display: none;
   }
 }

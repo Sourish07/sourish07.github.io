@@ -7,8 +7,12 @@
         "prod": "next build && next start"
     },
     "dependencies": {
+        "@emotion/react": "^11.11.0",
+        "@emotion/styled": "^11.11.0",
         "@fontsource/lato": "^4.5.10",
         "@fontsource/pt-mono": "^4.5.11",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^5.12.3",
         "@vercel/analytics": "^0.1.8",
         "contentlayer": "^0.3.2",
         "cross-env": "^7.0.3",

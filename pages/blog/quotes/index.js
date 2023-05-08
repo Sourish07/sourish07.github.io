@@ -75,8 +75,8 @@ function Error() {
 function Quote({ quote, author }) {
     return (
         <div style={{marginBottom: "30px", display: "flex", flexDirection: "column", width: "100%"}}>
-            <div style={{fontSize: "35px", marginBottom: "10px"}}>{`“${quote}”`}</div>
-            <div style={{alignSelf: "flex-end", fontSize: "20px"}}>{` — ${author}`}</div>
+            <div style={{fontSize: "20px", marginBottom: "10px"}}>{`“${quote}”`}</div>
+            <div style={{alignSelf: "flex-end", fontSize: "15px"}}>{` — ${author}`}</div>
         </div>
     );
 }
