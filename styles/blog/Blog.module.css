@@ -29,7 +29,8 @@
 }
 
 .navbarlinksDrawer {
-  padding: 20px 30px;
+  padding: 0 30px;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   width: 100%;

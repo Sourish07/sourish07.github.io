@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from '@/styles/NavBar.module.css';
+import SvgIcon from '@mui/material/SvgIcon';
+import BlogIcon from '@/public/resources/icons/blog.svg';
+import PortfolioIcon from '@/public/resources/icons/portfolio.svg';
 
 import Drawer from '@mui/material/Drawer';
 import PersonIcon from '@mui/icons-material/Person';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import ScienceIcon from '@mui/icons-material/Science';
 import WorkIcon from '@mui/icons-material/Work';
-import DrawIcon from '@mui/icons-material/Draw';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 
@@ -63,7 +65,7 @@ function NavBarLinks({ setDrawerOpen }) {
         },
         {
             name: "Blog",
-            icon: <DrawIcon />,
+            icon: <SvgIcon component={BlogIcon} inheritViewBox />,
         },
         {
             name: "Contact",
@@ -89,7 +91,7 @@ function NavBarLinks({ setDrawerOpen }) {
 
 function scrollTo(id, setDrawerOpen) {
     return function () {
-        setDrawerOpen(false);
+        setDrawerOpen && setDrawerOpen(false);
         let element = document.getElementById(id);
         console.log(id, element);
         element.scrollIntoView({ behavior: "smooth" });

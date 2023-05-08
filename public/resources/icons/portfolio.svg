@@ -1,73 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Vectornator (http://vectornator.io/) -->
-
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg
-   height="483.375"
+   height="100%"
    stroke-miterlimit="10"
-   style="clip-rule:evenodd;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round"
+   style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
    version="1.1"
    viewBox="0 0 598.422 483.375"
-   width="598.422"
+   width="100%"
    xml:space="preserve"
-   id="svg11"
-   sodipodi:docname="portfolio.svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:vectornator="http://vectornator.io"><sodipodi:namedview
-   id="namedview13"
-   pagecolor="#ffffff"
-   bordercolor="#000000"
-   borderopacity="0.25"
-   inkscape:showpageshadow="2"
-   inkscape:pageopacity="0.0"
-   inkscape:pagecheckerboard="0"
-   inkscape:deskcolor="#d1d1d1"
-   showgrid="false"
-   inkscape:zoom="1.0029297"
-   inkscape:cx="298.12658"
-   inkscape:cy="179.4742"
-   inkscape:window-width="3440"
-   inkscape:window-height="1369"
-   inkscape:window-x="1432"
-   inkscape:window-y="549"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="svg11" />
-<defs
-   id="defs2" />
-<g
-   id="Layer-1"
-   vectornator:layerName="Layer 1"
-   transform="translate(-210.766,-332.125)">
-<path
-   d="M 223.266,399.844 V 551.281 563.5 l 22.406,16.014 V 803 H 774.266 V 580.211 L 796.672,563.5 V 551.281 399.844 Z m 572.87,162.947 c -70.508,61.772 -185.061,100.286 -286.167,100.286 -100.155,0 -215.208,-40.423 -285.459,-101.16"
-   fill="none"
-   opacity="1"
-   stroke="#000000"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   stroke-width="25"
-   id="path4" />
-<path
-   d="m 509.969,621.914 v 0 c 7.463,0 13.512,6.05 13.512,13.513 v 46.514 c 0,7.463 -6.049,13.512 -13.512,13.512 v 0 c -7.462,0 -13.512,-6.049 -13.512,-13.512 v -46.514 c 0,-7.463 6.05,-13.513 13.512,-13.513 z"
-   fill="#000000"
-   fill-rule="nonzero"
-   opacity="1"
-   stroke="#000000"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   stroke-width="25"
-   id="path6" />
-<path
-   d="m 509.969,344.625 c -35.463,0 -65.46,23.189 -75.781,55.219 H 223.281 V 551.281 563.5 l 22.407,16 V 803 H 774.281 V 580.219 L 796.688,563.5 V 551.281 399.844 H 585.781 c -10.321,-32.03 -40.349,-55.219 -75.812,-55.219 z"
-   fill="none"
-   opacity="1"
-   stroke="#000000"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   stroke-width="25"
-   id="path8" />
-</g>
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/> 
+  <g
+     id="Layer-1"
+     transform="translate(-210.766,-332.125)">
+    <path
+       d="M 223.266,399.844 V 551.281 563.5 l 22.406,16.014 V 803 H 774.266 V 580.211 L 796.672,563.5 V 551.281 399.844 Z m 572.87,162.947 c -70.508,61.772 -185.061,100.286 -286.167,100.286 -100.155,0 -215.208,-40.423 -285.459,-101.16"
+       fill="none"
+       opacity="1"
+       stroke="#FFFFFF"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="25"
+       id="path4" />
+    <path
+       d="m 509.969,621.914 v 0 c 7.463,0 13.512,6.05 13.512,13.513 v 46.514 c 0,7.463 -6.049,13.512 -13.512,13.512 v 0 c -7.462,0 -13.512,-6.049 -13.512,-13.512 v -46.514 c 0,-7.463 6.05,-13.513 13.512,-13.513 z"
+       fill="#000000"
+       fill-rule="nonzero"
+       opacity="1"
+       stroke="#FFFFFF"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="25"
+       id="path6" />
+    <path
+       d="m 509.969,344.625 c -35.463,0 -65.46,23.189 -75.781,55.219 H 223.281 V 551.281 563.5 l 22.407,16 V 803 H 774.281 V 580.219 L 796.688,563.5 V 551.281 399.844 H 585.781 c -10.321,-32.03 -40.349,-55.219 -75.812,-55.219 z"
+       fill="none"
+       opacity="1"
+       stroke="#FFFFFF"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="25"
+       id="path8" />
+  </g>
 </svg>
