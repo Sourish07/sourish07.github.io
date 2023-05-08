@@ -8,7 +8,7 @@ import rehypeHighlight from "rehype-highlight";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: "**/*.mdx",
+  filePathPattern: "*.mdx", // Posts go in the root of the content folder
   contentType: "mdx",
   fields: {
     title: {
@@ -79,11 +79,24 @@ const options = {
   },
 };
 
+export const Text = defineDocumentType(() => ({
+  name: "Text",
+  filePathPattern: "text/*.md",
+  computedFields: {
+    title: {
+      type: "string",
+      resolve: (text) => text._id.split("/")[1].split(".")[0],
+    },
+  },
+}));
+
 export default makeSource({
-  contentDirPath: "posts",
-  documentTypes: [Post],
+  contentDirPath: "content",
+  documentTypes: [Post, Text],
   mdx: {
     remarkPlugins: [remarkMath, remarkGfm],
     rehypePlugins: [[rehypePrettyCode, options], rehypeKatex, rehypeHighlight],
   },
 })
+
+  
