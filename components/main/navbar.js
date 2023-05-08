@@ -1,78 +1,97 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from '@/styles/NavBar.module.css';
+
+import Drawer from '@mui/material/Drawer';
+import PersonIcon from '@mui/icons-material/Person';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import ScienceIcon from '@mui/icons-material/Science';
+import WorkIcon from '@mui/icons-material/Work';
+import DrawIcon from '@mui/icons-material/Draw';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 
 export default function Navbar() {
-    const navbarItems = ["About me", "Experience", "Skills", "Portfolio", "Blog", "Contact"];
-    return (
-        <>
-            <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
-                <div>
-                    <Link href="/" className={styles.navbarLink} style={{ display: "none", fontSize: "2rem" }}>sourish.dev</Link>
-                </div>
+    const [drawerOpen, setDrawerOpen] = useState(false);
 
-                <div style={{ display: "flex" }}>
-                    {navbarItems.map((item) => (
-                        <NavbarLink
-                            key={item}
-                            className={styles.navbarLink}
-                            text={item}
-                            style={{ display: "none", fontSize: "1.25rem", marginRight: "10px", transition: "all 0.2s", cursor: "pointer" }}
-                            onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase())}
-                        />
-                    ))}
-                    <button id={styles.navbarIcon} onClick={toggleSidebar} aria-label="menu"></button>
-                </div>
-            </nav>
-            <Sidebar items={navbarItems} />
-        </>
-    )
-}
+    const toggleDrawer = (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
 
-function Sidebar(props) {
+        setDrawerOpen(!drawerOpen);
+    };
+
     return (
-        <div id={styles.sidebar}>
-            <div id={styles.sidebarContent}>
-                {props.items.map((item) => (
-                    <NavbarLink
-                        key={item}
-                        text={item}
-                        className={styles.sidebarLink}
-                        onClick={scrollTo(item.replaceAll(' ', '-').toLowerCase(), true)}
-                    />
-                ))}
+        <nav style={{ position: "absolute", width: "100vw", display: "flex", justifyContent: "space-between", alignItems: "center", top: "0", padding: "10px" }}>
+            <div>
+                <Link href="/" className={styles.navbarLogo} style={{ display: "none", fontSize: "2rem" }}>sourish.dev</Link>
             </div>
-        </div>
-    )
+
+            <NavBarLinks />
+
+            {!drawerOpen && <button id={styles.navbarIcon} onClick={toggleDrawer} aria-label="menu"></button>}
+            <Drawer
+                anchor='right'
+                open={drawerOpen}
+                onClose={toggleDrawer}
+            >
+                <NavBarLinks setDrawerOpen={setDrawerOpen} />
+
+            </Drawer>
+        </nav>
+    );
 }
 
-function NavbarLink(props) {
+function NavBarLinks({ setDrawerOpen }) {
+    const navbarItems = [
+        {
+            name: "About me",
+            icon: <PersonIcon />,
+        },
+        {
+            name: "Experience",
+            icon: <EngineeringIcon />,
+        },
+        {
+            name: "Skills",
+            icon: <ScienceIcon />,
+        },
+        {
+            name: "Portfolio",
+            icon: <WorkIcon />,
+        },
+        {
+            name: "Blog",
+            icon: <DrawIcon />,
+        },
+        {
+            name: "Contact",
+            icon: <ContactPageIcon />,
+        },
+    ]
     return (
-        <div onClick={props.onClick} style={props.style} className={props.className}>
-            {props.text}
+        <div className={setDrawerOpen ? styles.sidebarContent : styles.navbarlinks}>
+            {navbarItems.map(({name, icon}) => (
+                <div
+                    onClick={scrollTo(`${name.replaceAll(' ', '-').toLowerCase()}`, setDrawerOpen)}
+                    key={name}
+                >
+                    {setDrawerOpen && icon}
+                    <span>
+                        {name}
+                    </span>
+                </div>
+            ))}
         </div>
-    )
+    );
 }
 
-function scrollTo(id, sidebarOpen = false) {
+function scrollTo(id, setDrawerOpen) {
     return function () {
-        if (sidebarOpen) toggleSidebar();
+        setDrawerOpen(false);
         let element = document.getElementById(id);
+        console.log(id, element);
         element.scrollIntoView({ behavior: "smooth" });
-    }
-}
-
-function toggleSidebar() {
-    let sidebar = document.getElementById(styles.sidebar);
-    let icon = document.getElementById(styles.navbarIcon);
-
-    if (sidebar.style.transform === "translateX(0%)") { // If sidebar is open
-        sidebar.style.transform = "translateX(100%)";
-        icon.style.backgroundImage = `url(resources/icons/hamburger.svg)`;
-        icon.style.filter = "var(--red-filter)";
-    } else { // If sidebar is closed
-        sidebar.style.transform = "translateX(0%)";
-        icon.style.backgroundImage = `url(resources/icons/close.svg)`;
-        icon.style.filter = "brightness(0) invert(1)";
     }
 }

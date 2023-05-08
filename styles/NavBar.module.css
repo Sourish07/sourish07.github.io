@@ -1,35 +1,42 @@
-.CenterBar {
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap;
+.navbarlinks {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 1.25rem;
 }
 
-#sidebar { 
-    display: flex;
-    position: absolute;
-    transform: translateX(100%);
-    height: 100%;
-    top: 0;
-    right: 0;
-    transition: 0.5s;
-    z-index: 1;
+.navbarlinks span {
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-#sidebarContent {
+.navbarLogo,
+.navbarlinks span {
+    transition: all 0.2s;
+}
+
+.navbarLogo:hover,
+.navbarlinks span:hover {
+    color: var(--red);
+}
+
+.sidebarContent {
     height: 100%;
     width: 180px;
     background-color: var(--red);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
 }
 
+.sidebarContent span {
+    margin-left: 10px;
+}
+
 #navbarIcon { 
     filter: var(--red-filter);
     cursor: pointer;
-    z-index: 9999;
     background-image: url("/resources/icons/hamburger.svg");
     width: 35px;
     aspect-ratio: 1;
@@ -39,44 +46,30 @@
     background-size: contain;
 }
 
-.sidebarLink {
+.sidebarContent div {
     padding: 10px;
     font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.sidebarLink:hover,
-.sidebarLink:active {
+.sidebarContent div:hover,
+.sidebarContent div:active {
     background: white;
     cursor: pointer;
-
-}
-
-.sidebarLink:hover span,
-.sidebarLink:active span {
     color: var(--red);
 
-}
-
-.sidebarLink div {
-    padding: 30px 5px;
-    text-align: center;
-    list-style: none;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.navbarLink:hover {
-    color: var(--red);
 }
 
 @media (min-width: 768px) {
-    .navbarLink {
+    .navbarLogo {
         display: inline !important;
     }
 
-    #sidebar {
-        display: none;
+    .navbarlinks {
+        display: flex;
     }
 
     #navbarIcon {
