@@ -1,15 +1,21 @@
 import Head from 'next/head';
 
 export default function BlogHead({ title, description, siteName, children }) {
+    let blogThumbnailPath = "/resources/images/blog-thumbnail.webp";
     return (
         <Head>
             <title>{title}</title>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+            <meta property="site_name" content={siteName} />
+            <meta property="title" content={title} />
+            <meta property="description" content={description} />
+            <meta property="image" content={blogThumbnailPath} />
+
             <meta property="og:site_name" content={siteName} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content="/resources/images/blog-thumbnail.webp" />
+            <meta property="og:image" content={blogThumbnailPath} />
 
             <link rel="canonical" href={`https://www.${siteName}`} key="canonical" />
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
