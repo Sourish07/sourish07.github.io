@@ -24,7 +24,6 @@ export default function Blog({ posts }) {
                 description="Here, I write about various topics about CS, the broader tech industry, and life."
                 siteName="sourish.dev/blog"
             />
-            <style jsx>{blogGlobal}</style>
             <Layout>
                 <h1 className={styles.pageTitle}>Posts</h1>
                 <PostList posts={posts} />
