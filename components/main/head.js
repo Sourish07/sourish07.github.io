@@ -1,20 +1,9 @@
 import Head from 'next/head';
-import Script from 'next/script'
 
 export default function SkHead({ title, children }) {
     let thumbnailPath = "/resources/images/link-thumbnail.webp";
     return (
         <Head>
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87" />
-            <Script>
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-J796TLFH87');
-                `}
-            </Script>
-
             <title>{title}</title>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -36,6 +25,7 @@ export default function SkHead({ title, children }) {
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
             <link rel="manifest" href="/site.webmanifest" />
+            <link rel="canonical" href="https://www.sourish.dev" />
             {children}
         </Head>
     )

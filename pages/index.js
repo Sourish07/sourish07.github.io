@@ -7,7 +7,6 @@ import Hero from '@/components/main/hero';
 import Portfolio from '@/components/main/portfolio';
 import Skills from '@/components/main/skills';
 import { allPosts, allTexts } from '@/.contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks'
 import { compareDesc } from 'date-fns';
 import mainGlobal from '@/styles/mainGlobal';
 
@@ -27,9 +26,7 @@ export async function getStaticProps() {
 export default function Index({ aboutMeText, posts }) {
     return (
         <>
-            <SkHead title="Sourish's Personal Website" >
-                <link rel="canonical" href="https://www.sourish.dev" />
-            </SkHead>
+            <SkHead title="Sourish's Personal Website" />
             <style jsx>{mainGlobal}</style>
             <main>
                 <Hero />
