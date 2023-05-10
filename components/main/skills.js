@@ -125,6 +125,7 @@ function getFrameworks(path) {
         { name: "AJAX", src: "ajax.svg" },
         { name: "Postgresql", src: "postgresql.svg" },
         { name: "Bootstrap", src: "bootstrap.svg" },
+        { name: "Three.js", src: "threejs.svg" },
     ]
     return format(frameworks, path);
 }
