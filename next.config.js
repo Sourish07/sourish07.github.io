@@ -3,17 +3,6 @@ const { withContentlayer } = require("next-contentlayer")
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      use: ['@svgr/webpack'],
-    })
-    return config
-  },
 }
 
 if (process.env.STATIC_BUILD) {
