@@ -4,11 +4,15 @@ import PostList from "@/components/blog/postList";
 import styles from "@/styles/blog/Blog.module.css";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import blogGlobal from "@/styles/blogGlobal";
 
 export async function getStaticProps() {
-    const posts = allPosts.sort((a, b) => {
+    let posts = allPosts.sort((a, b) => {
         return compareDesc(new Date(a.date), new Date(b.date));
     });
+
+    posts = posts.map(({ body, ...post }) => post);
+
     return { props: { posts } };
 }
 

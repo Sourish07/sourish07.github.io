@@ -108,6 +108,7 @@ function getFrameworks(path) {
         { name: "CUDA", src: "cuda.webp" },
         { name: "Tensorflow", src: "tensorflow.svg" },
         { name: "Scikit Learn", src: "scikitlearn.svg" },
+        { name: "OpenGL", src: "opengl.svg" },
         { name: "Docker", src: "docker.svg" },
         { name: "Nginx", src: "nginx.svg" },
         { name: "ARKit", src: "arkit.webp" },
@@ -124,6 +125,7 @@ function getFrameworks(path) {
         { name: "AJAX", src: "ajax.svg" },
         { name: "Postgresql", src: "postgresql.svg" },
         { name: "Bootstrap", src: "bootstrap.svg" },
+        { name: "Three.js", src: "threejs.svg" },
     ]
     return format(frameworks, path);
 }

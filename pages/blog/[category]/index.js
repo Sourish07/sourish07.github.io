@@ -44,8 +44,11 @@ export default function BlogCategory({ category, postsData }) {
                 siteName={`sourish.dev/blog/${category}`}
             />
             <Layout>
-                <h1 className={styles.pageTitle}>Category: {category}</h1>
-                <Link href="/blog" style={{ width: "100%", textAlign: "end" }}>Back to all posts</Link>
+                <div style={{position: "relative", width: "100%"}}>
+
+                    <h1 className={styles.pageTitle}>Category: {category}</h1>
+                    <Link href="/blog" style={{ width: "100%", textAlign: "end", position: "absolute", top: "70px" }}>Back to all posts</Link>
+                </div>
                 <PostList posts={postsData} />
             </Layout>
         </>

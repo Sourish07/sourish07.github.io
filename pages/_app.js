@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             {
-                process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' || process.env.NEXT_PUBLIC_GITHUB_BUILD && ( 
+                process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' || process.env.NEXT_PUBLIC_GITHUB_BUILD === 'main' && ( 
                     <>
                         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J796TLFH87" />
                         <Script>
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
                 )
             }
             <Component {...pageProps} />
-            <Analytics />
+            {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' && <Analytics />}
         </>
     )
 }

@@ -1,6 +1,10 @@
+import css from "styled-jsx/css";
+
+export default css.global`
+
 @font-face {
   font-family: "Cascadia Code";
-  src: url("/blogAssets/css/CascadiaCode.ttf") format("truetype");
+  src: url("/blogAssets/CascadiaCode.ttf") format("truetype");
   font-weight: 350;
 }
 
@@ -75,3 +79,4 @@ pre > code > .line::before {
   padding: 0px 3px;
   border-radius: 3px;
 }
+`;

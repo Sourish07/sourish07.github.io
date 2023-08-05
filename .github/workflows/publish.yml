@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - main
+env:
+    NODE_ENV: production
 permissions:
     contents: read
     id-token: write
@@ -19,6 +21,10 @@ jobs:
               with:
                   node-version: 16
                   cache: "npm"
+            - name: Setup .env
+              run: |
+                   echo NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY=${{ secrets.GOOGLE_SHEETS_API_KEY }} >> .env.$NODE_ENV
+                   echo NEXT_PUBLIC_GITHUB_BUILD=$GITHUB_REF_NAME >> .env.$NODE_ENV
             - name: Generate Main Website
               run: |
                   npm ci
@@ -26,7 +32,7 @@ jobs:
             - name: Cleanup Files
               run: |
                   shopt -s extglob
-                  rm -rf !("out"|"blog")
+                  rm -rf !("out")
                   mv out/* .
                   rm -rf out
             - name: Archive build output

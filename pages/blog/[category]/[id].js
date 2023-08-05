@@ -6,6 +6,7 @@ import Head from '@/components/blog/head';
 import Layout from '@/components/blog/layout';
 import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
+import blogCode from '@/styles/blogCode';
 
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks'
@@ -70,6 +71,7 @@ export default function Post({ postData }) {
                     </div>
                 </div>
                 <div style={{ width: "100%" }}>
+                    <style jsx>{blogCode}</style>
                     {/* If MultiLevelArticleContent component is passed in, it's so it can split the content between technical and non-technical */}
                     <PostBody components={components} />
                 </div>
