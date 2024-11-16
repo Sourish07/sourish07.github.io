@@ -9,7 +9,7 @@ import styles from '@/styles/blog/Post.module.css';
 import blogCode from '@/styles/blogCode';
 
 import { allPosts } from '@/.contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useMDXComponent } from 'next-contentlayer2/hooks'
 import { ArticleContent, MultiLevelArticleContent } from '@/components/blog/articleContent';
 
 export function getStaticPaths() {
