@@ -42,7 +42,6 @@ export default function Header() {
 function NavBarLinks({ inDrawer }) {
     return (
         <div className={inDrawer ? styles.navbarlinksDrawer : styles.navbarlinks}>
-            <Link href="/blog/hiatus2024">{inDrawer && <DrawIcon/>}<span>Hiatus 2024 Notes</span></Link>
             <Link href="/blog/why">{inDrawer && <DrawIcon/>}<span>Why I Write</span></Link>
             <Link href="/blog/quotes">{inDrawer && <FormatQuoteIcon/>}<span>Favorite Quotes</span></Link>
             <Link href="/">{inDrawer && <WorkIcon/>}<span>Personal Website</span></Link>
