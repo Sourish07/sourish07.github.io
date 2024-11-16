@@ -11,6 +11,7 @@ import blogCode from '@/styles/blogCode';
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer2/hooks'
 import { ArticleContent, MultiLevelArticleContent } from '@/components/blog/articleContent';
+import Hiatus from '@/dynamic-content/hiatus';
 
 export function getStaticPaths() {
     const paths = allPosts.map((post) => {
@@ -48,6 +49,7 @@ export default function Post({ postData }) {
         a: ({ href, children }) => <Link href={href.toString()}>{children}</Link>,
         img: ({ src, alt }) => <Image src={src} alt={alt} width={1000} height={300} />,
         ArticleContent: postData.multilevelarticle ? MultiLevelArticleContent : ArticleContent,
+        Hiatus
     };
 
 

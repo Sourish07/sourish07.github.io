@@ -1,6 +1,3 @@
-import BlogHead from '@/components/blog/head';
-import Layout from "@/components/blog/layout";
-import styles from "@/styles/blog/Blog.module.css";
 import postStyles from "@/styles/blog/Post.module.css";
 import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
@@ -26,23 +23,16 @@ export default function Hiatus() {
 
     return (
         <>
-            <BlogHead title="Sourish's Hiatus Notes" >
-                <link rel="canonical" href="https://www.sourish.dev/blog/hiatus2024" />
-            </BlogHead>
-            <Layout>
-                <h1 className={styles.pageTitle}>Notes During 2024 Winter Hiatus</h1>
-                <div className={styles.subheader} style={{ marginBottom: "30px" }}>Progress updates about my hiatus.</div>
-                {!notes && (
-                    <div style={{ width: "100%" }}>
-                        <SkeletonLoaderPiece height="50px" />
-                        <SkeletonLoaderPiece width="20%" alignSelf="flex-end" />
-                        <SkeletonLoaderPiece />
-                        <SkeletonLoaderPiece width="20%" alignSelf="flex-end" />
-                    </div>
-                )}
-                {notes && <div className={postStyles.content} dangerouslySetInnerHTML={{ __html: notes }} style={{ width: "100%" }}></div>}
-                {error && <Error />}
-            </Layout>
+            {!notes && (
+                <div style={{ width: "100%" }}>
+                    <SkeletonLoaderPiece height="50px" />
+                    <SkeletonLoaderPiece width="20%" alignSelf="flex-end" />
+                    <SkeletonLoaderPiece />
+                    <SkeletonLoaderPiece width="20%" alignSelf="flex-end" />
+                </div>
+            )}
+            {notes && <div className={postStyles.content} dangerouslySetInnerHTML={{ __html: notes }} style={{ width: "100%" }}></div>}
+            {error && <Error />}
         </>
     );
 }
