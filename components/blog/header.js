@@ -25,7 +25,7 @@ export default function Header() {
             <div className={styles.wrapper}>
                 <Link id={styles.title} href="/blog" style={{ fontWeight: "300" }}>Sourish Shares</Link>
                 <NavBarLinks />
-                <Link href="" onClick={toggleDrawer} className={styles.drawerIcon}><MenuIcon/></Link>
+                <a onClick={toggleDrawer} className={styles.drawerIcon}><MenuIcon/></a>
             </div>
             <Drawer
                 anchor='right'
