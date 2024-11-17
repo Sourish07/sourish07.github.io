@@ -1,6 +1,6 @@
 import BlogHead from '@/components/blog/head';
 import Layout from "@/components/blog/layout";
-import { SkeletonLoaderBlock, Error } from '@/dynamic-content/skeletonLoader';
+import { SkeletonLoaderPiece, Error } from '@/dynamic-content/skeletonLoader';
 import styles from "@/styles/blog/Blog.module.css";
 import useSWR from 'swr';
 
@@ -56,7 +56,7 @@ export default function Quotes() {
                     {quotes && !error ? quotes.map((quote, index) => (
                         <Quote key={index} quote={quote.quote} author={quote.author} />
                     )) :
-                        <SkeletonLoaderBlock />
+                        <SkeletonLoaderQuotes />
                     }
                     {error && <Error message={`Failed to fetch quotes: ${error}`} />}
                 </div>
@@ -71,5 +71,16 @@ function Quote({ quote, author }) {
             <div style={{fontSize: "20px", marginBottom: "10px"}}>{`“${quote}”`}</div>
             <div style={{alignSelf: "flex-end", fontSize: "15px"}}>{` — ${author}`}</div>
         </div>
+    );
+}
+
+function SkeletonLoaderQuotes() {
+    return (
+        <div style={{width: "95%", position: "relative", display: "flex", flexDirection: "column"}}>
+            <SkeletonLoaderPiece height='30px' />
+            <SkeletonLoaderPiece width={"20%"} alignSelf='flex-end'/>
+            <SkeletonLoaderPiece />
+            <SkeletonLoaderPiece width={"20%"} alignSelf='flex-end'/>
+        </div> 
     );
 }

@@ -1,4 +1,4 @@
-import { Error, SkeletonLoaderBlock } from "@/dynamic-content/skeletonLoader";
+import { Error, SkeletonLoaderPiece } from "@/dynamic-content/skeletonLoader";
 import postStyles from "@/styles/blog/Post.module.css";
 import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
@@ -25,11 +25,26 @@ export default function GoogleDoc({ documentId }) {
         <>
             {!notes && (
                 <div style={{ width: "100%" }}>
-                    <SkeletonLoaderBlock />
+                    <SkeletonLoaderDoc />
                 </div>
             )}
             {notes && <div className={postStyles.content} dangerouslySetInnerHTML={{ __html: notes }} style={{ width: "100%" }}></div>}
             {error && <Error message={`Failed to fetch document: ${error}`} />}
         </>
+    );
+}
+
+function SkeletonLoaderDoc() {
+    return (
+        <div style={{width: "95%", position: "relative", display: "flex", flexDirection: "column"}}>
+            <SkeletonLoaderPiece height='50px' />
+            <SkeletonLoaderPiece width={"20%"} />
+            {[...Array(5)].map((_, i) => (
+                <>
+                    <SkeletonLoaderPiece />
+                    <SkeletonLoaderPiece width={"20%"} />
+                </>
+            ))}
+        </div> 
     );
 }
