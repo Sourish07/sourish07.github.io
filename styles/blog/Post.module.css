@@ -37,6 +37,11 @@
   max-width: 100%;
 }
 
+.content a {
+  color: #e62b1e;
+  text-decoration: underline;
+}
+
 .content p,
 .content li {
   line-height: 1.5;
@@ -101,6 +106,7 @@
   border-spacing: 0;
   border-collapse: collapse;
   display: block;
+  margin: auto;
   margin-top: 0;
   margin-bottom: 16px;
   width: max-content;
