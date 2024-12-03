@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from '@/styles/NavBar.module.css';
-import SvgIcon from '@mui/material/SvgIcon';
-import BlogIcon from '@/public/resources/icons/blog.svg';
-import PortfolioIcon from '@/public/resources/icons/portfolio.svg';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 
 import Drawer from '@mui/material/Drawer';
 import PersonIcon from '@mui/icons-material/Person';
@@ -11,7 +9,6 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import ScienceIcon from '@mui/icons-material/Science';
 import WorkIcon from '@mui/icons-material/Work';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -65,7 +62,7 @@ function NavBarLinks({ setDrawerOpen }) {
         },
         {
             name: "Blog",
-            icon: <SvgIcon component={BlogIcon} inheritViewBox />,
+            icon: <NoteAltIcon />,
         },
         {
             name: "Contact",
