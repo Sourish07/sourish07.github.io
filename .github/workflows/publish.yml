@@ -50,6 +50,7 @@ jobs:
                   path: ./artifact.tar
                   if-no-files-found: warn
     deploy:
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
         needs: build
         environment:
