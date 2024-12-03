@@ -1,6 +1,5 @@
 import BlogHead from '@/components/blog/head';
 import Layout from "@/components/blog/layout";
-import { SkeletonLoaderPiece, Error } from '@/dynamic-content/skeletonLoader';
 import styles from "@/styles/blog/Blog.module.css";
 import useSWR from 'swr';
 
@@ -58,10 +57,18 @@ export default function Quotes() {
                     )) :
                         <SkeletonLoaderQuotes />
                     }
-                    {error && <Error message={`Failed to fetch quotes: ${error}`} />}
+                    {error && <Error />}
                 </div>
             </Layout>
         </>
+    );
+}
+
+function Error() {
+    return (
+        <div style={{width: "100%"}}>
+            <div style={{fontSize: "35px", marginBottom: "10px", textAlign: "center", color: "red"}}>- Failed to fetch quotes -</div>
+        </div>
     );
 }
 
@@ -84,3 +91,19 @@ function SkeletonLoaderQuotes() {
         </div> 
     );
 }
+
+function SkeletonLoaderPiece({ width = '100%', height = '30px', borderRadius = '5px', alignSelf = 'flex-start' }) {
+    const style = {
+        width,
+        height,
+        borderRadius,
+        alignSelf,
+        backgroundColor: '#f0f0f0',
+        margin: '20px 0',
+        animation: 'flash 1.5s ease-in-out infinite',
+    };
+
+    return (
+        <div style={style}></div>
+    )
+};
