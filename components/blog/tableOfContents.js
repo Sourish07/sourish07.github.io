@@ -2,21 +2,48 @@ import { useState, useEffect } from 'react';
 import styles from '@/styles/blog/TableOfContents.module.css';
 
 export default function TableOfContents() {
-    const [headings, setHeadings] = useState([]);
+    const [nonTechHeadings, setNonTechHeadings] = useState([]);
+    const [techHeadings, setTechHeadings] = useState([]);
+    const [regularHeadings, setRegularHeadings] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const [currentSection, setCurrentSection] = useState('regular');
 
     useEffect(() => {
         const processHeadings = () => {
+            const nonTechContent = document.querySelector('#nonTechnicalContent');
+            const techContent = document.querySelector('#technicalContent');
             const article = document.querySelector('article');
-            if (!article) return;
+            
+            // Check if this is a split article or regular article
+            if (nonTechContent && techContent) {
+                // Process non-technical headings if visible
+                const nonTechHeadings = getComputedStyle(nonTechContent).display !== 'none' 
+                    ? processContentHeadings(nonTechContent) 
+                    : [];
+                setNonTechHeadings(nonTechHeadings);
 
-            // Get all headings h1-h6 from both static and dynamic content
-            const elements = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
-            const headingElements = Array.from(elements);
+                // Process technical headings if visible
+                const techHeadings = getComputedStyle(techContent).display !== 'none'
+                    ? processContentHeadings(techContent)
+                    : [];
+                setTechHeadings(techHeadings);
 
-            // Create TOC data structure and ensure all headings have IDs
-            const headings = headingElements.map((heading, index) => {
-                // Create an ID if one doesn't exist
+                // Update current section based on visibility
+                setCurrentSection(getComputedStyle(nonTechContent).display !== 'none' ? 'nonTech' : 'tech');
+                setRegularHeadings([]); // Clear regular headings for split articles
+            } else if (article) {
+                // Process regular article headings
+                const headings = processContentHeadings(article);
+                setRegularHeadings(headings);
+                setNonTechHeadings([]);
+                setTechHeadings([]);
+                setCurrentSection('regular');
+            }
+        };
+
+        const processContentHeadings = (contentElement) => {
+            const elements = contentElement.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            return Array.from(elements).map((heading, index) => {
                 if (!heading.id) {
                     heading.id = createId(heading.textContent) || `heading-${index}`;
                 }
@@ -27,35 +54,69 @@ export default function TableOfContents() {
                     level: parseInt(heading.tagName.substring(1))
                 };
             });
-
-            setHeadings(headings);
         };
 
         // Initial processing
         processHeadings();
 
-        // Set up a MutationObserver to watch for dynamically added content
+        // Set up observers
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
-                if (mutation.addedNodes.length > 0) {
-                    // Wait a bit for any post-processing of added content
-                    setTimeout(processHeadings, 500);
+                if (mutation.addedNodes.length > 0 || 
+                    mutation.attributeName === 'style' || 
+                    mutation.attributeName === 'class') {
+                    setTimeout(processHeadings, 100);
                 }
             });
         });
 
         const article = document.querySelector('article');
-        if (article) {
+        const nonTechContent = document.querySelector('#nonTechnicalContent');
+        const techContent = document.querySelector('#technicalContent');
+
+        // Observe the appropriate elements
+        if (nonTechContent && techContent) {
+            observer.observe(nonTechContent, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['style', 'class']
+            });
+            observer.observe(techContent, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['style', 'class']
+            });
+
+            // Listen for section changes
+            const handleSectionChange = () => {
+                setTimeout(processHeadings, 100);
+            };
+
+            const nonTechLink = document.querySelector('#nonTechnicalLink');
+            const techLink = document.querySelector('#technicalLink');
+
+            nonTechLink?.addEventListener('click', handleSectionChange);
+            techLink?.addEventListener('click', handleSectionChange);
+
+            // Cleanup event listeners
+            return () => {
+                observer.disconnect();
+                nonTechLink?.removeEventListener('click', handleSectionChange);
+                techLink?.removeEventListener('click', handleSectionChange);
+            };
+        } else if (article) {
             observer.observe(article, {
                 childList: true,
-                subtree: true
+                subtree: true,
+                attributes: true
             });
-        }
 
-        // Cleanup
-        return () => {
-            observer.disconnect();
-        };
+            return () => {
+                observer.disconnect();
+            };
+        }
     }, []);
 
     const createId = (text) => {
@@ -69,14 +130,22 @@ export default function TableOfContents() {
     const handleClick = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            const yOffset = -100; // Offset to account for any fixed headers
+            const yOffset = -100;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
             setIsOpen(false);
         }
     };
 
-    if (headings.length === 0) return null;
+    // Get current headings based on section type
+    const currentHeadings = currentSection === 'regular' 
+        ? regularHeadings 
+        : currentSection === 'nonTech' 
+            ? nonTechHeadings 
+            : techHeadings;
+
+    // Don't render anything if there are no headings
+    if (!currentHeadings || currentHeadings.length === 0) return null;
 
     return (
         <>
@@ -113,9 +182,14 @@ export default function TableOfContents() {
                             ×
                         </button>
                         <nav className={styles.tableOfContents}>
-                            <h2>Table of Contents</h2>
+                            <h2>
+                                Table of Contents
+                                {currentSection !== 'regular' && 
+                                    ` (${currentSection === 'nonTech' ? 'Non-Technical' : 'Technical'})`
+                                }
+                            </h2>
                             <ul>
-                                {headings.map((heading) => (
+                                {currentHeadings.map((heading) => (
                                     <li
                                         key={heading.id}
                                         style={{ marginLeft: `${(heading.level - 1) * 1}rem` }}
