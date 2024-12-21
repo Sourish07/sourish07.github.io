@@ -7,6 +7,7 @@ import Layout from '@/components/blog/layout';
 import blogStyles from '@/styles/blog/Blog.module.css';
 import styles from '@/styles/blog/Post.module.css';
 import blogCode from '@/styles/blogCode';
+import TableOfContents from '@/components/blog/tableOfContents';
 
 import { allPosts } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer2/hooks'
@@ -72,10 +73,15 @@ export default function Post({ postData }) {
                         <div className={styles.author}>By Sourish Kundu</div>
                     </div>
                 </div>
+                <div className={styles.content}>
+                    <article>
+                        <PostBody components={components} />
+                        {postData.googleDocId && <GoogleDoc docId={postData.googleDocId} />}
+                    </article>
+                    <TableOfContents />
+                </div>
                 <div style={{ width: "100%" }}>
                     <style jsx>{blogCode}</style>
-                    {/* If MultiLevelArticleContent component is passed in, it's so it can split the content between technical and non-technical */}
-                    <PostBody components={components} />
                 </div>
             </Layout>
         </>
