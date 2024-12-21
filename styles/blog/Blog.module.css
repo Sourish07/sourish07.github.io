@@ -18,6 +18,8 @@
   align-items: center;
   margin: auto;
   padding: 0 15px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 #title {

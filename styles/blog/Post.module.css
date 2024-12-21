@@ -137,3 +137,20 @@
 .content table img {
   background-color: transparent;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid aside {
+    display: none; /* Hide TOC on mobile */
+  }
+}

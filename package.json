@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "dev": "next dev",
+        "dev": "STATIC_BUILD=1 next dev",
         "build": "next build",
         "export": "cross-env STATIC_BUILD=1 next build",
         "start": "next start",
