@@ -76,6 +76,10 @@
   margin-bottom: 0px;
 }
 
+.content li > ul {
+  margin-bottom: 0px;
+}
+
 .readingLevel {
   display: flex;
   justify-content: space-around;
