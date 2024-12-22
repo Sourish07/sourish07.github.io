@@ -1,6 +1,6 @@
 ---
 title: "Variational Inference with Linear Regression"
-subheader: "How to turn point estimtates into probability distributions!"
+subheader: "How to turn point estimates into probability distributions!"
 date: "2024-12-31"
 category: tutorials
 ---
@@ -126,9 +126,9 @@ Since PyTorch is tracking all of these operations through the graph it's creatin
 
 # Negative Log-Likelihood
 
-Now the other major change is our loss function. We're replace the `MSELoss` with the negative log-likelihood.
+The other change we need to make is to our loss function. We're replacing the `MSELoss` with the negative log-likelihood.
 
-We need to measure if our model's outputted distribution for a given $x$ is accurate, thus want to note how "likely" the associated y-value in our training data is under this predicted distribution. This value is known as the "likelihood" and is just the value of the distribution's PDF, parametrized by the model's predicted mean & standard deviation. The higher the likelihood, the better, as it indicates the ground truth y-value is more plausible as a sample from the predicted distribution.
+We need to measure if our model's outputted distribution for a given $x$ is accurate, thus we want to note how "likely" the associated y-value in our training data is under this predicted distribution. This value is known as the "likelihood" and is just the value of the distribution's PDF, parametrized by the model's predicted mean & standard deviation. The higher the likelihood, the better, as it indicates the ground truth y-value is more plausible as a sample from the predicted distribution.
 
 ![image](/blogAssets/images/vi_lr/Pasted_image_20241216122319.png)
 *Assume this is the PDF of our distribution. If our mean is 0 and standard deviation is 1, the likelihood of -1 is `0.241...`, or the value of this function evaluated at -1. By having our loss function be the negative log-likelihood, we're telling the optimization to try its best to center this distribution (because the center is where the likelihood is the largest) around the y-values in our training data.*
@@ -165,7 +165,24 @@ In the previous example, we incorporated no prior beliefs about the distribution
 
 With MLE, we were optimizing $w^{MLE} = \underset{w}{\mathrm{argmax}} \log P(D|w)$, effectively selecting the set of weights $w$ maximizes the likelihood of the data $D$ under the model conditioned on those weights.
 
-If we choose to add a prior over our output distribution $P(w)$, we can formulate our loss to be $w^{MAP}= \underset{w}{\mathrm{argmax}} [\log P(D|w) + \log P(w)] = \underset{w}{\mathrm{argmax}} \log P(w|D)$. We got this from Bayes Theorem which states that $P(w|D)=\frac{P(D|w)P(w)}{P(D)}$, or $\text{posterior} = \frac{likelihood \times prior}{evidence}$ Since $P(D)$ isn't a function of $w$ it wasn't included in the argmax. This is also known as the *Maximum a Posteriori* objective, or MAP.
+If we choose to add a prior over our output distribution $P(w)$, we can formulate our loss to be: 
+
+$$
+\begin{align*}
+w^{MAP}= \underset{w}{\mathrm{argmax}} [\log P(D|w) + \log P(w)] = \underset{w}{\mathrm{argmax}} \log P(w|D)
+\end{align*}
+$$
+
+We got this from Bayes Theorem which states:
+
+$$
+\begin{align*}
+P(w|D) &= \frac{P(D|w)P(w)}{P(D)}\\
+\text{posterior} &= \frac{likelihood \times prior}{evidence}
+\end{align*}
+$$
+
+Since our evidence, $P(D)$, isn't a function of $w$ it wasn't included in the argmax. This is also known as the *Maximum a Posteriori* objective, or MAP.
 
 The issue is that in a lot of cases, this posterior distribution, $P(w|D)$ is intractable, meaning there's no neat closed-form solution. Solving for it requires many samples $w$ to estimate, which can get computationally infeasible.
 
