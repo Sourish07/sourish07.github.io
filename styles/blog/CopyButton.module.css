@@ -1,0 +1,22 @@
+.copyButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.copyButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Show button on pre:hover */
+div[data-rehype-pretty-code-fragment]:hover .copyButton {
+    opacity: 1;
+}

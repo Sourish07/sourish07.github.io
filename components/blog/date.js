@@ -6,7 +6,7 @@ export default function Date({ dateString }) {
 
     useEffect(() => {
         setDate(format(parseISO(dateString), "LLLL d, yyyy"));
-      }, [date]);
+      }, [dateString]);
 
     return <div>{date}</div>;
 }
